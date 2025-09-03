@@ -1,1 +1,1 @@
-# mi-whitelist
+# my-whitelist
