@@ -1,0 +1,520 @@
+# --- Banca ---
+
+# AforeMóvil
+aforemovil.com.mx
+api.aforemovil.com.mx
+
+# Apple Pay
+apple.com
+apple-pay-gateway.apple.com
+applepay.icloud.com
+
+# Banamex (Citibanamex)
+api.citibanamex.com
+bancanet.banamex.com
+citibanamex.com
+portal.banamex.com.mx
+
+# BanCoppel
+api.bancoppel.com
+bancoppel.com
+cdn.bancoppel.com
+portal.bancoppel.com
+
+# Banorte
+banorte.com
+banorte.com.mx
+servicios.banorte.com
+
+# BBVA
+api.bbva.com
+bbva.com
+bbva.mx
+bbvanet.com.mx
+
+# Google Pay / Wallet
+pay.google.com
+pay.googleapis.com
+pay.gstatic.com
+wallet.google.com
+
+# HSBC
+hsbc.com.mx
+api.hsbc.com.mx
+www.hsbc.com.mx
+
+# PayPal
+paypal.com
+api.paypal.com
+assets.paypal.com
+
+# Santander
+santander.com.mx
+supernet.santander.com.mx
+api.santander.com.mx
+
+# Spin by OXXO
+spinbyoxxo.com.mx
+api.spinbyoxxo.com.mx
+
+# --- Compras ---
+
+# Alibaba
+alibaba.com
+alicdn.com
+img.alicdn.com
+is.alicdn.com
+sc01.alicdn.com
+sc02.alicdn.com
+sc04.alicdn.com
+
+# AliExpress
+ae.aliexpress.com
+ae01.alicdn.com
+aer.aliexpress.com
+aliexpress.com
+img.alicdn.com
+
+# Amazon
+amazon.com
+images-amazon.com
+m.media-amazon.com
+media-amazon.com
+ssl-images-amazon.com
+
+# Bodega Aurrerá
+bodegaaurrera.com.mx
+despensa.bodegaaurrera.com.mx
+
+# Chedraui
+chedraui.com.mx
+api.chedraui.com.mx
+
+# El Palacio de Hierro
+elpalaciodehierro.com
+assets.elpalaciodehierro.com
+api.elpalaciodehierro.com
+
+# Liverpool
+liverpool.com.mx
+assetspwa.liverpool.com.mx
+graphql.liverpool.com.mx
+
+# Mercado Libre
+api.mercadolibre.com
+http2.mlstatic.com
+mercadolibre.com
+mercadolibre.com.mx
+mercadopago.com.mx
+mlstatic.com
+static.mlstatic.com
+
+# OXXO
+oxxo.com
+oxxopay.com
+mi.oxxo.com
+
+# Sam's Club
+sams.com.mx
+assets.sams.com.mx
+
+# Sears
+sears.com.mx
+asset.sears.com.mx
+api.sears.com.mx
+
+# SHEIN
+shein.com
+img.shein.com
+api.shein.com
+
+# Soriana
+soriana.com
+sorianadomicilio.com
+api.soriana.com
+
+# Suburbia
+suburbia.com.mx
+assets.suburbia.com.mx
+api.suburbia.com.mx
+
+# The Home Depot
+homedepot.com.mx
+api.homedepot.com.mx
+assets.homedepot-static.com
+images.homedepot-static.com
+
+# Walmart
+walmart.com.mx
+super.walmart.com.mx
+assets.walmartimages.com.mx
+
+# --- Juegos ---
+
+# Candy Crush
+candycrush.king.com
+candycrushsaga.com
+cdn.king.com
+king.com
+
+# Clash of Clans
+clashofclans.com
+supercell.com
+cdn.supercell.com
+
+# Epic Games
+epicgames.com
+launcher.epicgames.com
+
+# PlayStation Network
+playstation.com
+playstation.net
+api.playstation.com
+
+# PUBG Mobile
+pubgmobile.com
+g.pubgmobile.com
+api.pubgmobile.com
+
+# Roblox
+api.roblox.com
+assetdelivery.roblox.com
+chat.roblox.com
+clientsettings.roblox.com
+friends.roblox.com
+games.roblox.com
+rbxcdn.com
+roblox.com
+voice.roblox.com
+
+# Steam
+steampowered.com
+steamcommunity.com
+steamcontent.com
+steamstatic.com
+
+# Xbox Live
+xbox.com
+xboxlive.com
+api.xboxlive.com
+login.live.com
+account.live.com
+xbl.mp.microsoft.com
+
+# --- Sistemas de Smart TV ---
+
+# LG (webOS)
+eic.lgappstv.com
+lgtvcommon.com
+rd.webos.com
+snu.lge.com
+us.lgappstv.com
+
+# Samsung (Tizen)
+apps.samsung.com
+gpm.samsungqbe.com
+samsung.com
+samsungcloudsolution.net
+samsungotn.net
+samsungqbe.com
+time.samsung.com
+
+# --- Plataformas de Video, Música y Entretenimiento ---
+
+# Amazon Music
+music.amazon.com
+api.music.amazon.com
+
+# Amazon Prime Video
+aiv-cdn.net
+aiv-delivery.net
+amazonvideo.com
+atv-ps.amazon.com
+images-na.ssl-images-amazon.com
+media-amazon.com
+primevideo.com
+pv-cdn.net
+
+# Apple Music
+music.apple.com
+
+# Apple TV
+api.apple-cloudkit.com
+apple-tv.com
+books.apple.com
+buy.itunes.apple.com
+is1-ssl.mzstatic.com
+is2-ssl.mzstatic.com
+is3-ssl.mzstatic.com
+is4-ssl.mzstatic.com
+is5-ssl.mzstatic.com
+itunes.apple.com
+mzstatic.com
+tv.apple.com
+
+# Cinemex
+cinemex.com
+api.cinemex.com
+
+# Cinépolis
+cinepolis.com
+api.cinepolis.com
+
+# Cinépolis KLIC
+cinepolisklic.com
+api.cinepolisklic.com
+
+# Crunchyroll
+crunchyroll.com
+api.crunchyroll.com
+static.crunchyroll.com
+
+# Disney+
+bamgrid.com
+cdn.registerdisney.go.com
+disney-plus.net
+disneyplus.com
+dssott.com
+execute-api.us-east-1.amazonaws.com
+global.edge.bamgrid.com
+
+# Max (HBO Max)
+execute-api.us-east-1.amazonaws.com
+hbo.com
+hbomax.com
+hbomaxcdn.com
+hbonow.com
+play.hbomax.com
+s3.amazonaws.com
+sr.max.com
+max.com
+
+# Netflix
+netflix.com
+nflxext.com
+nflximg.net
+nflxso.net
+nflxvideo.net
+
+# Spotify
+spoti.fi
+scdn.co
+i.scdn.co
+dealers.spotify.com
+omni.spotify.com
+
+# Ticketmaster
+ticketmaster.com.mx
+api.ticketmaster.com
+
+# Twitch
+api.twitch.tv
+jtvnw.net
+ttvnw.net
+twitch.tv
+twitchcdn.net
+
+# YouTube
+googlevideo.com
+s.ytimg.com
+youtu.be
+youtube.com
+youtubei.googleapis.com
+yt3.ggpht.com
+ytimg.com
+
+# YouTube Music
+music.googleapis.com
+music.youtube.com
+ytmusic.be
+
+# --- Redes Sociales y Comunicación ---
+
+# Discord
+cdn.discordapp.com
+discord.com
+discord.gg
+discord.media
+discordapp.com
+discordapp.net
+
+# Facebook
+facebook.com
+fb.com
+fbcdn.net
+fbsbx.com
+graph.facebook.com
+m.facebook.com
+messenger.com
+mqtt.facebook.com
+scontent.xx.fbcdn.net
+static.xx.fbcdn.net
+
+# Instagram
+api.instagram.com
+cdninstagram.com
+edge-chat.instagram.com
+graph.instagram.com
+i.instagram.com
+instagram.com
+
+# LinkedIn
+licdn.com
+linkedin.com
+media-exp1.licdn.com
+static-exp1.licdn.com
+
+# Reddit
+i.redd.it
+reddit.com
+redditmedia.com
+redditstatic.com
+redd.it
+v.redd.it
+www.redditstatic.com
+
+# Snapchat
+app.snapchat.com
+feelinsonice.com
+sc-cdn.net
+snap-dev.net
+snapchat.com
+
+# Telegram
+api.telegram.org
+aurora.web.telegram.org
+t.me
+telegram.org
+telesco.pe
+venus.web.telegram.org
+web.telegram.org
+
+# TikTok
+api.tiktokv.com
+p16-sign-va.tiktokcdn.com
+tiktok.com
+tiktokcdn.com
+tiktokv.com
+
+# WeChat
+szmmsns.qpic.cn
+szsns.video.qpic.cn
+wechat.com
+weixin.qq.com
+
+# WhatsApp
+g.whatsapp.net
+media.whatsapp.net
+mmg.whatsapp.net
+static.whatsapp.net
+v.whatsapp.net
+whatsapp.com
+whatsapp.net
+
+# X (Twitter)
+abs-0.twimg.com
+api.twitter.com
+t.co
+twimg.com
+twitter.com
+upload.twitter.com
+video.twimg.com
+x.com
+
+# --- Servicios, Gobierno y Utilidades ---
+
+# App CDMX
+cdmx.gob.mx
+api.cdmx.gob.mx
+
+# CFE Contigo
+cfe.mx
+app.cfe.mx
+
+# Dropbox
+dropbox.com
+dropboxapi.com
+dropboxstatic.com
+
+# Gob.mx
+gob.mx
+api.gob.mx
+cdn.gob.mx
+
+# Google Drive
+drive.google.com
+www.googleapis.com
+
+# Google Maps
+maps.googleapis.com
+mt0.google.com
+mt1.google.com
+
+# IMSS Digital
+imss.gob.mx
+serviciosdigitales.imss.gob.mx
+
+# OneDrive
+onedrive.live.com
+storage.live.com
+api.onedrive.com
+login.live.com
+account.live.com
+
+# SAT
+sat.gob.mx
+www.sat.gob.mx
+
+# Salud Digna
+salud-digna.org
+api.salud-digna.org
+
+# Telmex
+telmex.com
+mitelmex.com
+api.telmex.com
+
+# Waze
+waze.com
+livemap.waze.com
+maps.waze.com
+
+# --- Transporte y Viajes ---
+
+# ADO Móvil
+ado.com.mx
+api.ado.com.mx
+
+# Aeroméxico
+aeromexico.com
+api.aeromexico.com
+
+# Airbnb
+airbnb.com
+airbnb.mx
+a0.muscache.com
+
+# Didi
+didiglobal.com
+api.didiglobal.com
+static.didiglobal.com
+
+# Rappi
+rappi.com
+rappi.com.mx
+api.rappi.com
+static.rappi.com
+
+# Uber
+api.uber.com
+cn-geo1.uber.com
+uber-cdn.com
+uber.com
+
+# Uber Eats
+ubereats.com
+api.ubereats.com
+
+# Volaris
+volaris.com
+api.volaris.com
