@@ -4,6 +4,11 @@
 aforemovil.com.mx
 api.aforemovil.com.mx
 
+# American Express
+americanexpress.com
+americanexpress.com.mx
+global.americanexpress.com
+
 # Apple Pay
 apple.com
 apple-pay-gateway.apple.com
@@ -32,6 +37,10 @@ bbva.com
 bbva.mx
 bbvanet.com.mx
 
+# Diners Club
+dinersclub.com
+dinersclub.com.mx
+
 # Google Pay / Wallet
 pay.google.com
 pay.googleapis.com
@@ -42,6 +51,11 @@ wallet.google.com
 hsbc.com.mx
 api.hsbc.com.mx
 www.hsbc.com.mx
+
+# Mastercard
+mastercard.com
+mastercard.com.mx
+api.mastercard.com
 
 # PayPal
 paypal.com
@@ -56,6 +70,11 @@ api.santander.com.mx
 # Spin by OXXO
 spinbyoxxo.com.mx
 api.spinbyoxxo.com.mx
+
+# Visa
+visa.com
+visa.com.mx
+api.visa.com
 
 # --- Compras ---
 
@@ -73,7 +92,6 @@ ae.aliexpress.com
 ae01.alicdn.com
 aer.aliexpress.com
 aliexpress.com
-img.alicdn.com
 
 # Amazon
 amazon.com
@@ -89,6 +107,9 @@ despensa.bodegaaurrera.com.mx
 # Chedraui
 chedraui.com.mx
 api.chedraui.com.mx
+
+# Costco (Añadir como Wildcard en Pi-hole)
+costco.com.mx
 
 # El Palacio de Hierro
 elpalaciodehierro.com
@@ -151,20 +172,40 @@ assets.walmartimages.com.mx
 
 # --- Juegos ---
 
+# Call of Duty: Mobile
+callofduty.com
+api.activision.com
+cdn.activision.com
+demonware.net
+
 # Candy Crush
 candycrush.king.com
 candycrushsaga.com
 cdn.king.com
 king.com
 
-# Clash of Clans
+# Clash of Clans / Clash Royale
 clashofclans.com
+clashroyale.com
 supercell.com
 cdn.supercell.com
 
-# Epic Games
+# Epic Games / Fortnite
 epicgames.com
 launcher.epicgames.com
+fortnite.com
+fortnite-public-service-prod.ol.epicgames.com
+
+# Garena Free Fire
+freefiremobile.com
+ff.garena.com
+cdn.garena.com
+garena.sg
+
+# Genshin Impact
+genshinimpact.com
+hoyoverse.com
+api-os-takumi.mihoyo.com
 
 # PlayStation Network
 playstation.com
@@ -285,7 +326,6 @@ hbomax.com
 hbomaxcdn.com
 hbonow.com
 play.hbomax.com
-s3.amazonaws.com
 sr.max.com
 max.com
 
@@ -300,8 +340,7 @@ nflxvideo.net
 spoti.fi
 scdn.co
 i.scdn.co
-dealers.spotify.com
-omni.spotify.com
+googleusercontent.com
 
 # Ticketmaster
 ticketmaster.com.mx
@@ -347,8 +386,6 @@ graph.facebook.com
 m.facebook.com
 messenger.com
 mqtt.facebook.com
-scontent.xx.fbcdn.net
-static.xx.fbcdn.net
 
 # Instagram
 api.instagram.com
@@ -363,6 +400,11 @@ licdn.com
 linkedin.com
 media-exp1.licdn.com
 static-exp1.licdn.com
+
+# Pinterest
+pinterest.com
+pinterest.com.mx
+i.pinimg.com
 
 # Reddit
 i.redd.it
@@ -449,6 +491,10 @@ www.googleapis.com
 maps.googleapis.com
 mt0.google.com
 mt1.google.com
+
+# iCloud
+icloud.com
+mzstatic.com
 
 # IMSS Digital
 imss.gob.mx
