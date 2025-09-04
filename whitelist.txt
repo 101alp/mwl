@@ -108,7 +108,7 @@ despensa.bodegaaurrera.com.mx
 chedraui.com.mx
 api.chedraui.com.mx
 
-# Costco (Añadir como Wildcard en Pi-hole)
+# Costco
 costco.com.mx
 
 # El Palacio de Hierro
