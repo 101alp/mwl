@@ -250,6 +250,11 @@ lgtvcommon.com
 rd.webos.com
 snu.lge.com
 us.lgappstv.com
+ngfts.lge.com
+eic.lge.com
+lge.com
+snutt.lge.com
+lgiot.lge.com
 
 # Samsung (Tizen)
 apps.samsung.com
