@@ -289,7 +289,7 @@ gpm.samsungqbe.com
 sas.samsungcloudsolution.com
 hub.samsungapps.com
 vas.samsungapps.com
-www.samsung.com/sec
+www.samsung.com
 cdn.samsungcloudsolution.com
 img-resize-cdn-prod.samsungnyc.com
 sdk-multiscreen.samsung.com
