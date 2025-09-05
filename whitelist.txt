@@ -1,90 +1,301 @@
-# --- Banca ---
+# --- Plataformas de Video, Música y Entretenimiento ---
 
-# AforeMóvil
-aforemovil.com.mx
-api.aforemovil.com.mx
+# YouTube
+youtube.com
+googlevideo.com
+youtubei.googleapis.com
+s.ytimg.com
+yt3.ggpht.com
+youtu.be
+ggpht.com
+ytimg.com
 
-# American Express
-americanexpress.com
-americanexpress.com.mx
-global.americanexpress.com
+# Netflix
+netflix.com
+nflxvideo.net
+nflximg.net
+nflxso.net
+nflxext.com
 
-# Apple Pay
-apple.com
-apple-pay-gateway.apple.com
-applepay.icloud.com
+# Spotify
+scdn.co
+spoti.fi
+i.scdn.co
+pscdn.co
+googleusercontent.com
 
-# Arkose Labs (Servicio Anti-Fraude usado por varios bancos y PayPal)
-arkoselabs.com
-client-api.arkoselabs.com
+# Amazon Prime Video
+primevideo.com
+aiv-cdn.net
+aiv-delivery.net
+pv-cdn.net
+amazonvideo.com
+atv-ps.amazon.com
 
-# Banamex (Citibanamex)
-api.citibanamex.com
-bancanet.banamex.com
-citibanamex.com
-portal.banamex.com.mx
+# Disney+
+disneyplus.com
+bamgrid.com
+dssott.com
+global.edge.bamgrid.com
+execute-api.us-east-1.amazonaws.com
+disney-plus.net
+cdn.registerdisney.go.com
+# Para gestión de consentimiento (necesario para login)
+onetrust.com
+disney-portal.my.onetrust.com
+cdn.cookielaw.org
 
-# BanCoppel
-api.bancoppel.com
-bancoppel.com
-cdn.bancoppel.com
-portal.bancoppel.com
+# Max (HBO Max)
+max.com
+play.hbomax.com
+hbomax.com
+hbomaxcdn.com
+hbonow.com
+sr.max.com
+hbo.com
 
-# Banorte
-banorte.com
-banorte.com.mx
-servicios.banorte.com
+# Twitch
+twitch.tv
+api.twitch.tv
+ttvnw.net
+jtvnw.net
+twitchcdn.net
 
-# BBVA
-api.bbva.com
-bbva.com
-bbva.mx
-bbvanet.com.mx
+# Apple TV
+tv.apple.com
+itunes.apple.com
+mzstatic.com
+api.apple-cloudkit.com
+is1-ssl.mzstatic.com
+is2-ssl.mzstatic.com
+is3-ssl.mzstatic.com
+is4-ssl.mzstatic.com
+is5-ssl.mzstatic.com
+buy.itunes.apple.com
+apple-tv.com
+books.apple.com
 
-# Diners Club
-dinersclub.com
-dinersclub.com.mx
+# Apple Music
+music.apple.com
 
-# Google Pay / Wallet
-pay.google.com
-pay.googleapis.com
-pay.gstatic.com
-wallet.google.com
-# Para reCAPTCHA en pagos y logins
-grecaptcha.com
-recaptcha.net
+# YouTube Music
+music.youtube.com
+music.googleapis.com
+ytmusic.be
 
-# HSBC
-hsbc.com.mx
-api.hsbc.com.mx
-www.hsbc.com.mx
+# Crunchyroll
+crunchyroll.com
+api.crunchyroll.com
+static.crunchyroll.com
 
-# Mastercard
-mastercard.com
-mastercard.com.mx
-api.mastercard.com
+# Cinépolis
+cinepolis.com
+api.cinepolis.com
 
-# PayPal
-paypal.com
-api.paypal.com
-assets.paypal.com
-c.paypal.com
+# Cinemex
+cinemex.com
+api.cinemex.com
 
-# Santander
-santander.com.mx
-supernet.santander.com.mx
-api.santander.com.mx
+# Ticketmaster
+ticketmaster.com.mx
+api.ticketmaster.com
 
-# Spin by OXXO
-spinbyoxxo.com.mx
-api.spinbyoxxo.com.mx
+# Cinépolis KLIC
+cinepolisklic.com
+api.cinepolisklic.com
 
-# Visa
-visa.com
-visa.com.mx
-api.visa.com
+# Amazon Music
+music.amazon.com
+api.music.amazon.com
+
+# --- Redes Sociales y Comunicación ---
+
+# WhatsApp
+whatsapp.com
+whatsapp.net
+g.whatsapp.net
+v.whatsapp.net
+media.whatsapp.net
+mmg.whatsapp.net
+static.whatsapp.net
+
+# Facebook
+facebook.com
+fbcdn.net
+graph.facebook.com
+edge-chat.facebook.com
+mqtt.facebook.com
+fb.com
+fbsbx.com
+m.facebook.com
+
+# Messenger
+messenger.com
+
+# Instagram
+instagram.com
+api.instagram.com
+i.instagram.com
+graph.instagram.com
+edge-chat.instagram.com
+cdninstagram.com
+
+# TikTok
+tiktok.com
+api.tiktokv.com
+p16-sign-va.tiktokcdn.com
+tiktokv.com
+tiktokcdn.com
+
+# X (Twitter)
+x.com
+twitter.com
+api.twitter.com
+pbs.twimg.com
+video.twimg.com
+upload.twitter.com
+twimg.com
+t.co
+abs-0.twimg.com
+
+# Telegram
+telegram.org
+api.telegram.org
+t.me
+web.telegram.org
+aurora.web.telegram.org
+venus.web.telegram.org
+telesco.pe
+
+# Discord
+discord.com
+discord.gg
+gateway.discord.gg
+cdn.discordapp.com
+discord.media
+discordapp.com
+discordapp.net
+
+# LinkedIn
+linkedin.com
+licdn.com
+static-exp1.licdn.com
+media-exp1.licdn.com
+
+# Reddit
+reddit.com
+redditmedia.com
+redditstatic.com
+i.redd.it
+v.redd.it
+redd.it
+www.redditstatic.com
+
+# Pinterest
+pinterest.com
+i.pinimg.com
+pinterest.com.mx
+
+# Snapchat
+snapchat.com
+app.snapchat.com
+gateway.snapchat.com
+messaging.snapchat.com
+sc-cdn.net
+feelinsonice.com
+snap-dev.net
+
+# WeChat
+wechat.com
+weixin.qq.com
+szmmsns.qpic.cn
+szsns.video.qpic.cn
 
 # --- Compras ---
+
+# Mercado Libre
+mercadolibre.com.mx
+mercadolibre.com
+api.mercadolibre.com
+mercadopago.com.mx
+mercadopago.com
+http2.mlstatic.com
+mlstatic.com
+static.mlstatic.com
+
+# Amazon
+amazon.com
+ssl-images-amazon.com
+images-na.ssl-images-amazon.com
+m.media-amazon.com
+media-amazon.com
+
+# Walmart
+walmart.com.mx
+super.walmart.com.mx
+assets.walmartimages.com.mx
+
+# Liverpool
+liverpool.com.mx
+graphql.liverpool.com.mx
+assetspwa.liverpool.com.mx
+
+# Bodega Aurrerá
+bodegaaurrera.com.mx
+despensa.bodegaaurrera.com.mx
+
+# OXXO
+oxxo.com
+mi.oxxo.com
+oxxopay.com
+
+# SHEIN
+shein.com
+api.shein.com
+img.shein.com
+
+# AliExpress
+aliexpress.com
+ae.aliexpress.com
+aer.aliexpress.com
+ae01.alicdn.com
+
+# Chedraui
+chedraui.com.mx
+api.chedraui.com.mx
+
+# Soriana
+soriana.com
+api.soriana.com
+sorianadomicilio.com
+
+# Costco
+costco.com.mx
+
+# Sam's Club
+sams.com.mx
+assets.sams.com.mx
+
+# The Home Depot
+homedepot.com.mx
+api.homedepot.com.mx
+images.homedepot-static.com
+assets.homedepot-static.com
+
+# Sears
+sears.com.mx
+api.sears.com.mx
+asset.sears.com.mx
+
+# Suburbia
+suburbia.com.mx
+api.suburbia.com.mx
+assets.suburbia.com.mx
+
+# El Palacio de Hierro
+elpalaciodehierro.com
+api.elpalaciodehierro.com
+assets.elpalaciodehierro.com
 
 # Alibaba
 alibaba.com
@@ -95,452 +306,36 @@ sc01.alicdn.com
 sc02.alicdn.com
 sc04.alicdn.com
 
-# AliExpress
-ae.aliexpress.com
-ae01.alicdn.com
-aer.aliexpress.com
-aliexpress.com
-
-# Amazon
-amazon.com
-images-na.ssl-images-amazon.com
-m.media-amazon.com
-media-amazon.com
-ssl-images-amazon.com
-
-# Bodega Aurrerá
-bodegaaurrera.com.mx
-despensa.bodegaaurrera.com.mx
-
-# Chedraui
-chedraui.com.mx
-api.chedraui.com.mx
-
-# Costco
-costco.com.mx
-
-# El Palacio de Hierro
-elpalaciodehierro.com
-assets.elpalaciodehierro.com
-api.elpalaciodehierro.com
-
-# Liverpool
-liverpool.com.mx
-assetspwa.liverpool.com.mx
-graphql.liverpool.com.mx
-
-# Mercado Libre
-api.mercadolibre.com
-http2.mlstatic.com
-mercadolibre.com
-mercadolibre.com.mx
-mercadopago.com
-mercadopago.com.mx
-mlstatic.com
-static.mlstatic.com
-
-# OXXO
-oxxo.com
-oxxopay.com
-mi.oxxo.com
-
-# Sam's Club
-sams.com.mx
-assets.sams.com.mx
-
-# Sears
-sears.com.mx
-asset.sears.com.mx
-api.sears.com.mx
-
-# SHEIN
-shein.com
-img.shein.com
-api.shein.com
-
-# Soriana
-soriana.com
-sorianadomicilio.com
-api.soriana.com
-
-# Suburbia
-suburbia.com.mx
-assets.suburbia.com.mx
-api.suburbia.com.mx
-
-# The Home Depot
-homedepot.com.mx
-api.homedepot.com.mx
-assets.homedepot-static.com
-images.homedepot-static.com
-
-# Walmart
-walmart.com.mx
-super.walmart.com.mx
-assets.walmartimages.com.mx
-
-# --- Juegos ---
-
-# Call of Duty: Mobile
-callofduty.com
-api.activision.com
-cdn.activision.com
-demonware.net
-
-# Candy Crush
-candycrush.king.com
-candycrushsaga.com
-cdn.king.com
-king.com
-
-# Clash of Clans / Clash Royale
-clashofclans.com
-clashroyale.com
-supercell.com
-cdn.supercell.com
-
-# Epic Games / Fortnite
-epicgames.com
-launcher.epicgames.com
-fortnite.com
-fortnite-public-service-prod.ol.epicgames.com
-datarouter.ol.epicgames.com
-
-# Garena Free Fire
-freefiremobile.com
-ff.garena.com
-cdn.garena.com
-garena.sg
-
-# Genshin Impact
-genshinimpact.com
-hoyoverse.com
-api-os-takumi.mihoyo.com
-
-# PlayStation Network
-playstation.com
-playstation.net
-api.playstation.com
-ca.psn.services.playstation.net
-
-# PUBG Mobile
-pubgmobile.com
-g.pubgmobile.com
-api.pubgmobile.com
-
-# Roblox
-api.roblox.com
-assetdelivery.roblox.com
-chat.roblox.com
-clientsettings.roblox.com
-friends.roblox.com
-games.roblox.com
-rbxcdn.com
-roblox.com
-voice.roblox.com
-
-# Steam
-steampowered.com
-steamcommunity.com
-steamcontent.com
-steamstatic.com
-cdn.steamstatic.com
-
-# Xbox Live
-xbox.com
-xboxlive.com
-api.xboxlive.com
-login.live.com
-account.live.com
-login.microsoftonline.com
-xbl.mp.microsoft.com
-
-# --- Sistemas de Smart TV ---
-
-# LG (webOS)
-aic-gfts.lge.com
-lgtvcommon.com
-rd.webos.com
-snu.lge.com
-snutt.lge.com
-ngfts.lge.com
-us.lgappstv.com
-eic.lgappstv.com
-apps.svc.lgappstv.com
-smart.lgappstv.com
-cdn.lgappstv.com
-lgiot.lge.com
-lge.com
-eic.lge.com
-sdk.lgtvsdp.com
-cdn.jsdelivr.net
-
-# Samsung (Tizen)
-time.samsungcloudsolution.com
-config.samsungads.com
-samsungotn.net
-www.samsungotn.net
-otn.samsungcloudcdn.com
-osb-apps.samsungqbe.com
-otnprd10.samsungcloudsolution.net
-lcprd1.samsungcloudsolution.net
-api.samsungyosemite.com
-gpm.samsungqbe.com
-sas.samsungcloudsolution.com
-hub.samsungapps.com
-vas.samsungapps.com
-www.samsung.com
-cdn.samsungcloudsolution.com
-img-resize-cdn-prod.samsungnyc.com
-sdk-multiscreen.samsung.com
-multiscreen.samsung.com
-api.smartthings.com
-dispatch.smartthings.com
-c2c-us.smartthings.com
-ocf.samsungqbe.com
-
-# --- Plataformas de Video, Música y Entretenimiento ---
-
-# Amazon Music
-music.amazon.com
-api.music.amazon.com
-
-# Amazon Prime Video
-aiv-cdn.net
-aiv-delivery.net
-amazonvideo.com
-atv-ps.amazon.com
-images-na.ssl-images-amazon.com
-media-amazon.com
-primevideo.com
-pv-cdn.net
-
-# Apple Music
-music.apple.com
-
-# Apple TV
-api.apple-cloudkit.com
-apple-tv.com
-books.apple.com
-buy.itunes.apple.com
-is1-ssl.mzstatic.com
-is2-ssl.mzstatic.com
-is3-ssl.mzstatic.com
-is4-ssl.mzstatic.com
-is5-ssl.mzstatic.com
-itunes.apple.com
-mzstatic.com
-tv.apple.com
-
-# Cinemex
-cinemex.com
-api.cinemex.com
-
-# Cinépolis
-cinepolis.com
-api.cinepolis.com
-
-# Cinépolis KLIC
-cinepolisklic.com
-api.cinepolisklic.com
-
-# Crunchyroll
-crunchyroll.com
-api.crunchyroll.com
-static.crunchyroll.com
-
-# Disney+
-bamgrid.com
-cdn.registerdisney.go.com
-disney-plus.net
-disneyplus.com
-dssott.com
-execute-api.us-east-1.amazonaws.com
-global.edge.bamgrid.com
-# Para gestión de consentimiento (necesario para login)
-disney-portal.my.onetrust.com
-cdn.cookielaw.org
-onetrust.com
-
-# Max (HBO Max)
-execute-api.us-east-1.amazonaws.com
-hbo.com
-hbomax.com
-hbomaxcdn.com
-hbonow.com
-play.hbomax.com
-sr.max.com
-max.com
-
-# Netflix
-netflix.com
-nflxext.com
-nflximg.net
-nflxso.net
-nflxvideo.net
-
-# Spotify
-spoti.fi
-scdn.co
-i.scdn.co
-pscdn.co
-googleusercontent.com
-
-# Ticketmaster
-ticketmaster.com.mx
-api.ticketmaster.com
-
-# Twitch
-api.twitch.tv
-jtvnw.net
-ttvnw.net
-twitch.tv
-twitchcdn.net
-
-# YouTube
-googlevideo.com
-s.ytimg.com
-youtu.be
-youtube.com
-youtubei.googleapis.com
-yt3.ggpht.com
-ggpht.com
-ytimg.com
-
-# YouTube Music
-music.googleapis.com
-music.youtube.com
-ytmusic.be
-
-# --- Redes Sociales y Comunicación ---
-
-# Discord
-cdn.discordapp.com
-discord.com
-discord.gg
-discord.media
-discordapp.com
-discordapp.net
-
-# Facebook
-facebook.com
-fb.com
-fbcdn.net
-fbsbx.com
-graph.facebook.com
-m.facebook.com
-messenger.com
-mqtt.facebook.com
-
-# Instagram
-api.instagram.com
-cdninstagram.com
-edge-chat.instagram.com
-graph.instagram.com
-i.instagram.com
-instagram.com
-
-# LinkedIn
-licdn.com
-linkedin.com
-media-exp1.licdn.com
-static-exp1.licdn.com
-
-# Pinterest
-pinterest.com
-pinterest.com.mx
-i.pinimg.com
-
-# Reddit
-i.redd.it
-reddit.com
-redditmedia.com
-redditstatic.com
-redd.it
-v.redd.it
-www.redditstatic.com
-
-# Snapchat
-app.snapchat.com
-feelinsonice.com
-sc-cdn.net
-snap-dev.net
-snapchat.com
-
-# Telegram
-api.telegram.org
-aurora.web.telegram.org
-t.me
-telegram.org
-telesco.pe
-venus.web.telegram.org
-web.telegram.org
-
-# TikTok
-api.tiktokv.com
-p16-sign-va.tiktokcdn.com
-tiktok.com
-tiktokcdn.com
-tiktokv.com
-
-# WeChat
-szmmsns.qpic.cn
-szsns.video.qpic.cn
-wechat.com
-weixin.qq.com
-
-# WhatsApp
-g.whatsapp.net
-media.whatsapp.net
-mmg.whatsapp.net
-static.whatsapp.net
-v.whatsapp.net
-whatsapp.com
-whatsapp.net
-
-# X (Twitter)
-abs-0.twimg.com
-api.twitter.com
-pbs.twimg.com
-t.co
-twimg.com
-twitter.com
-upload.twitter.com
-video.twimg.com
-x.com
-
 # --- Servicios, Gobierno y Utilidades ---
 
-# App CDMX
-cdmx.gob.mx
-api.cdmx.gob.mx
-
-# CFE Contigo
-cfe.mx
-app.cfe.mx
-
-# Dropbox
-dropbox.com
-dropboxapi.com
-dropboxstatic.com
-
-# Gob.mx
-gob.mx
-api.gob.mx
-cdn.gob.mx
-
-# Google (General)
+# Google (General y Autenticación)
+google.com
+www.google.com
 accounts.google.com
-ssl.gstatic.com
+googleapis.com
 www.googleapis.com
-# Para Google Sign-In
-accounts.google.com
-accounts.youtube.com
+gstatic.com
+ssl.gstatic.com
+www.gstatic.com
+fonts.gstatic.com
 signin.l.google.com
+apis.google.com
+clients2.google.com
+clients4.google.com
+clients6.google.com
+accounts.youtube.com
+google.com.mx
+# Red de Contenido de Google, esencial para descargas y servicios
+1e100.net
 
 # Google Drive
 drive.google.com
 drive.files.ggpht.com
+
+# Google Photos
+photos.google.com
+lh3.googleusercontent.com
+apidata.googleusercontent.com
 
 # Google Maps
 maps.googleapis.com
@@ -548,29 +343,72 @@ mt0.google.com
 mt1.google.com
 maps.gstatic.com
 
-# iCloud
-icloud.com
-gateway.icloud.com
-mzstatic.com
+# Google Play Store
+play.google.com
+play.googleapis.com
+android.clients.google.com
 
-# IMSS Digital
-imss.gob.mx
-serviciosdigitales.imss.gob.mx
+# Google Calendar
+calendar.google.com
+
+# Google Meet
+meet.google.com
+meetings.googleapis.com
+
+# Google Workspace (Docs, Sheets, Slides)
+docs.google.com
+docs.googleusercontent.com
+
+# Google Fonts
+fonts.googleapis.com
+
+# Google Classroom
+classroom.google.com
+
+# Microsoft (General / Windows)
+update.microsoft.com
+windowsupdate.com
+cdn.dl.delivery.mp.microsoft.com
+displaycatalog.mp.microsoft.com
+storecatalog.recs.microsoft.com
+ctldl.windowsupdate.com
 
 # OneDrive
 onedrive.live.com
-storage.live.com
 api.onedrive.com
-login.live.com
-account.live.com
+storage.live.com
+
+# iCloud
+icloud.com
+gateway.icloud.com
+
+# Dropbox
+dropbox.com
+dropboxapi.com
+dropboxstatic.com
+
+# MEGA
+mega.nz
+mega.io
+eu.static.mega.co.nz
+g.static.mega.co.nz
+
+# Gob.mx
+gob.mx
+api.gob.mx
+cdn.gob.mx
 
 # SAT
 sat.gob.mx
 www.sat.gob.mx
 
-# Salud Digna
-salud-digna.org
-api.salud-digna.org
+# CFE Contigo
+cfe.mx
+app.cfe.mx
+
+# IMSS Digital
+imss.gob.mx
+serviciosdigitales.imss.gob.mx
 
 # Telmex
 telmex.com
@@ -582,42 +420,272 @@ waze.com
 livemap.waze.com
 maps.waze.com
 
+# App CDMX
+cdmx.gob.mx
+api.cdmx.gob.mx
+
+# Salud Digna
+salud-digna.org
+api.salud-digna.org
+
+# --- Banca ---
+
+# BBVA
+bbva.mx
+bbva.com
+bbvanet.com.mx
+api.bbva.com
+
+# Banamex (Citibanamex)
+citibanamex.com
+bancanet.banamex.com
+api.citibanamex.com
+portal.banamex.com.mx
+
+# Santander
+santander.com.mx
+supernet.santander.com.mx
+api.santander.com.mx
+
+# Banorte
+banorte.com
+banorte.com.mx
+servicios.banorte.com
+
+# HSBC
+hsbc.com.mx
+www.hsbc.com.mx
+api.hsbc.com.mx
+
+# BanCoppel
+bancoppel.com
+portal.bancoppel.com
+api.bancoppel.com
+cdn.bancoppel.com
+
+# PayPal
+paypal.com
+api.paypal.com
+c.paypal.com
+assets.paypal.com
+
+# American Express
+americanexpress.com.mx
+americanexpress.com
+global.americanexpress.com
+
+# Spin by OXXO
+spinbyoxxo.com.mx
+api.spinbyoxxo.com.mx
+
+# Google Pay / Wallet
+pay.google.com
+wallet.google.com
+pay.googleapis.com
+pay.gstatic.com
+
+# Apple Pay
+apple.com
+apple-pay-gateway.apple.com
+applepay.icloud.com
+
+# AforeMóvil
+aforemovil.com.mx
+api.aforemovil.com.mx
+
+# Visa
+visa.com
+visa.com.mx
+api.visa.com
+
+# Mastercard
+mastercard.com
+mastercard.com.mx
+api.mastercard.com
+
+# Arkose Labs (Servicio Anti-Fraude)
+arkoselabs.com
+client-api.arkoselabs.com
+
+# Diners Club
+dinersclub.com
+dinersclub.com.mx
+
+# --- Juegos ---
+
+# Epic Games / Fortnite
+epicgames.com
+fortnite.com
+launcher.epicgames.com
+fortnite-public-service-prod.ol.epicgames.com
+datarouter.ol.epicgames.com
+
+# Roblox
+roblox.com
+api.roblox.com
+games.roblox.com
+voice.roblox.com
+chat.roblox.com
+assetdelivery.roblox.com
+rbxcdn.com
+friends.roblox.com
+clientsettings.roblox.com
+
+# Call of Duty: Mobile
+callofduty.com
+api.activision.com
+cdn.activision.com
+demonware.net
+
+# Garena Free Fire
+ff.garena.com
+freefiremobile.com
+garena.sg
+cdn.garena.com
+
+# Clash of Clans / Clash Royale
+supercell.com
+clashofclans.com
+clashroyale.com
+cdn.supercell.com
+
+# Genshin Impact
+hoyoverse.com
+genshinimpact.com
+api-os-takumi.mihoyo.com
+
+# PUBG Mobile
+pubgmobile.com
+api.pubgmobile.com
+g.pubgmobile.com
+
+# Steam
+steampowered.com
+steamcommunity.com
+steamstatic.com
+cdn.steamstatic.com
+steamcontent.com
+
+# PlayStation Network
+playstation.com
+playstation.net
+api.playstation.com
+ca.psn.services.playstation.net
+
+# Xbox Live
+xbox.com
+xboxlive.com
+api.xboxlive.com
+login.live.com
+account.live.com
+login.microsoftonline.com
+xbl.mp.microsoft.com
+
+# Candy Crush
+king.com
+candycrushsaga.com
+candycrush.king.com
+cdn.king.com
+
 # --- Transporte y Viajes ---
 
-# ADO Móvil
-ado.com.mx
-api.ado.com.mx
-
-# Aeroméxico
-aeromexico.com
-api.aeromexico.com
-
-# Airbnb
-airbnb.com
-airbnb.mx
-a0.muscache.com
+# Uber
+uber.com
+api.uber.com
+uber-cdn.com
+cn-geo1.uber.com
 
 # Didi
 didiglobal.com
 api.didiglobal.com
 static.didiglobal.com
 
-# Rappi
-rappi.com
-rappi.com.mx
-api.rappi.com
-static.rappi.com
-
-# Uber
-api.uber.com
-cn-geo1.uber.com
-uber-cdn.com
-uber.com
-
 # Uber Eats
 ubereats.com
 api.ubereats.com
 
+# Rappi
+rappi.com.mx
+rappi.com
+api.rappi.com
+static.rappi.com
+
+# Airbnb
+airbnb.com
+airbnb.mx
+a0.muscache.com
+
+# Aeroméxico
+aeromexico.com
+api.aeromexico.com
+
 # Volaris
 volaris.com
 api.volaris.com
+
+# ADO Móvil
+ado.com.mx
+api.ado.com.mx
+
+# --- Sistemas de Smart TV ---
+
+# Samsung (Tizen)
+samsung.com
+hub.samsungapps.com
+time.samsungcloudsolution.com
+otn.samsungcloudcdn.com
+samsungotn.net
+api.samsungyosemite.com
+cdn.samsungcloudsolution.com
+api.smartthings.com
+vas.samsungapps.com
+osb-apps.samsungqbe.com
+gpm.samsungqbe.com
+sas.samsungcloudsolution.com
+otnprd10.samsungcloudsolution.net
+lcprd1.samsungcloudsolution.net
+config.samsungads.com
+www.samsungotn.net
+img-resize-cdn-prod.samsungnyc.com
+sdk-multiscreen.samsung.com
+multiscreen.samsung.com
+dispatch.smartthings.com
+c2c-us.smartthings.com
+ocf.samsungqbe.com
+
+# LG (webOS)
+lge.com
+lgtvcommon.com
+us.lgappstv.com
+smart.lgappstv.com
+cdn.lgappstv.com
+snu.lge.com
+ngfts.lge.com
+aic-gfts.lge.com
+eic.lgappstv.com
+apps.svc.lgappstv.com
+lgiot.lge.com
+eic.lge.com
+sdk.lgtvsdp.com
+rd.webos.com
+snutt.lge.com
+cdn.jsdelivr.net
+
+# --- Certificados y Seguridad ---
+
+# Certificate Authorities (Para validar HTTPS)
+ocsp.digicert.com
+crl.digicert.com
+ocsp.pki.goog
+crl.pki.goog
+ocsp.sectigo.com
+crl.sectigo.com
+ocsp.godaddy.com
+crl.godaddy.com
+isrg.trustid.ocsp.identrust.com
+ocsp.identrust.com
+globalsign.com
+ocsp.globalsign.com
+# Para reCAPTCHA
+grecaptcha.com
+recaptcha.net
