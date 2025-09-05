@@ -14,6 +14,10 @@ apple.com
 apple-pay-gateway.apple.com
 applepay.icloud.com
 
+# Arkose Labs (Servicio Anti-Fraude usado por varios bancos y PayPal)
+arkoselabs.com
+client-api.arkoselabs.com
+
 # Banamex (Citibanamex)
 api.citibanamex.com
 bancanet.banamex.com
@@ -46,6 +50,9 @@ pay.google.com
 pay.googleapis.com
 pay.gstatic.com
 wallet.google.com
+# Para reCAPTCHA en pagos y logins
+grecaptcha.com
+recaptcha.net
 
 # HSBC
 hsbc.com.mx
@@ -61,6 +68,7 @@ api.mastercard.com
 paypal.com
 api.paypal.com
 assets.paypal.com
+c.paypal.com
 
 # Santander
 santander.com.mx
@@ -95,7 +103,7 @@ aliexpress.com
 
 # Amazon
 amazon.com
-images-amazon.com
+images-na.ssl-images-amazon.com
 m.media-amazon.com
 media-amazon.com
 ssl-images-amazon.com
@@ -126,6 +134,7 @@ api.mercadolibre.com
 http2.mlstatic.com
 mercadolibre.com
 mercadolibre.com.mx
+mercadopago.com
 mercadopago.com.mx
 mlstatic.com
 static.mlstatic.com
@@ -195,6 +204,7 @@ epicgames.com
 launcher.epicgames.com
 fortnite.com
 fortnite-public-service-prod.ol.epicgames.com
+datarouter.ol.epicgames.com
 
 # Garena Free Fire
 freefiremobile.com
@@ -211,6 +221,7 @@ api-os-takumi.mihoyo.com
 playstation.com
 playstation.net
 api.playstation.com
+ca.psn.services.playstation.net
 
 # PUBG Mobile
 pubgmobile.com
@@ -233,6 +244,7 @@ steampowered.com
 steamcommunity.com
 steamcontent.com
 steamstatic.com
+cdn.steamstatic.com
 
 # Xbox Live
 xbox.com
@@ -240,30 +252,52 @@ xboxlive.com
 api.xboxlive.com
 login.live.com
 account.live.com
+login.microsoftonline.com
 xbl.mp.microsoft.com
 
 # --- Sistemas de Smart TV ---
 
 # LG (webOS)
-eic.lgappstv.com
+aic-gfts.lge.com
 lgtvcommon.com
 rd.webos.com
 snu.lge.com
-us.lgappstv.com
-ngfts.lge.com
-eic.lge.com
-lge.com
 snutt.lge.com
+ngfts.lge.com
+us.lgappstv.com
+eic.lgappstv.com
+apps.svc.lgappstv.com
+smart.lgappstv.com
+cdn.lgappstv.com
 lgiot.lge.com
+lge.com
+eic.lge.com
+sdk.lgtvsdp.com
+cdn.jsdelivr.net
 
 # Samsung (Tizen)
-apps.samsung.com
-gpm.samsungqbe.com
-samsung.com
-samsungcloudsolution.net
+time.samsungcloudsolution.com
+config.samsungads.com
 samsungotn.net
-samsungqbe.com
-time.samsung.com
+www.samsungotn.net
+otn.samsungcloudcdn.com
+osb-apps.samsungqbe.com
+otnprd10.samsungcloudsolution.net
+lcprd1.samsungcloudsolution.net
+api.samsungyosemite.com
+gpm.samsungqbe.com
+sas.samsungcloudsolution.com
+hub.samsungapps.com
+vas.samsungapps.com
+www.samsung.com/sec
+cdn.samsungcloudsolution.com
+img-resize-cdn-prod.samsungnyc.com
+sdk-multiscreen.samsung.com
+multiscreen.samsung.com
+api.smartthings.com
+dispatch.smartthings.com
+c2c-us.smartthings.com
+ocf.samsungqbe.com
 
 # --- Plataformas de Video, Música y Entretenimiento ---
 
@@ -323,6 +357,10 @@ disneyplus.com
 dssott.com
 execute-api.us-east-1.amazonaws.com
 global.edge.bamgrid.com
+# Para gestión de consentimiento (necesario para login)
+disney-portal.my.onetrust.com
+cdn.cookielaw.org
+onetrust.com
 
 # Max (HBO Max)
 execute-api.us-east-1.amazonaws.com
@@ -345,6 +383,7 @@ nflxvideo.net
 spoti.fi
 scdn.co
 i.scdn.co
+pscdn.co
 googleusercontent.com
 
 # Ticketmaster
@@ -365,6 +404,7 @@ youtu.be
 youtube.com
 youtubei.googleapis.com
 yt3.ggpht.com
+ggpht.com
 ytimg.com
 
 # YouTube Music
@@ -461,6 +501,7 @@ whatsapp.net
 # X (Twitter)
 abs-0.twimg.com
 api.twitter.com
+pbs.twimg.com
 t.co
 twimg.com
 twitter.com
@@ -488,17 +529,28 @@ gob.mx
 api.gob.mx
 cdn.gob.mx
 
+# Google (General)
+accounts.google.com
+ssl.gstatic.com
+www.googleapis.com
+# Para Google Sign-In
+accounts.google.com
+accounts.youtube.com
+signin.l.google.com
+
 # Google Drive
 drive.google.com
-www.googleapis.com
+drive.files.ggpht.com
 
 # Google Maps
 maps.googleapis.com
 mt0.google.com
 mt1.google.com
+maps.gstatic.com
 
 # iCloud
 icloud.com
+gateway.icloud.com
 mzstatic.com
 
 # IMSS Digital
