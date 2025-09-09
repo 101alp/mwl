@@ -1,3 +1,10 @@
+# --- CDNs Globales y Servicios Base ---
+akamaihd.net
+akamaized.net
+fastly.net
+cloudflare.com
+cdnjs.cloudflare.com
+
 # --- Plataformas de Video, Música y Entretenimiento ---
 
 # YouTube
@@ -6,9 +13,11 @@ googlevideo.com
 youtubei.googleapis.com
 s.ytimg.com
 yt3.ggpht.com
+yt4.ggpht.com
 youtu.be
 ggpht.com
 ytimg.com
+ytimg.l.google.com
 
 # Netflix
 netflix.com
@@ -16,6 +25,8 @@ nflxvideo.net
 nflximg.net
 nflxso.net
 nflxext.com
+netflix.net
+nflxsearch.net
 
 # Spotify
 scdn.co
@@ -23,6 +34,8 @@ spoti.fi
 i.scdn.co
 pscdn.co
 googleusercontent.com
+audio-akp-quic.spotifycdn.com
+audio-fa.scdn.co
 
 # Amazon Prime Video
 primevideo.com
@@ -31,6 +44,7 @@ aiv-delivery.net
 pv-cdn.net
 amazonvideo.com
 atv-ps.amazon.com
+media-amazon.com
 
 # Disney+
 disneyplus.com
@@ -40,10 +54,12 @@ global.edge.bamgrid.com
 execute-api.us-east-1.amazonaws.com
 disney-plus.net
 cdn.registerdisney.go.com
-# Para gestión de consentimiento (necesario para login)
+registerdisney.go.com
+cdn.unid.go.com
 onetrust.com
 disney-portal.my.onetrust.com
 cdn.cookielaw.org
+bam.nr-data.net
 
 # Max (HBO Max)
 max.com
@@ -60,6 +76,8 @@ api.twitch.tv
 ttvnw.net
 jtvnw.net
 twitchcdn.net
+twitch-ext.rootonline.de
+ext-twitch.tv
 
 # Apple TV
 tv.apple.com
@@ -77,6 +95,7 @@ books.apple.com
 
 # Apple Music
 music.apple.com
+apple.music.audio
 
 # YouTube Music
 music.youtube.com
@@ -87,6 +106,9 @@ ytmusic.be
 crunchyroll.com
 api.crunchyroll.com
 static.crunchyroll.com
+img.crunchyroll.com
+pl.crunchyroll.com
+vrv.co
 
 # Cinépolis
 cinepolis.com
@@ -118,12 +140,15 @@ v.whatsapp.net
 media.whatsapp.net
 mmg.whatsapp.net
 static.whatsapp.net
+whatsappcdn.com
 
 # Facebook
 facebook.com
 fbcdn.net
+fbcdn.com
 graph.facebook.com
 edge-chat.facebook.com
+edge-mqtt.facebook.com
 mqtt.facebook.com
 fb.com
 fbsbx.com
@@ -139,6 +164,7 @@ i.instagram.com
 graph.instagram.com
 edge-chat.instagram.com
 cdninstagram.com
+instagramcdn.com
 
 # TikTok
 tiktok.com
@@ -146,26 +172,34 @@ api.tiktokv.com
 p16-sign-va.tiktokcdn.com
 tiktokv.com
 tiktokcdn.com
+muscdn.com
+tiktokapi.com
+sf-tk-sg.ibytedtos.com
+sf16-website-login.useast8.tiktokscan.com
 
 # X (Twitter)
 x.com
 twitter.com
 api.twitter.com
+api.x.com
 pbs.twimg.com
 video.twimg.com
 upload.twitter.com
 twimg.com
 t.co
 abs-0.twimg.com
+ton.twimg.com
 
 # Telegram
 telegram.org
 api.telegram.org
 t.me
+telegram.me
 web.telegram.org
 aurora.web.telegram.org
 venus.web.telegram.org
 telesco.pe
+tdesktop.com
 
 # Discord
 discord.com
@@ -175,6 +209,8 @@ cdn.discordapp.com
 discord.media
 discordapp.com
 discordapp.net
+media.discordapp.net
+status.discord.com
 
 # LinkedIn
 linkedin.com
@@ -222,13 +258,28 @@ mercadopago.com
 http2.mlstatic.com
 mlstatic.com
 static.mlstatic.com
+mercadoenvios.com.mx
 
-# Amazon
+# Amazon (Global)
 amazon.com
+amazon.com.mx
+amazon.de
+amazon.co.uk
+amazon.fr
+amazon.it
+amazon.es
+amazon.ca
+amazon.com.br
+amazon.nl
+amazon.se
+amazon.pl
+amazon.com.tr
+amazon.in
 ssl-images-amazon.com
 images-na.ssl-images-amazon.com
 m.media-amazon.com
 media-amazon.com
+amazonaws.com
 
 # Walmart
 walmart.com.mx
@@ -253,6 +304,7 @@ oxxopay.com
 shein.com
 api.shein.com
 img.shein.com
+img.ltwebstatic.com
 
 # AliExpress
 aliexpress.com
@@ -306,6 +358,60 @@ sc01.alicdn.com
 sc02.alicdn.com
 sc04.alicdn.com
 
+# --- Tiendas Oficiales de Marcas en México ---
+
+# Samsung
+samsung.com
+shop.samsung.com.mx
+
+# Xiaomi
+xiaomi.com
+mi.com
+xiaomi-store.mx
+
+# Apple
+apple.com
+store.apple.com
+
+# LG
+lg.com
+
+# Whirlpool
+whirlpool.com
+whirlpool.com.mx
+
+# Mabe
+mabe.com.mx
+
+# Hisense
+hisense.com
+hisense.com.mx
+
+# Sony
+sony.com
+sony.com.mx
+store.sony.com.mx
+
+# Dell
+dell.com
+dell.com.mx
+
+# HP
+hp.com
+store.hp.com
+
+# Lenovo
+lenovo.com
+
+# Acer
+acer.com
+
+# Asus
+asus.com
+
+# Huawei
+huawei.com
+
 # --- Servicios, Gobierno y Utilidades ---
 
 # Google (General y Autenticación)
@@ -320,21 +426,25 @@ www.gstatic.com
 fonts.gstatic.com
 signin.l.google.com
 apis.google.com
+clients1.google.com
 clients2.google.com
+clients3.google.com
 clients4.google.com
+clients5.google.com
 clients6.google.com
+clients7.google.com
 accounts.youtube.com
 google.com.mx
-# Red de Contenido de Google, esencial para descargas y servicios
 1e100.net
+gvt1.com
 
 # Google Drive
 drive.google.com
 drive.files.ggpht.com
+lh3.googleusercontent.com
 
 # Google Photos
 photos.google.com
-lh3.googleusercontent.com
 apidata.googleusercontent.com
 
 # Google Maps
@@ -342,11 +452,13 @@ maps.googleapis.com
 mt0.google.com
 mt1.google.com
 maps.gstatic.com
+tile.googleapis.com
 
 # Google Play Store
 play.google.com
 play.googleapis.com
 android.clients.google.com
+android.googleapis.com
 
 # Google Calendar
 calendar.google.com
@@ -366,32 +478,48 @@ fonts.googleapis.com
 classroom.google.com
 
 # Microsoft (General / Windows)
+microsoft.com
 update.microsoft.com
 windowsupdate.com
+windowsupdate.microsoft.com
 cdn.dl.delivery.mp.microsoft.com
 displaycatalog.mp.microsoft.com
 storecatalog.recs.microsoft.com
 ctldl.windowsupdate.com
+login.live.com
+account.live.com
+office.com
+office.net
+outlook.com
+microsoftonline.com
+msftconnecttest.com
+msftncsi.com
 
 # OneDrive
 onedrive.live.com
 api.onedrive.com
 storage.live.com
+g.live.com
 
 # iCloud
 icloud.com
 gateway.icloud.com
+setup.icloud.com
+cvws.icloud-content.com
+static.gc.apple.com
 
 # Dropbox
 dropbox.com
 dropboxapi.com
 dropboxstatic.com
+dropboxusercontent.com
 
 # MEGA
 mega.nz
 mega.io
 eu.static.mega.co.nz
 g.static.mega.co.nz
+mega.co.nz
 
 # Gob.mx
 gob.mx
@@ -435,6 +563,7 @@ bbva.mx
 bbva.com
 bbvanet.com.mx
 api.bbva.com
+bbv.mx
 
 # Banamex (Citibanamex)
 citibanamex.com
@@ -468,6 +597,7 @@ paypal.com
 api.paypal.com
 c.paypal.com
 assets.paypal.com
+paypalobjects.com
 
 # American Express
 americanexpress.com.mx
@@ -487,7 +617,6 @@ pay.gstatic.com
 # Apple Pay
 apple.com
 apple-pay-gateway.apple.com
-applepay.icloud.com
 
 # AforeMóvil
 aforemovil.com.mx
@@ -497,11 +626,13 @@ api.aforemovil.com.mx
 visa.com
 visa.com.mx
 api.visa.com
+secure.visa.com
 
 # Mastercard
 mastercard.com
 mastercard.com.mx
 api.mastercard.com
+secure.mastercard.com
 
 # Arkose Labs (Servicio Anti-Fraude)
 arkoselabs.com
@@ -515,13 +646,17 @@ dinersclub.com.mx
 
 # Epic Games / Fortnite
 epicgames.com
+epicgamescdn.com
 fortnite.com
 launcher.epicgames.com
 fortnite-public-service-prod.ol.epicgames.com
 datarouter.ol.epicgames.com
+epicgames.dev
+unrealengine.com
 
 # Roblox
 roblox.com
+robloxapis.com
 api.roblox.com
 games.roblox.com
 voice.roblox.com
@@ -530,6 +665,7 @@ assetdelivery.roblox.com
 rbxcdn.com
 friends.roblox.com
 clientsettings.roblox.com
+robloxusercontent.com
 
 # Call of Duty: Mobile
 callofduty.com
@@ -565,12 +701,16 @@ steamcommunity.com
 steamstatic.com
 cdn.steamstatic.com
 steamcontent.com
+steamusercontent.com
+steamserver.net
 
 # PlayStation Network
 playstation.com
 playstation.net
 api.playstation.com
 ca.psn.services.playstation.net
+auth.api.sonyentertainmentnetwork.com
+static.playstation.com
 
 # Xbox Live
 xbox.com
@@ -594,6 +734,7 @@ uber.com
 api.uber.com
 uber-cdn.com
 cn-geo1.uber.com
+uberstatic.com
 
 # Didi
 didiglobal.com
@@ -609,6 +750,7 @@ rappi.com.mx
 rappi.com
 api.rappi.com
 static.rappi.com
+rappicdn.net
 
 # Airbnb
 airbnb.com
@@ -631,6 +773,7 @@ api.ado.com.mx
 
 # Samsung (Tizen)
 samsung.com
+samsungcloud.com
 hub.samsungapps.com
 time.samsungcloudsolution.com
 otn.samsungcloudcdn.com
@@ -644,7 +787,6 @@ gpm.samsungqbe.com
 sas.samsungcloudsolution.com
 otnprd10.samsungcloudsolution.net
 lcprd1.samsungcloudsolution.net
-config.samsungads.com
 www.samsungotn.net
 img-resize-cdn-prod.samsungnyc.com
 sdk-multiscreen.samsung.com
@@ -652,9 +794,11 @@ multiscreen.samsung.com
 dispatch.smartthings.com
 c2c-us.smartthings.com
 ocf.samsungqbe.com
+samsungcloudsolution.com
 
 # LG (webOS)
 lge.com
+lgeapi.com
 lgtvcommon.com
 us.lgappstv.com
 smart.lgappstv.com
@@ -670,10 +814,11 @@ sdk.lgtvsdp.com
 rd.webos.com
 snutt.lge.com
 cdn.jsdelivr.net
+lgappstv.com
 
 # --- Certificados y Seguridad ---
 
-# Certificate Authorities (Para validar HTTPS)
+# Certificate Authorities
 ocsp.digicert.com
 crl.digicert.com
 ocsp.pki.goog
@@ -686,6 +831,14 @@ isrg.trustid.ocsp.identrust.com
 ocsp.identrust.com
 globalsign.com
 ocsp.globalsign.com
+
 # Para reCAPTCHA
 grecaptcha.com
 recaptcha.net
+
+# LetsEncrypt
+letsencrypt.org
+ocsp.int-x3.letsencrypt.org
+
+# DigiCert
+digicert.com
