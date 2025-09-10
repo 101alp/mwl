@@ -4,83 +4,106 @@ akamaized.net
 fastly.net
 cloudflare.com
 cdnjs.cloudflare.com
+1e100.net
+gvt1.com
 
-# --- Plataformas de Video, Música y Entretenimiento ---
+# --- Certificados y Seguridad ---
+# Certificate Authorities
+ocsp.digicert.com
+crl.digicert.com
+ocsp.pki.goog
+crl.pki.goog
+ocsp.sectigo.com
+crl.sectigo.com
+ocsp.godaddy.com
+crl.godaddy.com
+isrg.trustid.ocsp.identrust.com
+ocsp.identrust.com
+globalsign.com
+ocsp.globalsign.com
+letsencrypt.org
+ocsp.int-x3.letsencrypt.org
+digicert.com
 
-# YouTube
-youtube.com
-googlevideo.com
-youtubei.googleapis.com
-s.ytimg.com
-yt3.ggpht.com
-yt4.ggpht.com
-youtu.be
+# Para CAPTCHA
+grecaptcha.com
+recaptcha.net
+hcaptcha.com
+
+# --- Servicios, Gobierno y Utilidades ---
+
+# Google (General y Autenticación)
+google.com
+www.google.com
+accounts.google.com
+googleapis.com
+www.googleapis.com
+gstatic.com
+ssl.gstatic.com
+www.gstatic.com
+fonts.gstatic.com
+signin.l.google.com
+apis.google.com
+clients1.google.com
+clients2.google.com
+clients3.google.com
+clients4.google.com
+clients5.google.com
+clients6.google.com
+clients7.google.com
+accounts.youtube.com
+google.com.mx
 ggpht.com
-ytimg.com
-ytimg.l.google.com
-
-# Netflix
-netflix.com
-nflxvideo.net
-nflximg.net
-nflxso.net
-nflxext.com
-netflix.net
-nflxsearch.net
-
-# Spotify
-scdn.co
-spoti.fi
-i.scdn.co
-pscdn.co
 googleusercontent.com
-audio-akp-quic.spotifycdn.com
-audio-fa.scdn.co
 
-# Amazon Prime Video
-primevideo.com
-aiv-cdn.net
-aiv-delivery.net
-pv-cdn.net
-amazonvideo.com
-atv-ps.amazon.com
-media-amazon.com
+# Google Workspace (Drive, Photos, Meet, etc.)
+drive.google.com
+drive.files.ggpht.com
+lh3.googleusercontent.com
+photos.google.com
+apidata.googleusercontent.com
+maps.googleapis.com
+mt0.google.com
+mt1.google.com
+maps.gstatic.com
+tile.googleapis.com
+play.google.com
+play.googleapis.com
+android.clients.google.com
+android.googleapis.com
+calendar.google.com
+meet.google.com
+meetings.googleapis.com
+docs.google.com
+docs.googleusercontent.com
+fonts.googleapis.com
+classroom.google.com
 
-# Disney+
-disneyplus.com
-bamgrid.com
-dssott.com
-global.edge.bamgrid.com
-execute-api.us-east-1.amazonaws.com
-disney-plus.net
-cdn.registerdisney.go.com
-registerdisney.go.com
-cdn.unid.go.com
-onetrust.com
-disney-portal.my.onetrust.com
-cdn.cookielaw.org
-bam.nr-data.net
+# Microsoft (General / Windows / Office)
+microsoft.com
+update.microsoft.com
+windowsupdate.com
+windowsupdate.microsoft.com
+cdn.dl.delivery.mp.microsoft.com
+displaycatalog.mp.microsoft.com
+storecatalog.recs.microsoft.com
+ctldl.windowsupdate.com
+login.live.com
+account.live.com
+live.net
+office.com
+office.net
+outlook.com
+microsoftonline.com
+msftconnecttest.com
+msftncsi.com
+onedrive.live.com
+api.onedrive.com
+storage.live.com
+g.live.com
 
-# Max (HBO Max)
-max.com
-play.hbomax.com
-hbomax.com
-hbomaxcdn.com
-hbonow.com
-sr.max.com
-hbo.com
-
-# Twitch
-twitch.tv
-api.twitch.tv
-ttvnw.net
-jtvnw.net
-twitchcdn.net
-twitch-ext.rootonline.de
-ext-twitch.tv
-
-# Apple TV
-tv.apple.com
+# Apple (General / iCloud)
+apple.com
 itunes.apple.com
 mzstatic.com
 api.apple-cloudkit.com
@@ -90,45 +113,224 @@ is3-ssl.mzstatic.com
 is4-ssl.mzstatic.com
 is5-ssl.mzstatic.com
 buy.itunes.apple.com
-apple-tv.com
-books.apple.com
+icloud.com
+gateway.icloud.com
+setup.icloud.com
+cvws.icloud-content.com
+static.gc.apple.com
 
-# Apple Music
-music.apple.com
-apple.music.audio
+# Dropbox
+dropbox.com
+dropboxapi.com
+dropboxstatic.com
+dropboxusercontent.com
 
-# YouTube Music
-music.youtube.com
-music.googleapis.com
-ytmusic.be
+# MEGA
+mega.nz
+mega.io
+eu.static.mega.co.nz
+g.static.mega.co.nz
+mega.co.nz
 
-# Crunchyroll
-crunchyroll.com
-api.crunchyroll.com
-static.crunchyroll.com
-img.crunchyroll.com
-pl.crunchyroll.com
-vrv.co
+# Gob.mx (Portal General y Trámites)
+gob.mx
+api.gob.mx
+cdn.gob.mx
 
-# Cinépolis
-cinepolis.com
-api.cinepolis.com
+# SAT
+sat.gob.mx
+www.sat.gob.mx
 
-# Cinemex
-cinemex.com
-api.cinemex.com
+# IMSS Digital
+imss.gob.mx
+serviciosdigitales.imss.gob.mx
 
-# Ticketmaster
-ticketmaster.com.mx
-api.ticketmaster.com
+# IMSS-Bienestar
+imss-bienestar.gob.mx
 
-# Cinépolis KLIC
-cinepolisklic.com
-api.cinepolisklic.com
+# ISSSTE Digital
+issste.gob.mx
 
-# Amazon Music
-music.amazon.com
-api.music.amazon.com
+# SRE (Pasaportes y Citas)
+sre.gob.mx
+citas.sre.gob.mx
+
+# INFONAVIT
+infonavit.org.mx
+
+# RENAPO (CURP)
+renapo.gob.mx
+
+# Secretaría de Salud / COFEPRIS
+salud.gob.mx
+cofepris.gob.mx
+
+# SEP
+sep.gob.mx
+
+# CFE Contigo
+cfe.mx
+app.cfe.mx
+
+# CONSAR (Afores)
+consar.gob.mx
+
+# CONDUSEF
+condusef.gob.mx
+
+# PROFECO
+profeco.gob.mx
+
+# INE
+ine.mx
+
+# INEGI
+inegi.org.mx
+
+# Poder Judicial
+scjn.gob.mx
+cjf.gob.mx
+
+# FGR (Fiscalía General de la República)
+fgr.org.mx
+
+# Guardia Nacional
+gn.gob.mx
+
+# CONAHCYT (antes CONACYT)
+conahcyt.mx
+
+# Aduanas (ANAM)
+anam.gob.mx
+
+# Telmex
+telmex.com
+mitelmex.com
+api.telmex.com
+
+# Waze
+waze.com
+livemap.waze.com
+maps.waze.com
+
+# App CDMX
+cdmx.gob.mx
+api.cdmx.gob.mx
+
+# Salud Digna
+salud-digna.org
+api.salud-digna.org
+
+# --- Banca y Finanzas ---
+
+# BBVA
+bbva.mx
+bbva.com
+bbvanet.com.mx
+api.bbva.com
+bbv.mx
+
+# Banamex (Citibanamex)
+citibanamex.com
+bancanet.banamex.com
+api.citibanamex.com
+portal.banamex.com.mx
+
+# Santander
+santander.com.mx
+supernet.santander.com.mx
+api.santander.com.mx
+
+# Banorte
+banorte.com
+banorte.com.mx
+servicios.banorte.com
+
+# HSBC
+hsbc.com.mx
+www.hsbc.com.mx
+api.hsbc.com.mx
+
+# Scotiabank México
+scotiabank.com.mx
+
+# Inbursa
+inbursa.com
+
+# Banco Azteca
+bancoazteca.com.mx
+
+# BanCoppel
+bancoppel.com
+portal.bancoppel.com
+api.bancoppel.com
+cdn.bancoppel.com
+
+# PayPal
+paypal.com
+api.paypal.com
+c.paypal.com
+assets.paypal.com
+paypalobjects.com
+
+# Stripe
+stripe.com
+
+# American Express
+americanexpress.com.mx
+americanexpress.com
+global.americanexpress.com
+
+# Nubank México
+nu.com.mx
+
+# Spin by OXXO
+spinbyoxxo.com.mx
+api.spinbyoxxo.com.mx
+
+# Klar
+klar.mx
+
+# Stori
+storicard.com
+
+# Albo
+albo.mx
+
+# Kueski
+kueski.com
+
+# Compartamos Banco
+compartamos.com.mx
+
+# AforeMóvil
+aforemovil.com.mx
+api.aforemovil.com.mx
+
+# Google Pay / Wallet
+pay.google.com
+wallet.google.com
+pay.googleapis.com
+pay.gstatic.com
+
+# Apple Pay
+apple-pay-gateway.apple.com
+
+# Visa
+visa.com
+visa.com.mx
+api.visa.com
+secure.visa.com
+
+# Mastercard
+mastercard.com
+mastercard.com.mx
+api.mastercard.com
+secure.mastercard.com
+
+# Arkose Labs (Servicio Anti-Fraude)
+arkoselabs.com
+client-api.arkoselabs.com
 
 # --- Redes Sociales y Comunicación ---
 
@@ -166,17 +368,6 @@ edge-chat.instagram.com
 cdninstagram.com
 instagramcdn.com
 
-# TikTok
-tiktok.com
-api.tiktokv.com
-p16-sign-va.tiktokcdn.com
-tiktokv.com
-tiktokcdn.com
-muscdn.com
-tiktokapi.com
-sf-tk-sg.ibytedtos.com
-sf16-website-login.useast8.tiktokscan.com
-
 # X (Twitter)
 x.com
 twitter.com
@@ -189,6 +380,17 @@ twimg.com
 t.co
 abs-0.twimg.com
 ton.twimg.com
+
+# TikTok
+tiktok.com
+api.tiktokv.com
+p16-sign-va.tiktokcdn.com
+tiktokv.com
+tiktokcdn.com
+muscdn.com
+tiktokapi.com
+sf-tk-sg.ibytedtos.com
+sf16-website-login.useast8.tiktokscan.com
 
 # Telegram
 telegram.org
@@ -247,7 +449,123 @@ weixin.qq.com
 szmmsns.qpic.cn
 szsns.video.qpic.cn
 
-# --- Compras ---
+# --- Plataformas de Video, Música y Entretenimiento ---
+
+# YouTube
+youtube.com
+googlevideo.com
+youtubei.googleapis.com
+s.ytimg.com
+yt3.ggpht.com
+yt4.ggpht.com
+youtu.be
+ytimg.com
+ytimg.l.google.com
+
+# Netflix
+netflix.com
+nflxvideo.net
+nflximg.net
+nflxso.net
+nflxext.com
+netflix.net
+nflxsearch.net
+
+# Spotify
+scdn.co
+spoti.fi
+i.scdn.co
+pscdn.co
+audio-akp-quic.spotifycdn.com
+audio-fa.scdn.co
+
+# Amazon Prime Video
+primevideo.com
+aiv-cdn.net
+aiv-delivery.net
+pv-cdn.net
+amazonvideo.com
+atv-ps.amazon.com
+media-amazon.com
+
+# Disney+
+disneyplus.com
+bamgrid.com
+dssott.com
+global.edge.bamgrid.com
+execute-api.us-east-1.amazonaws.com
+disney-plus.net
+cdn.registerdisney.go.com
+registerdisney.go.com
+cdn.unid.go.com
+bam.nr-data.net
+
+# Max (HBO Max)
+max.com
+play.hbomax.com
+hbomax.com
+hbomaxcdn.com
+hbonow.com
+sr.max.com
+hbo.com
+
+# Vix
+vix.com
+vixplus.com
+
+# Twitch
+twitch.tv
+api.twitch.tv
+ttvnw.net
+jtvnw.net
+twitchcdn.net
+twitch-ext.rootonline.de
+ext-twitch.tv
+
+# Apple TV
+tv.apple.com
+apple-tv.com
+
+# Apple Music
+music.apple.com
+apple.music.audio
+
+# YouTube Music
+music.youtube.com
+music.googleapis.com
+ytmusic.be
+
+# Amazon Music
+music.amazon.com
+api.music.amazon.com
+
+# Crunchyroll
+crunchyroll.com
+api.crunchyroll.com
+static.crunchyroll.com
+img.crunchyroll.com
+pl.crunchyroll.com
+vrv.co
+
+# Claro Video
+clarovideo.com
+
+# Blim TV
+blim.com
+
+# Cinépolis
+cinepolis.com
+api.cinepolis.com
+
+# Cinemex
+cinemex.com
+api.cinemex.com
+
+# Ticketmaster
+ticketmaster.com.mx
+api.ticketmaster.com
+
+# --- Compras y Retail ---
 
 # Mercado Libre
 mercadolibre.com.mx
@@ -278,7 +596,6 @@ amazon.in
 ssl-images-amazon.com
 images-na.ssl-images-amazon.com
 m.media-amazon.com
-media-amazon.com
 amazonaws.com
 
 # Walmart
@@ -291,9 +608,24 @@ liverpool.com.mx
 graphql.liverpool.com.mx
 assetspwa.liverpool.com.mx
 
+# Coppel
+coppel.com
+
+# Elektra
+elektra.mx
+
 # Bodega Aurrerá
 bodegaaurrera.com.mx
 despensa.bodegaaurrera.com.mx
+
+# Soriana
+soriana.com
+api.soriana.com
+sorianadomicilio.com
+
+# Chedraui
+chedraui.com.mx
+api.chedraui.com.mx
 
 # OXXO
 oxxo.com
@@ -311,15 +643,6 @@ aliexpress.com
 ae.aliexpress.com
 aer.aliexpress.com
 ae01.alicdn.com
-
-# Chedraui
-chedraui.com.mx
-api.chedraui.com.mx
-
-# Soriana
-soriana.com
-api.soriana.com
-sorianadomicilio.com
 
 # Costco
 costco.com.mx
@@ -349,6 +672,27 @@ elpalaciodehierro.com
 api.elpalaciodehierro.com
 assets.elpalaciodehierro.com
 
+# Sanborns
+sanborns.com.mx
+
+# La Comer
+lacomer.com.mx
+
+# Price Shoes
+priceshoes.com
+
+# Andrea
+andrea.com
+
+# Farmacias Guadalajara
+farmaciasguadalajara.com
+
+# Farmacias del Ahorro
+fahorro.com
+
+# Office Depot México
+officedepot.com.mx
+
 # Alibaba
 alibaba.com
 alicdn.com
@@ -358,291 +702,62 @@ sc01.alicdn.com
 sc02.alicdn.com
 sc04.alicdn.com
 
-# --- Tiendas Oficiales de Marcas en México ---
+# --- Transporte y Viajes ---
 
-# Samsung
-samsung.com
-shop.samsung.com.mx
+# Uber / Uber Eats
+uber.com
+api.uber.com
+uber-cdn.com
+cn-geo1.uber.com
+uberstatic.com
+ubereats.com
+api.ubereats.com
 
-# Xiaomi
-xiaomi.com
-mi.com
-xiaomi-store.mx
+# Didi
+didiglobal.com
+api.didiglobal.com
+static.didiglobal.com
 
-# Apple
-apple.com
-store.apple.com
+# Cabify
+cabify.com
 
-# LG
-lg.com
+# Rappi
+rappi.com.mx
+rappi.com
+api.rappi.com
+static.rappi.com
+rappicdn.net
 
-# Whirlpool
-whirlpool.com
-whirlpool.com.mx
+# Airbnb
+airbnb.com
+airbnb.mx
+a0.muscache.com
 
-# Mabe
-mabe.com.mx
+# Aeroméxico
+aeromexico.com
+api.aeromexico.com
 
-# Hisense
-hisense.com
-hisense.com.mx
+# Volaris
+volaris.com
+api.volaris.com
 
-# Sony
-sony.com
-sony.com.mx
-store.sony.com.mx
+# VivaAerobus
+vivaaerobus.com
 
-# Dell
-dell.com
-dell.com.mx
-
-# HP
-hp.com
-store.hp.com
-
-# Lenovo
-lenovo.com
-
-# Acer
-acer.com
-
-# Asus
-asus.com
-
-# Huawei
-huawei.com
-
-# --- Servicios, Gobierno y Utilidades ---
-
-# Google (General y Autenticación)
-google.com
-www.google.com
-accounts.google.com
-googleapis.com
-www.googleapis.com
-gstatic.com
-ssl.gstatic.com
-www.gstatic.com
-fonts.gstatic.com
-signin.l.google.com
-apis.google.com
-clients1.google.com
-clients2.google.com
-clients3.google.com
-clients4.google.com
-clients5.google.com
-clients6.google.com
-clients7.google.com
-accounts.youtube.com
-google.com.mx
-1e100.net
-gvt1.com
-
-# Google Drive
-drive.google.com
-drive.files.ggpht.com
-lh3.googleusercontent.com
-
-# Google Photos
-photos.google.com
-apidata.googleusercontent.com
-
-# Google Maps
-maps.googleapis.com
-mt0.google.com
-mt1.google.com
-maps.gstatic.com
-tile.googleapis.com
-
-# Google Play Store
-play.google.com
-play.googleapis.com
-android.clients.google.com
-android.googleapis.com
-
-# Google Calendar
-calendar.google.com
-
-# Google Meet
-meet.google.com
-meetings.googleapis.com
-
-# Google Workspace (Docs, Sheets, Slides)
-docs.google.com
-docs.googleusercontent.com
-
-# Google Fonts
-fonts.googleapis.com
-
-# Google Classroom
-classroom.google.com
-
-# Microsoft (General / Windows)
-microsoft.com
-update.microsoft.com
-windowsupdate.com
-windowsupdate.microsoft.com
-cdn.dl.delivery.mp.microsoft.com
-displaycatalog.mp.microsoft.com
-storecatalog.recs.microsoft.com
-ctldl.windowsupdate.com
-login.live.com
-account.live.com
-office.com
-office.net
-outlook.com
-microsoftonline.com
-msftconnecttest.com
-msftncsi.com
-
-# OneDrive
-onedrive.live.com
-api.onedrive.com
-storage.live.com
-g.live.com
-
-# iCloud
-icloud.com
-gateway.icloud.com
-setup.icloud.com
-cvws.icloud-content.com
-static.gc.apple.com
-
-# Dropbox
-dropbox.com
-dropboxapi.com
-dropboxstatic.com
-dropboxusercontent.com
-
-# MEGA
-mega.nz
-mega.io
-eu.static.mega.co.nz
-g.static.mega.co.nz
-mega.co.nz
-
-# Gob.mx
-gob.mx
-api.gob.mx
-cdn.gob.mx
-
-# SAT
-sat.gob.mx
-www.sat.gob.mx
-
-# CFE Contigo
-cfe.mx
-app.cfe.mx
-
-# IMSS Digital
-imss.gob.mx
-serviciosdigitales.imss.gob.mx
-
-# Telmex
-telmex.com
-mitelmex.com
-api.telmex.com
-
-# Waze
-waze.com
-livemap.waze.com
-maps.waze.com
-
-# App CDMX
-cdmx.gob.mx
-api.cdmx.gob.mx
-
-# Salud Digna
-salud-digna.org
-api.salud-digna.org
-
-# --- Banca ---
-
-# BBVA
-bbva.mx
-bbva.com
-bbvanet.com.mx
-api.bbva.com
-bbv.mx
-
-# Banamex (Citibanamex)
-citibanamex.com
-bancanet.banamex.com
-api.citibanamex.com
-portal.banamex.com.mx
-
-# Santander
-santander.com.mx
-supernet.santander.com.mx
-api.santander.com.mx
-
-# Banorte
-banorte.com
-banorte.com.mx
-servicios.banorte.com
-
-# HSBC
-hsbc.com.mx
-www.hsbc.com.mx
-api.hsbc.com.mx
-
-# BanCoppel
-bancoppel.com
-portal.bancoppel.com
-api.bancoppel.com
-cdn.bancoppel.com
-
-# PayPal
-paypal.com
-api.paypal.com
-c.paypal.com
-assets.paypal.com
-paypalobjects.com
-
-# American Express
-americanexpress.com.mx
-americanexpress.com
-global.americanexpress.com
-
-# Spin by OXXO
-spinbyoxxo.com.mx
-api.spinbyoxxo.com.mx
-
-# Google Pay / Wallet
-pay.google.com
-wallet.google.com
-pay.googleapis.com
-pay.gstatic.com
-
-# Apple Pay
-apple.com
-apple-pay-gateway.apple.com
-
-# AforeMóvil
-aforemovil.com.mx
-api.aforemovil.com.mx
-
-# Visa
-visa.com
-visa.com.mx
-api.visa.com
-secure.visa.com
-
-# Mastercard
-mastercard.com
-mastercard.com.mx
-api.mastercard.com
-secure.mastercard.com
-
-# Arkose Labs (Servicio Anti-Fraude)
-arkoselabs.com
-client-api.arkoselabs.com
-
-# Diners Club
-dinersclub.com
-dinersclub.com.mx
+# ADO Móvil
+ado.com.mx
+api.ado.com.mx
 
 # --- Juegos ---
+
+# Steam
+steampowered.com
+steamcommunity.com
+steamstatic.com
+cdn.steamstatic.com
+steamcontent.com
+steamusercontent.com
+steamserver.net
 
 # Epic Games / Fortnite
 epicgames.com
@@ -666,6 +781,20 @@ rbxcdn.com
 friends.roblox.com
 clientsettings.roblox.com
 robloxusercontent.com
+
+# PlayStation Network
+playstation.com
+playstation.net
+api.playstation.com
+ca.psn.services.playstation.net
+auth.api.sonyentertainmentnetwork.com
+static.playstation.com
+
+# Xbox Live
+xbox.com
+xboxlive.com
+api.xboxlive.com
+xbl.mp.microsoft.com
 
 # Call of Duty: Mobile
 callofduty.com
@@ -695,79 +824,11 @@ pubgmobile.com
 api.pubgmobile.com
 g.pubgmobile.com
 
-# Steam
-steampowered.com
-steamcommunity.com
-steamstatic.com
-cdn.steamstatic.com
-steamcontent.com
-steamusercontent.com
-steamserver.net
-
-# PlayStation Network
-playstation.com
-playstation.net
-api.playstation.com
-ca.psn.services.playstation.net
-auth.api.sonyentertainmentnetwork.com
-static.playstation.com
-
-# Xbox Live
-xbox.com
-xboxlive.com
-api.xboxlive.com
-login.live.com
-account.live.com
-login.microsoftonline.com
-xbl.mp.microsoft.com
-
 # Candy Crush
 king.com
 candycrushsaga.com
 candycrush.king.com
 cdn.king.com
-
-# --- Transporte y Viajes ---
-
-# Uber
-uber.com
-api.uber.com
-uber-cdn.com
-cn-geo1.uber.com
-uberstatic.com
-
-# Didi
-didiglobal.com
-api.didiglobal.com
-static.didiglobal.com
-
-# Uber Eats
-ubereats.com
-api.ubereats.com
-
-# Rappi
-rappi.com.mx
-rappi.com
-api.rappi.com
-static.rappi.com
-rappicdn.net
-
-# Airbnb
-airbnb.com
-airbnb.mx
-a0.muscache.com
-
-# Aeroméxico
-aeromexico.com
-api.aeromexico.com
-
-# Volaris
-volaris.com
-api.volaris.com
-
-# ADO Móvil
-ado.com.mx
-api.ado.com.mx
 
 # --- Sistemas de Smart TV ---
 
@@ -816,29 +877,54 @@ snutt.lge.com
 cdn.jsdelivr.net
 lgappstv.com
 
-# --- Certificados y Seguridad ---
+# --- Tiendas Oficiales de Marcas en México ---
 
-# Certificate Authorities
-ocsp.digicert.com
-crl.digicert.com
-ocsp.pki.goog
-crl.pki.goog
-ocsp.sectigo.com
-crl.sectigo.com
-ocsp.godaddy.com
-crl.godaddy.com
-isrg.trustid.ocsp.identrust.com
-ocsp.identrust.com
-globalsign.com
-ocsp.globalsign.com
+# Apple
+store.apple.com
 
-# Para reCAPTCHA
-grecaptcha.com
-recaptcha.net
+# Samsung
+shop.samsung.com.mx
 
-# LetsEncrypt
-letsencrypt.org
-ocsp.int-x3.letsencrypt.org
+# Xiaomi
+xiaomi.com
+mi.com
+xiaomi-store.mx
 
-# DigiCert
-digicert.com
+# LG
+lg.com
+
+# Whirlpool
+whirlpool.com
+whirlpool.com.mx
+
+# Mabe
+mabe.com.mx
+
+# Hisense
+hisense.com
+hisense.com.mx
+
+# Sony
+sony.com
+sony.com.mx
+store.sony.com.mx
+
+# Dell
+dell.com
+dell.com.mx
+
+# HP
+hp.com
+store.hp.com
+
+# Lenovo
+lenovo.com
+
+# Acer
+acer.com
+
+# Asus
+asus.com
+
+# Huawei
+huawei.com
