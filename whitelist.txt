@@ -647,6 +647,11 @@ yt4.ggpht.com
 youtu.be
 ytimg.com
 ytimg.l.google.com
+youtube.googleapis.com
+www.youtube-nocookie.com
+gstatic.com
+googleusercontent.com
+accounts.google.com
 
 # YouTube Music
 music.youtube.com
