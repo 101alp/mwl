@@ -652,6 +652,9 @@ www.youtube-nocookie.com
 gstatic.com
 googleusercontent.com
 accounts.google.com
+i.ytimg.com
+ytimg.googleusercontent.com
+ggpht.com
 
 # YouTube Music
 music.youtube.com
