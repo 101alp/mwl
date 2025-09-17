@@ -6,7 +6,7 @@
 # plataformas, servicios y aplicaciones, excluyendo
 # publicidad, telemetría y rastreo.
 #
-# Versión: 2.1
+# Versión: 2.4
 # Fecha de Actualización: 2025-09-16
 # ===========================================================
 
@@ -81,6 +81,8 @@
         recaptcha.net
     # Identidad Federada
         widget-cdn.rpxnow.com
+    # DNS Públicos
+        1.1.1.1
 
 # Contenido Web General
     # Avatares Globales
@@ -89,10 +91,17 @@
         cdn.embedly.com
     # Imágenes de Alojamiento
         imagesak.secureserver.net
+        imgur.com
     # Acortadores de URL
         bit.ly
         ow.ly
         tinyurl.com
+    # Archivos y Preservación Web
+        archive.org
+        web.archive.org
+    # Enciclopedias y Contenido Educativo
+        wikimedia.org
+        wikipedia.org
 
 
 # --- SECCIÓN 2: SISTEMAS OPERATIVOS Y HARDWARE DE RED ---
@@ -120,7 +129,6 @@
         settings-win.data.microsoft.com
         update.microsoft.com
         windowsupdate.com
-        windowsupdate.microsoft.com
     # Tienda, Catálogos y Activación
         continuum.dds.microsoft.com
         displaycatalog.mp.microsoft.com
@@ -200,6 +208,15 @@
         raspberrypi.org
 
 # Navegadores Web
+    # Google Chrome
+        chrome.google.com
+        # Sus dependencias de actualización y navegación segura se encuentran en la sección de Google.
+    # Microsoft Edge
+        msedge.api.cdp.microsoft.com
+        edge.microsoft.com
+        # Sus dependencias de actualización y cuenta se encuentran en la sección de Microsoft.
+    # Apple Safari
+        # Sus dependencias de actualización, sincronización y navegación segura se encuentran en las secciones de Apple y Google.
     # Mozilla Firefox
         aus5.mozilla.org
         blocklist.addons.mozilla.org
@@ -209,16 +226,26 @@
         snippets.cdn.mozilla.net
     # Thunderbird
         live.thunderbird.net
+    # Opera
+        addons.opera.com
+        autoupdate.opera.com
+        sync.opera.com
+    # Brave
+        api.brave.com
+        brave-browser-apt-release.s3.brave.com
+        updates.brave.com
 
 # Hardware de Red
     # TP-Link (Routers y Smart Home)
         n-use1-wap.i.tplinkcloud.com
         pool.ntp.org
+        ntp.org
         tplink.com
         tplinkcloud.com
         tplinkra.com
         tplinkwifi.net
     # Dynamic DNS
+        duckdns.org
         dynupdate.no-ip.com
         ipv64.net
         no-ip.com
@@ -242,6 +269,7 @@
         appspot-preview.l.google.com
         appsbackup-pa.clients6.google.com
         appsbackup-pa.googleapis.com
+        clients.google.com
         clients1.google.com
         clients2.google.com
         clients3.google.com
@@ -249,6 +277,7 @@
         clients5.google.com
         clients6.google.com
         clients7.google.com
+        clientservices.googleapis.com
         cse.google.com
         googleapis.com
         instantmessaging-pa.googleapis.com
@@ -264,6 +293,7 @@
         ggpht.com
         googleusercontent.com
         gstatic.com
+        storage.googleapis.com
         ssl.gstatic.com
         www.gstatic.com
     # Recursos para Desarrolladores
@@ -297,6 +327,7 @@
         graph.microsoft.com
         graph.windows.net
     # Portales Principales
+        azure.com
         microsoft.com
 
 # Apple (Cuentas y Servicios Generales)
@@ -412,6 +443,13 @@
         lm.licenses.adobe.com
         swupmf.adobe.com
         use.typekit.net
+    # Herramientas de Diseño
+        canva.com
+        content.canva.com
+        static.canva.com
+        figma.com
+        static.figma.com
+        www.figma.com
     # Slack
         slack-edge.com
         slack-files.com
@@ -431,6 +469,17 @@
         api.miro.com
         miro.com
         static.miro.com
+
+# Administradores de Contraseñas
+    # Bitwarden
+        api.bitwarden.com
+        bitwarden.com
+        identity.bitwarden.com
+    # 1Password
+        1password.com
+        c.1password.com
+    # LastPass
+        lastpass.com
 
 # Almacenamiento en la Nube (Dedicado)
     # Dropbox
@@ -457,9 +506,19 @@
     # APIs Generales
         api.ipify.org
     # Control de Versiones
+        bitbucket.org
         github.com
         github.io
+        gitlab.com
         raw.githubusercontent.com
+    # Plataformas y Comunidades
+        docker.com
+        nodejs.org
+        python.org
+        stackexchange.com
+        stackoverflow.com
+    # Inteligencia Artificial
+        openai.com
 
 # Software de Seguridad
     # Malwarebytes
@@ -470,8 +529,10 @@
 
 # WhatsApp
     # Servicio Principal y Contenido
+        dyn.web.whatsapp.com
         media.whatsapp.net
         static.whatsapp.net
+        web.whatsapp.com
         whatsapp.com
         whatsapp.net
         whatsappcdn.com
@@ -559,6 +620,10 @@
     # Aplicación de Escritorio
         tdesktop.com
 
+# Mensajería Segura
+    # Signal
+        signal.org
+
 # TikTok
     # Portal Principal y API
         api.tiktokv.com
@@ -596,6 +661,7 @@
         i.pinimg.com
         pinterest.com
         pinterest.com.mx
+        pinimg.com
 
 # Snapchat
     # Servicio Principal y API
@@ -632,6 +698,10 @@
     # WordPress
         s1.wp.com
         wp.com
+        wordpress.com
+        wordpress.org
+    # Plataformas de Mecenazgo
+        patreon.com
 
 
 # --- SECCIÓN 5: ENTRETENIMIENTO Y VIDEOJUEGOS ---
@@ -703,6 +773,20 @@
         disney-plus.net
         registerdisney.go.com
 
+# Star+
+    # Portal Principal y API
+        star.api.edge.bamgrid.com
+        starplus.com
+    # Contenido (CDN)
+        starott.com
+
+# Hulu
+    # Portal Principal y API
+        hulu.com
+        huluim.com
+    # Contenido (CDN) y Servicios
+        assetshuluimcom-a.akamaihd.net
+
 # Max (HBO Max)
     # Portales Principales
         hbo.com
@@ -716,7 +800,10 @@
 
 # Spotify
     # Portal Principal y Dominio Corto
+        api.spotify.com
+        open.spotify.com
         spoti.fi
+        spotify.com
         spotify.com
     # API y Servicios
         api.spotify.com
@@ -733,6 +820,18 @@
         tv.apple.com
     # Contenido de Audio
         apple.music.audio
+    # Contenido de Video (CDN)
+        cdn.apple-tv.services
+
+# Deezer
+    # Portal Principal y API
+        api.deezer.com
+        deezer.com
+    # Contenido (Audio e Imágenes)
+        cdns-images.dzcdn.net
+        cdns-music.dzcdn.net
+        e-cdns-images.dzcdn.net
+        e-cdns-music.dzcdn.net
 
 # Twitch
     # Portal Principal y API
@@ -744,6 +843,15 @@
     # Recursos Estáticos y Extensiones
         ext-twitch.tv
         twitchcdn.net
+
+# ESPN
+    # Portal Principal y API
+        api.espn.com
+        espn.com
+        espn.go.com
+    # Contenido (CDN) y Servicios
+        a.espncdn.com
+        go.com
 
 # Crunchyroll
     # Portal Principal y API
@@ -771,6 +879,9 @@
     # Vix
         vix.com
         vixplus.com
+    # Tubi
+        tubi.video
+        tubitv.com
     # Claro Video
         clarovideo.com
     # Blim TV
@@ -979,6 +1090,7 @@
     # Portales Principales
         amazon.com
         amazon.com.mx
+        api.amazon.com
     # Contenido de Imágenes
         images-na.ssl-images-amazon.com
         m.media-amazon.com
@@ -1011,8 +1123,10 @@
         api.paypal.com
         c.paypal.com
         paypal.com
+        pyplcs.com
     # Contenido Estático y Recursos
         assets.paypal.com
+        paypal-static.com
         paypalobjects.com
         www.paypalobjects.com
 
@@ -1034,6 +1148,12 @@
         img.ltwebstatic.com
         img.shein.com
         shein.com
+    # eBay
+        ebay.com
+
+# Plataformas de E-commerce
+    # Shopify
+        shopify.com
 
 # Tiendas Departamentales (México)
     # Liverpool
@@ -1043,6 +1163,7 @@
     # Walmart
         assets.walmartimages.com.mx
         super.walmart.com.mx
+        walmart.com
         walmart.com.mx
     # Coppel
         coppel.com
@@ -1107,6 +1228,8 @@
 
 # Servicios de Pago y Anti-Fraude
     # Stripe
+        api.stripe.com
+        js.stripe.com
         stripe.com
     # Mastercard
         api.mastercard.com
@@ -1236,7 +1359,6 @@
         d1s31zyz8d9j6e.cloudfront.net
         device-messaging.amazon.com
         fireos.com
-        mads.amazon-adsystem.com
         softwareupdates.amazon.com
     # Xiaomi (PatchWall / TV Box)
         api.patchwall.mitv.com
@@ -1378,11 +1500,15 @@
     # VivaAerobus
         vivaaerobus.com
 
-# Alojamiento
+# Alojamiento y Agencias de Viajes Online
     # Airbnb
         a0.muscache.com
         airbnb.com
         airbnb.mx
+    # Booking
+        booking.com
+    # Expedia
+        expedia.com
 
 # Transporte Terrestre (México)
     # ADO Móvil
