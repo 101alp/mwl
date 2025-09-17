@@ -6,7 +6,7 @@
 # plataformas, servicios y aplicaciones, excluyendo
 # publicidad, telemetría y rastreo.
 #
-# Versión: 2.4
+# Versión: 2.7
 # Fecha de Actualización: 2025-09-16
 # ===========================================================
 
@@ -15,6 +15,7 @@
 
 # CDNs (Content Delivery Networks)
     # Servidores de Contenido Principales
+        akamai.net
         akamaihd.net
         akamaized.net
         amazonaws.com
@@ -134,17 +135,24 @@
         displaycatalog.mp.microsoft.com
         geo-prod.do.dsp.mp.microsoft.com
         licensing.mp.microsoft.com
+        packages.microsoft.com
+        store.microsoft.com
         storecatalog.recs.microsoft.com
+    # Servicios del Sistema
+        wns.windows.com
     # Sincronización de Hora y Conectividad
         dns.msftncsi.com
+        msftconnecttest.com
         time.windows.com
         win10.ipv6.microsoft.com
         www.msftconnecttest.com
 
 # Apple (iOS, macOS, etc.)
     # Verificación y Sincronización del SO
+        gsa.apple.com
         gs.apple.com
         mesu.apple.com
+        swcatalog.apple.com
         swcdn.apple.com
         swscan.apple.com
     # Servicios Base y DNS
@@ -236,14 +244,32 @@
         updates.brave.com
 
 # Hardware de Red
-    # TP-Link (Routers y Smart Home)
+    # TP-Link
         n-use1-wap.i.tplinkcloud.com
-        pool.ntp.org
-        ntp.org
         tplink.com
         tplinkcloud.com
         tplinkra.com
         tplinkwifi.net
+    # Linksys
+        api.linksys.com
+        linksys.com
+        linksyssmartwifi.com
+    # Netgear
+        my.netgear.com
+        netgear.com
+        updates.netgear.com
+    # ASUS
+        asuscomm.com
+        asusrouter.com
+        router.asus.com
+    # Amazon Eero
+        api.eero.com
+        eero.com
+    # Google / Nest Wifi
+        wifi.google.com
+    # Sincronización de Hora (NTP)
+        pool.ntp.org
+        ntp.org
     # Dynamic DNS
         duckdns.org
         dynupdate.no-ip.com
@@ -257,6 +283,8 @@
     # Búsqueda y Páginas Principales
         google.com
         google.com.mx
+        one.google.com
+        photos.google.com
         www.google.com
     # Autenticación y Cuentas
         accounts.google.com
@@ -265,6 +293,7 @@
         signin.l.google.com
     # APIs y Servicios de Clientes
         0.client-channel.google.com
+        androidplatformbackuprestore-pa.googleapis.com
         apis.google.com
         appspot-preview.l.google.com
         appsbackup-pa.clients6.google.com
@@ -278,13 +307,17 @@
         clients6.google.com
         clients7.google.com
         clientservices.googleapis.com
+        contactsui-pa.googleapis.com
+        cryptauthenrollment.googleapis.com
         cse.google.com
         googleapis.com
         instantmessaging-pa.googleapis.com
+        notifications-pa.googleapis.com
         people-pa.googleapis.com
         peoplestack-pa.clients6.google.com
         tasks-pa.clients6.google.com
         tasks-pa.googleapis.com
+        translate.googleapis.com
         www.googleapis.com
     # Contenido Estático y de Usuario
         connectivitycheck.gstatic.com
@@ -296,6 +329,8 @@
         storage.googleapis.com
         ssl.gstatic.com
         www.gstatic.com
+    # Servicios del Sistema y Conectividad
+        ota-cache1.googlezip.net
     # Recursos para Desarrolladores
         google.dev
     # Navegación Segura
@@ -334,6 +369,7 @@
     # Autenticación y Cuentas (Apple ID)
         apple.com
         appleid.apple.com
+        appleid.cdn-apple.com
         idmsa.apple.com
     # Servicios de iCloud
         api.apple-cloudkit.com
@@ -431,6 +467,7 @@
         protection.office.com
         statics.teams.cdn.office.net
         storage.live.com
+        substrate.office.com
         teams.live.com
         teams.microsoft.com
         webshell.suite.office.com
@@ -439,10 +476,18 @@
         adobe.io
         adobelogin.com
         adobesc.com
+        assets.adobe.com
+        cc-api-storage.adobe.io
         ccmdl.adobe.com
         lm.licenses.adobe.com
         swupmf.adobe.com
         use.typekit.net
+    # Validación de Software
+        genuine.adobe.com
+    # Firma Digital
+        docusign.com
+        docusign.net
+        images.docusign.com
     # Herramientas de Diseño
         canva.com
         content.canva.com
@@ -475,11 +520,17 @@
         api.bitwarden.com
         bitwarden.com
         identity.bitwarden.com
+        vault.bitwarden.com
     # 1Password
         1password.com
+        1passwordusercontent.com
         c.1password.com
     # LastPass
         lastpass.com
+    # Dashlane
+        api.dashlane.com
+        dashlane.com
+        ws1.dashlane.com
 
 # Almacenamiento en la Nube (Dedicado)
     # Dropbox
@@ -489,6 +540,7 @@
         dropboxapi.com
         dropboxstatic.com
         dropboxusercontent.com
+        notify.dropbox.com
         ns1.dropbox.com
         ns2.dropbox.com
     # MEGA
@@ -520,8 +572,24 @@
     # Inteligencia Artificial
         openai.com
 
-# Software de Seguridad
+# Software de Seguridad (Antivirus)
+    # Avast
+        my-win.avast.com
+        ping.avast.com
+    # ESET
+        edf.eset.com
+    # Kaspersky
+        ff.kis.scr.kaspersky-labs.com
+        gc.kis.scr.kaspersky-labs.com
+        ie.kis.scr.kaspersky-labs.com
+    # McAfee
+        provision.ccs.mcafee.com
+        updatekeepalive.mcafee.com
+    # Sophos
+        sdds3.sophosupd.com
+        sus.sophosupd.com
     # Malwarebytes
+        adwcleaner.toolslib.net
         keystone.mwbsys.com
 
 
@@ -623,6 +691,9 @@
 # Mensajería Segura
     # Signal
         signal.org
+    # Viber
+        media.viber.com
+        viber.com
 
 # TikTok
     # Portal Principal y API
@@ -648,6 +719,8 @@
     # Recursos Estáticos
         redditstatic.com
         www.redditstatic.com
+    # API y Gateway
+        gateway.reddit.com
 
 # LinkedIn
     # Portal Principal y Contenido (CDN)
@@ -734,8 +807,10 @@
 
 # Netflix
     # Servicio Principal y Búsqueda
+        appboot.netflix.com
         netflix.com
         netflix.net
+        nflx.com
         nflxsearch.net
     # Transmisión de Contenido (Video e Imágenes)
         nflxext.com
@@ -744,6 +819,8 @@
         nflxvideo.net
     # Componentes y Extensiones
         codex.nflxext.com
+    # Servicios de Red
+        netflixdnstest.com
 
 # Amazon Prime Video y Music
     # Portal Principal
@@ -764,6 +841,7 @@
         bamgrid.com
         cdn.datonis.disney.go.com
         disney.api.edge.bamgrid.com
+        disney.content.edge.bamgrid.com
         disneyplus.com
         dssott.com
         global.edge.bamgrid.com
@@ -782,6 +860,7 @@
 
 # Hulu
     # Portal Principal y API
+        androidtv.app.hulu.com
         hulu.com
         huluim.com
     # Contenido (CDN) y Servicios
@@ -799,19 +878,23 @@
         sr.max.com
 
 # Spotify
-    # Portal Principal y Dominio Corto
-        api.spotify.com
-        open.spotify.com
-        spoti.fi
+    # Portal Principal y API
         spotify.com
-        spotify.com
-    # API y Servicios
         api.spotify.com
-    # Contenido (CDN)
+    # Contenido (Audio e Imágenes)
+        audio-fa.scdn.co
         i.scdn.co
         pscdn.co
         scdn.co
         spotifycdn.com
+
+# SoundCloud
+    # Portal Principal y API
+        api-v2.soundcloud.com
+        api.soundcloud.com
+        soundcloud.com
+    # Contenido (CDN)
+        cf-media.sndcdn.com
 
 # Apple Music y Apple TV
     # Portales Principales
@@ -886,6 +969,8 @@
         clarovideo.com
     # Blim TV
         blim.com
+    # FilminLatino
+        filminlatino.mx
     # RLJE Services (Acorn TV)
         api.rlje.net
 
@@ -920,6 +1005,7 @@
         proxy.plex.tv
         pubsub.plex.bz
         pubsub.plex.tv
+        scrobbles.plex.tv
         services.sonarr.tv
         skyhook.sonarr.tv
         staging.plex.tv
@@ -941,8 +1027,10 @@
 
 # Steam
     # Portal Principal y Comunidad
+        steam-chat.com
         steamcommunity.com
         steampowered.com
+        store.steampowered.com
     # Contenido (CDN) y Servidores
         cdn.steamstatic.com
         steamcontent.com
@@ -1033,6 +1121,7 @@
         battle.net
         blizzard.com
         blzddist1-a.akamaihd.net
+        cache-cms-ext-us.battle.net
     # Electronic Arts (EA)
         ea.com
         easo.com
@@ -1087,14 +1176,17 @@
 # --- SECCIÓN 6: COMPRAS Y SERVICIOS FINANCIEROS ---
 
 # Amazon (Compras)
-    # Portales Principales
+    # Portales Principales y Pago
         amazon.com
         amazon.com.mx
+        amazonpay.com
         api.amazon.com
     # Contenido de Imágenes
         images-na.ssl-images-amazon.com
         m.media-amazon.com
         ssl-images-amazon.com
+    # Servicios Funcionales de Logging
+        fls-na.amazon.com
     # Dominios Internacionales (Ejemplos)
         amazon.ae
         amazon.ca
@@ -1230,7 +1322,11 @@
     # Stripe
         api.stripe.com
         js.stripe.com
+        m.stripe.com
         stripe.com
+    # Conekta
+        api.conekta.io
+        conekta.com
     # Mastercard
         api.mastercard.com
         mastercard.com
@@ -1290,6 +1386,8 @@
         aforemovil.com.mx
     # Nu
         nu.com.mx
+    # Ualá
+        uala.com.mx
     # Klar
         klar.mx
     # Stori
@@ -1313,6 +1411,7 @@
         api.samsungyosemite.com
         api.smartthings.com
         cdn.samsungcloudsolution.com
+        fota-apis.samsungdm.com
         gpm.samsungqbe.com
         hub.samsungapps.com
         img-resize-cdn-prod.samsungnyc.com
@@ -1351,10 +1450,12 @@
         us.lgappstv.com
         us.software.lge.com
     # Sony (Google TV / Android TV)
+        api.erabu.sony.tv
         sony.com
         sony.net
         tv.meta.update.sony.net
         tv.update.sony.net
+        update.biv.sony.tv
     # Amazon (Fire OS / Fire TV)
         d1s31zyz8d9j6e.cloudfront.net
         device-messaging.amazon.com
@@ -1384,10 +1485,13 @@
         panasonic.com
         panasonic.net
     # Roku
+        api2.sr.roku.com
         cloudservices.roku.com
         image.roku.com
+        prod.mobile.roku.com
         prod.ott.roku.com
         roku.com
+        vod-playlist.sr.roku.com
     # Android TV / Google TV (Base)
         android.com
         androidtvwatson.googleapis.com
@@ -1403,15 +1507,27 @@
         api.amazonalexa.com
         device-messaging-na.amazon.com
         dp-gw-na.amazon.com
+        skills-store.amazon.com
     # Google Nest
         api.nest.com
+        nest-api.com
         nest.com
     # iRobot
         content-prod.iot.irobotapi.com
         disc-prod.iot.irobotapi.com
         unauth3.prod.iot.irobotapi.com
+    # Roborock
+        files.roborock.com
+        mqtt-us-2.roborock.com
+    # Tuya / Smart Life
+        a.tuyaus.com
+        tuya.com
     # Philips Hue
         philips-hue.com
+    # Sonos
+        ms.sonos.com
+        sonos.com
+        update.sonos.com
     # Wyze
         api.wyzecam.com
         wyze-device-service.wyzecam.com
@@ -1429,14 +1545,25 @@
     # Dell
         dell.com
         dell.com.mx
+        dellupdater.dell.com
     # HP Store
         hp.com
         store.hp.com
+    # Lenovo
+        media.dds.lenovo.com
     # Otros Fabricantes
         acer.com
         asus.com
         lenovo.com
         lg.com
+
+# Otros (Hardware y Software)
+    # Barracuda
+        geoip.cudasvc.com
+    # Garmin
+        geolocation.garmin.com
+    # General Motors
+        apim.gm.com
 
 # Electrodomésticos
     # Mabe
@@ -1509,6 +1636,10 @@
         booking.com
     # Expedia
         expedia.com
+    # Trivago
+        static.trivago.com
+        trivago.com
+        trivago.com.mx
 
 # Transporte Terrestre (México)
     # ADO Móvil
