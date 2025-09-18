@@ -1062,9 +1062,12 @@
 # Roblox
     # Portal Principal y API
         api.roblox.com
+        auth.roblox.com
         roblox.com
         roblox.com.edgekey.net
         robloxapis.com
+    # Captcha y Seguridad (Muy importante para login)
+        roblox-api.arkoselabs.com 
     # Servicios de Juego
         chat.roblox.com
         friends.roblox.com
