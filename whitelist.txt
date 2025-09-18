@@ -1070,6 +1070,9 @@
         friends.roblox.com
         games.roblox.com
         voice.roblox.com
+    # Telemetría y Localización (Requeridas)
+        ecsv2.roblox.com
+        locale.roblox.com
     # Contenido (CDN) y de Usuario
         assetdelivery.roblox.com
         rbxcdn.com
