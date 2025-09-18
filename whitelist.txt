@@ -6,8 +6,8 @@
 # plataformas, servicios y aplicaciones, excluyendo
 # publicidad, telemetría y rastreo.
 #
-# Versión: 2.7
-# Fecha de Actualización: 2025-09-16
+# Versión: 3.6
+# Fecha de Actualización: 2025-09-18
 # ===========================================================
 
 
@@ -17,1711 +17,1760 @@
     # Servidores de Contenido Principales
         akamai.net
         akamaihd.net
+        akamaized-st.net
         akamaized.net
         amazonaws.com
         aspnetcdn.com
         azureedge.net
         azurefd.net
         bunny.net
-        bunnycdn.com
-        cdn.ampproject.org
-        cdn.cloudflare.net
-        cdn.jsdelivr.net
-        cdnjs.cloudflare.com
-        cloudflare.com
-        cloudfront.net
-        edgecastcdn.net
-        edgekey.net
-        edgesuite.net
-        fastly.com
-        fastly.net
-        imgix.net
-        jquery.com
-        jsdelivr.net
-        res.cloudinary.com
-        s3.amazonaws.com
+        bunnycdn.com [cite: 3]
+        cdn-apple.com [cite: 3]
+        cdn.ampproject.org [cite: 3]
+        cdn.cloudflare.net [cite: 3]
+        cdn.jsdelivr.net [cite: 3]
+        cdn.mozilla.net [cite: 3]
+        cdnjs.cloudflare.com [cite: 3]
+        cloudflare.com [cite: 3]
+        cloudfront.net [cite: 3]
+        edgecastcdn.net [cite: 3]
+        edgekey.net [cite: 3]
+        edgesuite.net [cite: 3]
+        fastly.com [cite: 4]
+        fastly.net [cite: 4]
+        imgix.net [cite: 4]
+        jquery.com [cite: 4]
+        jsdelivr.net [cite: 4]
+        res.cloudinary.com [cite: 4]
+        s3.amazonaws.com [cite: 4]
     # CDNs de Plataformas de Video
-        brightcove.net
-        edge.api.brightcove.com
-        players.brightcove.net
-        secure.brightcove.com
-        ssl.p.jwpcdn.com
+        brightcove.net [cite: 4]
+        edge.api.brightcove.com [cite: 4]
+        players.brightcove.net [cite: 4]
+        secure.brightcove.com [cite: 4]
+        ssl.p.jwpcdn.com [cite: 5]
     # Dependencias de Google
-        1e100.net
-        gvt1.com
+        1e100.net [cite: 5]
+        gvt1.com [cite: 5]
+        gvt2.com [cite: 5]
 
 # Seguridad y Certificados
     # Autoridades de Certificación (CA)
-        crl.digicert.com
-        crl.godaddy.com
-        crl.globalsign.com
-        crl.microsoft.com
-        crl.pki.goog
-        crl.sectigo.com
-        digicert.com
-        entrust.net
-        globalsign.com
-        isrg.trustid.ocsp.identrust.com
-        letsencrypt.org
-        ocsp.apple.com
-        ocsp.digicert.com
-        ocsp.godaddy.com
-        ocsp.globalsign.com
-        ocsp.identrust.com
-        ocsp.int-x3.letsencrypt.org
-        ocsp.msocsp.com
-        ocsp.pki.goog
-        ocsp.sectigo.com
-        ocsp.usertrust.com
-        pki.goog
-        sa.symcb.com
-        symcd.com
+        crl.digicert.com [cite: 5]
+        crl.godaddy.com [cite: 5]
+        crl.globalsign.com [cite: 5]
+        crl.microsoft.com [cite: 5]
+        crl.pki.goog [cite: 5]
+        crl.sectigo.com [cite: 5]
+        digicert.com [cite: 5]
+        entrust.net [cite: 6]
+        globalsign.com [cite: 6]
+        isrg.trustid.ocsp.identrust.com [cite: 6]
+        letsencrypt.org [cite: 6]
+        ocsp.apple.com [cite: 6]
+        ocsp2.apple.com [cite: 6]
+        ocsp.digicert.com [cite: 6]
+        ocsp.godaddy.com [cite: 6]
+        ocsp.globalsign.com [cite: 6]
+        ocsp.identrust.com [cite: 6]
+        ocsp.int-x3.letsencrypt.org [cite: 6]
+        ocsp.msocsp.com [cite: 6]
+        ocsp.pki.goog [cite: 7]
+        ocsp.sectigo.com [cite: 7]
+        ocsp.usertrust.com [cite: 7]
+        ocsp.verisign.com [cite: 7]
+        pki.goog [cite: 7]
+        sa.symcb.com [cite: 7]
+        symcd.com [cite: 7]
     # Servicios de Verificación (CAPTCHA)
-        grecaptcha.com
-        hcaptcha.com
-        recaptcha.net
+        grecaptcha.com [cite: 7]
+        hcaptcha.com [cite: 7]
+        recaptcha.net [cite: 7]
     # Identidad Federada
-        widget-cdn.rpxnow.com
-    # DNS Públicos
-        1.1.1.1
+        widget-cdn.rpxnow.com [cite: 7]
 
 # Contenido Web General
     # Avatares Globales
-        gravatar.com
-    # Incrustación de Contenido
-        cdn.embedly.com
+        gravatar.com [cite: 8]
     # Imágenes de Alojamiento
-        imagesak.secureserver.net
-        imgur.com
-    # Acortadores de URL
-        bit.ly
-        ow.ly
-        tinyurl.com
-    # Archivos y Preservación Web
-        archive.org
-        web.archive.org
+        imagesak.secureserver.net [cite: 8]
     # Enciclopedias y Contenido Educativo
-        wikimedia.org
-        wikipedia.org
+        wikimedia.org [cite: 8]
+        wikipedia.org [cite: 8]
 
 
 # --- SECCIÓN 2: SISTEMAS OPERATIVOS Y HARDWARE DE RED ---
 
 # Android (Sistema Operativo Base)
     # Google Play Store y Servicios
-        android.clients.google.com
-        android.googleapis.com
-        play.google.com
-        play.googleapis.com
+        android.clients.google.com [cite: 8]
+        android.googleapis.com [cite: 8]
+        play.google.com [cite: 8]
+        play.googleapis.com [cite: 9]
+        play-fe.googleapis.com [cite: 9]
     # Servicios del Sistema y Conectividad
-        2.android.pool.ntp.org
-        connectivitycheck.android.com
-        dl.google.com
-        mtalk.google.com
-        time.android.com
+        2.android.pool.ntp.org [cite: 9]
+        alt1-mtalk.google.com [cite: 9]
+        connectivitycheck.android.com [cite: 9]
+        dl.google.com [cite: 9]
+        mtalk.google.com [cite: 9]
+        time.android.com [cite: 9]
     # DNS Privado
-        dns.google
+        dns.google [cite: 9]
 
 # Microsoft Windows
     # Actualizaciones de Sistema (Windows Update)
-        cdn.dl.delivery.mp.microsoft.com
-        ctldl.windowsupdate.com
-        dl.delivery.mp.microsoft.com
-        settings-win.data.microsoft.com
-        update.microsoft.com
-        windowsupdate.com
+        cdn.dl.delivery.mp.microsoft.com [cite: 10]
+        ctldl.windowsupdate.com [cite: 10]
+        dl.delivery.mp.microsoft.com [cite: 10]
+        update.microsoft.com [cite: 10]
+        windowsupdate.com [cite: 10]
     # Tienda, Catálogos y Activación
-        continuum.dds.microsoft.com
-        displaycatalog.mp.microsoft.com
-        geo-prod.do.dsp.mp.microsoft.com
-        licensing.mp.microsoft.com
-        packages.microsoft.com
-        store.microsoft.com
-        storecatalog.recs.microsoft.com
+        continuum.dds.microsoft.com [cite: 10]
+        displaycatalog.mp.microsoft.com [cite: 10]
+        geo-prod.do.dsp.mp.microsoft.com [cite: 10]
+        licensing.mp.microsoft.com [cite: 10]
+        packages.microsoft.com [cite: 10]
+        store.microsoft.com [cite: 10]
+        storecatalog.recs.microsoft.com 
     # Servicios del Sistema
-        wns.windows.com
+        self.events.data.microsoft.com
+        wns.windows.com 
     # Sincronización de Hora y Conectividad
-        dns.msftncsi.com
-        msftconnecttest.com
-        time.windows.com
-        win10.ipv6.microsoft.com
-        www.msftconnecttest.com
+        dns.msftncsi.com 
+        msftconnecttest.com 
+        time.windows.com 
+        www.msftconnecttest.com 
 
 # Apple (iOS, macOS, etc.)
     # Verificación y Sincronización del SO
-        gsa.apple.com
-        gs.apple.com
-        mesu.apple.com
-        swcatalog.apple.com
-        swcdn.apple.com
-        swscan.apple.com
+        gsa.apple.com 
+        gs.apple.com 
+        mesu.apple.com 
+        swcatalog.apple.com [cite: 12]
+        swcdn.apple.com [cite: 12]
+        swscan.apple.com [cite: 12]
+    # Servicios del Sistema
+        push.apple.com [cite: 12]
     # Servicios Base y DNS
-        apple-dns.net
+        apple-dns.net [cite: 12]
 
 # Samsung (One UI)
     # Actualizaciones de Sistema (OTA)
-        fota-secure-dn.ospserver.net
-        ospserver.net
-        samsungdm.com
+        fota-secure-dn.ospserver.net [cite: 12]
+        ospserver.net [cite: 12]
+        samsungdm.com [cite: 12]
     # Tienda de Aplicaciones (Galaxy Store)
-        samsung-gs.com
-        samsungapps.com
+        samsung-gs.com [cite: 13]
+        samsungapps.com [cite: 13]
     # Servicios del Ecosistema
-        findmymobile.samsung.com
-        push.samsung.com.cn
+        findmymobile.samsung.com [cite: 13]
+        push.samsung.com.cn [cite: 13]
 
 # Xiaomi (HyperOS / MIUI)
     # Actualizaciones de Sistema (OTA)
-        bigota.d.miui.com
-        cdn.ota.miui.com
-        ota.mi.com
+        bigota.d.miui.com [cite: 13]
+        cdn.ota.miui.com [cite: 13]
+        ota.mi.com [cite: 13]
     # Servicios del Sistema
-        api.miui.com
-        resolver.msg.xiaomi.net
+        api.miui.com [cite: 13]
+        resolver.msg.xiaomi.net [cite: 13]
+        verify.miui.com [cite: 13]
 
-# Huawei (EMUI / HarmonyOS)
+# Huawei (EMUI / HarmonyOS) [cite: 14]
     # Actualizaciones de Sistema (OTA)
-        update.dbankcdn.com
-        update.hicloud.com
+        update.dbankcdn.com [cite: 14]
+        update.hicloud.com [cite: 14]
     # Servicios Principales (HMS Core)
-        core.hms.huawei.com
+        core.hms.huawei.com [cite: 14]
     # Tienda de Aplicaciones (AppGallery)
-        appgallery.cloud.huawei.com
-        appgallery.huawei.com
-        dl-app-share.dbankcdn.com
+        appgallery.cloud.huawei.com [cite: 14]
+        appgallery.huawei.com [cite: 14]
+        dl-app-share.dbankcdn.com [cite: 14]
 
 # HONOR (Magic OS)
     # Actualizaciones de Sistema (OTA)
-        ota.hihonor.com
+        ota.hihonor.com [cite: 14]
 
-# Oppo / OnePlus (ColorOS / OxygenOS)
+# Oppo / OnePlus (ColorOS / OxygenOS) [cite: 15]
     # Actualizaciones de Sistema (OTA)
-        open.oneplus.net
-        ota.coloros.com
-        ota.oppo.com
+        open.oneplus.net [cite: 15]
+        ota.coloros.com [cite: 15]
+        ota.oppo.com [cite: 15]
 
 # Realme (Realme UI)
     # Actualizaciones de Sistema (OTA)
-        ota.realme.com
+        ota.realme.com [cite: 15]
 
 # Motorola
     # Actualizaciones de Sistema y Apps
-        updates.motorola.com
+        updates.motorola.com [cite: 15]
 
 # Raspberry Pi OS
     # Repositorios de Paquetes (APT)
-        archive.raspberrypi.org
-        raspbian.raspberrypi.org
-    # Portal Principal
-        raspberrypi.org
+        archive.raspberrypi.org [cite: 15]
+        raspbian.raspberrypi.org [cite: 15]
+    # Portal Principal [cite: 16]
+        raspberrypi.org [cite: 16]
 
 # Navegadores Web
     # Google Chrome
-        chrome.google.com
-        # Sus dependencias de actualización y navegación segura se encuentran en la sección de Google.
-    # Microsoft Edge
-        msedge.api.cdp.microsoft.com
-        edge.microsoft.com
-        # Sus dependencias de actualización y cuenta se encuentran en la sección de Microsoft.
-    # Apple Safari
-        # Sus dependencias de actualización, sincronización y navegación segura se encuentran en las secciones de Apple y Google.
-    # Mozilla Firefox
-        aus5.mozilla.org
-        blocklist.addons.mozilla.org
-        firefox.settings.services.mozilla.com
-        location.services.mozilla.com
-        mozilla.org
-        snippets.cdn.mozilla.net
+        chrome.google.com [cite: 16]
+        # Sus dependencias de actualización y navegación segura se encuentran en la sección de Google. [cite: 16]
+    # Microsoft Edge [cite: 17]
+        msedge.api.cdp.microsoft.com [cite: 17]
+        edge.microsoft.com [cite: 17]
+        # Sus dependencias de actualización y cuenta se encuentran en la sección de Microsoft. [cite: 17]
+    # Apple Safari [cite: 18]
+        # Sus dependencias de actualización, sincronización y navegación segura se encuentran en las secciones de Apple y Google. [cite: 18]
+    # Mozilla Firefox [cite: 19]
+        aus5.mozilla.org [cite: 19]
+        blocklist.addons.mozilla.org [cite: 19]
+        firefox.settings.services.mozilla.com [cite: 19]
+        location.services.mozilla.com [cite: 19]
+        mozilla.org [cite: 19]
+        snippets.cdn.mozilla.net [cite: 19]
     # Thunderbird
-        live.thunderbird.net
+        live.thunderbird.net [cite: 19]
     # Opera
-        addons.opera.com
-        autoupdate.opera.com
-        sync.opera.com
+        addons.opera.com [cite: 19]
+        autoupdate.opera.com [cite: 19]
+        sync.opera.com [cite: 19]
     # Brave
-        api.brave.com
-        brave-browser-apt-release.s3.brave.com
-        updates.brave.com
+        api.brave.com [cite: 20]
+        brave-browser-apt-release.s3.brave.com [cite: 20]
+        updates.brave.com [cite: 20]
 
 # Hardware de Red
     # TP-Link
-        n-use1-wap.i.tplinkcloud.com
-        tplink.com
-        tplinkcloud.com
-        tplinkra.com
-        tplinkwifi.net
+        n-use1-wap.i.tplinkcloud.com [cite: 20]
+        tplink.com [cite: 20]
+        tplinkcloud.com [cite: 20]
+        tplinkra.com [cite: 20]
+        tplinkwifi.net [cite: 20]
     # Linksys
-        api.linksys.com
-        linksys.com
-        linksyssmartwifi.com
-    # Netgear
-        my.netgear.com
-        netgear.com
-        updates.netgear.com
+        api.linksys.com [cite: 20]
+        linksys.com [cite: 20]
+        linksyssmartwifi.com [cite: 20]
+    # Netgear [cite: 21]
+        my.netgear.com [cite: 21]
+        netgear.com [cite: 21]
+        updates.netgear.com [cite: 21]
     # ASUS
-        asuscomm.com
-        asusrouter.com
-        router.asus.com
+        asuscomm.com [cite: 21]
+        asusrouter.com [cite: 21]
+        router.asus.com [cite: 21]
     # Amazon Eero
-        api.eero.com
-        eero.com
+        api.eero.com [cite: 21]
+        eero.com [cite: 21]
     # Google / Nest Wifi
-        wifi.google.com
-    # Sincronización de Hora (NTP)
-        pool.ntp.org
-        ntp.org
+        wifi.google.com [cite: 21]
+    # Sincronización de Hora (NTP) [cite: 22]
+        pool.ntp.org [cite: 22]
+        ntp.org [cite: 22]
     # Dynamic DNS
-        duckdns.org
-        dynupdate.no-ip.com
-        ipv64.net
-        no-ip.com
+        duckdns.org [cite: 22]
+        dynupdate.no-ip.com [cite: 22]
+        ipv64.net [cite: 22]
+        no-ip.com [cite: 22]
 
 
 # --- SECCIÓN 3: ECOSISTEMAS DE CUENTAS Y PRODUCTIVIDAD ---
 
 # Google (Cuentas y Servicios Generales)
     # Búsqueda y Páginas Principales
-        google.com
-        google.com.mx
-        one.google.com
-        photos.google.com
-        www.google.com
+        google.com [cite: 22]
+        google.com.mx [cite: 22]
+        one.google.com [cite: 23]
+        photos.google.com [cite: 23]
+        www.google.com [cite: 23]
     # Autenticación y Cuentas
-        accounts.google.com
-        accounts.youtube.com
-        passbox-pa.googleapis.com
-        signin.l.google.com
+        accounts.google.com [cite: 23]
+        accounts.youtube.com [cite: 23]
+        passbox-pa.googleapis.com [cite: 23]
+        signin.l.google.com [cite: 23]
     # APIs y Servicios de Clientes
-        0.client-channel.google.com
-        androidplatformbackuprestore-pa.googleapis.com
-        apis.google.com
-        appspot-preview.l.google.com
-        appsbackup-pa.clients6.google.com
-        appsbackup-pa.googleapis.com
-        clients.google.com
-        clients1.google.com
-        clients2.google.com
-        clients3.google.com
-        clients4.google.com
-        clients5.google.com
-        clients6.google.com
-        clients7.google.com
-        clientservices.googleapis.com
-        contactsui-pa.googleapis.com
-        cryptauthenrollment.googleapis.com
-        cse.google.com
-        googleapis.com
-        instantmessaging-pa.googleapis.com
-        notifications-pa.googleapis.com
-        people-pa.googleapis.com
-        peoplestack-pa.clients6.google.com
-        tasks-pa.clients6.google.com
-        tasks-pa.googleapis.com
-        translate.googleapis.com
-        www.googleapis.com
-    # Contenido Estático y de Usuario
-        connectivitycheck.gstatic.com
-        fonts.gstatic.com
-        geo3.ggpht.com
-        ggpht.com
-        googleusercontent.com
-        gstatic.com
-        storage.googleapis.com
-        ssl.gstatic.com
-        www.gstatic.com
+        0.client-channel.google.com [cite: 23]
+        androidplatformbackuprestore-pa.googleapis.com [cite: 23]
+        apis.google.com [cite: 23]
+        appspot-preview.l.google.com [cite: 23]
+        appsbackup-pa.clients6.google.com [cite: 24]
+        appsbackup-pa.googleapis.com [cite: 24]
+        clients.google.com [cite: 24]
+        clients1.google.com [cite: 24]
+        clients2.google.com [cite: 24]
+        clients2.googleusercontent.com [cite: 24]
+        clients3.google.com [cite: 24]
+        clients4.google.com [cite: 24]
+        clients5.google.com [cite: 24]
+        clients6.google.com [cite: 24]
+        clients7.google.com [cite: 24]
+        clientservices.googleapis.com [cite: 24]
+        contactsui-pa.googleapis.com [cite: 25]
+        cryptauthenrollment.googleapis.com [cite: 25]
+        cse.google.com [cite: 25]
+        googleapis.com [cite: 25]
+        instantmessaging-pa.googleapis.com [cite: 25]
+        notifications-pa.googleapis.com [cite: 25]
+        people-pa.googleapis.com [cite: 25]
+        peoplestack-pa.clients6.google.com [cite: 25]
+        tasks-pa.clients6.google.com [cite: 25]
+        tasks-pa.googleapis.com [cite: 25]
+        translate.googleapis.com [cite: 25]
+        update.googleapis.com [cite: 25]
+        www.googleapis.com [cite: 25]
+    # Contenido Estático y de Usuario [cite: 26]
+        connectivitycheck.gstatic.com [cite: 26]
+        fonts.gstatic.com [cite: 26]
+        geo3.ggpht.com [cite: 26]
+        ggpht.com [cite: 26]
+        googleusercontent.com [cite: 26]
+        gstatic.com [cite: 26]
+        storage.googleapis.com [cite: 26]
+        ssl.gstatic.com [cite: 26]
+        www.gstatic.com [cite: 26]
     # Servicios del Sistema y Conectividad
-        ota-cache1.googlezip.net
-    # Recursos para Desarrolladores
-        google.dev
+        ota-cache1.googlezip.net [cite: 26]
+    # Recursos para Desarrolladores [cite: 27]
+        google.dev [cite: 27]
     # Navegación Segura
-        safebrowsing.googleapis.com
+        safebrowsing.googleapis.com [cite: 27]
     # Firebase (Backend para Apps)
-        firebase-settings.googleapis.com
-        firebaseapp.com
-        firebaseappcheck.googleapis.com
-        firebasehosting.googleapis.com
-        firebaseinstallations.googleapis.com
-        firebaseio.com
-        firebasestorage.googleapis.com
+        firebase-settings.googleapis.com [cite: 27]
+        firebaseapp.com [cite: 27]
+        firebaseappcheck.googleapis.com [cite: 27]
+        firebasehosting.googleapis.com [cite: 27]
+        firebaseinstallations.googleapis.com [cite: 27]
+        firebaseio.com [cite: 27]
+        firebasestorage.googleapis.com [cite: 27]
 
 # Microsoft (Cuentas y Servicios Generales)
-    # Autenticación y Cuentas (Live/Azure)
-        account.live.com
-        c.s-microsoft.com
-        clientconfig.passport.net
-        g.live.com
-        live.com
-        live.net
-        login.live.com
-        login.microsoft.com
-        login.microsoftonline.com
-        login.windows.net
-        microsoftonline.com
-        s.gateway.messenger.live.com
-    # APIs y Servicios Gráficos
-        graph.microsoft.com
-        graph.windows.net
+    # Autenticación y Cuentas (Live/Azure) [cite: 28]
+        account.live.com [cite: 28]
+        c.s-microsoft.com [cite: 28]
+        clientconfig.passport.net [cite: 28]
+        g.live.com [cite: 28]
+        live.com [cite: 28]
+        live.net [cite: 28]
+        login.live.com [cite: 28]
+        login.microsoft.com [cite: 28]
+        login.microsoftonline.com [cite: 28]
+        login.windows.net [cite: 28]
+        microsoftonline.com [cite: 28]
+        s.gateway.messenger.live.com [cite: 28]
+    # APIs y Servicios Gráficos [cite: 29]
+        graph.microsoft.com [cite: 29]
+        graph.windows.net [cite: 29]
     # Portales Principales
-        azure.com
-        microsoft.com
+        azure.com [cite: 29]
+        microsoft.com [cite: 29]
 
 # Apple (Cuentas y Servicios Generales)
     # Autenticación y Cuentas (Apple ID)
-        apple.com
-        appleid.apple.com
-        appleid.cdn-apple.com
-        idmsa.apple.com
-    # Servicios de iCloud
-        api.apple-cloudkit.com
-        cvws.icloud-content.com
-        gateway.icloud.com
-        icloud-content.com
-        icloud.com
-        p33-content.icloud.com
-        p33-drivews.icloud.com
-        setup.icloud.com
+        apple.com [cite: 29]
+        appleid.apple.com [cite: 29]
+        appleid.apple.com.edgesuite.net [cite: 29]
+        appleid.cdn-apple.com [cite: 29]
+        idmsa.apple.com [cite: 29]
+    # Servicios de iCloud [cite: 30]
+        api.apple-cloudkit.com [cite: 30]
+        cvws.icloud-content.com [cite: 30]
+        gateway.icloud.com [cite: 30]
+        icloud-content.com [cite: 30]
+        icloud.com [cite: 30]
+        p33-content.icloud.com [cite: 30]
+        p108-content.icloud.com [cite: 30]
+        p33-drivews.icloud.com [cite: 30]
+        setup.icloud.com [cite: 30]
     # App Store y Contenido
-        amp-api-search-edge.apps.apple.com
-        appstore.com
-        ax.phobos.apple.com.edgesuite.net
-        buy.itunes.apple.com
-        is1-ssl.mzstatic.com
-        is2-ssl.mzstatic.com
-        is3-ssl.mzstatic.com
-        is4-ssl.mzstatic.com
-        is5-ssl.mzstatic.com
-        itunes.apple.com
-        itunes.com
-        mzstatic.com
-        static.gc.apple.com
-        video.apple.com
-    # Noticias
-        apple.news
+        amp-api-search-edge.apps.apple.com [cite: 30]
+        appstore.com [cite: 31]
+        ax.phobos.apple.com.edgesuite.net [cite: 31]
+        buy.itunes.apple.com [cite: 31]
+        is1-ssl.mzstatic.com [cite: 31]
+        is2-ssl.mzstatic.com [cite: 31]
+        is3-ssl.mzstatic.com [cite: 31]
+        is4-ssl.mzstatic.com [cite: 31]
+        is5-ssl.mzstatic.com [cite: 31]
+        itunes.apple.com [cite: 31]
+        itunes.com [cite: 31]
+        mzstatic.com [cite: 31]
+        static.gc.apple.com [cite: 31]
+        video.apple.com [cite: 31]
+    # Noticias [cite: 32]
+        apple.news [cite: 32]
 
 # Samsung (Cuentas y Ecosistema)
     # Cuenta y Sincronización en la Nube
-        samsung.net
-        samsungaccount.com
+        samsung.net [cite: 32]
+        samsungaccount.com [cite: 32]
 
 # Xiaomi (Cuentas y Ecosistema)
     # Cuenta y Sincronización en la Nube
-        account.xiaomi.com
-        api.account.xiaomi.com
-        i.mi.com
+        account.xiaomi.com [cite: 32]
+        api.account.xiaomi.com [cite: 32]
+        i.mi.com [cite: 32]
     # Portal Principal
-        mi.com
+        mi.com [cite: 32]
 
 # Huawei (Cuentas y Ecosistema)
-    # Cuenta y Sincronización en la Nube
-        hicloud.com
+    # Cuenta y Sincronización en la Nube [cite: 33]
+        hicloud.com [cite: 33]
 
 # HONOR (Cuentas y Ecosistema)
     # Cuenta y Servicios en la Nube
-        api.cloud.honor.com
-        cloud.honor.com
-        hnid.com
-        honor.com
+        api.cloud.honor.com [cite: 33]
+        cloud.honor.com [cite: 33]
+        hnid.com [cite: 33]
+        honor.com [cite: 33]
 
 # Oppo / OnePlus / Realme (Cuentas y Ecosistema)
     # Servicios en la Nube (HeyTap)
-        cloud.heytap.com
-        heytap.com
-        id.heytap.com
+        cloud.heytap.com [cite: 33]
+        heytap.com [cite: 33]
+        id.heytap.com [cite: 34]
     # Portales Principales
-        oneplus.com
-        oppo.com
-        realme.com
+        oneplus.com [cite: 34]
+        oppo.com [cite: 34]
+        realme.com [cite: 34]
 
 # Suites de Oficina y Colaboración
     # Google Workspace
-        apidata.googleusercontent.com
-        calendar.google.com
-        classroom.google.com
-        docs.google.com
-        docs.googleusercontent.com
-        drive.files.ggpht.com
-        drive.google.com
-        fonts.googleapis.com
-        maps.googleapis.com
-        maps.gstatic.com
-        meet.google.com
-        meetings.googleapis.com
-        mt0.google.com
-        mt1.google.com
-        tile.googleapis.com
+        apidata.googleusercontent.com [cite: 34]
+        calendar.google.com [cite: 34]
+        classroom.google.com [cite: 34]
+        docs.google.com [cite: 34]
+        docs.googleusercontent.com [cite: 34]
+        drive.files.ggpht.com [cite: 34]
+        drive.google.com [cite: 34]
+        fonts.googleapis.com [cite: 35]
+        maps.googleapis.com [cite: 35]
+        maps.gstatic.com [cite: 35]
+        meet.google.com [cite: 35]
+        meetings.googleapis.com [cite: 35]
+        mt0.google.com [cite: 35]
+        mt1.google.com [cite: 35]
+        tile.googleapis.com [cite: 35]
     # Microsoft Office 365
-        1drv.com
-        activation-v2.sls.microsoft.com
-        api.onedrive.com
-        nexusrules.officeapps.live.com
-        office.com
-        office.net
-        office365.com
-        officecdn.microsoft.com
-        officeclient.microsoft.com
-        onedrive.live.com
-        outlook.com
-        outlook.live.com
-        outlook.office365.com
-        products.office.com
-        protection.office.com
-        statics.teams.cdn.office.net
-        storage.live.com
-        substrate.office.com
-        teams.live.com
-        teams.microsoft.com
-        webshell.suite.office.com
+        1drv.com [cite: 35]
+        activation-v2.sls.microsoft.com [cite: 35]
+        api.onedrive.com [cite: 35]
+        nexusrules.officeapps.live.com [cite: 36]
+        office.com [cite: 36]
+        office.net [cite: 36]
+        office365.com [cite: 36]
+        officecdn.microsoft.com [cite: 36]
+        officecdn.microsoft.com.edgesuite.net [cite: 36]
+        officeclient.microsoft.com [cite: 36]
+        onedrive.live.com [cite: 36]
+        outlook.com [cite: 36]
+        outlook.live.com [cite: 36]
+        outlook.office365.com [cite: 36]
+        products.office.com [cite: 36]
+        protection.office.com [cite: 36]
+        statics.teams.cdn.office.net [cite: 37]
+        storage.live.com [cite: 37]
+        substrate.office.com [cite: 37]
+        teams.live.com [cite: 37]
+        teams.microsoft.com [cite: 37]
+        webshell.suite.office.com [cite: 37]
     # Adobe Creative Cloud
-        adobe.com
-        adobe.io
-        adobelogin.com
-        adobesc.com
-        assets.adobe.com
-        cc-api-storage.adobe.io
-        ccmdl.adobe.com
-        lm.licenses.adobe.com
-        swupmf.adobe.com
-        use.typekit.net
+        adobe.com [cite: 37]
+        adobe.io [cite: 37]
+        adobelogin.com [cite: 37]
+        adobesc.com [cite: 37]
+        assets.adobe.com [cite: 37]
+        cc-api-storage.adobe.io [cite: 38]
+        ccmdl.adobe.com [cite: 38]
+        lm.licenses.adobe.com [cite: 38]
+        swupmf.adobe.com [cite: 38]
+        use.typekit.net [cite: 38]
     # Validación de Software
-        genuine.adobe.com
+        genuine.adobe.com [cite: 38]
     # Firma Digital
-        docusign.com
-        docusign.net
-        images.docusign.com
+        docusign.com [cite: 38]
+        docusign.net [cite: 38]
+        images.docusign.com [cite: 38]
     # Herramientas de Diseño
-        canva.com
-        content.canva.com
-        static.canva.com
-        figma.com
-        static.figma.com
-        www.figma.com
-    # Slack
-        slack-edge.com
-        slack-files.com
-        slack-imgs.com
-        slack.com
+        canva.com [cite: 38]
+        content.canva.com [cite: 39]
+        static.canva.com [cite: 39]
+        figma.com [cite: 39]
+        static.figma.com [cite: 39]
+        www.figma.com [cite: 39]
+    # Asistencia de Escritura
+        assets.grammarly.com [cite: 39]
+        data.grammarly.com [cite: 39]
+        grammarly.com [cite: 39]
+    # Atlassian (Jira / Confluence)
+        atlassian.com [cite: 39]
+        atlassian.net [cite: 39]
+        jira.com [cite: 39]
+    # Slack [cite: 40]
+        slack-edge.com [cite: 40]
+        slack-files.com [cite: 40]
+        slack-imgs.com [cite: 40]
+        slack.com [cite: 40]
     # Zoom
-        zoom.us
+        api.zoom.us [cite: 40]
+        zoom.us [cite: 40]
     # Notion
-        notion.so
+        notion.so [cite: 40]
     # Trello
-        trello.com
+        trello.com [cite: 40]
     # Asana
-        api.asana.com
-        asana.com
-        luna1.luna.asana.com
+        api.asana.com [cite: 40]
+        asana.com [cite: 41]
+        luna1.luna.asana.com [cite: 41]
     # Miro
-        api.miro.com
-        miro.com
-        static.miro.com
+        api.miro.com [cite: 41]
+        miro.com [cite: 41]
+        static.miro.com [cite: 41]
 
 # Administradores de Contraseñas
     # Bitwarden
-        api.bitwarden.com
-        bitwarden.com
-        identity.bitwarden.com
-        vault.bitwarden.com
+        api.bitwarden.com [cite: 41]
+        bitwarden.com [cite: 41]
+        identity.bitwarden.com [cite: 41]
+        vault.bitwarden.com [cite: 41]
     # 1Password
-        1password.com
-        1passwordusercontent.com
-        c.1password.com
+        1password.com [cite: 41]
+        1passwordusercontent.com [cite: 41]
+        c.1password.com [cite: 42]
     # LastPass
-        lastpass.com
+        lastpass.com [cite: 42]
     # Dashlane
-        api.dashlane.com
-        dashlane.com
-        ws1.dashlane.com
+        api.dashlane.com [cite: 42]
+        dashlane.com [cite: 42]
+        ws1.dashlane.com [cite: 42]
 
 # Almacenamiento en la Nube (Dedicado)
     # Dropbox
-        dl.dropbox.com
-        dl.dropboxusercontent.com
-        dropbox.com
-        dropboxapi.com
-        dropboxstatic.com
-        dropboxusercontent.com
-        notify.dropbox.com
-        ns1.dropbox.com
-        ns2.dropbox.com
+        api.dropboxapi.com [cite: 42]
+        dl.dropbox.com [cite: 42]
+        dl.dropboxusercontent.com [cite: 42]
+        dropbox.com [cite: 42]
+        dropboxapi.com [cite: 42]
+        dropboxstatic.com [cite: 43]
+        dropboxusercontent.com [cite: 43]
+        ns1.dropbox.com [cite: 43]
+        ns2.dropbox.com [cite: 43]
     # MEGA
-        eu.static.mega.co.nz
-        g.static.mega.co.nz
-        mega.co.nz
-        mega.io
-        mega.nz
+        eu.static.mega.co.nz [cite: 43]
+        g.static.mega.co.nz [cite: 43]
+        mega.co.nz [cite: 43]
+        mega.io [cite: 43]
+        mega.nz [cite: 43]
     # Box
-        box.com
+        box.com [cite: 43]
     # pCloud
-        pcloud.com
+        pcloud.com [cite: 44]
 
 # Herramientas para Desarrolladores
-    # APIs Generales
-        api.ipify.org
     # Control de Versiones
-        bitbucket.org
-        github.com
-        github.io
-        gitlab.com
-        raw.githubusercontent.com
+        bitbucket.org [cite: 44]
+        github.com [cite: 44]
+        github.io [cite: 44]
+        gitlab.com [cite: 44]
+        raw.githubusercontent.com [cite: 44]
     # Plataformas y Comunidades
-        docker.com
-        nodejs.org
-        python.org
-        stackexchange.com
-        stackoverflow.com
+        docker.com [cite: 44]
+        nodejs.org [cite: 44]
+        python.org [cite: 44]
     # Inteligencia Artificial
-        openai.com
+        openai.com [cite: 44]
 
-# Software de Seguridad (Antivirus)
+# Software de Seguridad (Antivirus) [cite: 45]
     # Avast
-        my-win.avast.com
-        ping.avast.com
+        my-win.avast.com [cite: 45]
     # ESET
-        edf.eset.com
+        edf.eset.com [cite: 45]
     # Kaspersky
-        ff.kis.scr.kaspersky-labs.com
-        gc.kis.scr.kaspersky-labs.com
-        ie.kis.scr.kaspersky-labs.com
+        ff.kis.scr.kaspersky-labs.com [cite: 45]
+        gc.kis.scr.kaspersky-labs.com [cite: 45]
+        ie.kis.scr.kaspersky-labs.com [cite: 45]
     # McAfee
-        provision.ccs.mcafee.com
-        updatekeepalive.mcafee.com
+        provision.ccs.mcafee.com [cite: 45]
+        updatekeepalive.mcafee.com [cite: 45]
     # Sophos
-        sdds3.sophosupd.com
-        sus.sophosupd.com
-    # Malwarebytes
-        adwcleaner.toolslib.net
-        keystone.mwbsys.com
+        sdds3.sophosupd.com [cite: 45]
+        sus.sophosupd.com [cite: 45]
+    # Malwarebytes [cite: 46]
+        keystone.mwbsys.com [cite: 46]
 
 
 # --- SECCIÓN 4: COMUNICACIÓN Y REDES SOCIALES ---
 
 # WhatsApp
     # Servicio Principal y Contenido
-        dyn.web.whatsapp.com
-        media.whatsapp.net
-        static.whatsapp.net
-        web.whatsapp.com
-        whatsapp.com
-        whatsapp.net
-        whatsappcdn.com
+        dyn.web.whatsapp.com [cite: 46]
+        media.whatsapp.net [cite: 46]
+        static.whatsapp.net [cite: 46]
+        web.whatsapp.com [cite: 46]
+        whatsapp.com [cite: 46]
+        whatsapp.net [cite: 46]
+        whatsappcdn.com [cite: 46]
     # Conexiones (Voz/Video)
-        g.whatsapp.net
-        mmg.whatsapp.net
-        mmx.whatsapp.net
-        v.whatsapp.net
+        g.whatsapp.net [cite: 46]
+        mmg.whatsapp.net [cite: 47]
+        mmx.whatsapp.net [cite: 47]
+        v.whatsapp.net [cite: 47]
 
 # Facebook y Messenger
     # Portal Principal y Dominios Cortos
-        fb.com
-        fb.me
-        fb.watch
-        facebook.com
-        m.facebook.com
-        messenger.com
+        fb.com [cite: 47]
+        fb.me [cite: 47]
+        facebook.com [cite: 47]
+        m.facebook.com [cite: 47]
+        messenger.com [cite: 47]
     # Contenido (CDN)
-        fbcdn.com
-        fbcdn.net
-        fbsbx.com
+        facebook.net [cite: 47]
+        fbcdn.com [cite: 47]
+        fbcdn.net 
+        fbsbx.com 
+        static.xx.fbcdn.net
     # API y Conexiones de Chat
-        edge-chat.facebook.com
-        edge-mqtt.facebook.com
-        graph.facebook.com
-        mqtt.facebook.com
+        edge-chat.facebook.com 
+        edge-mqtt.facebook.com 
+        graph.facebook.com 
+        mqtt.facebook.com 
 
 # Instagram y Threads
     # Portal Principal y API
-        api.instagram.com
-        api.threads.net
-        graph.instagram.com
-        instagram.com
-        threads.net
+        api.instagram.com 
+        api.threads.net 
+        graph.instagram.com 
+        instagram.com 
+        threads.net [cite: 49]
     # Contenido (CDN)
-        cdninstagram.com
-        i.instagram.com
-        instagram.net
-        instagramcdn.com
+        cdninstagram.com [cite: 49]
+        i.instagram.com [cite: 49]
+        instagram.net [cite: 49]
+        instagramcdn.com [cite: 49]
     # Conexiones de Chat
-        edge-chat.instagram.com
+        edge-chat.instagram.com [cite: 49]
 
 # X (Twitter)
     # Dominios Principales y API
-        api.twitter.com
-        api.x.com
-        twitter.com
-        x.com
-    # Contenido (Imágenes y Videos)
-        abs-0.twimg.com
-        pbs.twimg.com
-        ton.twimg.com
-        twimg.com
-        video.twimg.com
+        api.twitter.com [cite: 49]
+        api.x.com [cite: 49]
+        twitter.com [cite: 49]
+        x.com [cite: 49]
+    # Contenido (Imágenes y Videos) [cite: 50]
+        abs-0.twimg.com [cite: 50]
+        pbs.twimg.com [cite: 50]
+        ton.twimg.com [cite: 50]
+        twimg.com [cite: 50]
+        video.twimg.com [cite: 50]
     # Acortador de URL y Carga de Archivos
-        t.co
-        upload.twitter.com
+        t.co [cite: 50]
+        upload.twitter.com [cite: 50]
 
 # Discord
     # Portal Principal y Servicios
-        discord.com
-        discordapp.com
-        status.discord.com
+        discord.com [cite: 50]
+        discordapp.com [cite: 50]
+        status.discord.com [cite: 51]
     # Contenido (CDN) y Media
-        cdn.discordapp.com
-        discord.media
-        discordapp.net
-        media.discordapp.net
+        cdn.discordapp.com [cite: 51]
+        discord.media [cite: 51]
+        discordapp.net [cite: 51]
+        media.discordapp.net [cite: 51]
     # Invitaciones y Gateway
-        discord.gg
-        gateway.discord.gg
+        discord.gg [cite: 51]
+        gateway.discord.gg [cite: 51]
 
 # Telegram
     # Portales Principales
-        telegram.org
-        web.telegram.org
-    # API y Dominios Cortos
-        api.telegram.org
-        t.me
-        telegram.me
+        telegram.org [cite: 51]
+        web.telegram.org [cite: 51]
+    # API y Dominios Cortos [cite: 52]
+        api.telegram.org [cite: 52]
+        t.me [cite: 52]
+        telegram.me [cite: 52]
     # Contenido Multimedia y Web
-        aurora.web.telegram.org
-        telesco.pe
-        venus.web.telegram.org
+        aurora.web.telegram.org [cite: 52]
+        telesco.pe [cite: 52]
+        venus.web.telegram.org [cite: 52]
     # Aplicación de Escritorio
-        tdesktop.com
+        tdesktop.com [cite: 52]
 
 # Mensajería Segura
     # Signal
-        signal.org
+        signal.org [cite: 52]
     # Viber
-        media.viber.com
-        viber.com
+        media.viber.com [cite: 52]
+        viber.com [cite: 53]
 
 # TikTok
     # Portal Principal y API
-        api.tiktokv.com
-        tiktok.com
-        tiktokapi.com
+        api.tiktok.com [cite: 53]
+        api.tiktokv.com [cite: 53]
+        tiktok.com [cite: 53]
+        tiktokapi.com [cite: 53]
     # Contenido (CDN) y Dominios de Servicio
-        muscdn.com
-        p16-sign-va.tiktokcdn.com
-        sf-tk-sg.ibytedtos.com
-        sf16-website-login.useast8.tiktokscan.com
-        tiktokcdn.com
-        tiktokv.com
+        ibyteimg.com [cite: 53]
+        muscdn.com [cite: 53]
+        p16-sign-va.tiktokcdn.com [cite: 53]
+        sf-tk-sg.ibytedtos.com [cite: 53]
+        sf16-website-login.useast8.tiktokscan.com [cite: 53]
+        tiktokcdn-us.com [cite: 54]
+        tiktokcdn.com [cite: 54]
+        tiktokv.com [cite: 54]
 
 # Reddit
     # Portal Principal y Dominio Corto
-        redd.it
-        reddit.com
+        redd.it [cite: 54]
+        reddit.com [cite: 54]
     # Contenido (Imágenes y Videos)
-        i.redd.it
-        redditmedia.com
-        v.redd.it
+        i.redd.it [cite: 54]
+        redditmedia.com [cite: 54]
+        v.redd.it [cite: 54]
     # Recursos Estáticos
-        redditstatic.com
-        www.redditstatic.com
+        redditstatic.com [cite: 54]
+        www.redditstatic.com [cite: 55]
     # API y Gateway
-        gateway.reddit.com
+        api.reddit.com [cite: 55]
+        gateway.reddit.com [cite: 55]
 
 # LinkedIn
     # Portal Principal y Contenido (CDN)
-        licdn.com
-        linkedin.com
-        media-exp1.licdn.com
-        static-exp1.licdn.com
+        licdn.com [cite: 55]
+        linkedin.com [cite: 55]
+        media-exp1.licdn.com [cite: 55]
+        static-exp1.licdn.com [cite: 55]
 
 # Pinterest
     # Portales Principales y Contenido
-        i.pinimg.com
-        pinterest.com
-        pinterest.com.mx
-        pinimg.com
+        i.pinimg.com [cite: 55]
+        pinterest.com [cite: 55]
+        pinterest.com.mx [cite: 56]
+        pinimg.com [cite: 56]
 
 # Snapchat
     # Servicio Principal y API
-        app.snapchat.com
-        gateway.snapchat.com
-        messaging.snapchat.com
-        snapchat.com
+        api.snapchat.com [cite: 56]
+        app.snapchat.com [cite: 56]
+        gateway.snapchat.com [cite: 56]
+        messaging.snapchat.com [cite: 56]
+        snapchat.com [cite: 56]
     # Contenido (CDN) y Dependencias
-        feelinsonice.com
-        sc-cdn.net
-        snap-dev.net
+        sc-cdn.net [cite: 56]
 
 # Skype
     # Portal Principal y Apps
-        apps.skype.com
-        ui.skype.com
-    # Contenido (CDN)
-        cdn.skype.com
+        apps.skype.com [cite: 56]
+        ui.skype.com [cite: 56]
+    # Contenido (CDN) [cite: 57]
+        cdn.skype.com [cite: 57]
     # Servicios
-        pricelist.skype.com
+        pricelist.skype.com [cite: 57]
 
 # WeChat
     # Portal Principal y Contenido
-        szmmsns.qpic.cn
-        szsns.video.qpic.cn
-        wechat.com
-        weixin.qq.com
-
-# GIFs
-    # Giphy
-        giphy.com
+        szmmsns.qpic.cn [cite: 57]
+        szsns.video.qpic.cn [cite: 57]
+        wechat.com [cite: 57]
+        weixin.qq.com [cite: 57]
 
 # Blogs y Publicaciones
     # WordPress
-        s1.wp.com
-        wp.com
-        wordpress.com
-        wordpress.org
-    # Plataformas de Mecenazgo
-        patreon.com
+        s1.wp.com [cite: 57]
+        wp.com [cite: 57]
+        wordpress.com [cite: 57]
+        wordpress.org [cite: 58]
 
 
 # --- SECCIÓN 5: ENTRETENIMIENTO Y VIDEOJUEGOS ---
 
 # YouTube y YouTube Music
     # Servicio principal y APIs
-        music.googleapis.com
-        music.youtube.com
-        youtube.com
-        youtube.googleapis.com
+        music.googleapis.com [cite: 58]
+        music.youtube.com [cite: 58]
+        youtube.com [cite: 58]
+        youtube.googleapis.com [cite: 58]
         youtubei.googleapis.com
     # Transmisión del contenido de video
-        googlevideo.com
-        manifest.googlevideo.com
-        redirector.googlevideo.com
-    # Contenido estático (Miniaturas, avatares, banners)
+        googlevideo.com [cite: 58]
+        manifest.googlevideo.com [cite: 58]
+        redirector.googlevideo.com [cite: 58]
+    # Contenido estático (Miniaturas, avatares, banners) [cite: 59]
         i.ytimg.com
-        i1.ytimg.com
-        s.ytimg.com
-        s2.youtube.com
-        yt3.ggpht.com
-        ytimg.com
+        i1.ytimg.com [cite: 59]
+        s.ytimg.com [cite: 59]
+        s2.youtube.com [cite: 59]
+        yt3.ggpht.com [cite: 59]
+        ytimg.com [cite: 59]
     # Historial y Progreso de Video
-        s.youtube.com
+        s.youtube.com [cite: 59]
     # Dominios Cortos y Embeds
-        www.youtube-nocookie.com
-        youtu.be
-        youtube-nocookie.com
-        ytmusic.be
+        www.youtube-nocookie.com [cite: 59]
+        youtu.be [cite: 59]
+        youtube-nocookie.com [cite: 60]
+        ytmusic.be [cite: 60]
 
 # Netflix
     # Servicio Principal y Búsqueda
-        appboot.netflix.com
-        netflix.com
-        netflix.net
-        nflx.com
-        nflxsearch.net
+        appboot.netflix.com [cite: 60]
+        assets.nflxext.com [cite: 60]
+        netflix.com [cite: 60]
+        netflix.net [cite: 60]
+        nflx.com [cite: 60]
+        nflxsearch.net [cite: 60]
     # Transmisión de Contenido (Video e Imágenes)
-        nflxext.com
-        nflximg.net
-        nflxso.net
-        nflxvideo.net
+        nflxext.com [cite: 60]
+        nflximg.net [cite: 60]
+        nflxso.net [cite: 61]
+        nflxvideo.net [cite: 61]
     # Componentes y Extensiones
-        codex.nflxext.com
+        codex.nflxext.com [cite: 61]
     # Servicios de Red
-        netflixdnstest.com
+        netflixdnstest.com [cite: 61]
 
 # Amazon Prime Video y Music
     # Portal Principal
-        amazonvideo.com
-        api.music.amazon.com
-        music.amazon.com
-        primevideo.com
+        amazonvideo.com [cite: 61]
+        api.music.amazon.com [cite: 61]
+        music.amazon.com [cite: 61]
+        primevideo.com [cite: 61]
     # Transmisión de Contenido (CDN)
-        aiv-cdn.net
-        aiv-delivery.net
-        media-amazon.com
-        pv-cdn.net
+        aiv-cdn.net [cite: 62]
+        aiv-delivery.net [cite: 62]
+        media-amazon.com [cite: 62]
+        pv-cdn.net [cite: 62]
     # Servicios de Backend
-        atv-ps.amazon.com
+        atv-ps.amazon.com [cite: 62]
 
 # Disney+
     # Portal Principal y Servicios de Backend
-        bamgrid.com
-        cdn.datonis.disney.go.com
-        disney.api.edge.bamgrid.com
-        disney.content.edge.bamgrid.com
-        disneyplus.com
-        dssott.com
-        global.edge.bamgrid.com
+        bamgrid.com [cite: 62]
+        cdn.datonis.disney.go.com [cite: 62]
+        disney.api.edge.bamgrid.com [cite: 62]
+        disney.content.edge.bamgrid.com [cite: 62]
+        disneyplus.com [cite: 62]
+        dssott.com [cite: 62]
+        global.edge.bamgrid.com [cite: 63]
     # Registro y Dominios Adicionales
-        cdn.registerdisney.go.com
-        cdn.unid.go.com
-        disney-plus.net
-        registerdisney.go.com
+        cdn.registerdisney.go.com [cite: 63]
+        cdn.unid.go.com [cite: 63]
+        disney-plus.net [cite: 63]
+        registerdisney.go.com [cite: 63]
 
 # Star+
     # Portal Principal y API
-        star.api.edge.bamgrid.com
-        starplus.com
+        star.api.edge.bamgrid.com [cite: 63]
+        starplus.com [cite: 63]
     # Contenido (CDN)
-        starott.com
+        starott.com [cite: 63]
 
 # Hulu
     # Portal Principal y API
-        androidtv.app.hulu.com
-        hulu.com
-        huluim.com
+        androidtv.app.hulu.com [cite: 64]
+        hulu.com [cite: 64]
+        huluim.com [cite: 64]
     # Contenido (CDN) y Servicios
-        assetshuluimcom-a.akamaihd.net
+        assetshuluimcom-a.akamaihd.net [cite: 64]
 
 # Max (HBO Max)
     # Portales Principales
-        hbo.com
-        hbomax.com
-        hbonow.com
-        max.com
-        play.hbomax.com
+        hbo.com [cite: 64]
+        hbomax.com [cite: 64]
+        hbonow.com [cite: 64]
+        max.com [cite: 64]
+        play.hbomax.com [cite: 64]
     # Contenido (CDN) y Servicios
-        hbomaxcdn.com
-        sr.max.com
+        hbomaxcdn.com [cite: 64]
+        sr.max.com [cite: 65]
 
 # Spotify
     # Portal Principal y API
-        spotify.com
-        api.spotify.com
+        spotify.com [cite: 65]
+        api.spotify.com [cite: 65]
     # Contenido (Audio e Imágenes)
-        audio-fa.scdn.co
-        i.scdn.co
-        pscdn.co
-        scdn.co
-        spotifycdn.com
+        audio-fa.scdn.co [cite: 65]
+        i.scdn.co [cite: 65]
+        pscdn.co [cite: 65]
+        scdn.co [cite: 65]
+        spotifycdn.com [cite: 65]
 
 # SoundCloud
     # Portal Principal y API
-        api-v2.soundcloud.com
-        api.soundcloud.com
-        soundcloud.com
+        api-v2.soundcloud.com [cite: 65]
+        api.soundcloud.com [cite: 66]
+        soundcloud.com [cite: 66]
     # Contenido (CDN)
-        cf-media.sndcdn.com
+        cf-media.sndcdn.com [cite: 66]
 
 # Apple Music y Apple TV
     # Portales Principales
-        apple-tv.com
-        music.apple.com
-        tv.apple.com
+        apple-tv.com [cite: 66]
+        music.apple.com [cite: 66]
+        tv.apple.com [cite: 66]
     # Contenido de Audio
-        apple.music.audio
+        apple.music.audio [cite: 66]
     # Contenido de Video (CDN)
-        cdn.apple-tv.services
+        cdn.apple-tv.services [cite: 66]
 
 # Deezer
-    # Portal Principal y API
-        api.deezer.com
-        deezer.com
+    # Portal Principal y API [cite: 67]
+        api.deezer.com [cite: 67]
+        deezer.com [cite: 67]
     # Contenido (Audio e Imágenes)
-        cdns-images.dzcdn.net
-        cdns-music.dzcdn.net
-        e-cdns-images.dzcdn.net
-        e-cdns-music.dzcdn.net
+        cdns-images.dzcdn.net [cite: 67]
+        cdns-music.dzcdn.net [cite: 67]
+        e-cdns-images.dzcdn.net [cite: 67]
+        e-cdns-music.dzcdn.net [cite: 67]
 
 # Twitch
     # Portal Principal y API
-        api.twitch.tv
-        twitch.tv
+        api.twitch.tv [cite: 67]
+        twitch.tv [cite: 67]
     # Contenido de Video (CDN)
-        jtvnw.net
-        ttvnw.net
+        jtvnw.net [cite: 67]
+        ttvnw.net [cite: 68]
     # Recursos Estáticos y Extensiones
-        ext-twitch.tv
-        twitchcdn.net
+        ext-twitch.tv [cite: 68]
+        twitchcdn.net [cite: 68]
 
 # ESPN
     # Portal Principal y API
-        api.espn.com
-        espn.com
-        espn.go.com
+        api.espn.com [cite: 68]
+        espn.com [cite: 68]
+        espn.go.com [cite: 68]
     # Contenido (CDN) y Servicios
-        a.espncdn.com
-        go.com
+        a.espncdn.com [cite: 68]
+        go.com [cite: 68]
 
 # Crunchyroll
     # Portal Principal y API
-        api.crunchyroll.com
-        crunchyroll.com
+        api.crunchyroll.com [cite: 69]
+        crunchyroll.com [cite: 69]
     # Contenido y Dependencias
-        img.crunchyroll.com
-        pl.crunchyroll.com
-        static.crunchyroll.com
-        vrv.co
+        img.crunchyroll.com [cite: 69]
+        pl.crunchyroll.com [cite: 69]
+        static.crunchyroll.com [cite: 69]
+        vrv.co [cite: 69]
 
 # Vimeo
     # Portal Principal y API
-        api.vimeo.com
-        vimeo.com
+        api.vimeo.com [cite: 69]
+        vimeo.com [cite: 69]
     # Contenido de Video (CDN)
-        f.vimeocdn.com
-        vimeocdn.com
+        f.vimeocdn.com [cite: 69]
+        vimeocdn.com [cite: 70]
 
 # Plataformas de Streaming (Otras)
     # Paramount+
-        paramountplus.com
+        paramountplus.com [cite: 70]
+    # Peacock
+        peacocktv.com [cite: 70]
     # Pluto TV
-        pluto.tv
+        pluto.tv [cite: 70]
     # Vix
-        vix.com
-        vixplus.com
+        vix.com [cite: 70]
+        vixplus.com [cite: 70]
     # Tubi
-        tubi.video
-        tubitv.com
+        tubi.video [cite: 70]
+        tubitv.com [cite: 70]
     # Claro Video
-        clarovideo.com
+        clarovideo.com [cite: 71]
     # Blim TV
-        blim.com
+        blim.com [cite: 71]
     # FilminLatino
-        filminlatino.mx
+        filminlatino.mx [cite: 71]
     # RLJE Services (Acorn TV)
-        api.rlje.net
+        api.rlje.net [cite: 71]
 
 # Plataformas Educativas
     # TED
-        app-api.ted.com
-        hls.ted.com
-        tedcdn.com
+        app-api.ted.com [cite: 71]
+        hls.ted.com [cite: 71]
+        tedcdn.com [cite: 71]
 
 # Música (Otros)
     # Last.fm
-        ws.audioscrobbler.com
+        ws.audioscrobbler.com [cite: 71]
 
 # Podcasting
     # Libsyn
-        traffic.libsyn.com
+        traffic.libsyn.com [cite: 72]
 
 # Servidores Multimedia Personales
     # Plex y Apps Relacionadas (Sonarr)
-        apt.sonarr.tv
-        auth.plex.tv
-        dashboard.plex.tv
-        download.sonarr.tv
-        forums.sonarr.tv
-        meta.plex.bz
-        meta.plex.tv
-        plex.direct
-        plex.services
-        plex.tv
-        provider.plex.tv
-        proxy.plex.bz
-        proxy.plex.tv
-        pubsub.plex.bz
-        pubsub.plex.tv
-        scrobbles.plex.tv
-        services.sonarr.tv
-        skyhook.sonarr.tv
-        staging.plex.tv
-        status.plex.tv
-        themoviedb.com
-        thetvdb.com
-        tvdb2.plex.tv
+        apt.sonarr.tv [cite: 72]
+        auth.plex.tv [cite: 72]
+        dashboard.plex.tv [cite: 72]
+        download.sonarr.tv [cite: 72]
+        forums.sonarr.tv [cite: 72]
+        meta.plex.bz [cite: 72]
+        meta.plex.tv [cite: 72]
+        plex.direct [cite: 72]
+        plex.services [cite: 72]
+        plex.tv [cite: 72]
+        provider.plex.tv [cite: 73]
+        proxy.plex.bz [cite: 73]
+        proxy.plex.tv [cite: 73]
+        pubsub.plex.bz [cite: 73]
+        pubsub.plex.tv [cite: 73]
+        scrobbles.plex.tv [cite: 73]
+        services.sonarr.tv [cite: 73]
+        skyhook.sonarr.tv [cite: 73]
+        staging.plex.tv [cite: 73]
+        status.plex.tv [cite: 73]
+        themoviedb.com [cite: 73]
+        thetvdb.com [cite: 73]
+        tvdb2.plex.tv [cite: 74]
 
 # Cines y Boletos (México)
     # Cinépolis
-        api.cinepolis.com
-        cinepolis.com
+        api.cinepolis.com [cite: 74]
+        cinepolis.com [cite: 74]
     # Cinemex
-        api.cinemex.com
-        cinemex.com
+        api.cinemex.com [cite: 74]
+        cinemex.com [cite: 74]
     # Ticketmaster
-        api.ticketmaster.com
-        ticketmaster.com.mx
+        api.ticketmaster.com [cite: 74]
+        ticketmaster.com.mx [cite: 74]
 
 # Steam
     # Portal Principal y Comunidad
-        steam-chat.com
-        steamcommunity.com
-        steampowered.com
-        store.steampowered.com
+        steam-chat.com [cite: 74]
+        steamcommunity.com [cite: 74]
+        steampowered.com [cite: 75]
+        store.steampowered.com [cite: 75]
     # Contenido (CDN) y Servidores
-        cdn.steamstatic.com
-        steamcontent.com
-        steamserver.net
-        steamstatic.com
-        steamusercontent.com
+        cdn.steamstatic.com [cite: 75]
+        steamcontent.com [cite: 75]
+        steamserver.net [cite: 75]
+        steamstatic.com [cite: 75]
+        steamusercontent.com [cite: 75]
 
 # Epic Games
     # Portal Principal y Launcher
-        epicgames.com
-        launcher.epicgames.com
+        epicgames.com [cite: 75]
+        launcher.epicgames.com [cite: 75]
     # Fortnite y Servicios de Backend
-        api.epicgames.dev
-        datarouter.ol.epicgames.com
-        fortnite-public-service-prod.ol.epicgames.com
-        fortnite.com
+        api.epicgames.dev [cite: 75]
+        datarouter.ol.epicgames.com [cite: 76]
+        fortnite-public-service-prod.ol.epicgames.com [cite: 76]
+        fortnite.com [cite: 76]
     # Contenido (CDN) y Motor Gráfico
-        epicgames.dev
-        epicgamescdn.com
-        unrealengine.com
+        epicgames.dev [cite: 76]
+        epicgamescdn.com [cite: 76]
+        unrealengine.com [cite: 76]
 
 # Roblox
     # Portal Principal y API
-        api.roblox.com
-        roblox.com
-        roblox.com.edgekey.net
-        robloxapis.com
-    # Servicios de Juego
-        chat.roblox.com
-        friends.roblox.com
-        games.roblox.com
-        voice.roblox.com
+        api.roblox.com [cite: 76]
+        roblox.com [cite: 76]
+        roblox.com.edgekey.net [cite: 76]
+        robloxapis.com [cite: 76]
+    # Servicios de Juego [cite: 77]
+        chat.roblox.com [cite: 77]
+        friends.roblox.com [cite: 77]
+        games.roblox.com [cite: 77]
+        voice.roblox.com [cite: 77]
     # Contenido (CDN) y de Usuario
-        assetdelivery.roblox.com
-        rbxcdn.com
-        robloxusercontent.com
+        assetdelivery.roblox.com [cite: 77]
+        rbxcdn.com [cite: 77]
+        robloxusercontent.com [cite: 77]
     # Configuración
-        clientsettings.roblox.com
+        clientsettings.roblox.com [cite: 77]
 
 # Riot Games (Valorant, LoL)
     # Portal Principal y Servicios
-        pvp.net
-        riotgames.com
+        lolstatic.com [cite: 78]
+        pvp.net [cite: 78]
+        riotgames.com [cite: 78]
     # Portales de Juegos Específicos
-        leagueoflegends.com
-        valorant.riotgames.com
-        wildrift.riotgames.com
+        leagueoflegends.com [cite: 78]
+        valorant.riotgames.com [cite: 78]
+        wildrift.riotgames.com [cite: 78]
     # Contenido (CDN) y Anti-Cheat
-        riotcdn.net
-        vanguard.riotgames.com
+        riotcdn.net [cite: 78]
+        vanguard.riotgames.com [cite: 78]
 
 # Consolas de Videojuegos
     # PlayStation Network
-        api.playstation.com
-        auth.api.sonyentertainmentnetwork.com
-        ca.psn.services.playstation.net
-        playstation.com
-        playstation.net
-        static.playstation.com
+        api.playstation.com [cite: 78]
+        auth.api.sonyentertainmentnetwork.com [cite: 78]
+        ca.psn.services.playstation.net [cite: 79]
+        playstation.com [cite: 79]
+        playstation.net [cite: 79]
+        static.playstation.com [cite: 79]
     # Xbox Live
-        api.xboxlive.com
-        attestation.xboxlive.com
-        cert.mgt.xboxlive.com
-        def-vef.xboxlive.com
-        device.auth.xboxlive.com
-        eds.xboxlive.com
-        help.ui.xboxlive.com
-        licensing.xboxlive.com
-        notify.xboxlive.com
-        title.auth.xboxlive.com
-        title.mgt.xboxlive.com
-        user.auth.xboxlive.com
-        xbl.mp.microsoft.com
-        xbox.com
-        xbox.ipv6.microsoft.com
-        xboxexperiencesprod.experimentation.xboxlive.com
-        xflight.xboxlive.com
-        xkms.xboxlive.com
-        xboxlive.com
-        xsts.auth.xboxlive.com
+        api.xboxlive.com [cite: 79]
+        attestation.xboxlive.com [cite: 79]
+        cert.mgt.xboxlive.com [cite: 79]
+        def-vef.xboxlive.com [cite: 79]
+        device.auth.xboxlive.com [cite: 79]
+        eds.xboxlive.com [cite: 79]
+        help.ui.xboxlive.com [cite: 79]
+        licensing.xboxlive.com [cite: 80]
+        notify.xboxlive.com [cite: 80]
+        title.auth.xboxlive.com [cite: 80]
+        title.mgt.xboxlive.com [cite: 80]
+        user.auth.xboxlive.com [cite: 80]
+        xbl.mp.microsoft.com [cite: 80]
+        xbox.com [cite: 80]
+        xboxexperiencesprod.experimentation.xboxlive.com [cite: 80]
+        xflight.xboxlive.com [cite: 80]
+        xkms.xboxlive.com [cite: 80]
+        xboxlive.com [cite: 80]
+        xsts.auth.xboxlive.com [cite: 80]
     # Nintendo
-        nintendo.com
-        nintendo.net
-        nintendowifi.net
+        nintendo.com [cite: 81]
+        nintendo.net [cite: 81]
+        nintendowifi.net [cite: 81]
 
 # Publicadores de Videojuegos
     # Battle.net (Activision Blizzard)
-        battle.net
-        blizzard.com
-        blzddist1-a.akamaihd.net
-        cache-cms-ext-us.battle.net
+        battle.net [cite: 81]
+        blizzard.com [cite: 81]
+        blzddist1-a.akamaihd.net [cite: 81]
+        cache-cms-ext-us.battle.net [cite: 81]
     # Electronic Arts (EA)
-        ea.com
-        easo.com
-        origin.com
+        ea.com [cite: 81]
+        easo.com [cite: 81]
+        origin.com [cite: 81]
     # Ubisoft
-        ubi.com
-        ubisoft.com
-        ubisoftconnect.com
+        ubi.com [cite: 82]
+        ubisoft.com [cite: 82]
+        ubisoftconnect.com [cite: 82]
     # Supercell
-        cdn.supercell.com
-        clashofclans.com
-        clashroyale.com
-        supercell.com
+        cdn.supercell.com [cite: 82]
+        clashofclans.com [cite: 82]
+        clashroyale.com [cite: 82]
+        supercell.com [cite: 82]
 
 # Juegos Móviles (Varios)
     # Call of Duty: Mobile
-        api.activision.com
-        callofduty.com
-        cdn.activision.com
-        demonware.net
+        api.activision.com [cite: 82]
+        callofduty.com [cite: 82]
+        cdn.activision.com [cite: 82]
+        demonware.net [cite: 83]
     # Garena Free Fire
-        cdn.garena.com
-        ff.garena.com
-        freefiremobile.com
-        garena.sg
+        cdn.garena.com [cite: 83]
+        ff.garena.com [cite: 83]
+        freefiremobile.com [cite: 83]
+        garena.sg [cite: 83]
     # Genshin Impact
-        api-os-takumi.mihoyo.com
-        genshinimpact.com
-        hoyoverse.com
+        api-os-takumi.mihoyo.com [cite: 83]
+        genshinimpact.com [cite: 83]
+        hoyoverse.com [cite: 83]
     # PUBG Mobile
-        api.pubgmobile.com
-        g.pubgmobile.com
-        pubgmobile.com
-    # Candy Crush
-        candycrush.king.com
-        candycrushsaga.com
-        cdn.king.com
-        king.com
+        api.pubgmobile.com [cite: 83]
+        g.pubgmobile.com [cite: 83]
+        pubgmobile.com [cite: 83]
+    # Candy Crush [cite: 84]
+        candycrush.king.com [cite: 84]
+        candycrushsaga.com [cite: 84]
+        cdn.king.com [cite: 84]
+        king.com [cite: 84]
 
 # Hardware de PC Gaming
     # NVIDIA
-        events.gfe.nvidia.com
-        gfe.nvidia.com
-        gfwsl.geforce.com
-        ota.nvidia.com
+        gfe.nvidia.com [cite: 84]
+        gfwsl.geforce.com [cite: 84]
+        ota.nvidia.com [cite: 84]
     # AMD
-        amd.com
+        amd.com [cite: 84]
     # Intel
-        downloadmirror.intel.com
+        downloadmirror.intel.com [cite: 84]
 
 
 # --- SECCIÓN 6: COMPRAS Y SERVICIOS FINANCIEROS ---
 
 # Amazon (Compras)
     # Portales Principales y Pago
-        amazon.com
-        amazon.com.mx
-        amazonpay.com
-        api.amazon.com
+        amazon.com 
+        amazon.com.mx 
+        amazonpay.com 
+        api.amazon.com 
     # Contenido de Imágenes
-        images-na.ssl-images-amazon.com
-        m.media-amazon.com
-        ssl-images-amazon.com
-    # Servicios Funcionales de Logging
-        fls-na.amazon.com
-    # Dominios Internacionales (Ejemplos)
-        amazon.ae
-        amazon.ca
-        amazon.co.uk
-        amazon.de
-        amazon.es
-        amazon.fr
-        amazon.in
+        images-na.ssl-images-amazon.com 
+        m.media-amazon.com 
+        ssl-images-amazon.com 
+    # Dominios Internacionales (Ejemplos) [cite: 86]
+        amazon.ae [cite: 86]
+        amazon.ca [cite: 86]
+        amazon.co.uk [cite: 86]
+        amazon.de [cite: 86]
+        amazon.es [cite: 86]
+        amazon.fr [cite: 86]
+        amazon.in [cite: 86]
 
 # Mercado Libre y Mercado Pago
     # Portales Principales
-        mercadolibre.com
-        mercadolibre.com.mx
+        mercadolibre.com [cite: 86]
+        mercadolibre.com.mx [cite: 86]
     # API y Pagos
-        api.mercadolibre.com
-        mercadopago.com
-        mercadopago.com.mx
+        api.mercadolibre.com [cite: 86]
+        mercadopago.com [cite: 87]
+        mercadopago.com.mx [cite: 87]
     # Contenido Estático (CDN) y Envíos
-        http2.mlstatic.com
-        mercadoenvios.com.mx
-        mlstatic.com
-        static.mlstatic.com
+        http2.mlstatic.com [cite: 87]
+        mercadoenvios.com.mx [cite: 87]
+        mlstatic.com [cite: 87]
+        static.mlstatic.com [cite: 87]
 
 # PayPal
     # Servicio Principal y API
-        api.paypal.com
-        c.paypal.com
-        paypal.com
-        pyplcs.com
+        api.paypal.com [cite: 87]
+        c.paypal.com [cite: 87]
+        paypal.com [cite: 87]
     # Contenido Estático y Recursos
-        assets.paypal.com
-        paypal-static.com
-        paypalobjects.com
-        www.paypalobjects.com
+        assets.paypal.com [cite: 88]
+        paypal-static.com [cite: 88]
+        paypalobjects.com [cite: 88]
+        www.paypalobjects.com [cite: 88]
 
 # Marketplaces Globales
     # AliExpress y Alibaba
-        ae.aliexpress.com
-        ae01.alicdn.com
-        aer.aliexpress.com
-        alibaba.com
-        alicdn.com
-        aliexpress.com
-        img.alicdn.com
-        is.alicdn.com
-        sc01.alicdn.com
-        sc02.alicdn.com
-        sc04.alicdn.com
+        ae.aliexpress.com [cite: 88]
+        ae01.alicdn.com [cite: 88]
+        aer.aliexpress.com [cite: 88]
+        api.alibaba.com [cite: 88]
+        api.aliexpress.com [cite: 88]
+        alibaba.com [cite: 88]
+        alicdn.com [cite: 88]
+        aliexpress.com [cite: 89]
+        img.alicdn.com [cite: 89]
+        is.alicdn.com [cite: 89]
+        sc01.alicdn.com [cite: 89]
+        sc02.alicdn.com [cite: 89]
+        sc04.alicdn.com [cite: 89]
     # SHEIN
-        api.shein.com
-        img.ltwebstatic.com
-        img.shein.com
-        shein.com
+        api.shein.com [cite: 89]
+        img.ltwebstatic.com [cite: 89]
+        img.shein.com [cite: 89]
+        shein.com [cite: 89]
     # eBay
-        ebay.com
+        ebay.com [cite: 89]
 
 # Plataformas de E-commerce
     # Shopify
-        shopify.com
+        shopify.com [cite: 90]
 
 # Tiendas Departamentales (México)
     # Liverpool
-        assetspwa.liverpool.com.mx
-        graphql.liverpool.com.mx
-        liverpool.com.mx
+        api.liverpool.com.mx [cite: 90]
+        assetspwa.liverpool.com.mx [cite: 90]
+        graphql.liverpool.com.mx [cite: 90]
+        liverpool.com.mx [cite: 90]
     # Walmart
-        assets.walmartimages.com.mx
-        super.walmart.com.mx
-        walmart.com
-        walmart.com.mx
+        assets.walmartimages.com.mx [cite: 90]
+        super.walmart.com.mx [cite: 90]
+        walmart.com [cite: 90]
+        walmart.com.mx [cite: 90]
     # Coppel
-        coppel.com
+        api.coppel.com [cite: 90]
+        coppel.com [cite: 91]
     # Elektra
-        elektra.mx
+        elektra.mx [cite: 91]
     # Sears
-        api.sears.com.mx
-        asset.sears.com.mx
-        sears.com.mx
+        api.sears.com.mx [cite: 91]
+        asset.sears.com.mx [cite: 91]
+        sears.com.mx [cite: 91]
     # Suburbia
-        api.suburbia.com.mx
-        assets.suburbia.com.mx
-        suburbia.com.mx
+        api.suburbia.com.mx [cite: 91]
+        assets.suburbia.com.mx [cite: 91]
+        suburbia.com.mx [cite: 91]
     # El Palacio de Hierro
-        api.elpalaciodehierro.com
-        assets.elpalaciodehierro.com
-        elpalaciodehierro.com
+        api.elpalaciodehierro.com [cite: 91]
+        assets.elpalaciodehierro.com [cite: 92]
+        elpalaciodehierro.com [cite: 92]
     # Sanborns
-        sanborns.com.mx
+        sanborns.com.mx [cite: 92]
 
 # Supermercados (México)
     # Bodega Aurrerá
-        bodegaaurrera.com.mx
-        despensa.bodegaaurrera.com.mx
+        bodegaaurrera.com.mx [cite: 92]
+        despensa.bodegaaurrera.com.mx [cite: 92]
     # Soriana
-        api.soriana.com
-        soriana.com
-        sorianadomicilio.com
+        api.soriana.com [cite: 92]
+        soriana.com [cite: 92]
+        sorianadomicilio.com [cite: 92]
     # Chedraui
-        api.chedraui.com.mx
-        chedraui.com.mx
-    # Sam's Club
-        assets.sams.com.mx
-        sams.com.mx
+        api.chedraui.com.mx [cite: 92]
+        chedraui.com.mx [cite: 92]
+    # Sam's Club [cite: 93]
+        assets.sams.com.mx [cite: 93]
+        sams.com.mx [cite: 93]
     # Costco
-        costco.com.mx
+        costco.com [cite: 93]
+        costco.com.mx [cite: 93]
     # La Comer
-        lacomer.com.mx
+        lacomer.com.mx [cite: 93]
+    # Justo.mx
+        justo.mx [cite: 93]
 
 # Tiendas de Conveniencia y Especializadas (México)
     # OXXO y Spin
-        api.spinbyoxxo.com.mx
-        mi.oxxo.com
-        oxxo.com
-        oxxopay.com
-        spinbyoxxo.com.mx
+        api.spinbyoxxo.com.mx [cite: 93]
+        mi.oxxo.com [cite: 93]
+        oxxo.com [cite: 94]
+        oxxopay.com [cite: 94]
+        spinbyoxxo.com.mx [cite: 94]
     # The Home Depot
-        api.homedepot.com.mx
-        assets.homedepot-static.com
-        homedepot.com.mx
-        images.homedepot-static.com
+        api.homedepot.com.mx [cite: 94]
+        assets.homedepot-static.com [cite: 94]
+        homedepot.com.mx [cite: 94]
+        images.homedepot-static.com [cite: 94]
     # Office Depot
-        officedepot.com.mx
+        officedepot.com.mx [cite: 94]
     # Farmacias del Ahorro
-        fahorro.com
+        fahorro.com [cite: 94]
     # Farmacias Guadalajara
-        farmaciasguadalajara.com
+        farmaciasguadalajara.com [cite: 95]
     # Price Shoes
-        priceshoes.com
+        priceshoes.com [cite: 95]
     # Andrea
-        andrea.com
+        andrea.com [cite: 95]
 
 # Servicios de Pago y Anti-Fraude
     # Stripe
-        api.stripe.com
-        js.stripe.com
-        m.stripe.com
-        stripe.com
+        api.stripe.com [cite: 95]
+        js.stripe.com [cite: 95]
+        m.stripe.com [cite: 95]
+        stripe.com [cite: 95]
     # Conekta
-        api.conekta.io
-        conekta.com
+        api.conekta.io [cite: 95]
+        conekta.com [cite: 95]
     # Mastercard
-        api.mastercard.com
-        mastercard.com
-        mastercard.com.mx
-        secure.mastercard.com
+        api.mastercard.com [cite: 96]
+        mastercard.com [cite: 96]
+        mastercard.com.mx [cite: 96]
+        secure.mastercard.com [cite: 96]
     # Visa
-        api.visa.com
-        secure.visa.com
-        visa.com
-        visa.com.mx
+        api.visa.com [cite: 96]
+        secure.visa.com [cite: 96]
+        visa.com [cite: 96]
+        visa.com.mx [cite: 96]
     # American Express
-        americanexpress.com
-        americanexpress.com.mx
-        global.americanexpress.com
-    # Arkose Labs (Anti-Fraude)
-        arkoselabs.com
-        client-api.arkoselabs.com
+        americanexpress.com [cite: 96]
+        americanexpress.com.mx [cite: 96]
+        global.americanexpress.com [cite: 96]
+    # Arkose Labs (Anti-Fraude) [cite: 97]
+        arkoselabs.com [cite: 97]
+        client-api.arkoselabs.com [cite: 97]
     # 2Checkout (Avangate)
-        secure.avangate.com
+        secure.avangate.com [cite: 97]
 
 # Banca y Fintech (México)
     # Citibanamex
-        api.citibanamex.com
-        bancanet.banamex.com
-        citibanamex.com
-        portal.banamex.com.mx
+        api.citibanamex.com [cite: 97]
+        bancanet.banamex.com [cite: 97]
+        citibanamex.com [cite: 97]
+        portal.banamex.com.mx [cite: 97]
     # BBVA
-        api.bbva.com
-        bbv.mx
-        bbva.com
-        bbva.mx
-        bbvanet.com.mx
+        api.bbva.com [cite: 97]
+        bbv.mx [cite: 97]
+        bbva.com [cite: 98]
+        bbva.mx [cite: 98]
+        bbvanet.com.mx [cite: 98]
     # Banorte
-        banorte.com
-        banorte.com.mx
-        banortein.com
-        servicios.banorte.com
+        api.banorte.com [cite: 98]
+        banorte.com [cite: 98]
+        banorte.com.mx [cite: 98]
+        banortein.com [cite: 98]
+        servicios.banorte.com [cite: 98]
     # Santander
-        api.santander.com.mx
-        santander.com.mx
-        supernet.santander.com.mx
+        api.santander.com.mx [cite: 98]
+        santander.com.mx [cite: 98]
+        supernet.santander.com.mx [cite: 98]
     # HSBC
-        api.hsbc.com.mx
-        hsbc.com.mx
-        www.hsbc.com.mx
+        api.hsbc.com.mx [cite: 99]
+        hsbc.com.mx [cite: 99]
+        www.hsbc.com.mx [cite: 99]
     # BanCoppel
-        api.bancoppel.com
-        bancoppel.com
-        cdn.bancoppel.com
-        portal.bancoppel.com
+        api.bancoppel.com [cite: 99]
+        bancoppel.com [cite: 99]
+        cdn.bancoppel.com [cite: 99]
+        portal.bancoppel.com [cite: 99]
     # Scotiabank
-        scotiabank.com.mx
+        scotiabank.com.mx [cite: 99]
     # Banregio
-        banregio.com
+        banregio.com [cite: 99]
     # Afore Móvil
-        api.aforemovil.com.mx
-        aforemovil.com.mx
+        api.aforemovil.com.mx [cite: 99]
+        aforemovil.com.mx [cite: 100]
+    # cetesdirecto
+        cetesdirecto.com [cite: 100]
     # Nu
-        nu.com.mx
+        nu.com.mx [cite: 100]
     # Ualá
-        uala.com.mx
+        uala.com.mx [cite: 100]
     # Klar
-        klar.mx
+        klar.mx [cite: 100]
     # Stori
-        storicard.com
+        storicard.com [cite: 100]
     # Albo
-        albo.mx
+        albo.mx [cite: 100]
     # Banco Azteca
-        bancoazteca.com.mx
-    # Kueski
-        kueski.com
+        bancoazteca.com.mx [cite: 100]
+    # Kueski [cite: 101]
+        kueski.com [cite: 101]
     # Inbursa
-        inbursa.com
+        inbursa.com [cite: 101]
     # Compartamos
-        compartamos.com.mx
+        compartamos.com.mx [cite: 101]
 
 
 # --- SECCIÓN 7: DISPOSITIVOS Y HOGAR INTELIGENTE ---
 
 # Smart TVs
     # Samsung (Tizen)
-        api.samsungyosemite.com
-        api.smartthings.com
-        cdn.samsungcloudsolution.com
-        fota-apis.samsungdm.com
-        gpm.samsungqbe.com
-        hub.samsungapps.com
-        img-resize-cdn-prod.samsungnyc.com
-        lcprd1.samsungcloudsolution.net
-        multiscreen.samsung.com
-        ocf.samsungqbe.com
-        osb-apps.samsungqbe.com
-        otn.samsungcloudcdn.com
-        otnprd10.samsungcloudsolution.net
-        samsungcloud.com
-        samsungcloudsolution.com
-        samsungotn.net
-        sas.samsungcloudsolution.com
-        sdk-multiscreen.samsung.com
-        time.samsungcloudsolution.com
-        vas.samsungapps.com
-        www.samsungotn.net
+        api.samsungyosemite.com [cite: 101]
+        api.smartthings.com [cite: 101]
+        cdn.samsungcloudsolution.com [cite: 101]
+        fota-apis.samsungdm.com [cite: 101]
+        gpm.samsungqbe.com [cite: 101]
+        hub.samsungapps.com [cite: 102]
+        img-resize-cdn-prod.samsungnyc.com [cite: 102]
+        lcprd1.samsungcloudsolution.net [cite: 102]
+        multiscreen.samsung.com [cite: 102]
+        ocf.samsungqbe.com [cite: 102]
+        osb-apps.samsungqbe.com [cite: 102]
+        otn.samsungcloudcdn.com [cite: 102]
+        otnprd10.samsungcloudsolution.net [cite: 102]
+        samsungcloud.com [cite: 102]
+        samsungcloudsolution.com [cite: 102]
+        samsungotn.net [cite: 102]
+        sas.samsungcloudsolution.com [cite: 102]
+        sdk-multiscreen.samsung.com [cite: 102]
+        time.samsungcloudsolution.com [cite: 103]
+        vas.samsungapps.com [cite: 103]
+        www.samsungotn.net [cite: 103]
     # LG (webOS)
-        aic-gfts.lge.com
-        apps.svc.lgappstv.com
-        cdn.lgappstv.com
-        eic.lgappstv.com
-        lgappstv.com
-        lge.com
-        lgeapi.com
-        lgiot.lge.com
-        lgtvcommon.com
-        lgtvsdp.com
-        ngfts.lge.com
-        rd.webos.com
-        sdk.lgtvsdp.com
-        smart.lgappstv.com
-        snu.lge.com
-        snutt.lge.com
-        us.firmware.lge.com
-        us.lgappstv.com
-        us.software.lge.com
+        aic-gfts.lge.com [cite: 103]
+        apps.svc.lgappstv.com [cite: 103]
+        cdn.lgappstv.com [cite: 103]
+        eic.lgappstv.com [cite: 103]
+        lgappstv.com [cite: 103]
+        lge.com [cite: 103]
+        lgeapi.com [cite: 103]
+        lgiot.lge.com [cite: 103]
+        lgtvcommon.com [cite: 103]
+        lgtvsdp.com [cite: 104]
+        ngfts.lge.com [cite: 104]
+        rd.webos.com [cite: 104]
+        sdk.lgtvsdp.com [cite: 104]
+        smart.lgappstv.com [cite: 104]
+        snu.lge.com [cite: 104]
+        snutt.lge.com [cite: 104]
+        us.firmware.lge.com [cite: 104]
+        us.lgappstv.com [cite: 104]
+        us.software.lge.com [cite: 104]
     # Sony (Google TV / Android TV)
-        api.erabu.sony.tv
-        sony.com
-        sony.net
-        tv.meta.update.sony.net
-        tv.update.sony.net
-        update.biv.sony.tv
+        api.erabu.sony.tv [cite: 104]
+        sony.com [cite: 105]
+        sony.net [cite: 105]
+        tv.meta.update.sony.net [cite: 105]
+        tv.update.sony.net [cite: 105]
+        update.biv.sony.tv [cite: 105]
     # Amazon (Fire OS / Fire TV)
-        d1s31zyz8d9j6e.cloudfront.net
-        device-messaging.amazon.com
-        fireos.com
-        softwareupdates.amazon.com
+        d1s31zyz8d9j6e.cloudfront.net [cite: 105]
+        device-messaging.amazon.com [cite: 105]
+        fireos.com [cite: 105]
+        softwareupdates.amazon.com [cite: 105]
     # Xiaomi (PatchWall / TV Box)
-        api.patchwall.mitv.com
-        cdn.cnbj1.fds.api.mi-img.com
-        mitv.com
-        update.miui.com
+        api.patchwall.mitv.com [cite: 105]
+        cdn.cnbj1.fds.api.mi-img.com [cite: 106]
+        mitv.com [cite: 106]
+        update.miui.com [cite: 106]
     # Hisense (VIDAA OS)
-        api.vidaa.com
-        appstore.vidaa.com
-        hisense.com
-        ota.vidaa.com
-        vidaa.com
+        api.vidaa.com [cite: 106]
+        appstore.vidaa.com [cite: 106]
+        hisense.com [cite: 106]
+        ota.vidaa.com [cite: 106]
+        vidaa.com [cite: 106]
     # TCL (Roku TV / Google TV)
-        notify.tclclouds.com
-        ota.tcl.com
-        tcl.com
+        notify.tclclouds.com [cite: 106]
+        ota.tcl.com [cite: 106]
+        tcl.com [cite: 107]
     # Philips (Android TV / Saphi)
-        app.nettvservice.com
-        ota.nettvservice.com
-        philips.com
+        app.nettvservice.com [cite: 107]
+        ota.nettvservice.com [cite: 107]
+        philips.com [cite: 107]
     # Panasonic (My Home Screen)
-        av.jpn.support.panasonic.com
-        panasonic.com
-        panasonic.net
+        av.jpn.support.panasonic.com [cite: 107]
+        panasonic.com [cite: 107]
+        panasonic.net [cite: 107]
     # Roku
-        api2.sr.roku.com
-        cloudservices.roku.com
-        image.roku.com
-        prod.mobile.roku.com
-        prod.ott.roku.com
-        roku.com
-        vod-playlist.sr.roku.com
+        api2.sr.roku.com [cite: 107]
+        cloudservices.roku.com [cite: 107]
+        image.roku.com [cite: 107]
+        prod.mobile.roku.com [cite: 108]
+        prod.ott.roku.com [cite: 108]
+        roku.com [cite: 108]
+        vod-playlist.sr.roku.com [cite: 108]
     # Android TV / Google TV (Base)
-        android.com
-        androidtvwatson.googleapis.com
-        g.co
-        play-games.google.com
-        tvlauncher.googleapis.com
+        android.com [cite: 108]
+        androidtvwatson.googleapis.com [cite: 108]
+        g.co [cite: 108]
+        play-games.google.com [cite: 108]
+        tvlauncher.googleapis.com [cite: 108]
 
 # Dispositivos Smart Home (IoT)
     # Amazon Alexa
-        alexa.amazon.com
-        alexa.amazon.com.mx
-        amazonalexa.com
-        api.amazonalexa.com
-        device-messaging-na.amazon.com
-        dp-gw-na.amazon.com
-        skills-store.amazon.com
+        alexa.amazon.com [cite: 108]
+        alexa.amazon.com.mx [cite: 109]
+        amazonalexa.com [cite: 109]
+        api.amazonalexa.com [cite: 109]
+        device-messaging-na.amazon.com [cite: 109]
+        dp-gw-na.amazon.com [cite: 109]
+        skills-store.amazon.com [cite: 109]
+    # Amazon Ring
+        api.ring.com [cite: 109]
+        ring.com [cite: 109]
+        ring-videos-production.s3.amazonaws.com [cite: 109]
     # Google Nest
-        api.nest.com
-        nest-api.com
-        nest.com
+        api.nest.com [cite: 109]
+        nest-api.com [cite: 109]
+        nest.com [cite: 110]
     # iRobot
-        content-prod.iot.irobotapi.com
-        disc-prod.iot.irobotapi.com
-        unauth3.prod.iot.irobotapi.com
+        content-prod.iot.irobotapi.com [cite: 110]
+        disc-prod.iot.irobotapi.com [cite: 110]
+        unauth3.prod.iot.irobotapi.com [cite: 110]
     # Roborock
-        files.roborock.com
-        mqtt-us-2.roborock.com
+        files.roborock.com [cite: 110]
+        mqtt-us-2.roborock.com [cite: 110]
     # Tuya / Smart Life
-        a.tuyaus.com
-        tuya.com
+        a.tuyaus.com [cite: 110]
+        a1.tuyaus.com [cite: 110]
+        mqtt.tuyaus.com [cite: 110]
+        px1.tuyaus.com [cite: 110]
+        tuya.com [cite: 111]
     # Philips Hue
-        philips-hue.com
+        philips-hue.com [cite: 111]
     # Sonos
-        ms.sonos.com
-        sonos.com
-        update.sonos.com
+        ms.sonos.com [cite: 111]
+        sonos.com [cite: 111]
+        update.sonos.com [cite: 111]
     # Wyze
-        api.wyzecam.com
-        wyze-device-service.wyzecam.com
-        wyze.com
-        wzapi.wyzecam.com
+        api.wyzecam.com [cite: 111]
+        wyze-device-service.wyzecam.com [cite: 111]
+        wyze.com [cite: 111]
+        wzapi.wyzecam.com [cite: 111]
     # SmartThings (Samsung)
-        c2c-us.smartthings.com
-        dispatch.smartthings.com
+        c2c-us.smartthings.com [cite: 111]
+        dispatch.smartthings.com [cite: 112]
 
-# Tiendas de Fabricantes de Hardware
+# Tiendas y Soporte de Fabricantes de Hardware
     # Apple Store
-        store.apple.com
+        store.apple.com [cite: 112]
     # Sony Store
-        store.sony.com.mx
+        store.sony.com.mx [cite: 112]
     # Dell
-        dell.com
-        dell.com.mx
-        dellupdater.dell.com
+        dell.com [cite: 112]
+        dell.com.mx [cite: 112]
+        dellupdater.dell.com [cite: 112]
     # HP Store
-        hp.com
-        store.hp.com
+        hp.com [cite: 112]
+        store.hp.com [cite: 112]
     # Lenovo
-        media.dds.lenovo.com
+        media.dds.lenovo.com [cite: 113]
+    # ASUS
+        dlcdnets.asus.com [cite: 113]
+    # MSI
+        download.msi.com [cite: 113]
+        msi.com [cite: 113]
     # Otros Fabricantes
-        acer.com
-        asus.com
-        lenovo.com
-        lg.com
+        acer.com [cite: 113]
+        asus.com [cite: 113]
+        lenovo.com [cite: 113]
+        lg.com [cite: 113]
 
 # Otros (Hardware y Software)
     # Barracuda
-        geoip.cudasvc.com
+        geoip.cudasvc.com [cite: 113]
     # Garmin
-        geolocation.garmin.com
+        geolocation.garmin.com [cite: 114]
     # General Motors
-        apim.gm.com
+        apim.gm.com [cite: 114]
 
 # Electrodomésticos
     # Mabe
-        mabe.com.mx
+        mabe.com.mx [cite: 114]
     # Whirlpool
-        whirlpool.com
-        whirlpool.com.mx
+        whirlpool.com [cite: 114]
+        whirlpool.com.mx [cite: 114]
 
 
 # --- SECCIÓN 8: TRANSPORTE Y VIAJES ---
 
 # Uber y Uber Eats
     # Servicio Principal y API
-        api.uber.com
-        api.ubereats.com
-        uber.com
-        ubereats.com
+        api.uber.com [cite: 114]
+        api.ubereats.com [cite: 114]
+        uber.com [cite: 114]
+        ubereats.com [cite: 115]
     # Contenido (CDN) y Servicios Geo
-        cn-geo1.uber.com
-        uber-cdn.com
-        uberstatic.com
+        cn-geo1.uber.com [cite: 115]
+        uber-cdn.com [cite: 115]
+        uberstatic.com [cite: 115]
 
 # Didi y Didi Food
     # Portal Principal y API
-        api.didiglobal.com
-        didiglobal.com
+        api.didi-food.com [cite: 115]
+        api.didiglobal.com [cite: 115]
+        didiglobal.com [cite: 115]
     # Contenido y Portal de Comida
-        didi-food.com
-        static.didiglobal.com
+        didi-food.com [cite: 115]
+        static.didiglobal.com [cite: 115]
 
 # Rappi
-    # Portal Principal y API
-        api.rappi.com
-        rappi.com
-        rappi.com.mx
+    # Portal Principal y API [cite: 116]
+        api.rappi.com [cite: 116]
+        rappi.com [cite: 116]
+        rappi.com.mx [cite: 116]
     # Contenido (CDN)
-        rappicdn.net
-        static.rappi.com
+        rappicdn.net [cite: 116]
+        static.rappi.com [cite: 116]
+
+# Compra/Venta de Autos (México)
+    # Kavak
+        api.kavak.com [cite: 116]
 
 # Mapas y Navegación
     # Waze
-        ctilesgcs-am.waze.com
-        gapi.waze.com
-        livemap.waze.com
-        maps.waze.com
-        rt.waze.com
-        waze.com
+        ctilesgcs-am.waze.com [cite: 116]
+        gapi.waze.com [cite: 116]
+        livemap.waze.com [cite: 117]
+        maps.waze.com [cite: 117]
+        rt.waze.com [cite: 117]
+        waze.com [cite: 117]
     # Bing Maps (Virtual Earth)
-        dev.virtualearth.net
-        ecn.dev.virtualearth.net
-        t0.ssl.ak.dynamic.tiles.virtualearth.net
-        t0.ssl.ak.tiles.virtualearth.net
+        dev.virtualearth.net [cite: 117]
+        ecn.dev.virtualearth.net [cite: 117]
+        t0.ssl.ak.dynamic.tiles.virtualearth.net [cite: 117]
+        t0.ssl.ak.tiles.virtualearth.net [cite: 117]
 
 # Aerolíneas (México)
     # Aeroméxico
-        aeromexico.com
-        api.aeromexico.com
+        aeromexico.com [cite: 117]
+        api.aeromexico.com [cite: 117]
     # Volaris
-        api.volaris.com
-        volaris.com
+        api.volaris.com [cite: 118]
+        volaris.com [cite: 118]
     # VivaAerobus
-        vivaaerobus.com
+        vivaaerobus.com [cite: 118]
 
 # Alojamiento y Agencias de Viajes Online
     # Airbnb
-        a0.muscache.com
-        airbnb.com
-        airbnb.mx
+        a0.muscache.com [cite: 118]
+        airbnb.com [cite: 118]
+        airbnb.mx [cite: 118]
     # Booking
-        booking.com
+        booking.com [cite: 118]
     # Expedia
-        expedia.com
+        expedia.com [cite: 118]
     # Trivago
-        static.trivago.com
-        trivago.com
-        trivago.com.mx
+        trivago.com [cite: 118]
+        trivago.com.mx [cite: 119]
 
 # Transporte Terrestre (México)
     # ADO Móvil
-        ado.com.mx
-        api.ado.com.mx
+        ado.com.mx [cite: 119]
+        api.ado.com.mx [cite: 119]
     # Cabify
-        cabify.com
+        cabify.com [cite: 119]
+    # Beat
+        beat.com [cite: 119]
 
 
 # --- SECCIÓN 9: SERVICIOS GUBERNAMENTALES (MÉXICO) ---
 
 # Portal Federal
     # Gobierno de México (Gob.mx)
-        api.gob.mx
-        cdn.gob.mx
-        gob.mx
+        api.gob.mx [cite: 119]
+        cdn.gob.mx [cite: 119]
+        gob.mx [cite: 119]
 
-# Dependencias Fiscales y Financieras
+# Dependencias Fiscales y Financieras [cite: 120]
     # SAT
-        sat.gob.mx
-        www.sat.gob.mx
+        sat.gob.mx [cite: 120]
+        www.sat.gob.mx [cite: 120]
     # CONSAR
-        consar.gob.mx
+        consar.gob.mx [cite: 120]
     # CONDUSEF
-        condusef.gob.mx
+        condusef.gob.mx [cite: 120]
     # INFONAVIT
-        infonavit.org.mx
+        api.infonavit.org.mx [cite: 120]
+        infonavit.org.mx [cite: 120]
 
 # Salud y Seguridad Social
     # IMSS
-        imss-bienestar.gob.mx
-        imss.gob.mx
-        serviciosdigitales.imss.gob.mx
+        imss-bienestar.gob.mx [cite: 120]
+        imss.gob.mx [cite: 120]
+        serviciosdigitales.imss.gob.mx [cite: 121]
     # ISSSTE
-        issste.gob.mx
+        issste.gob.mx [cite: 121]
     # Salud y COFEPRIS
-        cofepris.gob.mx
-        salud.gob.mx
+        cofepris.gob.mx [cite: 121]
+        salud.gob.mx [cite: 121]
 
 # Identidad y Relaciones Exteriores
     # RENAPO (CURP)
-        renapo.gob.mx
+        renapo.gob.mx [cite: 121]
     # SRE (Relaciones Exteriores)
-        citas.sre.gob.mx
-        sre.gob.mx
+        citas.sre.gob.mx [cite: 121]
+        sre.gob.mx [cite: 121]
 
 # Servicios Públicos y Otros
     # CFE
-        app.cfe.mx
-        cfe.mx
+        api.cfe.mx [cite: 121]
+        app.cfe.mx [cite: 122]
+        cfe.mx [cite: 122]
     # SEP
-        sep.gob.mx
+        sep.gob.mx [cite: 122]
     # PROFECO
-        profeco.gob.mx
+        profeco.gob.mx [cite: 122]
     # INE
-        ine.mx
+        ine.mx [cite: 122]
     # INEGI
-        inegi.org.mx
+        inegi.org.mx [cite: 122]
     # Poder Judicial
-        cjf.gob.mx
-        scjn.gob.mx
+        cjf.gob.mx [cite: 122]
+        scjn.gob.mx [cite: 122]
     # FGR
-        fgr.org.mx
-    # Guardia Nacional
-        gn.gob.mx
+        fgr.org.mx [cite: 122]
+    # Guardia Nacional [cite: 123]
+        gn.gob.mx [cite: 123]
     # CONAHCYT
-        conahcyt.mx
+        conahcyt.mx [cite: 123]
     # Aduanas (ANAM)
-        anam.gob.mx
+        anam.gob.mx [cite: 123]
 
 # Servicios Locales
     # App CDMX
-        api.cdmx.gob.mx
-        cdmx.gob.mx
+        api.cdmx.gob.mx [cite: 123]
+        cdmx.gob.mx [cite: 123]
     # Salud Digna
-        api.salud-digna.org
-        salud-digna.org
+        api.salud-digna.org [cite: 123]
+        salud-digna.org [cite: 123]
 
 # Telecomunicaciones
     # Telmex
-        api.telmex.com
-        mitelmex.com
-        telmex.com
+        api.telmex.com [cite: 123]
+        mitelmex.com [cite: 124]
+        telmex.com [cite: 124]
+    # Telcel
+        api.telcel.com [cite: 124]
+    # AT&T México
+        att.com.mx [cite: 124]
+    # Izzi
+        api.izzi.mx [cite: 124]
+        izzi.mx [cite: 124]
+    # Totalplay
+        api.totalplay.com.mx [cite: 124]
     # Claro
-        claro.com.mx
+        api.claro.com.mx [cite: 124]
+        claro.com.mx [cite: 124]
+    # Movistar [cite: 125]
+        api.movistar.com.mx [cite: 125]
+        movistar.com.mx [cite: 125]
+    # Megacable
+        api.megacable.com.mx [cite: 125]
+        megacable.com.mx [cite: 125]
