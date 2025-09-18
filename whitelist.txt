@@ -6,7 +6,7 @@
 # plataformas, servicios y aplicaciones, excluyendo
 # publicidad, telemetría y rastreo.
 #
-# Versión: 3.6
+# Versión: 4.0
 # Fecha de Actualización: 2025-09-18
 # ===========================================================
 
@@ -53,6 +53,8 @@
         1e100.net
         gvt1.com
         gvt2.com
+    # Servicios de Backend y APIs de Terceros
+        api.twilio.com
 
 # Seguridad y Certificados
     # Autoridades de Certificación (CA)
@@ -83,9 +85,18 @@
         sa.symcb.com
         symcd.com
     # Servicios de Verificación (CAPTCHA)
+        challenges.cloudflare.com
         grecaptcha.com
         hcaptcha.com
         recaptcha.net
+    # Servicios Anti-Fraude y Anti-Bot
+        aa.online-metrix.net
+        api3.sift.com
+        forter.com
+        roblox-api.arkoselabs.com
+        sift.com
+        static.forter.com
+        ws.humansecurity.com
     # Identidad Federada
         widget-cdn.rpxnow.com
 
@@ -135,6 +146,7 @@
         storecatalog.recs.microsoft.com
     # Servicios del Sistema
         self.events.data.microsoft.com
+        wdcp.microsoft.com
         wns.windows.com
     # Sincronización de Hora y Conectividad
         dns.msftncsi.com
@@ -152,6 +164,7 @@
         swscan.apple.com
     # Servicios del Sistema
         push.apple.com
+        xp.apple.com
     # Servicios Base y DNS
         apple-dns.net
 
@@ -288,6 +301,7 @@
         accounts.google.com
         accounts.youtube.com
         passbox-pa.googleapis.com
+        signin.google.com
         signin.l.google.com
     # APIs y Servicios de Clientes
         0.client-channel.google.com
@@ -336,6 +350,7 @@
     # Navegación Segura
         safebrowsing.googleapis.com
     # Firebase (Backend para Apps)
+        fcm.googleapis.com
         firebase-settings.googleapis.com
         firebaseapp.com
         firebaseappcheck.googleapis.com
@@ -459,6 +474,7 @@
         office.com
         office.net
         office365.com
+        officeapps.live.com
         officecdn.microsoft.com
         officecdn.microsoft.com.edgesuite.net
         officeclient.microsoft.com
@@ -507,6 +523,7 @@
         atlassian.net
         jira.com
     # Slack
+        api.slack.com
         slack-edge.com
         slack-files.com
         slack-imgs.com
@@ -515,6 +532,7 @@
         api.zoom.us
         zoom.us
     # Notion
+        api.notion.com
         notion.so
     # Trello
         trello.com
@@ -538,6 +556,7 @@
         1passwordusercontent.com
         c.1password.com
     # LastPass
+        api.lastpass.com
         lastpass.com
     # Dashlane
         api.dashlane.com
@@ -556,12 +575,14 @@
         ns1.dropbox.com
         ns2.dropbox.com
     # MEGA
+        api.mega.nz
         eu.static.mega.co.nz
         g.static.mega.co.nz
         mega.co.nz
         mega.io
         mega.nz
     # Box
+        api.box.com
         box.com
     # pCloud
         pcloud.com
@@ -618,6 +639,7 @@
 
 # Facebook y Messenger
     # Portal Principal y Dominios Cortos
+        connect.facebook.net
         fb.com
         fb.me
         facebook.com
@@ -670,6 +692,7 @@
     # Portal Principal y Servicios
         discord.com
         discordapp.com
+        router.discord.gg
         status.discord.com
     # Contenido (CDN) y Media
         cdn.discordapp.com
@@ -742,6 +765,7 @@
 
 # Pinterest
     # Portales Principales y Contenido
+        api.pinterest.com
         i.pinimg.com
         pinterest.com
         pinterest.com.mx
@@ -808,6 +832,8 @@
         youtu.be
         youtube-nocookie.com
         ytmusic.be
+    # TV en Vivo
+        tv.youtube.com
 
 # Netflix
     # Servicio Principal y Búsqueda
@@ -837,6 +863,7 @@
         aiv-cdn.net
         aiv-delivery.net
         media-amazon.com
+        prod.api.pv.verra.net
         pv-cdn.net
     # Servicios de Backend
         atv-ps.amazon.com
@@ -892,6 +919,8 @@
         pscdn.co
         scdn.co
         spotifycdn.com
+    # Servicios Secundarios
+        spclient.wg.spotify.com
 
 # SoundCloud
     # Portal Principal y API
@@ -900,6 +929,11 @@
         soundcloud.com
     # Contenido (CDN)
         cf-media.sndcdn.com
+
+# Tidal
+    # Portal Principal y API
+        api.tidal.com
+        tidal.com
 
 # Apple Music y Apple TV
     # Portales Principales
@@ -1063,19 +1097,20 @@
     # Portal Principal y API
         api.roblox.com
         auth.roblox.com
+        locale.roblox.com
         roblox.com
         roblox.com.edgekey.net
         robloxapis.com
-    # Captcha y Seguridad (Muy importante para login)
-        roblox-api.arkoselabs.com 
     # Servicios de Juego
+        avatar.roblox.com
         chat.roblox.com
+        economy.roblox.com
+        ephemeralcounters.roblox.com
         friends.roblox.com
+        gamepersistence.roblox.com
         games.roblox.com
+        privatemessaging.roblox.com
         voice.roblox.com
-    # Telemetría y Localización (Requeridas)
-        ecsv2.roblox.com
-        locale.roblox.com
     # Contenido (CDN) y de Usuario
         assetdelivery.roblox.com
         rbxcdn.com
@@ -1085,6 +1120,7 @@
 
 # Riot Games (Valorant, LoL)
     # Portal Principal y Servicios
+        auth.riotgames.com
         lolstatic.com
         pvp.net
         riotgames.com
@@ -1140,6 +1176,7 @@
         easo.com
         origin.com
     # Ubisoft
+        public-ubiservices.ubi.com
         ubi.com
         ubisoft.com
         ubisoftconnect.com
@@ -1197,8 +1234,6 @@
         images-na.ssl-images-amazon.com
         m.media-amazon.com
         ssl-images-amazon.com
-    # Servicios Funcionales de Logging
-        fls-na.amazon.com
     # Dominios Internacionales (Ejemplos)
         amazon.ae
         amazon.ca
@@ -1216,6 +1251,7 @@
         api.mercadolibre.com
         mercadopago.com
         mercadopago.com.mx
+        mptools.org
     # Contenido Estático (CDN) y Envíos
         http2.mlstatic.com
         mercadoenvios.com.mx
@@ -1254,10 +1290,12 @@
         img.shein.com
         shein.com
     # eBay
+        api.ebay.com
         ebay.com
 
 # Plataformas de E-commerce
     # Shopify
+        api.shopify.com
         shopify.com
 
 # Tiendas Departamentales (México)
@@ -1339,17 +1377,23 @@
 # Servicios de Pago y Anti-Fraude
     # Stripe
         api.stripe.com
+        files.stripe.com
         js.stripe.com
         m.stripe.com
+        m.stripe.network
         stripe.com
     # Conekta
         api.conekta.io
         conekta.com
+    # OpenPay
+        api.openpay.mx
+        openpay.mx
     # Mastercard
         api.mastercard.com
         mastercard.com
         mastercard.com.mx
         secure.mastercard.com
+        src.mastercard.com
     # Visa
         api.visa.com
         secure.visa.com
@@ -1400,11 +1444,16 @@
         scotiabank.com.mx
     # Banregio
         banregio.com
+    # Hey Banco
+        heybanco.com
     # Afore Móvil
         api.aforemovil.com.mx
         aforemovil.com.mx
     # cetesdirecto
         cetesdirecto.com
+    # GBM+
+        gbm.com
+        plus.gbm.com
     # Nu
         nu.com.mx
     # Ualá
