@@ -6,8 +6,8 @@
 # plataformas, servicios y aplicaciones, excluyendo
 # publicidad, telemetría y rastreo.
 #
-# Versión: 4.0
-# Fecha de Actualización: 2025-09-18
+# Versión: 4.3
+# Fecha de Actualización: 2025-09-19
 # ===========================================================
 
 
@@ -119,6 +119,7 @@
         play.google.com
         play.googleapis.com
         play-fe.googleapis.com
+        play-gfe.googleapis.com
     # Servicios del Sistema y Conectividad
         2.android.pool.ntp.org
         alt1-mtalk.google.com
@@ -165,6 +166,9 @@
     # Servicios del Sistema
         push.apple.com
         xp.apple.com
+    # iCloud Private Relay
+        mask-api.icloud.com
+        mask.icloud.com
     # Servicios Base y DNS
         apple-dns.net
 
@@ -323,6 +327,7 @@
         contactsui-pa.googleapis.com
         cryptauthenrollment.googleapis.com
         cse.google.com
+        drive-thirdparty.googleusercontent.com
         googleapis.com
         instantmessaging-pa.googleapis.com
         notifications-pa.googleapis.com
@@ -402,6 +407,7 @@
         appstore.com
         ax.phobos.apple.com.edgesuite.net
         buy.itunes.apple.com
+        download.developer.apple.com
         is1-ssl.mzstatic.com
         is2-ssl.mzstatic.com
         is3-ssl.mzstatic.com
@@ -470,6 +476,7 @@
         1drv.com
         activation-v2.sls.microsoft.com
         api.onedrive.com
+        nexus.officeapps.live.com
         nexusrules.officeapps.live.com
         office.com
         office.net
@@ -585,6 +592,7 @@
         api.box.com
         box.com
     # pCloud
+        api.pcloud.com
         pcloud.com
 
 # Herramientas para Desarrolladores
@@ -671,6 +679,13 @@
         instagramcdn.com
     # Conexiones de Chat
         edge-chat.instagram.com
+
+# Meta Quest (Oculus)
+    # Autenticación y API
+        auth.oculus.com
+        graph.oculus.com
+    # Contenido (CDN)
+        scontent.oculuscdn.com
 
 # X (Twitter)
     # Dominios Principales y API
@@ -1000,6 +1015,9 @@
         peacocktv.com
     # Pluto TV
         pluto.tv
+    # Starz
+        api.starz.com
+        starz.com
     # Vix
         vix.com
         vixplus.com
@@ -1155,7 +1173,6 @@
         user.auth.xboxlive.com
         xbl.mp.microsoft.com
         xbox.com
-        xboxexperiencesprod.experimentation.xboxlive.com
         xflight.xboxlive.com
         xkms.xboxlive.com
         xboxlive.com
@@ -1213,8 +1230,6 @@
 
 # Hardware de PC Gaming
     # NVIDIA
-        gfe.nvidia.com
-        gfwsl.geforce.com
         ota.nvidia.com
     # AMD
         amd.com
@@ -1646,6 +1661,8 @@
         geolocation.garmin.com
     # General Motors
         apim.gm.com
+    # Netskope
+        geo.netskope.com
 
 # Electrodomésticos
     # Mabe
@@ -1713,6 +1730,11 @@
         volaris.com
     # VivaAerobus
         vivaaerobus.com
+
+# Servicios de Paquetería
+    # DHL
+        api.dhl.com
+        dhl.com
 
 # Alojamiento y Agencias de Viajes Online
     # Airbnb
