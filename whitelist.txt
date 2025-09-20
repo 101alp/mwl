@@ -6,8 +6,8 @@
 # plataformas, servicios y aplicaciones, excluyendo
 # publicidad, telemetría y rastreo.
 #
-# Versión: 4.3
-# Fecha de Actualización: 2025-09-19
+# Versión: 5.1
+# Fecha de Actualización: 2025-09-20
 # ===========================================================
 
 
@@ -92,6 +92,7 @@
     # Servicios Anti-Fraude y Anti-Bot
         aa.online-metrix.net
         api3.sift.com
+        as.arkoselabs.com
         forter.com
         roblox-api.arkoselabs.com
         sift.com
@@ -146,7 +147,6 @@
         store.microsoft.com
         storecatalog.recs.microsoft.com
     # Servicios del Sistema
-        self.events.data.microsoft.com
         wdcp.microsoft.com
         wns.windows.com
     # Sincronización de Hora y Conectividad
@@ -506,6 +506,7 @@
         cc-api-storage.adobe.io
         ccmdl.adobe.com
         lm.licenses.adobe.com
+        prod.adobegenuine.com
         swupmf.adobe.com
         use.typekit.net
     # Validación de Software
