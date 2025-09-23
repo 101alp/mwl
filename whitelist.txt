@@ -19,7 +19,6 @@
         akamaihd.net
         akamaized-st.net
         akamaized.net
-        amazonaws.com
         aspnetcdn.com
         azureedge.net
         azurefd.net
@@ -31,7 +30,6 @@
         cdn.jsdelivr.net
         cdn.mozilla.net
         cdnjs.cloudflare.com
-        cloudflare.com
         cloudfront.net
         edgecastcdn.net
         edgekey.net
@@ -296,7 +294,6 @@
 
 # Google (Cuentas y Servicios Generales)
     # Búsqueda y Páginas Principales
-        google.com
         google.com.mx
         one.google.com
         photos.google.com
@@ -383,11 +380,9 @@
         graph.windows.net
     # Portales Principales
         azure.com
-        microsoft.com
 
 # Apple (Cuentas y Servicios Generales)
     # Autenticación y Cuentas (Apple ID)
-        apple.com
         appleid.apple.com
         appleid.apple.com.edgesuite.net
         appleid.cdn-apple.com
@@ -651,7 +646,6 @@
         connect.facebook.net
         fb.com
         fb.me
-        facebook.com
         m.facebook.com
         messenger.com
     # Contenido (CDN)
@@ -669,10 +663,8 @@
 # Instagram y Threads
     # Portal Principal y API
         api.instagram.com
-        api.threads.net
         graph.instagram.com
         instagram.com
-        threads.net
     # Contenido (CDN)
         cdninstagram.com
         i.instagram.com
@@ -827,7 +819,6 @@
     # Servicio principal y APIs
         music.googleapis.com
         music.youtube.com
-        youtube.com
         youtube.googleapis.com
         youtubei.googleapis.com
     # Transmisión del contenido de video
@@ -1242,7 +1233,6 @@
 
 # Amazon (Compras)
     # Portales Principales y Pago
-        amazon.com
         amazon.com.mx
         amazonpay.com
         api.amazon.com
