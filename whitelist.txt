@@ -1,115 +1,12 @@
-# ===========================================================
-# Whitelist Global Esencial
-# ===========================================================
+# Mi Whitelist Esencial
+
 # Este archivo contiene dominios esenciales únicos, organizados
 # por prioridad de uso, para el funcionamiento de diversas
 # plataformas, servicios y aplicaciones, excluyendo
 # publicidad, telemetría y rastreo.
-#
-# Versión: 5.1
-# Fecha de Actualización: 2025-09-20
-# ===========================================================
 
 
-# --- SECCIÓN 1: INFRAESTRUCTURA CRÍTICA DE INTERNET ---
-
-# CDNs (Content Delivery Networks)
-    # Servidores de Contenido Principales
-        akamai.net
-        akamaihd.net
-        akamaized-st.net
-        akamaized.net
-        aspnetcdn.com
-        azureedge.net
-        azurefd.net
-        bunny.net
-        bunnycdn.com
-        cdn-apple.com
-        cdn.ampproject.org
-        cdn.cloudflare.net
-        cdn.jsdelivr.net
-        cdn.mozilla.net
-        cdnjs.cloudflare.com
-        cloudfront.net
-        edgecastcdn.net
-        edgekey.net
-        edgesuite.net
-        fastly.com
-        fastly.net
-        imgix.net
-        jquery.com
-        jsdelivr.net
-        res.cloudinary.com
-        s3.amazonaws.com
-    # CDNs de Plataformas de Video
-        brightcove.net
-        edge.api.brightcove.com
-        players.brightcove.net
-        secure.brightcove.com
-        ssl.p.jwpcdn.com
-    # Dependencias de Google
-        1e100.net
-        gvt1.com
-        gvt2.com
-    # Servicios de Backend y APIs de Terceros
-        api.twilio.com
-
-# Seguridad y Certificados
-    # Autoridades de Certificación (CA)
-        crl.digicert.com
-        crl.godaddy.com
-        crl.globalsign.com
-        crl.microsoft.com
-        crl.pki.goog
-        crl.sectigo.com
-        digicert.com
-        entrust.net
-        globalsign.com
-        isrg.trustid.ocsp.identrust.com
-        letsencrypt.org
-        ocsp.apple.com
-        ocsp2.apple.com
-        ocsp.digicert.com
-        ocsp.godaddy.com
-        ocsp.globalsign.com
-        ocsp.identrust.com
-        ocsp.int-x3.letsencrypt.org
-        ocsp.msocsp.com
-        ocsp.pki.goog
-        ocsp.sectigo.com
-        ocsp.usertrust.com
-        ocsp.verisign.com
-        pki.goog
-        sa.symcb.com
-        symcd.com
-    # Servicios de Verificación (CAPTCHA)
-        challenges.cloudflare.com
-        grecaptcha.com
-        hcaptcha.com
-        recaptcha.net
-    # Servicios Anti-Fraude y Anti-Bot
-        aa.online-metrix.net
-        api3.sift.com
-        as.arkoselabs.com
-        forter.com
-        roblox-api.arkoselabs.com
-        sift.com
-        static.forter.com
-        ws.humansecurity.com
-    # Identidad Federada
-        widget-cdn.rpxnow.com
-
-# Contenido Web General
-    # Avatares Globales
-        gravatar.com
-    # Imágenes de Alojamiento
-        imagesak.secureserver.net
-    # Enciclopedias y Contenido Educativo
-        wikimedia.org
-        wikipedia.org
-
-
-# --- SECCIÓN 2: SISTEMAS OPERATIVOS Y HARDWARE DE RED ---
+# --- SECCIÓN 1: SISTEMAS OPERATIVOS Y HARDWARE DE RED ---
 
 # Android (Sistema Operativo Base)
     # Google Play Store y Servicios
@@ -228,16 +125,13 @@
     # Portal Principal
         raspberrypi.org
 
-# Navegadores Web
+# Navegadores Web (Sus dependencias de actualización y navegación segura se encuentran en la sección de Google)
     # Google Chrome
         chrome.google.com
-        # Sus dependencias de actualización y navegación segura se encuentran en la sección de Google.
-    # Microsoft Edge
+    # Microsoft Edge (Sus dependencias de actualización y cuenta se encuentran en la sección de Microsoft)
         msedge.api.cdp.microsoft.com
         edge.microsoft.com
-        # Sus dependencias de actualización y cuenta se encuentran en la sección de Microsoft.
-    # Apple Safari
-        # Sus dependencias de actualización, sincronización y navegación segura se encuentran en las secciones de Apple y Google.
+    # Apple Safari (Sus dependencias de actualización, sincronización y navegación segura se encuentran en las secciones de Apple y Google)
     # Mozilla Firefox
         aus5.mozilla.org
         blocklist.addons.mozilla.org
@@ -245,8 +139,6 @@
         location.services.mozilla.com
         mozilla.org
         snippets.cdn.mozilla.net
-    # Thunderbird
-        live.thunderbird.net
     # Opera
         addons.opera.com
         autoupdate.opera.com
@@ -263,23 +155,6 @@
         tplinkcloud.com
         tplinkra.com
         tplinkwifi.net
-    # Linksys
-        api.linksys.com
-        linksys.com
-        linksyssmartwifi.com
-    # Netgear
-        my.netgear.com
-        netgear.com
-        updates.netgear.com
-    # ASUS
-        asuscomm.com
-        asusrouter.com
-        router.asus.com
-    # Amazon Eero
-        api.eero.com
-        eero.com
-    # Google / Nest Wifi
-        wifi.google.com
     # Sincronización de Hora (NTP)
         pool.ntp.org
         ntp.org
@@ -290,7 +165,7 @@
         no-ip.com
 
 
-# --- SECCIÓN 3: ECOSISTEMAS DE CUENTAS Y PRODUCTIVIDAD ---
+# --- SECCIÓN 2: ECOSISTEMAS DE CUENTAS Y PRODUCTIVIDAD ---
 
 # Google (Cuentas y Servicios Generales)
     # Búsqueda y Páginas Principales
@@ -450,122 +325,6 @@
         oppo.com
         realme.com
 
-# Suites de Oficina y Colaboración
-    # Google Workspace
-        apidata.googleusercontent.com
-        calendar.google.com
-        classroom.google.com
-        docs.google.com
-        docs.googleusercontent.com
-        drive.files.ggpht.com
-        drive.google.com
-        fonts.googleapis.com
-        maps.googleapis.com
-        maps.gstatic.com
-        meet.google.com
-        meetings.googleapis.com
-        mt0.google.com
-        mt1.google.com
-        tile.googleapis.com
-    # Microsoft Office 365
-        1drv.com
-        activation-v2.sls.microsoft.com
-        api.onedrive.com
-        nexus.officeapps.live.com
-        nexusrules.officeapps.live.com
-        office.com
-        office.net
-        office365.com
-        officeapps.live.com
-        officecdn.microsoft.com
-        officecdn.microsoft.com.edgesuite.net
-        officeclient.microsoft.com
-        onedrive.live.com
-        outlook.com
-        outlook.live.com
-        outlook.office365.com
-        products.office.com
-        protection.office.com
-        statics.teams.cdn.office.net
-        storage.live.com
-        substrate.office.com
-        teams.live.com
-        teams.microsoft.com
-        webshell.suite.office.com
-    # Adobe Creative Cloud
-        adobe.com
-        adobe.io
-        adobelogin.com
-        adobesc.com
-        assets.adobe.com
-        cc-api-storage.adobe.io
-        ccmdl.adobe.com
-        lm.licenses.adobe.com
-        prod.adobegenuine.com
-        swupmf.adobe.com
-        use.typekit.net
-    # Validación de Software
-        genuine.adobe.com
-    # Firma Digital
-        docusign.com
-        docusign.net
-        images.docusign.com
-    # Herramientas de Diseño
-        canva.com
-        content.canva.com
-        static.canva.com
-        figma.com
-        static.figma.com
-        www.figma.com
-    # Asistencia de Escritura
-        assets.grammarly.com
-        data.grammarly.com
-        grammarly.com
-    # Atlassian (Jira / Confluence)
-        atlassian.com
-        atlassian.net
-        jira.com
-    # Slack
-        api.slack.com
-        slack-edge.com
-        slack-files.com
-        slack-imgs.com
-        slack.com
-    # Zoom
-        api.zoom.us
-        zoom.us
-    # Notion
-        api.notion.com
-        notion.so
-    # Trello
-        trello.com
-    # Asana
-        api.asana.com
-        asana.com
-        luna1.luna.asana.com
-    # Miro
-        api.miro.com
-        miro.com
-        static.miro.com
-
-# Administradores de Contraseñas
-    # Bitwarden
-        api.bitwarden.com
-        bitwarden.com
-        identity.bitwarden.com
-        vault.bitwarden.com
-    # 1Password
-        1password.com
-        1passwordusercontent.com
-        c.1password.com
-    # LastPass
-        api.lastpass.com
-        lastpass.com
-    # Dashlane
-        api.dashlane.com
-        dashlane.com
-        ws1.dashlane.com
-
 # Almacenamiento en la Nube (Dedicado)
     # Dropbox
         api.dropboxapi.com
@@ -605,26 +364,8 @@
     # Inteligencia Artificial
         openai.com
 
-# Software de Seguridad (Antivirus)
-    # Avast
-        my-win.avast.com
-    # ESET
-        edf.eset.com
-    # Kaspersky
-        ff.kis.scr.kaspersky-labs.com
-        gc.kis.scr.kaspersky-labs.com
-        ie.kis.scr.kaspersky-labs.com
-    # McAfee
-        provision.ccs.mcafee.com
-        updatekeepalive.mcafee.com
-    # Sophos
-        sdds3.sophosupd.com
-        sus.sophosupd.com
-    # Malwarebytes
-        keystone.mwbsys.com
 
-
-# --- SECCIÓN 4: COMUNICACIÓN Y REDES SOCIALES ---
+# --- SECCIÓN 3: COMUNICACIÓN Y REDES SOCIALES ---
 
 # WhatsApp
     # Servicio Principal y Contenido
@@ -779,41 +520,8 @@
         pinterest.com.mx
         pinimg.com
 
-# Snapchat
-    # Servicio Principal y API
-        api.snapchat.com
-        app.snapchat.com
-        gateway.snapchat.com
-        messaging.snapchat.com
-        snapchat.com
-    # Contenido (CDN) y Dependencias
-        sc-cdn.net
 
-# Skype
-    # Portal Principal y Apps
-        apps.skype.com
-        ui.skype.com
-    # Contenido (CDN)
-        cdn.skype.com
-    # Servicios
-        pricelist.skype.com
-
-# WeChat
-    # Portal Principal y Contenido
-        szmmsns.qpic.cn
-        szsns.video.qpic.cn
-        wechat.com
-        weixin.qq.com
-
-# Blogs y Publicaciones
-    # WordPress
-        s1.wp.com
-        wp.com
-        wordpress.com
-        wordpress.org
-
-
-# --- SECCIÓN 5: ENTRETENIMIENTO Y VIDEOJUEGOS ---
+# --- SECCIÓN 4: ENTRETENIMIENTO Y VIDEOJUEGOS ---
 
 # YouTube y YouTube Music
     # Servicio principal y APIs
@@ -890,21 +598,6 @@
         disney-plus.net
         registerdisney.go.com
 
-# Star+
-    # Portal Principal y API
-        star.api.edge.bamgrid.com
-        starplus.com
-    # Contenido (CDN)
-        starott.com
-
-# Hulu
-    # Portal Principal y API
-        androidtv.app.hulu.com
-        hulu.com
-        huluim.com
-    # Contenido (CDN) y Servicios
-        assetshuluimcom-a.akamaihd.net
-
 # Max (HBO Max)
     # Portales Principales
         hbo.com
@@ -928,19 +621,6 @@
         spotifycdn.com
     # Servicios Secundarios
         spclient.wg.spotify.com
-
-# SoundCloud
-    # Portal Principal y API
-        api-v2.soundcloud.com
-        api.soundcloud.com
-        soundcloud.com
-    # Contenido (CDN)
-        cf-media.sndcdn.com
-
-# Tidal
-    # Portal Principal y API
-        api.tidal.com
-        tidal.com
 
 # Apple Music y Apple TV
     # Portales Principales
@@ -991,79 +671,6 @@
         pl.crunchyroll.com
         static.crunchyroll.com
         vrv.co
-
-# Vimeo
-    # Portal Principal y API
-        api.vimeo.com
-        vimeo.com
-    # Contenido de Video (CDN)
-        f.vimeocdn.com
-        vimeocdn.com
-
-# Plataformas de Streaming (Otras)
-    # Paramount+
-        paramountplus.com
-    # Peacock
-        peacocktv.com
-    # Pluto TV
-        pluto.tv
-    # Starz
-        api.starz.com
-        starz.com
-    # Vix
-        vix.com
-        vixplus.com
-    # Tubi
-        tubi.video
-        tubitv.com
-    # Claro Video
-        clarovideo.com
-    # Blim TV
-        blim.com
-    # FilminLatino
-        filminlatino.mx
-    # RLJE Services (Acorn TV)
-        api.rlje.net
-
-# Plataformas Educativas
-    # TED
-        app-api.ted.com
-        hls.ted.com
-        tedcdn.com
-
-# Música (Otros)
-    # Last.fm
-        ws.audioscrobbler.com
-
-# Podcasting
-    # Libsyn
-        traffic.libsyn.com
-
-# Servidores Multimedia Personales
-    # Plex y Apps Relacionadas (Sonarr)
-        apt.sonarr.tv
-        auth.plex.tv
-        dashboard.plex.tv
-        download.sonarr.tv
-        forums.sonarr.tv
-        meta.plex.bz
-        meta.plex.tv
-        plex.direct
-        plex.services
-        plex.tv
-        provider.plex.tv
-        proxy.plex.bz
-        proxy.plex.tv
-        pubsub.plex.bz
-        pubsub.plex.tv
-        scrobbles.plex.tv
-        services.sonarr.tv
-        skyhook.sonarr.tv
-        staging.plex.tv
-        status.plex.tv
-        themoviedb.com
-        thetvdb.com
-        tvdb2.plex.tv
 
 # Cines y Boletos (México)
     # Cinépolis
@@ -1220,16 +827,8 @@
         cdn.king.com
         king.com
 
-# Hardware de PC Gaming
-    # NVIDIA
-        ota.nvidia.com
-    # AMD
-        amd.com
-    # Intel
-        downloadmirror.intel.com
 
-
-# --- SECCIÓN 6: COMPRAS Y SERVICIOS FINANCIEROS ---
+# --- SECCIÓN 5: COMPRAS Y SERVICIOS FINANCIEROS ---
 
 # Amazon (Compras)
     # Portales Principales y Pago
@@ -1295,90 +894,6 @@
         img.ltwebstatic.com
         img.shein.com
         shein.com
-    # eBay
-        api.ebay.com
-        ebay.com
-
-# Plataformas de E-commerce
-    # Shopify
-        api.shopify.com
-        shopify.com
-
-# Tiendas Departamentales (México)
-    # Liverpool
-        api.liverpool.com.mx
-        assetspwa.liverpool.com.mx
-        graphql.liverpool.com.mx
-        liverpool.com.mx
-    # Walmart
-        assets.walmartimages.com.mx
-        super.walmart.com.mx
-        walmart.com
-        walmart.com.mx
-    # Coppel
-        api.coppel.com
-        coppel.com
-    # Elektra
-        elektra.mx
-    # Sears
-        api.sears.com.mx
-        asset.sears.com.mx
-        sears.com.mx
-    # Suburbia
-        api.suburbia.com.mx
-        assets.suburbia.com.mx
-        suburbia.com.mx
-    # El Palacio de Hierro
-        api.elpalaciodehierro.com
-        assets.elpalaciodehierro.com
-        elpalaciodehierro.com
-    # Sanborns
-        sanborns.com.mx
-
-# Supermercados (México)
-    # Bodega Aurrerá
-        bodegaaurrera.com.mx
-        despensa.bodegaaurrera.com.mx
-    # Soriana
-        api.soriana.com
-        soriana.com
-        sorianadomicilio.com
-    # Chedraui
-        api.chedraui.com.mx
-        chedraui.com.mx
-    # Sam's Club
-        assets.sams.com.mx
-        sams.com.mx
-    # Costco
-        costco.com
-        costco.com.mx
-    # La Comer
-        lacomer.com.mx
-    # Justo.mx
-        justo.mx
-
-# Tiendas de Conveniencia y Especializadas (México)
-    # OXXO y Spin
-        api.spinbyoxxo.com.mx
-        mi.oxxo.com
-        oxxo.com
-        oxxopay.com
-        spinbyoxxo.com.mx
-    # The Home Depot
-        api.homedepot.com.mx
-        assets.homedepot-static.com
-        homedepot.com.mx
-        images.homedepot-static.com
-    # Office Depot
-        officedepot.com.mx
-    # Farmacias del Ahorro
-        fahorro.com
-    # Farmacias Guadalajara
-        farmaciasguadalajara.com
-    # Price Shoes
-        priceshoes.com
-    # Andrea
-        andrea.com
 
 # Servicios de Pago y Anti-Fraude
     # Stripe
@@ -1448,39 +963,9 @@
         portal.bancoppel.com
     # Scotiabank
         scotiabank.com.mx
-    # Banregio
-        banregio.com
-    # Hey Banco
-        heybanco.com
-    # Afore Móvil
-        api.aforemovil.com.mx
-        aforemovil.com.mx
-    # cetesdirecto
-        cetesdirecto.com
-    # GBM+
-        gbm.com
-        plus.gbm.com
-    # Nu
-        nu.com.mx
-    # Ualá
-        uala.com.mx
-    # Klar
-        klar.mx
-    # Stori
-        storicard.com
-    # Albo
-        albo.mx
-    # Banco Azteca
-        bancoazteca.com.mx
-    # Kueski
-        kueski.com
-    # Inbursa
-        inbursa.com
-    # Compartamos
-        compartamos.com.mx
 
 
-# --- SECCIÓN 7: DISPOSITIVOS Y HOGAR INTELIGENTE ---
+# --- SECCIÓN 6: DISPOSITIVOS Y HOGAR INTELIGENTE ---
 
 # Smart TVs
     # Samsung (Tizen)
@@ -1574,273 +1059,3 @@
         g.co
         play-games.google.com
         tvlauncher.googleapis.com
-
-# Dispositivos Smart Home (IoT)
-    # Amazon Alexa
-        alexa.amazon.com
-        alexa.amazon.com.mx
-        amazonalexa.com
-        api.amazonalexa.com
-        device-messaging-na.amazon.com
-        dp-gw-na.amazon.com
-        skills-store.amazon.com
-    # Amazon Ring
-        api.ring.com
-        ring.com
-        ring-videos-production.s3.amazonaws.com
-    # Google Nest
-        api.nest.com
-        nest-api.com
-        nest.com
-    # iRobot
-        content-prod.iot.irobotapi.com
-        disc-prod.iot.irobotapi.com
-        unauth3.prod.irobotapi.com
-    # Roborock
-        files.roborock.com
-        mqtt-us-2.roborock.com
-    # Tuya / Smart Life
-        a.tuyaus.com
-        a1.tuyaus.com
-        mqtt.tuyaus.com
-        px1.tuyaus.com
-        tuya.com
-    # Philips Hue
-        philips-hue.com
-    # Sonos
-        ms.sonos.com
-        sonos.com
-        update.sonos.com
-    # Wyze
-        api.wyzecam.com
-        wyze-device-service.wyzecam.com
-        wyze.com
-        wzapi.wyzecam.com
-    # SmartThings (Samsung)
-        c2c-us.smartthings.com
-        dispatch.smartthings.com
-
-# Tiendas y Soporte de Fabricantes de Hardware
-    # Apple Store
-        store.apple.com
-    # Sony Store
-        store.sony.com.mx
-    # Dell
-        dell.com
-        dell.com.mx
-        dellupdater.dell.com
-    # HP Store
-        hp.com
-        store.hp.com
-    # Lenovo
-        media.dds.lenovo.com
-    # ASUS
-        dlcdnets.asus.com
-    # MSI
-        download.msi.com
-        msi.com
-    # Otros Fabricantes
-        acer.com
-        asus.com
-        lenovo.com
-        lg.com
-
-# Otros (Hardware y Software)
-    # Barracuda
-        geoip.cudasvc.com
-    # Garmin
-        geolocation.garmin.com
-    # General Motors
-        apim.gm.com
-    # Netskope
-        geo.netskope.com
-
-# Electrodomésticos
-    # Mabe
-        mabe.com.mx
-    # Whirlpool
-        whirlpool.com
-        whirlpool.com.mx
-
-
-# --- SECCIÓN 8: TRANSPORTE Y VIAJES ---
-
-# Uber y Uber Eats
-    # Servicio Principal y API
-        api.uber.com
-        api.ubereats.com
-        uber.com
-        ubereats.com
-    # Contenido (CDN) y Servicios Geo
-        cn-geo1.uber.com
-        uber-cdn.com
-        uberstatic.com
-
-# Didi y Didi Food
-    # Portal Principal y API
-        api.didi-food.com
-        api.didiglobal.com
-        didiglobal.com
-    # Contenido y Portal de Comida
-        didi-food.com
-        static.didiglobal.com
-
-# Rappi
-    # Portal Principal y API
-        api.rappi.com
-        rappi.com
-        rappi.com.mx
-    # Contenido (CDN)
-        rappicdn.net
-        static.rappi.com
-
-# Compra/Venta de Autos (México)
-    # Kavak
-        api.kavak.com
-
-# Mapas y Navegación
-    # Waze
-        ctilesgcs-am.waze.com
-        gapi.waze.com
-        livemap.waze.com
-        maps.waze.com
-        rt.waze.com
-        waze.com
-    # Bing Maps (Virtual Earth)
-        dev.virtualearth.net
-        ecn.dev.virtualearth.net
-        t0.ssl.ak.dynamic.tiles.virtualearth.net
-        t0.ssl.ak.tiles.virtualearth.net
-
-# Aerolíneas (México)
-    # Aeroméxico
-        aeromexico.com
-        api.aeromexico.com
-    # Volaris
-        api.volaris.com
-        volaris.com
-    # VivaAerobus
-        vivaaerobus.com
-
-# Servicios de Paquetería
-    # DHL
-        api.dhl.com
-        dhl.com
-
-# Alojamiento y Agencias de Viajes Online
-    # Airbnb
-        a0.muscache.com
-        airbnb.com
-        airbnb.mx
-    # Booking
-        booking.com
-    # Expedia
-        expedia.com
-    # Trivago
-        trivago.com
-        trivago.com.mx
-
-# Transporte Terrestre (México)
-    # ADO Móvil
-        ado.com.mx
-        api.ado.com.mx
-    # Cabify
-        cabify.com
-    # Beat
-        beat.com
-
-
-# --- SECCIÓN 9: SERVICIOS GUBERNAMENTALES (MÉXICO) ---
-
-# Portal Federal
-    # Gobierno de México (Gob.mx)
-        api.gob.mx
-        cdn.gob.mx
-        gob.mx
-
-# Dependencias Fiscales y Financieras
-    # SAT
-        sat.gob.mx
-        www.sat.gob.mx
-    # CONSAR
-        consar.gob.mx
-    # CONDUSEF
-        condusef.gob.mx
-    # INFONAVIT
-        api.infonavit.org.mx
-        infonavit.org.mx
-
-# Salud y Seguridad Social
-    # IMSS
-        imss-bienestar.gob.mx
-        imss.gob.mx
-        serviciosdigitales.imss.gob.mx
-    # ISSSTE
-        issste.gob.mx
-    # Salud y COFEPRIS
-        cofepris.gob.mx
-        salud.gob.mx
-
-# Identidad y Relaciones Exteriores
-    # RENAPO (CURP)
-        renapo.gob.mx
-    # SRE (Relaciones Exteriores)
-        citas.sre.gob.mx
-        sre.gob.mx
-
-# Servicios Públicos y Otros
-    # CFE
-        api.cfe.mx
-        app.cfe.mx
-        cfe.mx
-    # SEP
-        sep.gob.mx
-    # PROFECO
-        profeco.gob.mx
-    # INE
-        ine.mx
-    # INEGI
-        inegi.org.mx
-    # Poder Judicial
-        cjf.gob.mx
-        scjn.gob.mx
-    # FGR
-        fgr.org.mx
-    # Guardia Nacional
-        gn.gob.mx
-    # CONAHCYT
-        conahcyt.mx
-    # Aduanas (ANAM)
-        anam.gob.mx
-
-# Servicios Locales
-    # App CDMX
-        api.cdmx.gob.mx
-        cdmx.gob.mx
-    # Salud Digna
-        api.salud-digna.org
-        salud-digna.org
-
-# Telecomunicaciones
-    # Telmex
-        api.telmex.com
-        mitelmex.com
-        telmex.com
-    # Telcel
-        api.telcel.com
-    # AT&T México
-        att.com.mx
-    # Izzi
-        api.izzi.mx
-        izzi.mx
-    # Totalplay
-        api.totalplay.com.mx
-    # Claro
-        api.claro.com.mx
-        claro.com.mx
-    # Movistar
-        api.movistar.com.mx
-        movistar.com.mx
-    # Megacable
-        api.megacable.com.mx
-        megacable.com.mx
