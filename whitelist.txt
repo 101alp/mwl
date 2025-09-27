@@ -1,4 +1,5 @@
-### Mi Whitelist
+### Mi Whitelist ###
+
 # Solo contiene subdominios críticos y dominios funcionalmente esenciales.
 # Todos los dominios apex (dominio raíz) han sido eliminados a favor de endpoints específicos,
 # excepto aquellos marcados como "Excepción Inevitable" donde no existe alternativa viable.
