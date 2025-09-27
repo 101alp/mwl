@@ -1,41 +1,29 @@
-# Mi Whitelist Esencial Depurada
-# Este archivo contiene dominios esenciales únicos, organizados
-# por prioridad de uso (de mayor a menor criticidad), para el
-# funcionamiento de diversas plataformas, servicios y aplicaciones.
-
+### Mi Whitelist
+# Solo contiene subdominios críticos y dominios funcionalmente esenciales.
+# Todos los dominios apex (dominio raíz) han sido eliminados a favor de endpoints específicos,
+# excepto aquellos marcados como "Excepción Inevitable" donde no existe alternativa viable.
 
 # --- SECCIÓN 1: INFRAESTRUCTURA DE RED Y SEGURIDAD CRÍTICA ---
 
 # Hardware de Red
     # Sincronización de Hora (NTP)
         pool.ntp.org
-        ntp.org
     # Dynamic DNS
         duckdns.org
         dynupdate.no-ip.com
         ipv64.net
-        no-ip.com
-    # TP-Link
+    # TP-Link (Solo subdominios críticos)
         n-use1-wap.i.tplinkcloud.com
-        tplink.com
-        tplinkcloud.com
-        tplinkra.com
-        tplinkwifi.net
 
 # Seguridad y Certificados
-    # Autoridades de Certificación (OCSP/CRL)
+    # Autoridades de Certificación (OCSP/CRL) - Puntos de contacto de certificados
         crl.digicert.com
         crl.godaddy.com
         crl.globalsign.com
         crl.microsoft.com
         crl.pki.goog
         crl.sectigo.com
-        digicert.com
-        entrust.net
-        globalsign.com
-        isrg.trustid.ocsp.identrust.com
-        letsencrypt.org
-        ocsp.apple.com # Requerido para la validación del estado de revocación de certificados TLS/SSL, crítico para la seguridad del sistema y App Store.
+        ocsp.apple.com
         ocsp2.apple.com
         ocsp.digicert.com
         ocsp.godaddy.com
@@ -50,66 +38,45 @@
         pki.goog
         sa.symcb.com
         symcd.com
-    # Servicios de Verificación (CAPTCHA) (Trampa Funcional)
-        challenges.cloudflare.com # Utilizado por Cloudflare para verificaciones de seguridad antes de acceder a un sitio web, bloqueando el acceso al sitio si se bloquea.
-        grecaptcha.com # Esencial para la validación anti-bot de formularios y accesos de inicio de sesión en muchos sitios.
-        hcaptcha.com # Esencial para la validación anti-bot de formularios y accesos de inicio de sesión en muchos sitios.
-        recaptcha.net # Dominio alternativo de Google para la validación anti-bot, necesario para la funcionalidad de muchos sitios web.
-    # Servicios Anti-Fraude y Anti-Bot (Trampa Funcional)
-        aa.online-metrix.net # Utilizado por servicios financieros y *e-commerce* para huellas digitales de dispositivos y prevención de fraudes en pagos.
-        api3.sift.com # API de backend para la prevención de fraudes y la gestión de riesgos en transacciones.
-        as.arkoselabs.com # Dominio usado por Arkose Labs para las verificaciones de bot y seguridad en plataformas como Roblox y servicios de *gaming*.
-        forter.com # Plataforma utilizada para la prevención de fraudes en pagos y *e-commerce*, crítica para finalizar compras.
-        roblox-api.arkoselabs.com # API crítica de Arkose Labs para la autenticación anti-bot específica de la plataforma Roblox.
-        sift.com # Backend del servicio de prevención de fraudes Sift.
-        static.forter.com # Carga de activos estáticos para la plataforma de prevención de fraudes Forter.
-        ws.humansecurity.com # Servicio utilizado para mitigar tráfico de bots y fraudes en transacciones y sitios web.
+    # Servicios de Verificación (CAPTCHA)
+        challenges.cloudflare.com
+        grecaptcha.com
+        recaptcha.net
+    # Servicios Anti-Fraude y Anti-Bot
+        aa.online-metrix.net
+        api3.sift.com
+        as.arkoselabs.com
+        roblox-api.arkoselabs.com
+        static.forter.com
+        ws.humansecurity.com
     # Identidad Federada
         widget-cdn.rpxnow.com
 
-# CDNs (Content Delivery Networks)
-    # Servidores de Contenido Principales
-        akamai.net
-        akamaihd.net
-        akamaized-st.net
-        akamaized.net
-        amazonaws.com
+# CDNs (Content Delivery Networks) - Dominios que sirven contenido estático
+        s3.amazonaws.com
         aspnetcdn.com
         azureedge.net
         azurefd.net
-        bunny.net
         bunnycdn.com
         cdn-apple.com
         cdn.ampproject.org
         cdn.cloudflare.net
-        cdn.jsdelivr.net
-        cdn.mozilla.net
         cdnjs.cloudflare.com
-        cloudflare.com
-        cloudfront.net
         edgecastcdn.net
         edgekey.net
         edgesuite.net
-        fastly.com
-        fastly.net
-        imgix.net
-        jquery.com
-        jsdelivr.net
-        res.cloudinary.com
-        s3.amazonaws.com
     # CDNs de Plataformas de Video
         brightcove.net
         edge.api.brightcove.com
         players.brightcove.net
         secure.brightcove.com
         ssl.p.jwpcdn.com
-    # Dependencias de Google (Trampa Funcional)
-        1e100.net # Dominio genérico de Google usado para muchos servicios internos, incluyendo APIs y *backend* crítico.
-        gvt1.com # Dominio genérico de Google utilizado para descargas de software, actualizaciones y contenido de Play Store/Chrome.
-        gvt2.com # Dominio genérico de Google utilizado para descargas de software, actualizaciones y contenido de Play Store/Chrome.
+    # Dependencias de Google (Críticas)
+        1e100.net
+        gvt1.com
+        gvt2.com
     # Servicios de Backend y APIs de Terceros
         api.twilio.com
-
 
 # --- SECCIÓN 2: SISTEMAS OPERATIVOS Y CUENTAS BASE ---
 
@@ -120,8 +87,7 @@
         passbox-pa.googleapis.com
         signin.google.com
         signin.l.google.com
-    # Autenticación Crítica (Trampa Funcional)
-        clients.auth.google.com # Utilizado para la autenticación de tokens y servicios OAuth de inicio de sesión de terceros.
+        clients.auth.google.com
     # APIs y Servicios de Clientes
         0.client-channel.google.com
         androidplatformbackuprestore-pa.googleapis.com
@@ -159,9 +125,8 @@
         geo3.ggpht.com
         ggpht.com
         googleusercontent.com
-        gstatic.com
-        storage.googleapis.com
         ssl.gstatic.com
+        storage.googleapis.com
         www.gstatic.com
     # Navegación Segura
         safebrowsing.googleapis.com
@@ -169,15 +134,12 @@
         fcm.googleapis.com
         firebase-settings.googleapis.com
         firebaseapp.com
-        firebaseappcheck.googleapis.com
         firebasehosting.googleapis.com
         firebaseinstallations.googleapis.com
         firebaseio.com
         firebasestorage.googleapis.com
     # Búsqueda y Páginas Principales
-        google.com.mx
         one.google.com
-        www.google.com
     # Recursos para Desarrolladores
         google.dev
 
@@ -203,26 +165,20 @@
         msftconnecttest.com
         time.windows.com
         www.msftconnecttest.com
-    # Configuración (Trampa Funcional)
-        settings-win.data.microsoft.com # Es esencial para la sincronización de configuraciones de Windows entre dispositivos y cuentas.
+        settings-win.data.microsoft.com
     # Autenticación y Cuentas (Live/Azure)
         account.live.com
         c.s-microsoft.com
         clientconfig.passport.net
         g.live.com
-        live.com
-        live.net
         login.live.com
         login.microsoft.com
         login.microsoftonline.com
         login.windows.net
-        microsoftonline.com
         s.gateway.messenger.live.com
     # APIs y Servicios Gráficos
         graph.microsoft.com
         graph.windows.net
-    # Portales Principales
-        azure.com
 
 # Apple (iOS, macOS, etc.)
     # Verificación y Sincronización del SO
@@ -250,14 +206,12 @@
         cvws.icloud-content.com
         gateway.icloud.com
         icloud-content.com
-        icloud.com
         p33-content.icloud.com
         p108-content.icloud.com
         p33-drivews.icloud.com
         setup.icloud.com
     # App Store y Contenido
         amp-api-search-edge.apps.apple.com
-        appstore.com
         ax.phobos.apple.com.edgesuite.net
         buy.itunes.apple.com
         download.developer.apple.com
@@ -267,12 +221,8 @@
         is4-ssl.mzstatic.com
         is5-ssl.mzstatic.com
         itunes.apple.com
-        itunes.com
-        mzstatic.com
         static.gc.apple.com
         video.apple.com
-    # Noticias
-        apple.news
 
 # Android (Sistema Operativo Base)
     # Google Play Store y Servicios
@@ -291,64 +241,46 @@
         dns.google
 
 # Ecosistemas de Dispositivos Móviles
-    # Samsung (One UI y Cuentas)
+    # Samsung (Solo subdominios críticos)
         fota-secure-dn.ospserver.net
-        ospserver.net
-        samsungdm.com
-        samsung-gs.com
-        samsungapps.com
-        findmymobile.samsung.com
         push.samsung.com.cn
-        samsung.net
-        samsungaccount.com
-    # Xiaomi (HyperOS / MIUI y Cuentas)
+    # Xiaomi (Solo subdominios críticos)
         bigota.d.miui.com
         cdn.ota.miui.com
         ota.mi.com
         api.miui.com
         resolver.msg.xiaomi.net
         verify.miui.com
-        account.xiaomi.com
         api.account.xiaomi.com
         i.mi.com
-        mi.com
-    # Huawei (EMUI / HarmonyOS y Cuentas)
+    # Huawei (Solo subdominios críticos)
         update.dbankcdn.com
         update.hicloud.com
         core.hms.huawei.com
         appgallery.cloud.huawei.com
-        appgallery.huawei.com
         dl-app-share.dbankcdn.com
-        hicloud.com
-    # HONOR (Magic OS y Cuentas)
+    # HONOR (Solo subdominios críticos)
         ota.hihonor.com
         api.cloud.honor.com
         cloud.honor.com
         hnid.com
-        honor.com
-    # Oppo / OnePlus / Realme (ColorOS / OxygenOS y Cuentas)
+    # Oppo / OnePlus / Realme (Solo subdominios críticos)
         open.oneplus.net
         ota.coloros.com
         ota.oppo.com
         ota.realme.com
         cloud.heytap.com
-        heytap.com
         id.heytap.com
-        oneplus.com
-        oppo.com
-        realme.com
     # Motorola
         updates.motorola.com
     # Raspberry Pi OS
         archive.raspberrypi.org
         raspbian.raspberrypi.org
-        raspberrypi.org
 
 # Mapas y Navegación
-    # Google Maps y APIs (Trampa Funcional)
-        maps.googleapis.com # API crítica para la carga de mapas en aplicaciones de terceros y la funcionalidad principal de la aplicación.
+    # Google Maps y APIs
+        maps.googleapis.com
     # Waze
-        waze.com
         api.waze.com
         cdn.waze.com
 
@@ -363,10 +295,7 @@
         blocklist.addons.mozilla.org
         firefox.settings.services.mozilla.com
         location.services.mozilla.com
-        mozilla.org
         snippets.cdn.mozilla.net
-    # Mozilla Telemetry (Trampa Funcional)
-        telemetry.mozilla.org # A pesar del nombre, es a menudo requerido por el cliente de escritorio de Firefox para la función de auto-actualización.
     # Opera
         addons.opera.com
         autoupdate.opera.com
@@ -377,79 +306,64 @@
         updates.brave.com
 
 # Almacenamiento en la Nube (Dedicado)
-    # Dropbox
+    # Dropbox (Solo subdominios críticos)
         api.dropboxapi.com
         dl.dropbox.com
         dl.dropboxusercontent.com
-        dropbox.com
-        dropboxapi.com
-        dropboxstatic.com
-        dropboxusercontent.com
         ns1.dropbox.com
         ns2.dropbox.com
     # MEGA
         api.mega.nz
         eu.static.mega.co.nz
         g.static.mega.co.nz
-        mega.co.nz
-        mega.io
-        mega.nz
     # Box
         api.box.com
-        box.com
     # pCloud
         api.pcloud.com
-        pcloud.com
 
+# Adobe Creative Cloud y Fuentes
+    # Adobe Fonts
+        p.typekit.net
+
+---
 
 # --- SECCIÓN 3: COMPRAS, FINANZAS Y PAGOS ---
 
 # Banca y Fintech (México)
-    # Citibanamex
+    # Citibanamex (Solo APIs y subdominios transaccionales)
         api.citibanamex.com
         bancanet.banamex.com
-        citibanamex.com
         portal.banamex.com.mx
     # BBVA
         api.bbva.com
         bbv.mx
-        bbva.com
-        bbva.mx
         bbvanet.com.mx
     # Banorte
         api.banorte.com
-        banorte.com
-        banorte.com.mx
         banortein.com
         servicios.banorte.com
     # Santander
         api.santander.com.mx
-        santander.com.mx
         supernet.santander.com.mx
     # HSBC
         api.hsbc.com.mx
-        hsbc.com.mx
         www.hsbc.com.mx
     # BanCoppel
         api.bancoppel.com
-        bancoppel.com
         cdn.bancoppel.com
         portal.bancoppel.com
     # Scotiabank
-        scotiabank.com.mx
+        scotiabank.com.mx # Excepción inevitable: Apex requerido para el portal principal de banca.
 
 # Servicios de Pago y Anti-Fraude
     # PayPal
         api.paypal.com
         c.paypal.com
-        paypal.com
         assets.paypal.com
         paypal-static.com
         paypalobjects.com
         www.paypalobjects.com
     # Mercado Pago
-        mercadopago.com
-        mercadopago.com.mx
         mptools.org
     # Stripe
         api.stripe.com
@@ -457,84 +371,65 @@
         js.stripe.com
         m.stripe.com
         m.stripe.network
-        stripe.com
     # Conekta
         api.conekta.io
-        conekta.com
+        openpay.mx
     # OpenPay
         api.openpay.mx
-        openpay.mx
     # Mastercard
         api.mastercard.com
-        mastercard.com
-        mastercard.com.mx
         secure.mastercard.com
         src.mastercard.com
+        mastercard.com.mx # Excepción inevitable: Apex requerido para el portal principal de banca.
     # Visa
         api.visa.com
         secure.visa.com
-        visa.com
-        visa.com.mx
+        visa.com.mx # Excepción inevitable: Apex requerido para el portal principal de banca.
     # American Express
-        americanexpress.com
-        americanexpress.com.mx
         global.americanexpress.com
+        americanexpress.com.mx # Excepción inevitable: Apex requerido para el portal principal de banca.
     # 2Checkout (Avangate)
         secure.avangate.com
 
 # E-commerce y Marketplaces
-    # Amazon (Compras)
-        amazon.com.mx
+    # Amazon (Solo subdominios geográficos/CDN/API - Apex de tienda regional eliminado)
         amazonpay.com
         api.amazon.com
         images-na.ssl-images-amazon.com
         m.media-amazon.com
         ssl-images-amazon.com
-        amazon.ae
-        amazon.ca
-        amazon.co.uk
-        amazon.de
-        amazon.es
-        amazon.fr
-        amazon.in
     # Mercado Libre
-        mercadolibre.com
-        mercadolibre.com.mx
         api.mercadolibre.com
         http2.mlstatic.com
         mercadoenvios.com.mx
         mlstatic.com
         static.mlstatic.com
-    # AliExpress y Alibaba
+    # AliExpress
         ae.aliexpress.com
         aer.aliexpress.com
         api.alibaba.com
         api.aliexpress.com
-        alibaba.com
-        alicdn.com
-        aliexpress.com
         img.alicdn.com
     # SHEIN
         api.shein.com
         img.ltwebstatic.com
         img.shein.com
-        shein.com
 
+---
 
 # --- SECCIÓN 4: COMUNICACIÓN Y REDES SOCIALES ---
 
 # Colaboración y Mensajería Empresarial
     # Zoom
-        zoom.us
-        zoom.com
-        zoomgov.com # Esencial para iniciar, unirse y mantener conferencias de audio/video.
+        zoom.us # Excepción inevitable: Apex oficial para el cliente Zoom.
+        zoom.com # Excepción inevitable: Apex oficial de Zoom (web/cliente).
+        zoomgov.com # Excepción inevitable: Apex usado por Zoom en entornos gubernamentales.
     # Microsoft Teams
         teams.microsoft.com
-        api.teams.skype.com # Crítico para la conexión y funcionalidad de chat/llamadas en entornos empresariales.
+        api.teams.skype.com
     # Slack
-        slack.com
         api.slack.com
-        files.slack.com # Necesario para la mensajería en tiempo real y la carga de archivos en espacios de trabajo.
+        files.slack.com
 
 # WhatsApp
     # Servicio Principal y Contenido
@@ -542,7 +437,6 @@
         media.whatsapp.net
         static.whatsapp.net
         web.whatsapp.com
-        whatsapp.com
         whatsapp.net
     # Conexiones (Voz/Video)
         g.whatsapp.net
@@ -552,7 +446,6 @@
 
 # Telegram
     # Portales Principales
-        telegram.org
         web.telegram.org
     # API y Dominios Cortos
         api.telegram.org
@@ -567,8 +460,6 @@
 
 # Discord
     # Portal Principal y Servicios
-        discord.com
-        discordapp.com
         router.discord.gg
         status.discord.com
     # Contenido (CDN) y Media
@@ -602,10 +493,9 @@
     # Portal Principal y API
         api.instagram.com
         graph.instagram.com
-        instagram.com
+        i.instagram.com
     # Contenido (CDN) y Dominios de Servicio
         cdninstagram.com
-        i.instagram.com
         instagram.net
         instagramcdn.com
     # Conexiones de Chat
@@ -615,8 +505,6 @@
     # Dominios Principales y API
         api.twitter.com
         api.x.com
-        twitter.com
-        x.com
     # Contenido (Imágenes y Videos)
         abs-0.twimg.com
         pbs.twimg.com
@@ -630,7 +518,6 @@
 # Reddit
     # Portal Principal y Dominio Corto
         redd.it
-        reddit.com
     # Contenido (Imágenes y Videos)
         i.redd.it
         redditmedia.com
@@ -646,7 +533,6 @@
     # Portal Principal y API
         api.tiktok.com
         api.tiktokv.com
-        tiktok.com
     # Contenido (CDN) y Dominios de Servicio
         ibyteimg.com
         muscdn.com
@@ -656,15 +542,17 @@
         tiktokcdn.com
         tiktokv.com
 
+# Snapchat
+    # Backend y Mensajería
+        im.snapchat.com
+        feelinsonice-hr.appspot.com
+
 # Servicios de Hosting de Contenido
-    # Imgur (Trampa Funcional)
-        i.imgur.com # CDN de imágenes muy utilizado en sitios de foros y redes sociales (como Reddit) como dependencia de contenido.
-        imgur.com # Portal principal para el alojamiento de imágenes.
+    # Imgur (Crítico para Foros)
+        i.imgur.com
 
 # LinkedIn
     # Portal Principal y Contenido (CDN)
-        licdn.com
-        linkedin.com
         media-exp1.licdn.com
         static-exp1.licdn.com
 
@@ -672,16 +560,14 @@
     # Portales Principales y Contenido
         api.pinterest.com
         i.pinimg.com
-        pinterest.com
-        pinimg.com
 
 # Mensajería Segura
     # Signal
-        signal.org
+        signal.org # Excepción inevitable: El servicio usa el apex directamente.
     # Viber
         media.viber.com
-        viber.com
 
+---
 
 # --- SECCIÓN 5: ENTRETENIMIENTO Y VIDEOJUEGOS ---
 
@@ -702,8 +588,8 @@
         s2.youtube.com
         yt3.ggpht.com
         ytimg.com
-    # Historial y Progreso de Video (Trampa Funcional)
-        s.youtube.com # Utilizado para la sincronización del progreso de reproducción del video, evitando que el usuario pierda su ubicación.
+    # Historial y Progreso de Video
+        s.youtube.com
     # Dominios Cortos y Embeds
         www.youtube-nocookie.com
         youtu.be
@@ -713,14 +599,11 @@
         tv.youtube.com
 
 # Netflix
-    # API Crítica (Trampa Funcional)
-        api.netflix.com # Es la API principal para la carga inicial de catálogos y perfiles de usuario, indispensable para el inicio de la plataforma.
+    # API Crítica
+        api.netflix.com
     # Servicio Principal y Búsqueda
         appboot.netflix.com
         assets.nflxext.com
-        netflix.com
-        netflix.net
-        nflx.com
         nflxsearch.net
     # Transmisión de Contenido (Video e Imágenes)
         nflxext.com
@@ -733,15 +616,92 @@
         netflixdnstest.com
 
 # Spotify
-    # Contenido Crítico (Trampa Funcional)
-        audio-ak.spotifycdn.com # Es un dominio CDN dedicado a la reproducción de contenido de audio, cuya interrupción bloquea la música.
-    # Portal Principal y API
+    # Contenido Crítico (Audio)
+        audio-ak.spotifycdn.com
     # Contenido (Audio e Imágenes)
         audio-fa.scdn.co
         i.scdn.co
         pscdn.co
         scdn.co
-        spotifycdn.com
+        spotifycdn.com # Excepción inevitable: Apex CDN oficial de Spotify, sin granularidad.
+
+# Hulu (Popular en USA)
+    # Portal y Servicios
+        hulu.tv # Excepción inevitable: Apex de Hulu, sin endpoints alternativos.
+        ll.svcs.hulu.com
+
+# Peacock (Popular en USA)
+    # Portal y Servicios
+        peacocktv.com # Excepción inevitable: Apex de Peacock, no expone subdominios públicos.
+
+# Claro Video (Popular en México / LATAM)
+    # Portal y Servicios
+        claro.video # Excepción inevitable: Apex requerido para portal Claro Video.
+        clarovideo.com # Excepción inevitable: Apex alterno usado por Claro Video.
+
+# Amazon Prime Video y Music
+    # Portal Principal
+        amazonvideo.com # Excepción inevitable: Apex de Amazon Video, necesario para acceso web.
+        api.music.amazon.com
+        music.amazon.com # Excepción inevitable: Apex de Amazon Music, usado por cliente web.
+        primevideo.com # Excepción inevitable: Apex de Prime Video, portal y cliente oficial.
+    # Transmisión de Contenido (CDN)
+        aiv-cdn.net
+        aiv-delivery.net
+        media-amazon.com
+        prod.api.pv.verra.net
+        pv-cdn.net
+    # Servicios de Backend
+        atv-ps.amazon.com
+
+# Disney+
+    # Portal Principal y Servicios de Backend
+        bamgrid.com
+        cdn.datonis.disney.go.com
+        disney.api.edge.bamgrid.com
+        disney.content.edge.bamgrid.com
+        disneyplus.com # Excepción inevitable: Apex principal de Disney+.
+        dssott.com
+        global.edge.bamgrid.com
+    # Registro y Dominios Adicionales
+        cdn.registerdisney.go.com
+        cdn.unid.go.com
+        disney-plus.net # Excepción inevitable: Apex alterno de Disney+, usado en autenticación.
+        registerdisney.go.com
+
+# Max (HBO Max)
+    # Portales Principales
+        play.hbomax.com
+    # Contenido (CDN) y Servicios
+        hbomaxcdn.com
+        sr.max.com
+
+# Apple Music y Apple TV
+    # Portales Principales
+        apple-tv.com # Excepción inevitable: Apex usado para Apple TV web.
+        music.apple.com # Excepción inevitable: Apex usado para Apple Music.
+        tv.apple.com # Excepción inevitable: Apex de Apple TV portal web.
+    # Contenido de Audio
+        apple.music.audio
+    # Contenido de Video (CDN)
+        cdn.apple-tv.services
+
+# Deezer
+    # Portal Principal y API
+        api.deezer.com
+    # Contenido (Audio e Imágenes)
+        cdns-images.dzcdn.net
+        cdns-music.dzcdn.net
+        e-cdns-images.dzcdn.net
+        e-cdns-music.dzcdn.net
+
+# Crunchyroll
+    # Portal Principal y API
+        api.crunchyroll.com
+    # Contenido y Dependencias
+        img.crunchyroll.com
+        pl.crunchyroll.com
+        static.crunchyroll.com
 
 # Consolas de Videojuegos
     # Xbox Live
@@ -758,21 +718,17 @@
         title.mgt.xboxlive.com
         user.auth.xboxlive.com
         xbl.mp.microsoft.com
-        xbox.com
         xflight.xboxlive.com
         xkms.xboxlive.com
-        xboxlive.com
         xsts.auth.xboxlive.com
     # PlayStation Network
         api.playstation.com
         auth.api.sonyentertainmentnetwork.com
         ca.psn.services.playstation.net
-        playstation.com
-        playstation.net
         static.playstation.com
     # Nintendo
-        nintendo.com
-        nintendo.net
+        accounts.nintendo.net
+        api.lp1.npns.srv.nintendo.net
         nintendowifi.net
     # Meta Quest (Oculus)
         auth.oculus.com
@@ -781,8 +737,7 @@
 # Steam
     # Portal Principal y Comunidad
         steam-chat.com
-        steamcommunity.com
-        steampowered.com
+        steamcommunity.com # Excepción inevitable: Requerido por el cliente y web para comunidad.
         store.steampowered.com
     # Contenido (CDN) y Servidores
         cdn.steamstatic.com
@@ -796,11 +751,10 @@
         auth.riotgames.com
         lolstatic.com
         pvp.net
-        riotgames.com
     # Portales de Juegos Específicos
-        leagueoflegends.com
-        valorant.riotgames.com
-        wildrift.riotgames.com
+        leagueoflegends.com # Excepción inevitable: Requerido para login/portal.
+        valorant.riotgames.com # Excepción inevitable: Requerido para login/portal.
+        wildrift.riotgames.com # Excepción inevitable: Requerido para login/portal.
     # Contenido (CDN) y Anti-Cheat
         riotcdn.net
         vanguard.riotgames.com
@@ -810,7 +764,7 @@
         api.roblox.com
         auth.roblox.com
         locale.roblox.com
-        roblox.com
+        roblox.com # Excepción inevitable: Apex usado por el cliente/juegos.
         roblox.com.edgekey.net
         robloxapis.com
     # Servicios de Juego
@@ -831,13 +785,11 @@
 
 # Epic Games
     # Portal Principal y Launcher
-        epicgames.com
         launcher.epicgames.com
     # Fortnite y Servicios de Backend
         api.epicgames.dev
         datarouter.ol.epicgames.com
         fortnite-public-service-prod.ol.epicgames.com
-        fortnite.com
     # Contenido (CDN) y Motor Gráfico
         epicgames.dev
         epicgamescdn.com
@@ -846,7 +798,6 @@
 # Twitch
     # Portal Principal y API
         api.twitch.tv
-        twitch.tv
     # Contenido de Video (CDN)
         jtvnw.net
         ttvnw.net
@@ -854,148 +805,56 @@
         ext-twitch.tv
         twitchcdn.net
 
-# Amazon Prime Video y Music
-    # Portal Principal
-        amazonvideo.com
-        api.music.amazon.com
-        music.amazon.com
-        primevideo.com
-    # Transmisión de Contenido (CDN)
-        aiv-cdn.net
-        aiv-delivery.net
-        media-amazon.com
-        prod.api.pv.verra.net
-        pv-cdn.net
-    # Servicios de Backend
-        atv-ps.amazon.com
-
-# Disney+
-    # Portal Principal y Servicios de Backend
-        bamgrid.com
-        cdn.datonis.disney.go.com
-        disney.api.edge.bamgrid.com
-        disney.content.edge.bamgrid.com
-        disneyplus.com
-        dssott.com
-        global.edge.bamgrid.com
-    # Registro y Dominios Adicionales
-        cdn.registerdisney.go.com
-        cdn.unid.go.com
-        disney-plus.net
-        registerdisney.go.com
-
-# Max (HBO Max)
-    # Portales Principales
-        hbo.com
-        hbomax.com
-        hbonow.com
-        max.com
-        play.hbomax.com
-    # Contenido (CDN) y Servicios
-        hbomaxcdn.com
-        sr.max.com
-
-# Apple Music y Apple TV
-    # Portales Principales
-        apple-tv.com
-        music.apple.com
-        tv.apple.com
-    # Contenido de Audio
-        apple.music.audio
-    # Contenido de Video (CDN)
-        cdn.apple-tv.services
-
-# Deezer
-    # Portal Principal y API
-        api.deezer.com
-        deezer.com
-    # Contenido (Audio e Imágenes)
-        cdns-images.dzcdn.net
-        cdns-music.dzcdn.net
-        e-cdns-images.dzcdn.net
-        e-cdns-music.dzcdn.net
-
-# Crunchyroll
-    # Portal Principal y API
-        api.crunchyroll.com
-        crunchyroll.com
-    # Contenido y Dependencias
-        img.crunchyroll.com
-        pl.crunchyroll.com
-        static.crunchyroll.com
-        vrv.co
-
 # Publicadores de Videojuegos
     # Battle.net (Activision Blizzard)
-        battle.net
-        blizzard.com
         blzddist1-a.akamaihd.net
         cache-cms-ext-us.battle.net
     # Electronic Arts (EA)
-        ea.com
-        easo.com
-        origin.com
+        easo.com # Excepción inevitable: Apex corporativo de EA, usado en login/launcher.
+        origin.com # Excepción inevitable: Apex usado por Origin, requerido por cliente.
     # Ubisoft
         public-ubiservices.ubi.com
-        ubi.com
-        ubisoft.com
-        ubisoftconnect.com
+        ubisoftconnect.com # Excepción inevitable: Apex de Ubisoft Connect, cliente/portal.
     # Supercell
         cdn.supercell.com
-        clashofclans.com
-        clashroyale.com
-        supercell.com
-
-# Juegos Móviles (Varios)
+    # Juegos Móviles (Varios)
     # Call of Duty: Mobile
         api.activision.com
-        callofduty.com
         cdn.activision.com
         demonware.net
     # Garena Free Fire
         cdn.garena.com
-        ff.garena.com
-        freefiremobile.com
-        garena.sg
+        ff.garena.com # Excepción inevitable: Apex de Garena (Free Fire), cliente oficial.
+        garena.sg # Excepción inevitable: Apex de Garena Singapur, usado para login/servicios.
     # Genshin Impact
         api-os-takumi.mihoyo.com
-        genshinimpact.com
-        hoyoverse.com
     # PUBG Mobile
         api.pubgmobile.com
         g.pubgmobile.com
-        pubgmobile.com
     # Candy Crush
         candycrush.king.com
-        candycrushsaga.com
         cdn.king.com
-        king.com
+        candycrushsaga.com
 
 # Cines y Boletos (México)
     # Cinépolis
         api.cinepolis.com
-        cinepolis.com
     # Cinemex
         api.cinemex.com
-        cinemex.com
     # Ticketmaster
         api.ticketmaster.com
-        ticketmaster.com.mx
 
 # ESPN
     # Portal Principal y API
         api.espn.com
-        espn.com
-        espn.go.com
-    # Contenido (CDN) y Servicios
         a.espncdn.com
-        go.com
 
+---
 
 # --- SECCIÓN 6: DISPOSITIVOS Y HOGAR INTELIGENTE ---
 
 # Smart TVs
-    # Samsung (Tizen)
+    # Samsung (Solo subdominios críticos)
         api.samsungyosemite.com
         api.smartthings.com
         cdn.samsungcloudsolution.com
@@ -1009,22 +868,16 @@
         osb-apps.samsungqbe.com
         otn.samsungcloudcdn.com
         otnprd10.samsungcloudsolution.net
-        samsungcloud.com
-        samsungcloudsolution.com
-        samsungotn.net
         sas.samsungcloudsolution.com
         sdk-multiscreen.samsung.com
         time.samsungcloudsolution.com
         vas.samsungapps.com
         www.samsungotn.net
-    # LG (webOS)
+    # LG (Solo subdominios críticos)
         aic-gfts.lge.com
         apps.svc.lgappstv.com
         cdn.lgappstv.com
         eic.lgappstv.com
-        lgappstv.com
-        lge.com
-        lgeapi.com
         lgiot.lge.com
         lgtvcommon.com
         lgtvsdp.com
@@ -1037,69 +890,52 @@
         us.firmware.lge.com
         us.lgappstv.com
         us.software.lge.com
-    # Sony (Google TV / Android TV)
+    # Sony (Solo subdominios críticos)
         api.erabu.sony.tv
-        sony.com
-        sony.net
         tv.meta.update.sony.net
         tv.update.sony.net
         update.biv.sony.tv
     # Amazon (Fire OS / Fire TV)
         d1s31zyz8d9j6e.cloudfront.net
         device-messaging.amazon.com
-        fireos.com
         softwareupdates.amazon.com
     # Xiaomi (PatchWall / TV Box)
         api.patchwall.mitv.com
         cdn.cnbj1.fds.api.mi-img.com
-        mitv.com
         update.miui.com
     # Hisense (VIDAA OS)
         api.vidaa.com
         appstore.vidaa.com
-        hisense.com
         ota.vidaa.com
-        vidaa.com
     # TCL (Roku TV / Google TV)
         notify.tclclouds.com
         ota.tcl.com
-        tcl.com
     # Philips (Android TV / Saphi)
         app.nettvservice.com
         ota.nettvservice.com
-        philips.com
     # Panasonic (My Home Screen)
         av.jpn.support.panasonic.com
-        panasonic.com
-        panasonic.net
     # Roku
         api2.sr.roku.com
         cloudservices.roku.com
         image.roku.com
         prod.mobile.roku.com
         prod.ott.roku.com
-        roku.com
         vod-playlist.sr.roku.com
     # Android TV / Google TV (Base)
-        android.com
         androidtvwatson.googleapis.com
-        g.co
+        g.co # Excepción inevitable: Shortlink oficial de Google, sin subdominio alternativo.
         play-games.google.com
         tvlauncher.googleapis.com
 
+---
 
 # --- SECCIÓN 7: HERRAMIENTAS PARA DESARROLLADORES ---
 
 # Herramientas para Desarrolladores
     # Control de Versiones
-        bitbucket.org
-        github.com
-        github.io
-        gitlab.com
         raw.githubusercontent.com
     # Plataformas y Comunidades
-        docker.com
-        nodejs.org
-        python.org
+        registry-1.docker.io
     # Inteligencia Artificial
-        openai.com
+        api.openai.com
