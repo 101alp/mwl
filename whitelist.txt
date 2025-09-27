@@ -325,8 +325,6 @@
     # Adobe Fonts
         p.typekit.net
 
----
-
 # --- SECCIÓN 3: COMPRAS, FINANZAS Y PAGOS ---
 
 # Banca y Fintech (México)
@@ -414,8 +412,6 @@
         api.shein.com
         img.ltwebstatic.com
         img.shein.com
-
----
 
 # --- SECCIÓN 4: COMUNICACIÓN Y REDES SOCIALES ---
 
@@ -566,8 +562,6 @@
         signal.org # Excepción inevitable: El servicio usa el apex directamente.
     # Viber
         media.viber.com
-
----
 
 # --- SECCIÓN 5: ENTRETENIMIENTO Y VIDEOJUEGOS ---
 
@@ -849,8 +843,6 @@
         api.espn.com
         a.espncdn.com
 
----
-
 # --- SECCIÓN 6: DISPOSITIVOS Y HOGAR INTELIGENTE ---
 
 # Smart TVs
@@ -927,8 +919,6 @@
         g.co # Excepción inevitable: Shortlink oficial de Google, sin subdominio alternativo.
         play-games.google.com
         tvlauncher.googleapis.com
-
----
 
 # --- SECCIÓN 7: HERRAMIENTAS PARA DESARROLLADORES ---
 
