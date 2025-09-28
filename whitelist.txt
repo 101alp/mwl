@@ -46,6 +46,9 @@
         roblox-api.arkoselabs.com
         static.forter.com
         ws.humansecurity.com
+    # APIs de Desarrollo y Reporte Crítico
+        sentry.io # Excepción inevitable: API de reporte de errores crítico (trampa funcional)
+        api.sentry.io
     # Identidad Federada
         widget-cdn.rpxnow.com
 
@@ -642,6 +645,7 @@
         nflxsearch.net
     # Transmisión de Contenido (Video e Imágenes)
         nflxext.com
+        nflximg.com # Dominio para miniaturas y UI, requerido para carga visual de la app/web.
         nflximg.net
         nflxso.net
         nflxvideo.net
@@ -941,6 +945,7 @@
         us.software.lge.com
     # Sony (Solo subdominios críticos)
         api.erabu.sony.tv
+        sony.net # Excepción inevitable: Utilizado para validación de red y conectividad de dispositivos.
         tv.meta.update.sony.net
         tv.update.sony.net
         update.biv.sony.tv
