@@ -1,10 +1,6 @@
-### Mi Whitelist ###
+# Mi Whitelist
 
-# Solo contiene subdominios críticos y dominios funcionalmente esenciales.
-# Todos los dominios apex (dominio raíz) han sido eliminados a favor de endpoints específicos,
-# excepto aquellos marcados como "Excepción Inevitable" donde no existe alternativa viable.
-
-# --- SECCIÓN 1: INFRAESTRUCTURA DE RED Y SEGURIDAD CRÍTICA ---
+# SECCIÓN 1: INFRAESTRUCTURA DE RED Y SEGURIDAD CRÍTICA
 
 # Hardware de Red
     # Sincronización de Hora (NTP)
@@ -54,6 +50,16 @@
         widget-cdn.rpxnow.com
 
 # CDNs (Content Delivery Networks) - Dominios que sirven contenido estático
+        akamai.net
+        akamaihd.net
+        akamaiedge.net
+        akamaitechnologies.com
+        cdn.net
+        cloudfront.net
+        cloudflarestream.com
+        fastly.net
+        llnwd.net
+        r.cdn.net
         s3.amazonaws.com
         aspnetcdn.com
         azureedge.net
@@ -74,14 +80,18 @@
         ssl.p.jwpcdn.com
     # Dependencias de Google (Críticas)
         1e100.net
+        googlesyndication.com
         gvt1.com
         gvt2.com
     # Servicios de Backend y APIs de Terceros
         api.twilio.com
+        bit.ly
 
-# --- SECCIÓN 2: SISTEMAS OPERATIVOS Y CUENTAS BASE ---
+# SECCIÓN 2: SISTEMAS OPERATIVOS Y CUENTAS BASE
 
 # Google (Cuentas y Servicios Generales)
+    # Excepción inevitable: Apex principal de Google.
+        google.com
     # Autenticación y Cuentas
         accounts.google.com
         accounts.youtube.com
@@ -145,6 +155,9 @@
         google.dev
 
 # Microsoft Windows
+    # Excepción inevitable: Apex principal de Microsoft.
+        microsoft.com
+        onedrive.com
     # Actualizaciones de Sistema (Windows Update)
         cdn.dl.delivery.mp.microsoft.com
         ctldl.windowsupdate.com
@@ -182,7 +195,10 @@
         graph.windows.net
 
 # Apple (iOS, macOS, etc.)
+    # Excepción inevitable: Apex principal de Apple.
+        apple.com
     # Verificación y Sincronización del SO
+        captive.apple.com
         gsa.apple.com
         gs.apple.com
         mesu.apple.com
@@ -326,7 +342,7 @@
     # Adobe Fonts
         p.typekit.net
 
-# --- SECCIÓN 3: COMPRAS, FINANZAS Y PAGOS ---
+# SECCIÓN 3: COMPRAS, FINANZAS Y PAGOS
 
 # Banca y Fintech (México)
     # Citibanamex (Solo APIs y subdominios transaccionales)
@@ -336,6 +352,7 @@
     # BBVA
         api.bbva.com
         bbv.mx
+        bbva.com.mx # Apex inevitable para portales de banca en México.
         bbvanet.com.mx
     # Banorte
         api.banorte.com
@@ -351,6 +368,9 @@
         api.bancoppel.com
         cdn.bancoppel.com
         portal.bancoppel.com
+    # Banco del Bienestar
+        banbienestar.gob.mx # Excepción inevitable: Portal principal Banco del Bienestar.
+        portal.bienestar.gob.mx
     # Scotiabank
         scotiabank.com.mx # Excepción inevitable: Apex requerido para el portal principal de banca.
 
@@ -376,11 +396,13 @@
     # OpenPay
         api.openpay.mx
     # Mastercard
+        mastercard.com
         api.mastercard.com
         secure.mastercard.com
         src.mastercard.com
         mastercard.com.mx # Excepción inevitable: Apex requerido para el portal principal de banca.
     # Visa
+        visa.com
         api.visa.com
         secure.visa.com
         visa.com.mx # Excepción inevitable: Apex requerido para el portal principal de banca.
@@ -392,11 +414,16 @@
 
 # E-commerce y Marketplaces
     # Amazon (Solo subdominios geográficos/CDN/API - Apex de tienda regional eliminado)
+        amazon.com
         amazonpay.com
         api.amazon.com
         images-na.ssl-images-amazon.com
         m.media-amazon.com
         ssl-images-amazon.com
+    # Temu
+        api.temu.com
+        img.temu.com
+        temu.com # Excepción inevitable: Apex del portal web, requerido para navegación completa.
     # Mercado Libre
         api.mercadolibre.com
         http2.mlstatic.com
@@ -414,7 +441,13 @@
         img.ltwebstatic.com
         img.shein.com
 
-# --- SECCIÓN 4: COMUNICACIÓN Y REDES SOCIALES ---
+# SECCIÓN 4: COMUNICACIÓN Y REDES SOCIALES
+
+# Correo Electrónico (Web)
+    # Gmail
+        mail.google.com
+    # iCloud Mail
+        mail.icloud.com
 
 # Colaboración y Mensajería Empresarial
     # Zoom
@@ -434,6 +467,7 @@
         media.whatsapp.net
         static.whatsapp.net
         web.whatsapp.com
+        whatsapp.com # Apex inevitable para login/navegación en WhatsApp.
         whatsapp.net
     # Conexiones (Voz/Video)
         g.whatsapp.net
@@ -479,6 +513,7 @@
         fbcdn.com
         fbcdn.net
         fbsbx.com
+        fbcdn-akamaihd.net
         static.xx.fbcdn.net
     # API y Conexiones de Chat
         edge-chat.facebook.com
@@ -491,6 +526,7 @@
         api.instagram.com
         graph.instagram.com
         i.instagram.com
+        instagram.com # Apex inevitable en algunos flujos de Instagram.
     # Contenido (CDN) y Dominios de Servicio
         cdninstagram.com
         instagram.net
@@ -540,6 +576,8 @@
         tiktokv.com
 
 # Snapchat
+    # Excepción inevitable: Apex principal de Snapchat.
+        snapchat.com
     # Backend y Mensajería
         im.snapchat.com
         feelinsonice-hr.appspot.com
@@ -554,6 +592,8 @@
         static-exp1.licdn.com
 
 # Pinterest
+    # Excepción inevitable: Apex principal de Pinterest.
+        pinterest.com
     # Portales Principales y Contenido
         api.pinterest.com
         i.pinimg.com
@@ -564,7 +604,7 @@
     # Viber
         media.viber.com
 
-# --- SECCIÓN 5: ENTRETENIMIENTO Y VIDEOJUEGOS ---
+# SECCIÓN 5: ENTRETENIMIENTO Y VIDEOJUEGOS
 
 # YouTube y YouTube Music
     # Servicio principal y APIs
@@ -699,11 +739,13 @@
         static.crunchyroll.com
 
 # Consolas de Videojuegos
-    # Xbox Live
+    # Xbox Live y Tienda
         api.xboxlive.com
+        assets1.xboxlive.com
         attestation.xboxlive.com
         cert.mgt.xboxlive.com
         def-vef.xboxlive.com
+        dlassets.xboxlive.com
         device.auth.xboxlive.com
         eds.xboxlive.com
         help.ui.xboxlive.com
@@ -781,6 +823,7 @@
 # Epic Games
     # Portal Principal y Launcher
         launcher.epicgames.com
+        store.epicgames.com
     # Fortnite y Servicios de Backend
         api.epicgames.dev
         datarouter.ol.epicgames.com
@@ -802,16 +845,29 @@
 
 # Publicadores de Videojuegos
     # Battle.net (Activision Blizzard)
+        battle.net
         blzddist1-a.akamaihd.net
         cache-cms-ext-us.battle.net
+    # Backends Comunes de Juegos Móviles
+        playfabapi.com
+        config.unity3d.com
+        unity.com
     # Electronic Arts (EA)
         easo.com # Excepción inevitable: Apex corporativo de EA, usado en login/launcher.
         origin.com # Excepción inevitable: Apex usado por Origin, requerido por cliente.
     # Ubisoft
         public-ubiservices.ubi.com
         ubisoftconnect.com # Excepción inevitable: Apex de Ubisoft Connect, cliente/portal.
+    # Minecraft
+        api.minecraftservices.com
+        textures.minecraft.net
     # Supercell
         cdn.supercell.com
+        api.brawlstarsgame.com
+        event.brawlstarsgame.com
+    # Geometry Dash
+        boomlings.com # Excepción inevitable: Servidores de Geometry Dash (RobTop).
+        robtopgames.com # Excepción inevitable: Portal/servicios de Geometry Dash.
     # Juegos Móviles (Varios)
     # Call of Duty: Mobile
         api.activision.com
@@ -844,7 +900,7 @@
         api.espn.com
         a.espncdn.com
 
-# --- SECCIÓN 6: DISPOSITIVOS Y HOGAR INTELIGENTE ---
+# SECCIÓN 6: DISPOSITIVOS Y HOGAR INTELIGENTE
 
 # Smart TVs
     # Samsung (Solo subdominios críticos)
@@ -921,10 +977,13 @@
         play-games.google.com
         tvlauncher.googleapis.com
 
-# --- SECCIÓN 7: HERRAMIENTAS PARA DESARROLLADORES ---
+# SECCIÓN 7: HERRAMIENTAS PARA DESARROLLADORES
 
 # Herramientas para Desarrolladores
     # Control de Versiones
+        api.github.com
+        github.com # Apex inevitable para login/repositorios.
+        gitlab.com
         raw.githubusercontent.com
     # Plataformas y Comunidades
         registry-1.docker.io
