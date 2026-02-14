@@ -257,8 +257,6 @@
         connectivitycheck.android.com
         dl.google.com
         time.android.com
-    # DNS Privado
-        dns.google
 
 # Ecosistemas de Dispositivos Móviles
     # Samsung (Solo subdominios críticos)
