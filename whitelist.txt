@@ -101,6 +101,7 @@ hbomaxcdn.com                           # CDN multimedia.
 amazon.com
 amazon.com.mx
 amazon-adsystem.com                     # Carga funcional de catálogos.
+fls-na.amazon.com.mx                    # Carga de productos patrocinados.
 primevideo.com
 atv-ps.amazon.com                       # Configuración App Prime Video.
 d3h13ap0p6v5ty.cloudfront.net           # CDN Video Prime.
