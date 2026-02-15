@@ -6,70 +6,61 @@
 # SECCIÓN: COMUNICACIÓN Y PRODUCTIVIDAD
 # =====================================================================
 
-# --- TELEGRAM (Mensajería Cifrada) ---
-# Acceso y Conectividad de Centros de Datos (DC)
+# --- TELEGRAM ---
 telegram.org                            # Portal principal y descargas.
-t.me                                    # Acortador de perfiles y canales (Crítico).
+t.me                                    # Acortador de enlaces (Crítico para la App).
 telegram.me                             # Redirección de acceso.
-# Protocolos de Red y WebSockets
 web.telegram.org                        # Cliente web.
-venus.web.telegram.org                  # Punto de acceso DC5 (Europa).
-pluto.web.telegram.org                  # Punto de acceso DC4 (Europa).
-flora.web.telegram.org                  # Punto de acceso DC2 (EE.UU.).
-# Contenido y Multimedia
+venus.web.telegram.org                  # Punto de acceso DC5.
+pluto.web.telegram.org                  # Punto de acceso DC4.
+flora.web.telegram.org                  # Punto de acceso DC2.
 telegram.space                          # Infraestructura de almacenamiento.
-telegra.ph                              # Plataforma de blogs de Telegram.
+telegra.ph                              # Plataforma de artículos.
 
-# --- WHATSAPP (Servicio Crítico) ---
-# Acceso y Conectividad
+# --- WHATSAPP ---
 whatsapp.com                            # Portal oficial.
-whatsapp.net                            # Infraestructura de servidores base.
+whatsapp.net                            # Infraestructura base.
 web.whatsapp.com                        # Interfaz de escritorio.
-# Mensajería y Llamadas
-aq.whatsapp.net                         # WebSocket para mensajes instantáneos.
+aq.whatsapp.net                         # WebSocket para recepción de mensajes.
 g.whatsapp.net                          # Señalización de llamadas y grupos.
-pps.whatsapp.net                        # Servicios push y estados.
-# Multimedia
-mmg.whatsapp.net                        # Servidor de fotos, audio y video.
-static.whatsapp.net                     # Recursos estáticos de la App.
+pps.whatsapp.net                        # Servicios de estado y push.
+mmg.whatsapp.net                        # Servidor multimedia (Fotos/Video).
+static.whatsapp.net                     # Recursos estáticos.
 
-# --- GOOGLE WORKSPACE (Productividad) ---
-# Autenticación y Meet
+# --- GOOGLE WORKSPACE ---
 accounts.google.com                     # Login universal.
 meet.google.com                         # Videoconferencias (WebRTC).
-# Almacenamiento y Edición
-drive.google.com                        # Nube y sincronización de archivos.
+drive.google.com                        # Nube y sincronización.
 docs.google.com                         # Edición y guardado automático.
-# Recursos
-lh3.googleusercontent.com               # CDN de imágenes y avatares.
+lh3.googleusercontent.com               # CDN de imágenes/avatares.
 static.gstatic.com                      # Recursos estáticos del sistema.
 
 # =====================================================================
 # SECCIÓN: SERVICIOS FINANCIEROS (MÉXICO)
 # =====================================================================
 
-# --- BANAMEX ---
-banamex.com                             # Portal banca en línea.
+# --- CITIBANAMEX ---
+banamex.com                             # Banca en línea.
 citibanamex.com                         # Dominio operativo.
-bancanet.citibanamex.com                # Acceso a tokens y transacciones.
+bancanet.citibanamex.com                # Transacciones electrónicas.
 
 # --- BANORTE ---
-banorte.com                             # Portal principal.
+banorte.com                             # Portal web.
 banorte.com.mx                          # Dominio regional.
-nixe.banorte.com                        # API de la aplicación móvil (Crítico).
+nixe.banorte.com                        # API de la App móvil (Validación de identidad).
 
 # --- SANTANDER MÉXICO ---
-santander.com.mx                        # Acceso a SuperMóvil.
+santander.com.mx                        # Acceso SuperMóvil.
 santander.com                           # Infraestructura global.
 isban.com.mx                            # Backend técnico México.
 
-# --- COPPEL / BANCO COPPEL ---
+# --- COPPEL ---
 coppel.com                              # Portal comercial.
 bancocoppel.com                         # Banca electrónica.
-api.coppel.com                          # API de la App (Logins y abonos).
+api.coppel.com                          # API de la App (Logins y pagos).
 
 # =====================================================================
-# SECCIÓN: ECOSISTEMA Y STREAMING DE VIDEO
+# SECCIÓN: ENTRETENIMIENTO Y VIDEO
 # =====================================================================
 
 # --- YOUTUBE & GOOGLE VIDEO ---
@@ -78,29 +69,29 @@ youtu.be
 music.youtube.com
 youtube.googleapis.com
 youtubei.googleapis.com
-googlevideo.com                         # Streaming de video real.
-manifest.googlevideo.com                # Manifiestos de carga.
+googlevideo.com                         # Streaming de video.
+manifest.googlevideo.com                # Instrucciones de carga.
 redirector.googlevideo.com              # Balanceo de carga.
-ytimg.com                               # CDN de imágenes.
-s.youtube.com                           # Historial funcional.
-www.youtube-nocookie.com                # Embeds sin rastreo publicitario.
+ytimg.com                               # Imágenes y miniaturas.
+s.youtube.com                           # Historial y progreso.
+www.youtube-nocookie.com                # Embeds externos.
 
 # --- NETFLIX ---
 netflix.com
-api.netflix.com                         # Auth.
-appboot.netflix.com                     # Arranque app.
-nflxvideo.net                           # CDN Video.
-nflxext.com                             # Extensiones.
-nflximg.net                             # Catálogo visual.
-codex.nflxext.com                       # DRM (Sin esto no hay video).
+api.netflix.com                         # Autenticación.
+appboot.netflix.com                     # Arranque de App.
+nflxvideo.net                           # CDN de Video.
+nflxext.com                             # Recursos de video.
+nflximg.net                             # Imágenes de catálogo.
+codex.nflxext.com                       # DRM / Seguridad de video.
 
 # --- DISNEY+ / MAX ---
 disneyplus.com
 disney-plus.net
-bamgrid.com                             # Infraestructura Disney.
+bamgrid.com                             # Backend de streaming.
 play.hbomax.com
 sr.max.com                              # Backend Max.
-hbomaxcdn.com                           # CDN Max.
+hbomaxcdn.com                           # CDN multimedia.
 
 # =====================================================================
 # SECCIÓN: COMERCIO Y CONSUMO
@@ -109,48 +100,66 @@ hbomaxcdn.com                           # CDN Max.
 # --- AMAZON & PRIME VIDEO ---
 amazon.com
 amazon.com.mx
-amazon-adsystem.com                     # Requerido para carga de catálogo en apps.
+amazon-adsystem.com                     # Carga funcional de catálogos.
 primevideo.com
-atv-ps.amazon.com                       # Configuración app Prime Video.
+atv-ps.amazon.com                       # Configuración App Prime Video.
 d3h13ap0p6v5ty.cloudfront.net           # CDN Video Prime.
-images-na.ssl-images-amazon.com         # Imágenes productos.
+images-na.ssl-images-amazon.com         # Imágenes de productos.
+m.media-amazon.com                      # IMPORTANTE: Carga de fotos en la app móvil.
 
 # =====================================================================
-# SECCIÓN: REDES SOCIALES Y GAMING
+# SECCIÓN: REDES SOCIALES
 # =====================================================================
 
-# --- META (FB/IG) ---
+# --- META (FACEBOOK / INSTAGRAM) ---
 fb.com
 m.facebook.com
 messenger.com
-graph.facebook.com                      # API Datos.
-edge-chat.facebook.com                  # Chat vivo.
-fbcdn.net                               # CDN Principal.
+graph.facebook.com                      # API de datos.
+edge-chat.facebook.com                  # Servidor de chat.
+fbcdn.net                               # CDN de imágenes estáticas.
+fbcdn.com                               # NECESARIO: Fotos de perfil y multimedia.
+static.xx.fbcdn.net                     # NECESARIO: Iconos y tipografía de la app.
 instagram.com
-i.instagram.com                         # API Móvil.
-cdninstagram.com                        # CDN Fotos/Reels.
+i.instagram.com                         # API de App móvil.
+cdninstagram.com                        # CDN de fotos/reels.
 
 # --- TIKTOK ---
 api.tiktok.com
-tiktokv.com                             # Backend Video.
-tiktokcdn.com                           # CDN Video.
-p16-sign-va.tiktokcdn.com               # Firmas de seguridad (Evita error 403).
-
-# --- GAMING (PSN & ROBLOX) ---
-auth.api.sonyentertainmentnetwork.com   # Login PSN.
-api.playstation.com                     # Servicios PSN.
-roblox.com
-auth.roblox.com                         # Login Roblox.
-clientsettings.roblox.com               # Configuración motor juego.
-rbxcdn.com                              # CDN Roblox.
+tiktokv.com                             # Backend de video.
+tiktokcdn.com                           # CDN de video global.
+p16-sign-va.tiktokcdn.com               # Firma de seguridad de videos.
+ibyteimg.com                            # NECESARIO: Avatares y fotos de perfil de usuarios.
 
 # =====================================================================
-# SECCIÓN: HARDWARE (SMART TV)
+# SECCIÓN: GAMING (RESTAURADA COMPLETA)
+# =====================================================================
+
+# --- PLAYSTATION NETWORK (PSN) ---
+auth.api.sonyentertainmentnetwork.com   # Inicio de sesión.
+api.playstation.com                     # Trofeos y perfiles.
+ca.psn.services.playstation.net         # Multijugador y red.
+static.playstation.com                  # Imágenes de la interfaz.
+
+# --- ROBLOX ---
+roblox.com                              # Portal web.
+auth.roblox.com                         # Login de usuario.
+robloxapis.com                          # APIs de sistema.
+api.roblox.com                          # Funciones básicas.
+clientsettings.roblox.com               # Configuración del motor (Crítico).
+games.roblox.com                        # Servidores de juego.
+gamepersistence.roblox.com              # Guardado de progreso.
+rbxcdn.com                              # CDN de texturas y assets.
+robloxusercontent.com                   # Contenido de usuarios.
+avatar.roblox.com                       # Personalización de personaje.
+
+# =====================================================================
+# SECCIÓN: HARDWARE Y SOPORTE
 # =====================================================================
 
 # --- LG SMART TV (WebOS) ---
 lge.com
-us.software.lge.com                     # Updates de Firmware.
-apps.svc.lgappstv.com                   # Tienda LG.
-smart.lgappstv.com                      # Servicios Smart.
-aic-gfts.lge.com                        # Servicios de voz/IA funcionales.
+us.software.lge.com                     # Actualizaciones de sistema.
+apps.svc.lgappstv.com                   # Tienda de apps.
+smart.lgappstv.com                      # Funciones inteligentes.
+aic-gfts.lge.com                        # IA y voz funcional.
