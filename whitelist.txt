@@ -329,6 +329,6 @@
 ! =====================================================================
 !
 ! --- RESOLUCIÓN DE IP PÚBLICA ---
-@@|api.ipify.org^
-@@|ipv4.icanhazip.com^
-@@|ifconfig.me^
+@@|api.ipify.org^                            ! Servidor para reconocimiento de IP Pública primario.
+@@|ipv4.icanhazip.com^                       ! Servidor para reconocimiento de IP Pública secundario.
+@@|ifconfig.me^                              ! Servidor para reconocimiento de IP Pública terciario.
