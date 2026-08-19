@@ -324,6 +324,6 @@
 !
 ! --- Subsección: Comprobadores de IP Pública ---------------------------------------------------------------- !
 !
-@@||api.ipify.org^$important                           ! Servidor de reconocimiento de IP Pública primario.
-@@||ipv4.icanhazip.com^$important                      ! Servidor de reconocimiento de IP Pública secundario.
-@@||ifconfig.me^$important                             ! Servidor de reconocimiento de IP Pública terciario.
+@@||api.ipify.org^$important                           ! Servidor de IP pública activo.
+@@||ipv4.icanhazip.com^$important                      ! Servidor de IP pública de respaldo.
+@@||ifconfig.me^$important                             ! Servidor de IP pública de contingencia.
