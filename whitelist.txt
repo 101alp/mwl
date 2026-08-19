@@ -329,6 +329,6 @@
 ! =====================================================================
 !
 ! --- RESOLUCIÓN DE IP PÚBLICA ---
-@@||api.ipify.org^
-@@||ipv4.icanhazip.com^
-@@||ifconfig.me^
+@@|api.ipify.org^
+@@|ipv4.icanhazip.com^
+@@|ifconfig.me^
