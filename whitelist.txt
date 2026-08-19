@@ -329,6 +329,6 @@
 ! =====================================================================
 !
 ! --- RESOLUCIÓN DE IP PÚBLICA ---
-@@|api.ipify.org^$client=127.0.0.1           ! Exclusivo para el host local.
-@@|ipv4.icanhazip.com^$client=127.0.0.1      ! Exclusivo para el host local.
-@@|ifconfig.me^$client=127.0.0.1             ! Exclusivo para el host local.
+@@|api.ipify.org^$client='127.0.0.1'         ! Exclusivo para el host local.
+@@|ipv4.icanhazip.com^$client='127.0.0.1'    ! Exclusivo para el host local.
+@@|ifconfig.me^$client='127.0.0.1'           ! Exclusivo para el host local.
