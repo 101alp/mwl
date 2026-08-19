@@ -136,6 +136,16 @@
 @@|sr.max.com^                                ! Backend Max.
 @@||hbomaxcdn.com^                            ! CDN multimedia.
 !
+! --- HBO ---
+@@|hbo.com^                                 ! Portal institucional e histórico de HBO.
+@@|hbomax.com^                              ! Dominio legado y redirección global.
+@@|max.com^                                 ! Portal principal actual de la plataforma Max.
+@@|play.hbomax.com^                         ! Interfaz de reproducción web clásica.
+@@|sr.max.com^                              ! Backend principal de streaming y metadatos de Max.
+@@|auth.max.com^                            ! API de autenticación y gestión de sesiones (si aplica regionalmente).
+@@||hbomaxcdn.com^                          ! CDN primario para entrega de video y recursos estáticos.
+@@||maxcdn.com^                             ! CDN perimetral para optimización de contenido de Max.
+!
 ! =====================================================================
 ! SECCIÓN: COMERCIO Y CONSUMO
 ! =====================================================================
