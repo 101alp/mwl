@@ -11,21 +11,19 @@
 ! Nota: Sin estos dominios, internet prácticamente deja de funcionar.
 !
 ! --- Subsección: Akamai ---
-@@||akamaized.net^                           ! CDN masivo para binarios, apps, streaming y parches.
-@@||akamai.net^                              ! Balanceo de carga dinámico y ruteo perimetral.
-@@||akamaihd.net^                            ! Nodos de alto rendimiento para streaming y descargas de software.
-@@||akamainetworks.com^                      ! Gestión de enrutamiento y aprovisionamiento de red.
+@@||akamaized.net^$important                 ! CDN masivo para binarios, apps, streaming y parches.
+@@||akamai.net^$important                    ! Balanceo de carga dinámico y ruteo perimetral.
+@@||akamaihd.net^$important                  ! Nodos de alto rendimiento para streaming y descargas de software.
+@@||akamainetworks.com^$important            ! Gestión de enrutamiento y aprovisionamiento de red.
 !
 ! --- Subsección: Fastly ---
-@@||fastly.net^                              ! CDN principal para WebSockets de tiempo real y APIs modernas.
-@@||fastly.com^                              ! Consola técnica y aprovisionamiento de certificados edge.
-@@||fastly-edge.com^                         ! Nodos de terminación TLS y optimización de entrega.
+@@||fastly.net^$important                    ! CDN principal para WebSockets de tiempo real y APIs modernas.
+@@||fastly.com^$important                    ! Consola técnica y aprovisionamiento de certificados edge.
+@@||fastly-edge.com^$important               ! Nodos de terminación TLS y optimización de entrega.
 !
 ! --- Subsección: Cloudflare ---
-@@|cloudflare.com^                           ! Portal principal.
-@@|dash.cloudflare.com^                      ! Acceso al panel de control.
-@@|api.cloudflare.com^                       ! Gestión por consola/API.
-@@||cloudflare.net^                          ! Repositorio global de librerías JS/CSS.
+@@|api.cloudflare.com^$important             ! Gestión por consola/API.
+@@||cloudflare.net^$important                ! Repositorio global de librerías JS/CSS.
 !
 ! =====================================================================
 ! CATEGORÍA 2: CONECTIVIDAD DE SISTEMAS (NCSI) Y HORA (NTP)
@@ -33,41 +31,41 @@
 ! Nota: Si esto falla, los sistemas asumen "Sin Internet" y se rompe el TLS.
 !
 ! --- Subsección: Sincronización de Hora (NTP) ---
-@@||pool.ntp.org^                            ! Pool global de servidores de tiempo para Linux y routers.
-@@||time.windows.com^                        ! Servidor oficial de hora para sistemas Windows.
-@@||time.apple.com^                          ! Servidor oficial de hora para dispositivos Apple (iOS/macOS).
-@@||time.google.com^                         ! Servidor oficial de hora para sistemas Google.
+@@||pool.ntp.org^$important                  ! Pool global de servidores de tiempo para Linux y routers.
+@@||time.windows.com^$important              ! Servidor oficial de hora para sistemas Windows.
+@@||time.apple.com^$important                ! Servidor oficial de hora para dispositivos Apple (iOS/macOS).
+@@||time.google.com^$important               ! Servidor oficial de hora para sistemas Google.
 !
 ! --- Subsección: Verificación de Red (Android / Google) ---
-@@||connectivitycheck.gstatic.com^           ! Comprobación WiFi Android primaria.
-@@||connectivitycheck.android.com^           ! Respaldo NCSI oficial en código base AOSP.
-@@||clients3.google.com^                     ! Endpoint HTTP 204 para navegadores Chromium.
+@@||connectivitycheck.gstatic.com^$important ! Comprobación WiFi Android primaria.
+@@||connectivitycheck.android.com^$important ! Respaldo NCSI oficial en código base AOSP.
+@@||clients3.google.com^$important           ! Endpoint HTTP 204 para navegadores Chromium.
 !
 ! --- Subsección: Verificación de Red (Apple) ---
-@@||captive.apple.com^                       ! Comprobación de portal cautivo y red en Apple.
-@@||configuration.apple.com^                 ! Descarga de perfiles de red y cifrado TLS.
-@@||gsp1.apple.com^                          ! Diagnóstico y sincronización CoreLocation.
+@@||captive.apple.com^$important             ! Comprobación de portal cautivo y red en Apple.
+@@||configuration.apple.com^$important       ! Descarga de perfiles de red y cifrado TLS.
+@@||gsp1.apple.com^$important                ! Diagnóstico y sincronización CoreLocation.
 !
 ! --- Subsección: Verificación de Red (Microsoft / Windows) ---
-@@||msftconnecttest.com^                     ! Windows 10/11: Verificación activa de acceso.
-@@||msftncsi.com^                            ! Windows Legacy y Windows Server.
+@@||msftconnecttest.com^$important           ! Windows 10/11: Verificación activa de acceso.
+@@||msftncsi.com^$important                  ! Windows Legacy y Windows Server.
 !
 ! --- Subsección: Verificación de Red (Linux / Ubuntu) ---
-@@||nmcheck.gnome.org^                       ! NetworkManager (Ubuntu, Debian, Fedora, Mint).
-@@||networkcheck.kde.org^                    ! Entornos KDE Plasma y derivados.
-@@||connectivity-check.ubuntu.com^           ! Servidor espejo de validación Ubuntu.
+@@||nmcheck.gnome.org^$important             ! NetworkManager (Ubuntu, Debian, Fedora, Mint).
+@@||networkcheck.kde.org^$important          ! Entornos KDE Plasma y derivados.
+@@||connectivity-check.ubuntu.com^$important ! Servidor espejo de validación Ubuntu.
 !
 ! --- Subsección: Verificación de Red (Fabricantes de Hardware) ---
-@@||connect.rom.miui.com^                    ! Xiaomi (MIUI / HyperOS).
-@@||connectivitycheck.samsung.com^           ! Samsung (One UI).
-@@||connectivity-check.platform.hicloud.com^ ! Huawei (HarmonyOS / EMUI).
-@@||connectivitycheck.amazon.com^            ! Dispositivos Alexa y Fire OS.
-@@||spectrum.s3.amazonaws.com^               ! Endpoint secundario (S3) para Amazon.
-@@||connectivitycheck.fb.com^                ! Meta (Portal / Quest).
-@@||conntest.nintendowifi.net^               ! Nintendo Switch.
-@@||ena.net.playstation.net^                 ! Sony PlayStation Network.
-@@||connectivitycheck.asus.com^              ! Routers y placas base ASUS.
-@@||lgtvonline.lge.com^                      ! Smart TVs LG (WebOS).
+@@||connect.rom.miui.com^$important          ! Xiaomi (MIUI / HyperOS).
+@@||connectivitycheck.samsung.com^$important ! Samsung (One UI).
+@@||connectivity-check.platform.hicloud.com^$important ! Huawei (HarmonyOS / EMUI).
+@@||connectivitycheck.amazon.com^$important  ! Dispositivos Alexa y Fire OS.
+@@||spectrum.s3.amazonaws.com^$important     ! Endpoint secundario (S3) para Amazon.
+@@||connectivitycheck.fb.com^$important      ! Meta (Portal / Quest).
+@@||conntest.nintendowifi.net^$important     ! Nintendo Switch.
+@@||ena.net.playstation.net^$important       ! Sony PlayStation Network.
+@@||connectivitycheck.asus.com^$important    ! Routers y placas base ASUS.
+@@||lgtvonline.lge.com^$important            ! Smart TVs LG (WebOS).
 !
 ! =====================================================================
 ! CATEGORÍA 3: SEGURIDAD, CAPTCHAS Y RENDERIZADO BÁSICO
@@ -75,248 +73,193 @@
 ! Nota: Vital para poder iniciar sesión en el 90% de los bancos y portales.
 !
 ! --- Subsección: Desafíos Anti-Bot ---
-@@||recaptcha.net^                            ! Infraestructura oficial Google reCAPTCHA (Sin tracking).
-@@||hcaptcha.com^                            ! Infraestructura hCaptcha (Alta adopción en webs modernas).
-@@|challenges.cloudflare.com^                 ! Sistema anti-bot Cloudflare Turnstile.
+@@||recaptcha.net^$important                  ! Infraestructura oficial Google reCAPTCHA (Sin tracking).
+@@||hcaptcha.com^$important                   ! Infraestructura hCaptcha (Alta adopción en webs modernas).
+@@|challenges.cloudflare.com^$important       ! Sistema anti-bot Cloudflare Turnstile.
 !
 ! --- Subsección: Motores de Tipografía ---
-@@||fonts.googleapis.com^                     ! Renderizado de tipografías web.
-@@||fonts.gstatic.com^                        ! CDN estático de tipografías.
+@@||fonts.googleapis.com^$important           ! Renderizado de tipografías web.
+@@||fonts.gstatic.com^$important              ! CDN estático de tipografías.
 !
 ! =====================================================================
 ! CATEGORÍA 4: SERVICIOS FINANCIEROS Y BANCOS (MÉXICO)
 ! =====================================================================
 !
 ! --- Subsección: Redes Globales de Procesamiento ---
-@@|visa.com^                                  ! Portal global oficial.
-@@|visa.com.mx^                               ! Portal regional México.
-@@|api.visa.com^                              ! APIs de integración y pasarelas.
-@@||cdn.visa.com^                             ! CDN estático de recursos.
-@@|mastercard.com^                            ! Portal global oficial.
-@@|mastercard.com.mx^                         ! Portal regional México.
-@@|api.mastercard.com^                        ! APIs de pagos y autenticación.
-@@||mastercard.co^                            ! Infraestructura operativa complementaria.
-@@||mcusercontent.com^                        ! Recursos institucionales.
+@@|api.visa.com^$important                    ! APIs de integración y pasarelas.
+@@||cdn.visa.com^$important                   ! CDN estático de recursos.
+@@|api.mastercard.com^$important              ! APIs de pagos y autenticación.
+@@||mastercard.co^$important                  ! Infraestructura operativa complementaria.
+@@||mcusercontent.com^$important              ! Recursos institucionales.
 !
 ! --- Subsección: Pasarelas de Pago Digital ---
-@@|paypal.com^                                ! Core transaccional y web.
-@@||paypalobjects.com^                        ! Gráficos, botones y CSS (Indispensable).
-@@|api.paypal.com^                            ! Conexión backend.
-@@|mercadopago.com^                           ! Motor de pagos global.
-@@|mercadopago.com.mx^                        ! Operaciones regionales.
-@@|api.mercadopago.com^                       ! Operaciones de la App móvil.
+@@||paypalobjects.com^$important              ! Gráficos, botones y CSS (Indispensable).
+@@|api.paypal.com^$important                  ! Conexión backend.
+@@|api.mercadopago.com^$important             ! Operaciones de la App móvil.
 !
 ! --- Subsección: Instituciones Bancarias Nacionales ---
-@@|bbva.mx^                                   ! Portal BBVA México.
-@@|bbva.com^                                  ! Infraestructura BBVA.
-@@|bbvanet.com.mx^                            ! Banca electrónica BBVA.
-@@|api.bbva.com^                              ! Backend app móvil BBVA.
-@@|banamex.com^                               ! Banca en línea.
-@@|citibanamex.com^                           ! Dominio operativo Citibanamex.
-@@|bancanet.citibanamex.com^                  ! Transacciones electrónicas.
-@@|banorte.com^                               ! Portal web Banorte.
-@@|banorte.com.mx^                            ! Dominio regional.
-@@|nixe.banorte.com^                          ! API de identidad Banorte.
-@@|santander.com.mx^                          ! Acceso SuperMóvil Santander.
-@@|santander.com^                             ! Infraestructura Santander.
-@@|isban.com.mx^                              ! Backend técnico México (Santander).
-@@|inbursa.com^                               ! Portal web Inbursa.
-@@|bancoinbursa.com^                          ! Interfaz transaccional Inbursa.
-@@|coppel.com^                                ! Portal comercial.
-@@|bancocoppel.com^                           ! Banca electrónica.
-@@|api.coppel.com^                            ! API logins y pagos BanCoppel.
+@@|bbvanet.com.mx^$important                  ! Banca electrónica BBVA.
+@@|api.bbva.com^$important                    ! Backend app móvil BBVA.
+@@|bancanet.citibanamex.com^$important        ! Transacciones electrónicas.
+@@|nixe.banorte.com^$important                ! API de identidad Banorte.
+@@|isban.com.mx^$important                    ! Backend técnico México (Santander).
+@@|bancoinbursa.com^$important                ! Interfaz transaccional Inbursa.
+@@|bancocoppel.com^$important                 ! Banca electrónica.
+@@|api.coppel.com^$important                  ! API logins y pagos BanCoppel.
 !
 ! =====================================================================
 ! CATEGORÍA 5: COMUNICACIÓN Y PRODUCTIVIDAD
 ! =====================================================================
 !
 ! --- Subsección: WhatsApp ---
-@@|whatsapp.com^                              ! Portal oficial.
-@@|whatsapp.net^                              ! Infraestructura base.
-@@|web.whatsapp.com^                          ! Interfaz de escritorio.
-@@|aq.whatsapp.net^                           ! WebSocket de mensajes.
-@@|g.whatsapp.net^                            ! Señalización de llamadas.
-@@|pps.whatsapp.net^                          ! Servicios de estado y push.
-@@|mmg.whatsapp.net^                          ! Servidor multimedia (Fotos/Video).
-@@||static.whatsapp.net^                      ! Recursos estáticos y cliente web.
+@@|web.whatsapp.com^$important                ! Interfaz de escritorio.
+@@|aq.whatsapp.net^$important                 ! WebSocket de mensajes.
+@@|g.whatsapp.net^$important                  ! Señalización de llamadas.
+@@|pps.whatsapp.net^$important                ! Servicios de estado y push.
+@@|mmg.whatsapp.net^$important                ! Servidor multimedia (Fotos/Video).
+@@||static.whatsapp.net^$important            ! Recursos estáticos y cliente web.
 !
 ! --- Subsección: Telegram ---
-@@|telegram.org^                              ! Portal principal.
-@@|t.me^                                      ! Acortador de enlaces (Crítico).
-@@|telegram.me^                               ! Redirección de acceso.
-@@|web.telegram.org^                          ! Cliente web.
-@@|venus.web.telegram.org^                    ! Punto de acceso DC5.
-@@|pluto.web.telegram.org^                    ! Punto de acceso DC4.
-@@|flora.web.telegram.org^                    ! Punto de acceso DC2.
-@@|telegram.space^                            ! Infraestructura de almacenamiento.
-@@|telegra.ph^                                ! Plataforma de artículos.
-@@||cdn-telegram.org^                         ! CDN para descarga de archivos.
+@@|t.me^$important                            ! Acortador de enlaces (Crítico).
+@@|telegram.me^$important                     ! Redirección de acceso.
+@@|web.telegram.org^$important                ! Cliente web.
+@@|venus.web.telegram.org^$important          ! Punto de acceso DC5.
+@@|pluto.web.telegram.org^$important          ! Punto de acceso DC4.
+@@|flora.web.telegram.org^$important          ! Punto de acceso DC2.
+@@|telegram.space^$important                  ! Infraestructura de almacenamiento.
+@@|telegra.ph^$important                      ! Plataforma de artículos.
+@@||cdn-telegram.org^$important               ! CDN para descarga de archivos.
 !
 ! --- Subsección: Google Workspace ---
-@@|accounts.google.com^                       ! Login universal.
-@@|meet.google.com^                           ! Videoconferencias.
-@@|drive.google.com^                          ! Nube y sincronización.
-@@|docs.google.com^                           ! Edición de documentos.
-@@||lh3.googleusercontent.com^                ! CDN de imágenes/avatares.
-@@|static.gstatic.com^                        ! Recursos estáticos del sistema.
+@@||lh3.googleusercontent.com^$important      ! CDN de imágenes/avatares.
+@@|static.gstatic.com^$important              ! Recursos estáticos del sistema.
 !
 ! =====================================================================
 ! CATEGORÍA 6: DESARROLLO Y GESTIÓN DE CÓDIGO
 ! =====================================================================
 !
 ! --- Subsección: GitHub ---
-@@|github.com^                                ! Portal y repositorios.
-@@||githubusercontent.com^                    ! Archivos RAW, código e imágenes.
-@@||githubassets.com^                         ! CDN de CSS/JS para renderizar la web.
-@@|api.github.com^                            ! Ejecución de Git, push/pull y CLI.
-@@|github.io^                                 ! Páginas web alojadas.
+@@||githubusercontent.com^$important          ! Archivos RAW, código e imágenes.
+@@||githubassets.com^$important               ! CDN de CSS/JS para renderizar la web.
+@@|api.github.com^$important                  ! Ejecución de Git, push/pull y CLI.
 !
 ! =====================================================================
 ! CATEGORÍA 7: COMERCIO ELECTRÓNICO
 ! =====================================================================
 !
 ! --- Subsección: Amazon Global ---
-@@|amazon.com^                                ! Portal Base.
-@@|www.amazon.com^                            ! Portal Base.
-@@|amazon.com.mx^                             ! Región México.
-@@||images-na.ssl-images-amazon.com^          ! Imágenes de productos.
-@@||media-amazon.com^                         ! CDN multimedia global de la app.
+@@||images-na.ssl-images-amazon.com^$important ! Imágenes de productos.
+@@||media-amazon.com^$important               ! CDN multimedia global de la app.
 !
 ! --- Subsección: Mercado Libre ---
-@@|mercadolibre.com^                          ! Login cruzado (OAuth).
-@@|mercadolibre.com.mx^                       ! Portal base México.
-@@||mlstatic.com^                             ! CDN estático (Interfaces y fotos).
+@@||mlstatic.com^$important                   ! CDN estático (Interfaces y fotos).
 !
 ! =====================================================================
 ! CATEGORÍA 8: ENTRETENIMIENTO Y VIDEO (STREAMING)
 ! =====================================================================
 !
 ! --- Subsección: YouTube ---
-@@|youtube.com^                               ! Portal Base.
-@@|www.youtube.com^                           ! Portal Base.
-@@|youtu.be^                                  ! Acortador.
-@@|music.youtube.com^                         ! YouTube Music.
-@@|youtube.googleapis.com^                    ! API Interna.
-@@|youtubei.googleapis.com^                   ! API de la App.
-@@||googlevideo.com^                          ! Streaming de video (Core).
-@@||manifest.googlevideo.com^                 ! Instrucciones de carga y búfer.
-@@||redirector.googlevideo.com^               ! Balanceo de carga.
-@@||ytimg.com^                                ! Imágenes y miniaturas.
-@@|s.youtube.com^                             ! Historial y progreso.
-@@|www.youtube-nocookie.com^                  ! Embeds web.
+@@|youtube.googleapis.com^$important          ! API Interna.
+@@|youtubei.googleapis.com^$important         ! API de la App.
+@@||googlevideo.com^$important                ! Streaming de video (Core).
+@@||manifest.googlevideo.com^$important       ! Instrucciones de carga y búfer.
+@@||redirector.googlevideo.com^$important     ! Balanceo de carga.
+@@||ytimg.com^$important                      ! Imágenes y miniaturas.
+@@||s.youtube.com^$important                  ! Historial y progreso (Tracker/Funcional).
+@@|www.youtube-nocookie.com^$important        ! Embeds web.
 !
 ! --- Subsección: Netflix ---
-@@|netflix.com^                               ! Portal Base.
-@@|www.netflix.com^                           ! Portal Base.
-@@|api.netflix.com^                           ! Autenticación de cuenta.
-@@|appboot.netflix.com^                       ! Arranque de App en TVs.
-@@||nflxvideo.net^                            ! CDN de Video.
-@@||nflxext.com^                              ! Recursos e interfaz estática.
-@@||nflximg.net^                              ! Imágenes de catálogo.
-@@||codex.nflxext.com^                        ! DRM / Seguridad de video.
+@@|api.netflix.com^$important                 ! Autenticación de cuenta.
+@@|appboot.netflix.com^$important             ! Arranque de App en TVs.
+@@||nflxvideo.net^$important                  ! CDN de Video.
+@@||nflxext.com^$important                    ! Recursos e interfaz estática.
+@@||nflximg.net^$important                    ! Imágenes de catálogo.
+@@||codex.nflxext.com^$important              ! DRM / Seguridad de video.
 !
 ! --- Subsección: Disney+ ---
-@@|disneyplus.com^                            ! Portal consolidado.
-@@|disney-plus.net^                           ! Backend técnico.
-@@|bamgrid.com^                               ! Backend de streaming Bamtech (Vital).
+@@|disney-plus.net^$important                 ! Backend técnico.
+@@|bamgrid.com^$important                     ! Backend de streaming Bamtech (Vital).
 !
 ! --- Subsección: Max (HBO) ---
-@@|hbo.com^                                   ! Portal institucional e histórico.
-@@|hbomax.com^                                ! Dominio legado y redirección global.
-@@|max.com^                                   ! Portal principal actual.
-@@|play.max.com^                              ! Interfaz de reproducción actual.
-@@|play.hbomax.com^                           ! Interfaz de reproducción clásica.
-@@|sr.max.com^                                ! Backend principal de streaming y metadatos.
-@@|auth.max.com^                              ! API de autenticación y gestión de sesiones.
-@@||hbomaxcdn.com^                            ! CDN primario para video y recursos estáticos.
+@@|play.max.com^$important                    ! Interfaz de reproducción actual.
+@@|play.hbomax.com^$important                 ! Interfaz de reproducción clásica.
+@@|sr.max.com^$important                      ! Backend principal de streaming y metadatos.
+@@|auth.max.com^$important                    ! API de autenticación y gestión de sesiones.
+@@||hbomaxcdn.com^$important                  ! CDN primario para video y recursos estáticos.
 !
 ! --- Subsección: Prime Video ---
-@@|primevideo.com^                            ! Portal Base.
-@@|atv-ps.amazon.com^                         ! Configuración App Prime Video.
-@@||d3h13ap0p6v5ty.cloudfront.net^            ! CDN Video Prime exclusivo.
+@@|atv-ps.amazon.com^$important               ! Configuración App Prime Video.
+@@||d3h13ap0p6v5ty.cloudfront.net^$important  ! CDN Video Prime exclusivo.
 !
 ! =====================================================================
 ! CATEGORÍA 9: REDES SOCIALES
 ! =====================================================================
 !
 ! --- Subsección: Ecosistema Meta ---
-@@|fb.com^                                    ! Acortador.
-@@|facebook.com^                              ! Portal Base.
-@@|www.facebook.com^                          ! Portal Base.
-@@|m.facebook.com^                            ! Versión Móvil.
-@@|messenger.com^                             ! Chat web.
-@@|graph.facebook.com^                        ! API de datos.
-@@|edge-chat.facebook.com^                    ! Servidor de chat.
-@@||fbcdn.net^                                ! CDN Maestro de imágenes y videos.
-@@||fbcdn.com^                                ! Recursos estáticos secundarios.
-@@|instagram.com^                             ! Portal Instagram.
-@@|i.instagram.com^                           ! API App Móvil Instagram.
-@@||cdninstagram.com^                         ! CDN de fotos/reels.
+@@|graph.facebook.com^$important              ! API de datos (Muy bloqueada por listas).
+@@|edge-chat.facebook.com^$important          ! Servidor de chat.
+@@||fbcdn.net^$important                      ! CDN Maestro de imágenes y videos.
+@@||fbcdn.com^$important                      ! Recursos estáticos secundarios.
+@@|i.instagram.com^$important                 ! API App Móvil Instagram.
+@@||cdninstagram.com^$important               ! CDN de fotos/reels.
 !
 ! --- Subsección: X (Twitter) ---
-@@|x.com^                                     ! Portal Nuevo.
-@@|twitter.com^                               ! Portal Legado.
-@@||twimg.com^                                ! CDN de imágenes y avatares.
-@@|api.twitter.com^                           ! Interacciones en App.
+@@||twimg.com^$important                      ! CDN de imágenes y avatares.
+@@|api.twitter.com^$important                 ! Interacciones en App.
 !
 ! --- Subsección: TikTok ---
-@@|tiktok.com^                                ! Portal Base.
-@@|api.tiktok.com^                            ! API de Datos.
-@@|tiktokv.com^                               ! Backend de video.
-@@||tiktokcdn.com^                            ! CDN global de video.
-@@||p16-sign-va.tiktokcdn.com^                ! Firma y seguridad de streaming.
-@@||ibyteimg.com^                             ! CDN de Avatares y fotos de perfil.
+@@|api.tiktok.com^$important                  ! API de Datos.
+@@|tiktokv.com^$important                     ! Backend de video.
+@@||tiktokcdn.com^$important                  ! CDN global de video.
+@@||p16-sign-va.tiktokcdn.com^$important      ! Firma y seguridad de streaming.
+@@||ibyteimg.com^$important                   ! CDN de Avatares y fotos de perfil.
 !
 ! =====================================================================
 ! CATEGORÍA 10: GAMING Y ECOSISTEMAS
 ! =====================================================================
 !
 ! --- Subsección: Ecosistema Apple / Xbox (Logins) ---
-@@||mzstatic.com^                             ! CDN visual App Store (iOS/macOS).
-@@|login.live.com^                            ! Autenticación Xbox/Microsoft.
-@@|user.auth.xboxlive.com^                    ! Token de sesión consola Xbox.
+@@||mzstatic.com^$important                   ! CDN visual App Store (iOS/macOS).
+@@|login.live.com^$important                  ! Autenticación Xbox/Microsoft.
+@@|user.auth.xboxlive.com^$important          ! Token de sesión consola Xbox.
 !
 ! --- Subsección: PlayStation Network (PSN) ---
-@@|auth.api.sonyentertainmentnetwork.com^     ! Inicio de sesión.
-@@|api.playstation.com^                       ! Trofeos y perfiles.
-@@|ca.psn.services.playstation.net^           ! Multijugador y red.
-@@|static.playstation.com^                    ! Imágenes de la interfaz.
+@@|auth.api.sonyentertainmentnetwork.com^$important ! Inicio de sesión.
+@@|api.playstation.com^$important             ! Trofeos y perfiles.
+@@|ca.psn.services.playstation.net^$important ! Multijugador y red.
+@@|static.playstation.com^$important          ! Imágenes de la interfaz.
 !
 ! --- Subsección: Roblox ---
-@@|roblox.com^                                ! Portal web.
-@@|auth.roblox.com^                           ! Login.
-@@|robloxapis.com^                            ! APIs de sistema.
-@@|api.roblox.com^                            ! Funciones básicas.
-@@|clientsettings.roblox.com^                 ! Configuración del motor de físicas.
-@@|games.roblox.com^                          ! Servidores de juego.
-@@|gamepersistence.roblox.com^                ! Guardado de progreso en la nube.
-@@||rbxcdn.com^                               ! CDN de texturas y assets 3D.
-@@||robloxusercontent.com^                    ! Contenido subido por usuarios.
-@@|avatar.roblox.com^                         ! Personalización.
+@@|auth.roblox.com^$important                 ! Login.
+@@|robloxapis.com^$important                  ! APIs de sistema.
+@@|api.roblox.com^$important                  ! Funciones básicas.
+@@|clientsettings.roblox.com^$important       ! Configuración del motor de físicas.
+@@|games.roblox.com^$important                ! Servidores de juego.
+@@|gamepersistence.roblox.com^$important      ! Guardado de progreso en la nube.
+@@||rbxcdn.com^$important                     ! CDN de texturas y assets 3D.
+@@||robloxusercontent.com^$important          ! Contenido subido por usuarios.
+@@|avatar.roblox.com^$important               ! Personalización.
 !
 ! --- Subsección: Juegos Móviles (Activision / King) ---
-@@|king.com^                                  ! Portal Candy Crush.
-@@|midas.king.com^                            ! Sincronización Candy Crush.
-@@|candycrush.king.com^                       ! Servidores Candy Crush.
-@@|activision.com^                            ! Autenticación CoD Mobile.
-@@|callofduty.com^                            ! Perfiles CoD Mobile.
-@@|proximabeta.com^                           ! Servidores CoD Mobile (Tencent).
-@@|tencentgames.com^                          ! Nodos de conexión multijugador.
+@@|midas.king.com^$important                  ! Sincronización Candy Crush.
+@@|candycrush.king.com^$important             ! Servidores Candy Crush.
+@@|proximabeta.com^$important                 ! Servidores CoD Mobile (Tencent).
+@@|tencentgames.com^$important                ! Nodos de conexión multijugador.
 !
 ! =====================================================================
 ! CATEGORÍA 11: HARDWARE Y SOPORTE TV
 ! =====================================================================
 !
 ! --- Subsección: LG Smart TV ---
-@@||apps.svc.lgappstv.com^                    ! Tienda de apps (WebOS).
-@@||smart.lgappstv.com^                       ! Funciones inteligentes y catálogo.
-@@||us.software.lge.com^                      ! Actualizaciones críticas de firmware.
+@@||apps.svc.lgappstv.com^$important          ! Tienda de apps (WebOS).
+@@||smart.lgappstv.com^$important             ! Funciones inteligentes y catálogo.
+@@||us.software.lge.com^$important            ! Actualizaciones críticas de firmware.
 !
 ! =====================================================================
 ! CATEGORÍA 12: HERRAMIENTAS DE RED LOCALES
 ! =====================================================================
 !
 ! --- Subsección: Comprobadores de IP Pública ---
-@@|api.ipify.org^                            ! Servidor para reconocimiento de IP Pública primario.
-@@|ipv4.icanhazip.com^                       ! Servidor para reconocimiento de IP Pública secundario.
-@@|ifconfig.me^                              ! Servidor para reconocimiento de IP Pública terciario.
+@@|api.ipify.org^$important                   ! Servidor para reconocimiento de IP Pública primario.
+@@|ipv4.icanhazip.com^$important              ! Servidor para reconocimiento de IP Pública secundario.
+@@|ifconfig.me^$important                     ! Servidor para reconocimiento de IP Pública terciario.
