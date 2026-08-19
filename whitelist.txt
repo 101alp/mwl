@@ -1,8 +1,7 @@
 ! ============================================================================================================================ !
 !                                      AEGIS LUMINA - WHITELIST FUNCIONAL ESTRICTA                                             !
 ! ============================================================================================================================ !
-! Orden de prioridad: De infraestructura crítica (Capa de Red/SO)
-! a servicios de usuario y entretenimiento (Capa de Aplicación).
+! Orden de prioridad: De infraestructura crítica (Capa de Red/SO) a servicios y entretenimiento (Capa de Aplicación).
 ! ============================================================================================================================ !
 !
 ! ============================================================================================================================ !
@@ -29,7 +28,7 @@
 @@||edgecastcdn.net^$important                             ! CDN masivo utilizado por múltiples plataformas y SO.
 !
 ! ============================================================================================================================ !
-!           CATEGORÍA 2: CONECTIVIDAD (NCSI), HORA (NTP) Y ACTUALIZACIONES SO              !
+!                             CATEGORÍA 2: CONECTIVIDAD (NCSI), HORA (NTP) Y ACTUALIZACIONES SO                                !
 ! ============================================================================================================================ !
 ! Nota: Si esto falla, los sistemas asumen "Sin Internet" y se rompe el TLS.
 !
@@ -77,7 +76,7 @@
 @@||lgtvonline.lge.com^$important                          ! Smart TVs LG (WebOS).
 !
 ! ============================================================================================================================ !
-!               CATEGORÍA 3: SEGURIDAD, TLS, CAPTCHAS Y RENDERIZADO BÁSICO                 !
+!                               CATEGORÍA 3: SEGURIDAD, TLS, CAPTCHAS Y RENDERIZADO BÁSICO                                     !
 ! ============================================================================================================================ !
 ! Nota: Vital para poder iniciar sesión en el 90% de los bancos y portales.
 !
@@ -98,7 +97,7 @@
 @@||fonts.gstatic.com^$important                           ! CDN estático de tipografías.
 !
 ! ============================================================================================================================ !
-!                  CATEGORÍA 4: SERVICIOS FINANCIEROS Y BANCOS (MÉXICO)                    !
+!                                   CATEGORÍA 4: SERVICIOS FINANCIEROS Y BANCOS (MÉXICO)                                       !
 ! ============================================================================================================================ !
 !
 ! --- Subsección: Redes Globales de Procesamiento ---------------------------------------------------------------------------- !
@@ -128,7 +127,7 @@
 @@||api.coppel.com^$important                              ! API logins y pagos BanCoppel.
 !
 ! ============================================================================================================================ !
-!                       CATEGORÍA 5: COMUNICACIÓN Y PRODUCTIVIDAD                          !
+!                                       CATEGORÍA 5: COMUNICACIÓN Y PRODUCTIVIDAD                                              !
 ! ============================================================================================================================ !
 !
 ! --- Subsección: WhatsApp --------------------------------------------------------------------------------------------------- !
@@ -284,7 +283,7 @@
 @@||us.software.lge.com^$important                         ! Actualizaciones críticas de firmware.
 !
 ! ============================================================================================================================ !
-!                                      CATEGORÍA 12: HERRAMIENTAS DE RED LOCALES                                               !
+!                                       CATEGORÍA 12: HERRAMIENTAS DE RED LOCALES                                              !
 ! ============================================================================================================================ !
 !
 ! --- Subsección: Comprobadores de IP Pública -------------------------------------------------------------------------------- !
