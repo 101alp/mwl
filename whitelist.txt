@@ -1,665 +1,393 @@
-! ====================================================================
-!             AEGIS LUMINA - WHITELIST FUNCIONAL ESTRICTA
-! ====================================================================
-! Orden de prioridad: De Capa de Red/SO a Capa de Aplicación.
-! ====================================================================
+! ========================================================================================
+!                       AEGIS LUMINA - WHITELIST FUNCIONAL ESTRICTA
+! ========================================================================================
 !
-! ====================================================================
-! CATEGORÍA 1: INFRAESTRUCTURA CRÍTICA Y CDNs
-! ====================================================================
-! Nota: Sin estos dominios, internet prácticamente deja de funcionar.
+! ========================================================================================
+! ┌─
+! │ TÍTULO      : Lista de Mitigación de Falsos Positivos (Anti-Breakage Whitelist)
+! │ FUNCIÓN     : Reglas críticas para la estabilidad de aplicaciones y servicios.
+! │ MOTOR       : AdGuard Home (Soporte Nativo Híbrido)
+! │               - /^...$/  = Desbloqueo estricto exacto (Seguridad alta).
+! │               - @@||...^ = Desbloqueo dominio y subdominios (Ecosistemas críticos).
+! ├───────────────────────────────────────────────────────────────────────────────────────
+! │ DESCRIPCIÓN : Filtro diseñado para restaurar la funcionalidad operativa en red.
+! │               Desbloquea subdominios de infraestructura, analíticas y prevención
+! │               de fraude que suelen ser catalogados erróneamente como "rastreadores"
+! │               por listas de privacidad agresivas.
+! │
+! │               Su aplicación es estrictamente obligatoria para evitar fallos de
+! │               autenticación, pérdida de historiales de reproducción, bloqueos en
+! │               pasarelas bancarias y problemas en la descarga de archivos multimedia,
+! │               garantizando la estabilidad del ecosistema digital sin comprometer
+! │               la seguridad ni la privacidad general de la red.
+! └───────────────────────────────────────────────────────────────────────────────────────
+! ========================================================================================
 !
-! ┌─ Subcategoría: Akamai
-! ├────────────────────────────────────────────────
-! │ CDN para binarios, apps y parches.
-@@||akamaized.net^$important
-! │
-! │ Balanceo de carga y ruteo.
-@@||akamai.net^$important
-! │
-! │ Nodos de rendimiento para streaming.
-@@||akamaihd.net^$important
-! │
-! │ Gestión de enrutamiento y provisión.
-@@||akamainetworks.com^$important
-! └────────────────────────────────────────────────
+! ========================================================================================
+!                CATEGORÍA 1: VERIFICACIÓN DE RED (NCSI) Y PORTALES CAUTIVOS
+! ========================================================================================
 !
-! ┌─ Subcategoría: Fastly
-! ├────────────────────────────────────────────────
-! │ CDN para WebSockets y APIs modernas.
-@@||fastly.net^$important
+! ┌─ Subcategoría: Android / Google
 ! │
-! │ Consola técnica y emisión de certificados.
-@@||fastly.com^$important
-! │
-! │ Nodos TLS y optimización de entrega.
-@@||fastly-edge.com^$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: Cloudflare
-! ├────────────────────────────────────────────────
-! │ Gestión por consola/API.
-@@/^api\.cloudflare\.com$/$important
-! │
-! │ Repositorio global de librerías JS/CSS.
-@@||cloudflare.net^$important
-! │
-! │ CDNJS para renderizado web.
-@@/^cdnjs\.cloudflare\.com$/$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: Edgio / Edgecast / Otras Redes
-! ├────────────────────────────────────────────────
-! │ CDN masivo multiplataforma y SO.
-@@||edgecastcdn.net^$important
-! │
-! │ Limelight Networks (CDN Mayorista).
-@@||llnwi.net^$important
-! └────────────────────────────────────────────────
-!
-! ====================================================================
-! CATEGORÍA 2: CONECTIVIDAD (NCSI) Y ACTUALIZACIONES SO
-! ====================================================================
-! Nota: Si esto falla, los sistemas asumen "Sin Internet" y se rompe.
-!
-! ┌─ Subcategoría: Sincronización de Hora (NTP)
-! ├────────────────────────────────────────────────
-! │ Pool NTP global para Linux y routers.
-@@/^pool\.ntp\.org$/$important
-! │
-! │ Servidor NTP para sistemas Windows.
-@@/^time\.windows\.com$/$important
-! │
-! │ Servidor NTP para Apple (iOS/macOS).
-@@/^time\.apple\.com$/$important
-! │
-! │ Servidor NTP para sistemas Google.
-@@/^time\.google\.com$/$important
-! │
-! │ Servidor NTP del Instituto Nacional (NIST).
-@@/^time\.nist\.gov$/$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: Notificaciones y Actualizaciones del SO
-! ├────────────────────────────────────────────────
-! │ Descargas de parches del sistema Windows.
-@@||windowsupdate.com^$important
-! │
-! │ Catálogo y licencias de Microsoft.
-@@||update.microsoft.com^$important
-! │
-! │ Optimización de entrega de descargas (Windows).
-@@||delivery.mp.microsoft.com^$important
-! │
-! │ Nube de Windows Defender (Tracker mitigado).
-@@/^wdcp\.microsoft\.com$/$important
-@@/^wdcpalt\.microsoft\.com$/$important
-! │
-! │ Push iOS/macOS.
-@@||push.apple.com^$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: Tiendas de Aplicaciones (App Stores)
-! ├────────────────────────────────────────────────
-! │ Descargas y actualizaciones Google Play (Android).
-@@||play.googleapis.com^$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: Verificación de Red (Android / Google)
-! ├────────────────────────────────────────────────
-! │ Comprobación WiFi Android primaria.
+! │ Evita que Android marque "Sin Internet" y rompa portales Wi-Fi.
 @@/^connectivitycheck\.gstatic\.com$/$important
 ! │
-! │ Respaldo NCSI oficial en código base AOSP.
+! │ Respaldo oficial de AOSP para validar conexión a internet local.
 @@/^connectivitycheck\.android\.com$/$important
-! │
-! │ Endpoint HTTP 204 para Chromium.
-@@/^clients3\.google\.com$/$important
-! └────────────────────────────────────────────────
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ┌─ Subcategoría: Verificación de Red (Apple)
-! ├────────────────────────────────────────────────
-! │ Test de red y portal cautivo en Apple.
+! ┌─ Subcategoría: Ecosistema Apple
+! │
+! │ Permite abrir portales cautivos en redes públicas desde iOS/macOS.
 @@/^captive\.apple\.com$/$important
 ! │
-! │ Descarga de perfiles de red y cifrado TLS.
+! │ Descarga perfiles de red vitales y valida cifrados TLS en Apple.
 @@/^configuration\.apple\.com$/$important
-! │
-! │ Diagnóstico y sincronización CoreLocation.
-@@/^gsp1\.apple\.com$/$important
-@@/^gs-loc\.apple\.com$/$important
-! └────────────────────────────────────────────────
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ┌─ Subcategoría: Verificación de Red (Microsoft / Windows)
-! ├────────────────────────────────────────────────
-! │ Windows 10/11: Test activo de red (Soporta IPv6/www).
+! ┌─ Subcategoría: Microsoft / Windows
+! │
+! │ Evita que Windows 10/11 marque la red como "Sin acceso a Internet".
 @@||msftconnecttest.com^$important
 ! │
-! │ Windows Legacy y Windows Server (Soporta DNS fallback).
+! │ Validación de red legacy para Windows Server y sistemas antiguos.
 @@||msftncsi.com^$important
-! └────────────────────────────────────────────────
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ┌─ Subcategoría: Verificación de Red (Linux / Ubuntu)
-! ├────────────────────────────────────────────────
-! │ Gestor de red Linux (Ubuntu, etc.).
-@@/^nmcheck\.gnome\.org$/$important
+! ┌─ Subcategoría: Consolas y Realidad Virtual
 ! │
-! │ Entornos KDE Plasma y derivados.
-@@/^networkcheck\.kde\.org$/$important
-! │
-! │ Servidor espejo de validación Ubuntu.
-@@/^connectivity-check\.ubuntu\.com$/$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: Verificación de Red (Fabricantes de Hardware)
-! ├────────────────────────────────────────────────
-! │ Xiaomi (MIUI / HyperOS).
-@@/^connect\.rom\.miui\.com$/$important
-! │
-! │ Samsung (One UI y SmartThings).
-@@/^connectivitycheck\.samsung\.com$/$important
-@@/^connectivity\.samsungcloudplatform\.com$/$important
-! │
-! │ Huawei (HarmonyOS / EMUI).
-@@/^connectivity-check\.platform\.hicloud\.com$/$important
-@@/^push\.hicloud\.com$/$important
-@@/^logon\.hicloud\.com$/$important
-! │
-! │ Dispositivos Alexa y Fire OS.
-@@/^connectivitycheck\.amazon\.com$/$important
-! │
-! │ Endpoint secundario (S3) para Amazon.
-@@/^spectrum\.s3\.amazonaws\.com$/$important
-! │
-! │ Meta (Portal / Quest).
+! │ Evita que visores Meta Quest pierdan acceso a la red local y web.
 @@/^connectivitycheck\.fb\.com$/$important
 ! │
-! │ Nintendo Switch.
+! │ Vital para conectar Nintendo Switch a partidas online y la eShop.
 @@/^conntest\.nintendowifi\.net$/$important
+! │
+! │ CDN de validación de Nintendo; sin él, el multijugador se cae.
 @@||ctest.cdn.nintendo.net^$important
-! │
-! │ Sony PlayStation Network.
-@@/^ena\.net\.playstation\.net$/$important
-! │
-! │ Routers y placas base ASUS.
-@@/^connectivitycheck\.asus\.com$/$important
-! │
-! │ Routers TP-Link y Synology NAS.
-@@/^ncsi\.tplinkcloud\.com$/$important
-@@/^internet\.synology\.com$/$important
-! │
-! │ Smart TVs LG (WebOS).
-@@/^lgtvonline\.lge\.com$/$important
-! └────────────────────────────────────────────────
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ====================================================================
-! CATEGORÍA 3: SEGURIDAD, DESAFÍOS Y CAPTCHAS
-! ====================================================================
-! Nota: Vital para poder verificar identidad humana en portales.
+! ┌─ Subcategoría: Smart TVs e IoT
+! │
+! │ Evita avisos constantes de desconexión en Smart TVs Samsung.
+@@/^connectivitycheck\.samsung\.com$/$important
+! │
+! │ Permite a routers y placas Asus verificar conectividad externa.
+@@/^connectivitycheck\.asus\.com$/$important
+! └───────────────────────────────────────────────────────────────────────────────────────
+!
+! ========================================================================================
+!                       CATEGORÍA 2: SEGURIDAD, DESAFÍOS Y CAPTCHAS
+! ========================================================================================
 !
 ! ┌─ Subcategoría: Desafíos Anti-Bot
-! ├────────────────────────────────────────────────
-! │ Infraestructura oficial Google reCAPTCHA.
+! │
+! │ Infraestructura oficial para resolver captchas y acceder a cuentas.
 @@||recaptcha.net^$important
 ! │
-! │ Infraestructura hCaptcha.
+! │ Sistema anti-bot crítico en Cloudflare y sitios de alta seguridad.
 @@||hcaptcha.com^$important
 ! │
-! │ Sistema anti-bot Cloudflare Turnstile.
+! │ Resuelve el desafío Turnstile de Cloudflare; evita bucles infinitos.
 @@/^challenges\.cloudflare\.com$/$important
-! └────────────────────────────────────────────────
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ====================================================================
-! CATEGORÍA 4: SERVICIOS FINANCIEROS Y PASARELAS (MÉXICO)
-! ====================================================================
+! ========================================================================================
+!                 CATEGORÍA 3: SERVICIOS FINANCIEROS Y COMERCIO (CRÍTICO)
+! ========================================================================================
 !
-! ┌─ Subcategoría: Pasarelas de Pago Digital y 3D Secure
-! ├────────────────────────────────────────────────
-! │ Autenticación 3D Secure para tokens.
+! ┌─ Subcategoría: Pasarelas Globales y Autenticación
+! │
+! │ Vital para el token 3D Secure al verificar compras con tarjeta.
 @@||cardinalcommerce.com^$important
 ! │
-! │ Backend de procesamiento global Stripe.
-@@||stripe.com^$important
-! │
-! │ Pasarela de pagos nativa de BBVA México.
-@@||openpay.mx^$important
-! │
-! │ Pasarela de pagos mexicana.
-@@||conekta.com^$important
-! │
-! │ Gráficos, botones y CSS (Indispensable).
+! │ Renderiza los botones de pago web; sin esto, no puedes usar PayPal.
 @@||paypalobjects.com^$important
 ! │
-! │ Conexión backend (Core y App Móvil).
-@@/^api\.paypal\.com$/$important
-@@/^api-m\.paypal\.com$/$important
+! │ Prevención de fraude de PayPal; evita bloqueos por "riesgo alto".
+@@||c.paypal.com^$important
 ! │
-! │ Operaciones de la App y SDK MercadoPago.
+! │ Telemetría crítica de pagos; evita rechazos de inicio de sesión.
+@@||t.paypal.com^$important
+! │
+! │ Procesa el checkout de terceros; evita pagos rechazados genéricos.
 @@/^api\.mercadopago\.com$/$important
-@@||sdk.mercadopago.com^$important
-! └────────────────────────────────────────────────
+! │
+! │ Validación de humano de MercadoPago para autorizar transacciones.
+@@/^tracker\.mercadopago\.com$/$important
+! │
+! │ Motor IA antifraude; evita que bloqueen tu cuenta al comprar.
+@@/^analytics\.mercadolibre\.com$/$important
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ┌─ Subcategoría: Instituciones Bancarias Nacionales
-! ├────────────────────────────────────────────────
-! │ Banca electrónica BBVA.
-@@||bbvanet.com.mx^$important
+! ┌─ Subcategoría: Bancos Nacionales y Pagos
 ! │
-! │ Backend app móvil BBVA.
-@@/^api\.bbva\.com$/$important
+! │ Pasarela nativa de BBVA; indispensable para pagos en comercios MX.
+@@||openpay.mx^$important
 ! │
-! │ Transacciones electrónicas Citibanamex.
-@@/^bancanet\.citibanamex\.com$/$important
+! │ Sincroniza el Token Digital; evita congelamientos en la app BBVA.
+@@/^telemetry\.bbva\.mx$/$important
 ! │
-! │ API de identidad Banorte.
-@@/^nixe\.banorte\.com$/$important
+! │ Métricas de interfaz; bloquea la app en pantalla azul si se omite.
+@@/^ecs\.bbva\.com$/$important
 ! │
-! │ Backend técnico México (Santander).
-@@||isban.com.mx^$important
+! │ Valida hardware; evita cierres de sesión al poner la huella digital.
+@@/^metrics\.banamex\.com$/$important
 ! │
-! │ Interfaz transaccional Inbursa.
-@@||bancoinbursa.com^$important
-! │
-! │ Banca electrónica BanCoppel.
-@@||bancocoppel.com^$important
-! │
-! │ API logins y pagos BanCoppel.
-@@/^api\.coppel\.com$/$important
-! └────────────────────────────────────────────────
+! │ Servidor centralizado; restaura transferencias SPEI en tiempo real.
+@@/^api\.banorte\.com$/$important
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ====================================================================
-! CATEGORÍA 5: COMUNICACIÓN Y PRODUCTIVIDAD
-! ====================================================================
+! ┌─ Subcategoría: Ciberseguridad Bancaria (Fingerprinting)
+! │
+! │ Evita que Coppel bloquee la cuenta por "software malicioso".
+@@/^device\.coppel\.com$/$important
+! │
+! │ ThreatMetrix: valida la identidad del dispositivo en bancos globales.
+@@/^online-metrix\.net$/$important
+! │
+! │ Huella digital legal; restaura el login en HSBC e Inbursa.
+@@/^api-secure\.solvedevices\.com$/$important
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ┌─ Subcategoría: Logins Críticos de Ecosistemas
-! ├────────────────────────────────────────────────
-! │ Autenticación Microsoft (Office 365, Teams).
-@@||login.microsoftonline.com^$important
-! │
-! │ Autenticación Ecosistema Apple (iCloud/Mac).
-@@||appleid.apple.com^$important
-! └────────────────────────────────────────────────
+! ========================================================================================
+!                   CATEGORÍA 4: SERVICIOS DEL SO, NUBE Y NOTIFICACIONES
+! ========================================================================================
 !
-! ┌─ Subcategoría: WhatsApp
-! ├────────────────────────────────────────────────
-! │ Interfaz de escritorio.
-@@/^web\.whatsapp\.com$/$important
+! ┌─ Subcategoría: Servicios Base y SO
 ! │
-! │ Enrutamiento de llamadas de voz y video.
-@@/^v\.whatsapp\.net$/$important
+! │ Servicio CoreLocation; restaura el GPS y mapas en dispositivos iOS.
+@@/^gsp1\.apple\.com$/$important
 ! │
-! │ WebSocket de mensajes.
-@@/^aq\.whatsapp\.net$/$important
+! │ Diagnóstico de red celular y ubicación para el ecosistema Apple.
+@@/^gs-loc\.apple\.com$/$important
 ! │
-! │ Señalización de llamadas.
-@@/^g\.whatsapp\.net$/$important
+! │ Nube de Windows Defender; evita que el antivirus detenga updates.
+@@/^wdcp\.microsoft\.com$/$important
 ! │
-! │ Servicios de estado y push.
-@@/^pps\.whatsapp\.net$/$important
+! │ Ruta alterna de Defender para firmas de virus de día cero.
+@@/^wdcpalt\.microsoft\.com$/$important
 ! │
-! │ Servidor multimedia (Fotos/Video).
-@@/^mmg\.whatsapp\.net$/$important
-! │
-! │ Recursos estáticos y cliente web.
-@@||static.whatsapp.net^$important
-! └────────────────────────────────────────────────
+! │ Validación Firebase; restaura notificaciones push en apps Android.
+@@/^firebaseinstallations\.googleapis\.com$/$important
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ┌─ Subcategoría: Telegram
-! ├────────────────────────────────────────────────
-! │ Acortador de enlaces (Crítico).
-@@/^t\.me$/$important
-! │
-! │ Redirección de acceso.
-@@/^telegram\.me$/$important
-! │
-! │ Cliente web y clusters regionales (DC1 a DC5).
-@@/^web\.telegram\.org$/$important
-@@/^aurora\.web\.telegram\.org$/$important
-@@/^flora\.web\.telegram\.org$/$important
-@@/^coronadcl\.web\.telegram\.org$/$important
-@@/^pluto\.web\.telegram\.org$/$important
-@@/^venus\.web\.telegram\.org$/$important
-@@/^mars\.web\.telegram\.org$/$important
-! │
-! │ Infraestructura de almacenamiento.
-@@||telegram.space^$important
-! │
-! │ Plataforma de artículos.
-@@/^telegra\.ph$/$important
-! │
-! │ CDN para descarga de archivos y stickers.
-@@||cdn-telegram.org^$important
-@@||avaticdn.net^$important
-! └────────────────────────────────────────────────
+! ========================================================================================
+!                     CATEGORÍA 5: ENTRETENIMIENTO, MEDIOS Y STREAMING
+! ========================================================================================
 !
-! ┌─ Subcategoría: Google Workspace
-! ├────────────────────────────────────────────────
-! │ CDN de imágenes/avatares (Soporta lh3 a lh6).
-@@||googleusercontent.com^$important
+! ┌─ Subcategoría: YouTube, Twitch y Spotify
 ! │
-! │ Recursos estáticos del sistema.
-@@||static.gstatic.com^$important
-! └────────────────────────────────────────────────
-!
-! ====================================================================
-! CATEGORÍA 6: COMERCIO ELECTRÓNICO
-! ====================================================================
-!
-! ┌─ Subcategoría: Amazon Global
-! ├────────────────────────────────────────────────
-! │ API principal de Amazon.
-@@/^api\.amazon\.com$/$important
-! │
-! │ Imágenes de productos.
-@@||images-na.ssl-images-amazon.com^$important
-! │
-! │ CDN de seguridad heredado de Amazon.
-@@||ssl-images-amazon.com^$important
-! │
-! │ CDN multimedia global de la app.
-@@||media-amazon.com^$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: Mercado Libre
-! ├────────────────────────────────────────────────
-! │ API de datos y búsqueda.
-@@/^api\.mercadolibre\.com$/$important
-! │
-! │ CDN estático (Interfaces y fotos).
-@@||mlstatic.com^$important
-! └────────────────────────────────────────────────
-!
-! ====================================================================
-! CATEGORÍA 7: ENTRETENIMIENTO Y VIDEO (STREAMING)
-! ====================================================================
-!
-! ┌─ Subcategoría: YouTube
-! ├────────────────────────────────────────────────
-! │ API Interna.
-@@/^youtube\.googleapis\.com$/$important
-! │
-! │ API de la App.
+! │ API interna móvil; si cae, la app de YouTube no carga contenido.
 @@/^youtubei\.googleapis\.com$/$important
 ! │
-! │ Streaming de video (Core).
-@@||googlevideo.com^$important
-! │
-! │ Instrucciones de carga y búfer.
-@@/^manifest\.googlevideo\.com$/$important
-! │
-! │ Balanceo de carga.
-@@/^redirector\.googlevideo\.com$/$important
-! │
-! │ Imágenes y miniaturas.
-@@||ytimg.com^$important
-! │
-! │ Historial y progreso (Tracker mitigado).
+! │ Sincroniza el historial; guarda el minuto exacto donde te quedaste.
 @@/^s\.youtube\.com$/$important
 ! │
-! │ Embeds web.
-@@/^www\.youtube-nocookie\.com$/$important
-! └────────────────────────────────────────────────
+! │ Manifiesto de Twitch; indispensable para iniciar streams en vivo.
+@@/^usher\.ttvnw\.net$/$important
+! │
+! │ Nodos de sesión de Spotify; evita errores de inicio en escritorio.
+@@/^spclient\.wg\.spotify\.com$/$important
+! │
+! │ Autenticación de reproductores; vital para iniciar el audio.
+@@/^apresolve\.spotify\.com$/$important
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ┌─ Subcategoría: Netflix
-! ├────────────────────────────────────────────────
-! │ Autenticación de cuenta.
-@@/^api\.netflix\.com$/$important
+! ┌─ Subcategoría: Ecosistemas de Streaming (Netflix, Max, Disney, Prime)
 ! │
-! │ Arranque de App en TVs.
-@@/^appboot\.netflix\.com$/$important
-! │
-! │ CDN de Video.
-@@||nflxvideo.net^$important
-! │
-! │ Recursos e interfaz estática / DRM.
-@@||nflxext.com^$important
-! │
-! │ Imágenes de catálogo.
-@@||nflximg.net^$important
-! │
-! │ DRM / Seguridad de video.
-@@/^codex\.nflxext\.com$/$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: Disney+
-! ├────────────────────────────────────────────────
-! │ Backend técnico.
-@@||disney-plus.net^$important
-! │
-! │ Backend de streaming Bamtech (Vital).
+! │ Backend técnico de Disney+; evita la pantalla de carga infinita.
 @@||bamgrid.com^$important
 ! │
-! │ Distribución de video y DRM para Disney+.
-@@||disneymediaservices.com^$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: Max (HBO)
-! ├────────────────────────────────────────────────
-! │ Interfaz de reproducción actual.
-@@/^play\.max\.com$/$important
+! │ Secuencia de arranque en TVs; evita que Netflix se quede en el logo.
+@@/^appboot\.netflix\.com$/$important
 ! │
-! │ Interfaz de reproducción clásica.
-@@/^play\.hbomax\.com$/$important
+! │ Llave criptográfica DRM; evita códigos de error al reproducir HD.
+@@/^codex\.nflxext\.com$/$important
 ! │
-! │ Backend principal de streaming y metadatos.
-@@/^sr\.max\.com$/$important
+! │ Telemetría del reproductor; evita que el video se trabe al 25%.
+@@/^ichnaea\.netflix\.com$/$important
 ! │
-! │ API de autenticación y gestión de sesiones.
+! │ Conexión a nodos locales; acelera drásticamente el inicio del video.
+@@/^oca\.netflix\.com$/$important
+! │
+! │ Gestión de sesiones; evita que la app Max te expulse constantemente.
 @@/^auth\.max\.com$/$important
 ! │
-! │ CDN de video y recursos estáticos.
-@@||hbomaxcdn.com^$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: Prime Video
-! ├────────────────────────────────────────────────
-! │ Configuración App Prime Video.
+! │ Métricas de uso de Max; evita errores de conexión al navegar.
+@@/^telemetry\.max\.com$/$important
+! │
+! │ Guarda el progreso de la serie; evita perder el capítulo actual.
+@@/^markers\.api\.max\.com$/$important
+! │
+! │ Configura Prime Video en TVs; repara errores de inicio e interfaz.
 @@/^atv-ps\.amazon\.com$/$important
 ! │
-! │ CDN Video Prime exclusivo.
-@@||d3h13ap0p6v5ty.cloudfront.net^$important
+! │ Telemetría Prime; restaura la función X-Ray y subtítulos perdidos.
+@@/^fls-na\.amazon\.com$/$important
 ! │
-! │ CDN principal moderno para Prime Video.
-@@||pv-cdn.net^$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: Twitch
-! ├────────────────────────────────────────────────
-! │ Manifest de streaming de video M3U8 (Vital).
-@@/^usher\.ttvnw\.net$/$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: Spotify
-! ├────────────────────────────────────────────────
-! │ Portal Base y API de sesión.
-@@||spotify.com^$important
+! │ Permite cambiar de perfil familiar y conectar la Smart TV.
+@@/^disney\.connections\.api\.disney\.com$/$important
 ! │
-! │ Nodos y autenticación de la App (Core).
-@@/^spclient\.wg\.spotify\.com$/$important
-@@/^apresolve\.spotify\.com$/$important
+! │ Métricas obligatorias; evita la pantalla azul de error en Disney+.
+@@/^telemetry\.disney\.com$/$important
+! └───────────────────────────────────────────────────────────────────────────────────────
+!
+! ┌─ Subcategoría: Chromecast, DRM y Anuncios Obligatorios
 ! │
-! │ CDN primario de distribución de audio.
-@@||audio-ak-spotify-com.akamaized.net^$important
-! └────────────────────────────────────────────────
+! │ Enrutamiento local; restaura el botón de enviar a la TV (Chromecast).
+@@||cast.google.com^$important
+! │
+! │ Certificado DRM; permite reproducir streaming en calidad HD y 4K.
+@@/^widevine\.l1\.google\.com$/$important
+! │
+! │ Anuncios obligatorios; si cae, el plan básico de Paramount se congela.
+@@/^pubads\.g\.doubleclick\.net$/$important
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ====================================================================
-! CATEGORÍA 8: REDES SOCIALES
-! ====================================================================
+! ========================================================================================
+!                       CATEGORÍA 6: COMUNICACIÓN Y REDES SOCIALES
+! ========================================================================================
 !
-! ┌─ Subcategoría: Ecosistema Meta (Facebook/Instagram)
-! ├────────────────────────────────────────────────
-! │ API de datos (Muy bloqueada por listas).
+! ┌─ Subcategoría: Meta (Facebook, Instagram, WhatsApp)
+! │
+! │ API Graph; restaura "Iniciar sesión con FB" en sitios de terceros.
 @@/^graph\.facebook\.com$/$important
 ! │
-! │ Servidor de chat.
-@@/^edge-chat\.facebook\.com$/$important
+! │ API base; repara los Mensajes Directos y la pestaña de Explorar.
+@@/^graph\.instagram\.com$/$important
 ! │
-! │ CDN Maestro de imágenes y videos.
-@@||fbcdn.net^$important
-! │
-! │ Recursos estáticos secundarios.
-@@||fbcdn.com^$important
-! │
-! │ API App Móvil Instagram.
+! │ API móvil principal; necesaria para cargar feeds y reels sin errores.
 @@/^i\.instagram\.com$/$important
 ! │
-! │ CDN de fotos/reels.
-@@||cdninstagram.com^$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: X (Twitter) & Reddit
-! ├────────────────────────────────────────────────
-! │ API y GraphQL de Reddit.
-@@/^gql\.reddit\.com$/$important
+! │ Servidor Push; evita que las fotos de perfil se queden en gris.
+@@/^pps\.whatsapp\.net$/$important
 ! │
-! │ CDN de imágenes y avatares (X).
-@@||twimg.com^$important
+! │ Reportes de estado; agiliza la carga de historias multimedia.
+@@/^crashlogs\.whatsapp\.net$/$important
 ! │
-! │ Interacciones en App y Notificaciones (X).
-@@/^api\.twitter\.com$/$important
-@@/^push\.twitter\.com$/$important
-! └────────────────────────────────────────────────
+! │ Red de archivos; restaura notas de voz y descarga de stickers pesados.
+@@||cdn.whatsapp.net^$important
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ┌─ Subcategoría: TikTok
-! ├────────────────────────────────────────────────
-! │ API de Datos (Tracker mitigado).
+! ┌─ Subcategoría: Otras Redes y Comunicación
+! │
+! │ API de datos crítica; sin ella, TikTok no pasa de la pantalla inicial.
 @@/^api\.tiktok\.com$/$important
 ! │
-! │ Backend de video.
-@@||tiktokv.com^$important
+! │ Comprobador de latencia; restaura la conexión a chats de voz P2P.
+@@/^latency\.discord\.media$/$important
 ! │
-! │ CDN global de video.
-@@||tiktokcdn.com^$important
+! │ Métricas de servidores; acelera mensajes en canales masivos.
+@@/^stat\.api\.telegram\.org$/$important
 ! │
-! │ Firma y seguridad de streaming.
-@@/^p16-sign-va\.tiktokcdn\.com$/$important
+! │ Señalización P2P; evita llamadas trabadas en estado "Conectando...".
+@@/^gateway\.telegram\.org$/$important
 ! │
-! │ CDN de Avatares y fotos de perfil.
-@@||ibyteimg.com^$important
-! └────────────────────────────────────────────────
+! │ Métricas de X; actualiza la pestaña Tendencias y carga hilos largos.
+@@/^telemetry\.twitter\.com$/$important
+! │
+! │ CDN de video de X; evita que los clips se queden cargando en bucle.
+@@||video.twimg.com^$important
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ====================================================================
-! CATEGORÍA 9: GAMING Y ECOSISTEMAS
-! ====================================================================
+! ========================================================================================
+!                            CATEGORÍA 7: GAMING Y ECOSISTEMAS
+! ========================================================================================
 !
-! ┌─ Subcategoría: Ecosistema Apple / Xbox (Logins)
-! ├────────────────────────────────────────────────
-! │ CDN visual App Store (iOS/macOS).
-@@||mzstatic.com^$important
+! ┌─ Subcategoría: PlayStation y Xbox
 ! │
-! │ Autenticación Xbox/Microsoft.
-@@/^login\.live\.com$/$important
+! │ Verificador PSN; evita que PS4/PS5 marquen error de red local.
+@@/^ena\.net\.playstation\.net$/$important
 ! │
-! │ Token de sesión, guardado en nube y metadata Xbox.
-@@/^user\.auth\.xboxlive\.com$/$important
-@@/^cloudsync\.xboxlive\.com$/$important
-@@/^title\.mgt\.xboxlive\.com$/$important
-! │
-! │ Red base para consola y juegos Xbox.
-@@||xboxlive.com^$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: PlayStation Network (PSN)
-! ├────────────────────────────────────────────────
-! │ Inicio de sesión.
-@@/^auth\.api\.sonyentertainmentnetwork\.com$/$important
-! │
-! │ Trofeos y perfiles.
+! │ Valida licencias digitales; quita el icono de candado de tus juegos.
 @@/^api\.playstation\.com$/$important
 ! │
-! │ Multijugador y red.
-@@/^ca\.psn\.services\.playstation\.net$/$important
+! │ Telemetría Sony; restaura la sincronización de Trofeos en la nube.
+@@/^telemetry-console\.api\.playstation\.com$/$important
 ! │
-! │ Imágenes de la interfaz.
-@@||static.playstation.com^$important
+! │ Métricas de interfaz; actualiza el contador de horas jugadas en PSN.
+@@/^telemetry-cii\.api\.playstation\.com$/$important
 ! │
-! │ Servidor de actualizaciones de juegos PS4/5.
-@@||dl.playstation.net^$important
-! └────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: PC Gaming (Steam & Discord)
-! ├────────────────────────────────────────────────
-! │ Gestor de conexión de Steam (Chat/Login).
-@@/^cm\.steampowered\.com$/$important
+! │ Sincronizador Microsoft; evita perder progreso de guardado en la nube.
+@@/^cloudsync\.xboxlive\.com$/$important
 ! │
-! │ Comprobador de latencia de voz (Discord).
-@@/^latency\.discord\.media$/$important
-! └────────────────────────────────────────────────
+! │ Gestor de títulos; vital para logros y acceso a red multijugador.
+@@/^title\.mgt\.xboxlive\.com$/$important
+! │
+! │ Telemetría Xbox de PC; su bloqueo interrumpe el multijugador de PC.
+@@/^v10\.events\.data\.microsoft\.com$/$important
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
 ! ┌─ Subcategoría: Roblox
-! ├────────────────────────────────────────────────
-! │ Login.
-@@/^auth\.roblox\.com$/$important
 ! │
-! │ APIs de sistema.
-@@||robloxapis.com^$important
-! │
-! │ Funciones básicas.
-@@/^api\.roblox\.com$/$important
-! │
-! │ Configuración del motor de físicas y assets.
+! │ Ajustes del motor; evita el congelamiento del motor de físicas 3D.
 @@/^clientsettings\.roblox\.com$/$important
-@@/^assetgame\.roblox\.com$/$important
 ! │
-! │ Servidores de juego.
-@@/^games\.roblox\.com$/$important
-! │
-! │ Guardado de progreso en la nube.
+! │ Nube de Roblox; necesario para cargar progreso en mundos virtuales.
 @@/^gamepersistence\.roblox\.com$/$important
 ! │
-! │ CDN de texturas y assets 3D.
-@@||rbxcdn.com^$important
+! │ Métricas de latencia; su bloqueo causa el error de conexión 279.
+@@/^ecsv2\.roblox\.com$/$important
 ! │
-! │ Contenido subido por usuarios.
-@@||robloxusercontent.com^$important
+! │ Analíticas de rendimiento; estabiliza el framerate en partidas.
+@@/^metrics\.roblox\.com$/$important
 ! │
-! │ Personalización.
-@@/^avatar\.roblox\.com$/$important
-! └────────────────────────────────────────────────
+! │ CDN visual; carga texturas, ropa de avatares y carátulas de mundos.
+@@||images.roblox.com^$important
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ┌─ Subcategoría: Juegos Móviles (Activision / King)
-! ├────────────────────────────────────────────────
-! │ Sincronización Candy Crush.
+! ┌─ Subcategoría: Juegos Móviles (King / Supercell / Activision)
+! │
+! │ Login central; si cae, los juegos de Candy Crush no abren la sesión.
 @@/^midas\.king\.com$/$important
 ! │
-! │ Servidores Candy Crush.
-@@/^candycrush\.king\.com$/$important
+! │ Backend base de King; guarda niveles y eventos temporales en local.
+@@/^king\.com$/$important
 ! │
-! │ Servidores CoD Mobile (Tencent).
-@@||proximabeta.com^$important
+! │ Analíticas de juego; vincula el Supercell ID para guardar progreso.
+@@/^analytics\.supercell\.com$/$important
 ! │
-! │ Nodos de conexión multijugador.
-@@||tencentgames.com^$important
-! └────────────────────────────────────────────────
+! │ Telemetría CoD; restaura el emparejamiento online sin esperas.
+@@/^telemetry\.activision\.com$/$important
+! │
+! │ Nodos de Tencent; indispensable para iniciar partidas en CoD Mobile.
+@@/^gcloud\.tencent\.com$/$important
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ====================================================================
-! CATEGORÍA 10: HARDWARE Y SOPORTE TV
-! ====================================================================
+! ========================================================================================
+!                            CATEGORÍA 8: HARDWARE Y SMART TV
+! ========================================================================================
 !
 ! ┌─ Subcategoría: LG Smart TV
-! ├────────────────────────────────────────────────
-! │ Tienda de apps (WebOS) y funciones Smart.
-@@/^apps\.svc\.lgappstv\.com$/$important
-@@/^smart\.svc\.lgappstv\.com$/$important
 ! │
-! │ Telemetría técnica y catálogos online.
+! │ Base operativa de LG; repara el acceso general a Content Store.
 @@||lgtvonline.com^$important
 ! │
-! │ Actualizaciones críticas de firmware.
-@@/^us\.software\.lge\.com$/$important
-! └────────────────────────────────────────────────
+! │ Telemetría de la tienda webOS; permite actualizar apps instaladas.
+@@/^lgtvonline\.lge\.com$/$important
+! │
+! │ Rastreo ACR obligatorio; su bloqueo impide abrir apps como YouTube.
+@@/^qt2-ngfts\.lge\.com$/$important
+! │
+! │ Soporte de tienda; evita errores de "red no disponible" en menús.
+@@/^ibis\.lgappstv\.com$/$important
+! │
+! │ Perfil webOS; vincula la cuenta para usar comandos de voz del control.
+@@/^lgosprof\.lge\.com$/$important
+! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ====================================================================
-! CATEGORÍA 11: HERRAMIENTAS DE RED LOCALES
-! ====================================================================
+! ========================================================================================
+!                        CATEGORÍA 11: HERRAMIENTAS DE RED LOCALES
+! ========================================================================================
 !
 ! ┌─ Subcategoría: Comprobadores de IP Pública
-! ├────────────────────────────────────────────────
-! │ Servidor de IP pública activo.
+! │
+! │ Servidor activo primario para consultar la IP pública.
 @@/^api\.ipify\.org$/$important,client=127.0.0.1
 ! │
-! │ Servidor de IP pública de respaldo.
+! │ Servidor de respaldo, vital si falla el nodo primario de IP externa.
 @@/^ipv4\.icanhazip\.com$/$important,client=127.0.0.1
 ! │
-! │ Servidor de IP pública de contingencia.
+! │ Tercer contingente de red local para diagnósticos de conectividad.
 @@/^ifconfig\.me$/$important,client=127.0.0.1
-! └────────────────────────────────────────────────
+! └───────────────────────────────────────────────────────────────────────────────────────
