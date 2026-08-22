@@ -3,31 +3,31 @@
 ! ========================================================================================
 !
 ! ========================================================================================
-! ┌─
-! │ TÍTULO      : Lista de Mitigación de Falsos Positivos (Anti-Breakage Whitelist)
-! │ FUNCIÓN     : Reglas críticas para la estabilidad de aplicaciones y servicios.
-! │ MOTOR       : AdGuard Home (Soporte Nativo Híbrido)
-! │               - /^...$/  = Desbloqueo estricto exacto (Seguridad alta).
-! │               - @@||...^ = Desbloqueo dominio y subdominios (Ecosistemas críticos).
-! ├───────────────────────────────────────────────────────────────────────────────────────
-! │ DESCRIPCIÓN : Filtro diseñado para restaurar la funcionalidad operativa en red.
-! │               Desbloquea subdominios de infraestructura, analíticas y prevención
-! │               de fraude que suelen ser catalogados erróneamente como "rastreadores"
-! │               por listas de privacidad agresivas.
-! │
-! │               Su aplicación es estrictamente obligatoria para evitar fallos de
-! │               autenticación, pérdida de historiales de reproducción, bloqueos en
-! │               pasarelas bancarias y problemas en la descarga de archivos multimedia,
-! │               garantizando la estabilidad del ecosistema digital sin comprometer
-! │               la seguridad ni la privacidad general de la red.
-! └───────────────────────────────────────────────────────────────────────────────────────
+! ┌──────────────────────────────────────────────────────────────────────────────────────┐
+! │ TÍTULO      : Lista de Mitigación de Falsos Positivos (Anti-Breakage Whitelist)      │
+! │ FUNCIÓN     : Reglas críticas para la estabilidad de aplicaciones y servicios.       │
+! │ MOTOR       : AdGuard Home (Soporte Nativo Híbrido)                                  │
+! │               - /^...$/  = Desbloqueo estricto exacto (Seguridad alta).              │
+! │               - @@||...^ = Desbloqueo dominio y subdominios (Ecosistemas críticos).  │
+! ├──────────────────────────────────────────────────────────────────────────────────────┤
+! │ DESCRIPCIÓN : Filtro diseñado para restaurar la funcionalidad operativa en red.      │
+! │               Desbloquea subdominios de infraestructura, analíticas y prevención     │
+! │               de fraude que suelen ser catalogados erróneamente como "rastreadores"  │
+! │               por listas de privacidad agresivas.                                    │
+! │                                                                                      │
+! │               Su aplicación es estrictamente obligatoria para evitar fallos de       │
+! │               autenticación, pérdida de historiales de reproducción, bloqueos en     │
+! │               pasarelas bancarias y problemas en la descarga de archivos multimedia, │
+! │               garantizando la estabilidad del ecosistema digital sin comprometer     │
+! │               la seguridad ni la privacidad general de la red.                       │
+! └──────────────────────────────────────────────────────────────────────────────────────┘
 ! ========================================================================================
 !
 ! ========================================================================================
 !                CATEGORÍA 1: VERIFICACIÓN DE RED (NCSI) Y PORTALES CAUTIVOS
 ! ========================================================================================
 !
-! ┌─ Subcategoría: Android / Google
+! ┌─ Subcategoría: Android / Google (Base Motorola)
 ! │
 ! │ Evita que Android marque "Sin Internet" y rompa portales Wi-Fi.
 @@/^connectivitycheck\.gstatic\.com$/$important
@@ -54,7 +54,22 @@
 @@||msftncsi.com^$important
 ! └───────────────────────────────────────────────────────────────────────────────────────
 !
-! ┌─ Subcategoría: Consolas y Realidad Virtual
+! ┌─ Subcategoría: Hardware Móvil Asiático (Xiaomi y Oppo)
+! │
+! │ Validación de red en MIUI/HyperOS; evita falso estado offline en Xiaomi.
+@@/^connect\.rom\.miui\.com$/$important
+! │
+! │ Portal cautivo y validación de red en ColorOS (Oppo, Realme, OnePlus).
+@@/^connectivitycheck\.oppomobile\.com$/$important
+! └───────────────────────────────────────────────────────────────────────────────────────
+!
+! ┌─ Subcategoría: Smart TVs, Consolas e IoT
+! │
+! │ Evita avisos constantes de desconexión en Smart TVs Samsung.
+@@/^connectivitycheck\.samsung\.com$/$important
+! │
+! │ Permite a routers y placas Asus verificar conectividad externa.
+@@/^connectivitycheck\.asus\.com$/$important
 ! │
 ! │ Evita que visores Meta Quest pierdan acceso a la red local y web.
 @@/^connectivitycheck\.fb\.com$/$important
@@ -64,15 +79,6 @@
 ! │
 ! │ CDN de validación de Nintendo; sin él, el multijugador se cae.
 @@||ctest.cdn.nintendo.net^$important
-! └───────────────────────────────────────────────────────────────────────────────────────
-!
-! ┌─ Subcategoría: Smart TVs e IoT
-! │
-! │ Evita avisos constantes de desconexión en Smart TVs Samsung.
-@@/^connectivitycheck\.samsung\.com$/$important
-! │
-! │ Permite a routers y placas Asus verificar conectividad externa.
-@@/^connectivitycheck\.asus\.com$/$important
 ! └───────────────────────────────────────────────────────────────────────────────────────
 !
 ! ========================================================================================
@@ -166,6 +172,18 @@
 ! │
 ! │ Ruta alterna de Defender para firmas de virus de día cero.
 @@/^wdcpalt\.microsoft\.com$/$important
+! └───────────────────────────────────────────────────────────────────────────────────────
+!
+! ┌─ Subcategoría: Ecosistemas Móviles y Push (Crítico)
+! │
+! │ Servidor Apple Push; si cae, iOS/macOS dejan de recibir alertas.
+@@||push.apple.com^$important
+! │
+! │ Notificaciones push nativas de dispositivos Samsung (One UI).
+@@||push.samsungosp.com^$important
+! │
+! │ Nube HeyTap; vital para notificaciones en Oppo, Realme y OnePlus.
+@@||heytapmobile.com^$important
 ! │
 ! │ Validación Firebase; restaura notificaciones push en apps Android.
 @@/^firebaseinstallations\.googleapis\.com$/$important
