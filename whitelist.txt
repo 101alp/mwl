@@ -122,9 +122,15 @@
 ! │
 ! │ Motor IA antifraude; evita que bloqueen tu cuenta al comprar.
 @@/^analytics\.mercadolibre\.com$/$important
-!
-! │ Clic en productos patrocinados; evita la página de error en Amazon.
-@@/^s\.amazon-adsystem\.com$/$important
+! │
+! │ Redirección de productos patrocinados de Amazon (Norteamérica: MX, USA).
+@@/^unagi-na\.amazon\.com$/$important
+! │
+! │ Redirección de productos patrocinados de Amazon (Europa: ES, DE).
+@@/^unagi-eu\.amazon\.com$/$important
+! │
+! │ Redirección de productos patrocinados de Amazon (Global/Respaldo).
+@@/^unagi\.amazon\.com$/$important
 ! └───────────────────────────────────────────────────────────────────────────────────────
 !
 ! ┌─ Subcategoría: Bancos Nacionales y Pagos
