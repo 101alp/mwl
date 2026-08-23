@@ -122,6 +122,9 @@
 ! │
 ! │ Motor IA antifraude; evita que bloqueen tu cuenta al comprar.
 @@/^analytics\.mercadolibre\.com$/$important
+!
+! │ Redirección de productos patrocinados; evita la página de error (perrito) en Amazon.
+@@/^s\.amazon-adsystem\.com$/$important
 ! └───────────────────────────────────────────────────────────────────────────────────────
 !
 ! ┌─ Subcategoría: Bancos Nacionales y Pagos
