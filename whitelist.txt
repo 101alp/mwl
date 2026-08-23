@@ -4,22 +4,21 @@
 !
 ! ========================================================================================
 ! ┌──────────────────────────────────────────────────────────────────────────────────────┐
-! │ TÍTULO      : Lista de Mitigación de Falsos Positivos (Anti-Breakage Whitelist)      │
-! │ FUNCIÓN     : Reglas críticas para la estabilidad de aplicaciones y servicios.       │
+! │ TÍTULO      : Anti-Breakage Whitelist (Mitigación de Falsos Positivos)               │
+! │ FUNCIÓN     : Excepciones críticas para la estabilidad operativa de la red.          │
 ! │ MOTOR       : AdGuard Home (Soporte Nativo Híbrido)                                  │
-! │               - /^...$/  = Desbloqueo estricto exacto (Seguridad alta).              │
-! │               - @@||...^ = Desbloqueo dominio y subdominios (Ecosistemas críticos).  │
+! │               - /^...$/  = Exclusión exacta estricta (Alta precisión).               │
+! │               - @@||...^ = Exclusión recursiva (Ecosistemas y subdominios).          │
 ! ├──────────────────────────────────────────────────────────────────────────────────────┤
-! │ DESCRIPCIÓN : Filtro diseñado para restaurar la funcionalidad operativa en red.      │
-! │               Desbloquea subdominios de infraestructura, analíticas y prevención     │
-! │               de fraude que suelen ser catalogados erróneamente como "rastreadores"  │
-! │               por listas de privacidad agresivas.                                    │
+! │ DESCRIPCIÓN : Restaura dominios de infraestructura y telemetría benigna que las      │
+! │               listas agresivas (anti-tracking/spyware) bloquean por error.           │
+! │               Evita la inoperatividad total o parcial de servicios esenciales.       │
 ! │                                                                                      │
-! │               Su aplicación es estrictamente obligatoria para evitar fallos de       │
-! │               autenticación, pérdida de historiales de reproducción, bloqueos en     │
-! │               pasarelas bancarias y problemas en la descarga de archivos multimedia, │
-! │               garantizando la estabilidad del ecosistema digital sin comprometer     │
-! │               la seguridad ni la privacidad general de la red.                       │
+! │               Es indispensable para prevenir fallos severos. Ejemplos clave:         │
+! │               - s.youtube.com : Restaura la carga de contenido e historial.          │
+! │               - c.paypal.com  : Evita errores críticos en pasarelas de pago.         │
+! │                                                                                      │
+! │               Garantiza la estabilidad sin comprometer la seguridad de la red.       │
 ! └──────────────────────────────────────────────────────────────────────────────────────┘
 ! ========================================================================================
 !
