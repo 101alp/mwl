@@ -1,24 +1,24 @@
-! ==============================================================================
-! AEGIS LUMINA: WHITELIST ESTRICTA [Privacidad + Historial]
-! ==============================================================================
+! ============================================================================================================
+!                                      AEGIS LUMINA: WHITELIST ESTRICTA
+! ============================================================================================================
 ! PROPOSITO: Mitigar fallos criticos generados por listas DNS agresivas.
 ! PRINCIPIO: Fallo visual = Bloqueado. Fallo funcional critico = Autorizado.
 ! REGLA 0: Solo dominios de rastreo mixto. Cero excepciones obvias.
 !
 ! SINTAXIS ADMITIDA:
-! [ @@||...^ ] Exclusion recursiva (Abarca el dominio y sus subdominios).
-! [ @@/^...$/ ] Exclusion exacta estricta via Regex (Maxima precision).
+! [ @@||...^ ] - Exclusion recursiva (Abarca el dominio y sus subdominios).
+! [ @@/^...$/ ] - Exclusion exacta estricta via Regex (Maxima precision).
 !
 ! EXCEPCIONES PERMITIDAS SOLO PARA:
 ! [1] Validacion de red (NCSI) y portales cautivos.
 ! [2] Pasarelas de pago, validacion antifraude y captchas.
 ! [3] CDNs esenciales, resolucion DRM y carga de medios.
 ! [4] Experiencia de usuario innegociable (Push, historial).
-! ==============================================================================
+! ============================================================================================================
 !
-! ==============================================================================
-! CATEGORIA 1: VERIFICACION DE RED (NCSI) Y PORTALES CAUTIVOS
-! ==============================================================================
+! ============================================================================================================
+!                         CATEGORIA 1: VERIFICACION DE RED (NCSI) Y PORTALES CAUTIVOS
+! ============================================================================================================
 !
 ! --- Subcategoria: Android, Apple, Windows e IoT ---
 !
@@ -61,9 +61,9 @@
 !  CDN de validacion de Nintendo; sin el, el multijugador se cae.
 @@||ctest.cdn.nintendo.net^
 !
-! ==============================================================================
-! CATEGORIA 2: SEGURIDAD, DESAFIOS Y CAPTCHAS
-! ==============================================================================
+! ============================================================================================================
+!                                 CATEGORIA 2: SEGURIDAD, DESAFIOS Y CAPTCHAS
+! ============================================================================================================
 !
 ! --- Subcategoria: Desafios Anti-Bot y Cloudflare ---
 !
@@ -76,9 +76,9 @@
 !  Resuelve el desafio Turnstile de Cloudflare; evita bucles infinitos.
 @@/^challenges\.cloudflare\.com$/
 !
-! ==============================================================================
-! CATEGORIA 3: SERVICIOS FINANCIEROS Y COMERCIO (CRITICO)
-! ==============================================================================
+! ============================================================================================================
+!                           CATEGORIA 3: SERVICIOS FINANCIEROS Y COMERCIO (CRITICO)
+! ============================================================================================================
 !
 ! --- Subcategoria: Pasarelas Globales, Pagos y Antifraude ---
 !
@@ -124,9 +124,9 @@
 !  Dominio de rastreo y estatus de paqueteria de MercadoLibre.
 @@||melilogistics.com^
 !
-! ==============================================================================
-! CATEGORIA 4: SERVICIOS DEL SO, NUBE Y NOTIFICACIONES
-! ==============================================================================
+! ============================================================================================================
+!                             CATEGORIA 4: SERVICIOS DEL SO, NUBE Y NOTIFICACIONES
+! ============================================================================================================
 !
 ! --- Subcategoria: Ecosistemas, Push y Verificacion Core ---
 !
@@ -163,9 +163,9 @@
 !  Sincronizacion de perfiles y actualizacion de extensiones en Google Chrome.
 @@||clients4.google.com^
 !
-! ==============================================================================
-! CATEGORIA 5: ENTRETENIMIENTO, MEDIOS Y STREAMING
-! ==============================================================================
+! ============================================================================================================
+!                               CATEGORIA 5: ENTRETENIMIENTO, MEDIOS Y STREAMING
+! ============================================================================================================
 !
 ! --- Subcategoria: YouTube, Spotify, Twitch y Streaming Global ---
 !
@@ -214,9 +214,9 @@
 !  Certificado DRM; permite reproducir streaming en calidad HD y 4K.
 @@/^widevine\.l1\.google\.com$/
 !
-! ==============================================================================
-! CATEGORIA 6: COMUNICACION Y REDES SOCIALES
-! ==============================================================================
+! ============================================================================================================
+!                                 CATEGORIA 6: COMUNICACION Y REDES SOCIALES
+! ============================================================================================================
 !
 ! --- Subcategoria: Meta, TikTok, Discord, Telegram y X ---
 !
@@ -247,9 +247,9 @@
 !  CDN de video de X; evita que los clips se queden cargando en bucle.
 @@||video.twimg.com^
 !
-! ==============================================================================
-! CATEGORIA 7: GAMING Y ECOSISTEMAS
-! ==============================================================================
+! ============================================================================================================
+!                                      CATEGORIA 7: GAMING Y ECOSISTEMAS
+! ============================================================================================================
 !
 ! --- Subcategoria: PlayStation, Xbox, Roblox, Supercell y Tencent ---
 !
@@ -298,9 +298,9 @@
 !  Autenticacion ID Supercell; evita fallos al recuperar partidas en Clash/Hay Day.
 @@||id.supercell.com^
 !
-! ==============================================================================
-! CATEGORIA 8: HARDWARE Y SMART TV
-! ==============================================================================
+! ============================================================================================================
+!                                       CATEGORIA 8: HARDWARE Y SMART TV
+! ============================================================================================================
 !
 ! --- Subcategoria: LG webOS y Ecosistemas de TV ---
 !
@@ -316,17 +316,17 @@
 !  Perfil webOS; vincula la cuenta para usar comandos de voz del control.
 @@/^lgosprof\.lge\.com$/
 !
-! ==============================================================================
-! CATEGORIA 11: HERRAMIENTAS DE RED LOCALES
-! ==============================================================================
+! ============================================================================================================
+!                                  CATEGORIA 11: HERRAMIENTAS DE RED LOCALES
+! ============================================================================================================
 !
 ! --- Subcategoria: Comprobadores de IP Publica ---
 !
 !  Servidor activo primario para consultar la IP publica.
-@@/^api\.ipify\.org$,client=127.0.0.1
+@@/^api\.ipify\.org$/$client=127.0.0.1
 !
 !  Servidor de respaldo, vital si falla el nodo primario de IP externa.
-@@/^ipv4\.icanhazip\.com$,client=127.0.0.1
+@@/^ipv4\.icanhazip\.com$/$client=127.0.0.1
 !
 !  Tercer contingente de red local para diagnosticos de conectividad.
-@@/^ifconfig\.me$,client=127.0.0.1
+@@/^ifconfig\.me$/$client=127.0.0.1
