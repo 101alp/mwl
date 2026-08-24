@@ -1,6 +1,6 @@
-! ============================================================================================================
-!                                      AEGIS LUMINA: WHITELIST ESTRICTA
-! ============================================================================================================
+!
+! AEGIS LUMINA: WHITELIST ESTRICTA
+!
 ! PROPOSITO: Mitigar fallos criticos generados por listas DNS agresivas.
 ! PRINCIPIO: Fallo visual = Bloqueado. Fallo funcional critico = Autorizado.
 ! REGLA 0: Solo dominios de rastreo mixto. Cero excepciones obvias.
@@ -14,319 +14,309 @@
 ! [2] Pasarelas de pago, validacion antifraude y captchas.
 ! [3] CDNs esenciales, resolucion DRM y carga de medios.
 ! [4] Experiencia de usuario innegociable (Push, historial).
-! ============================================================================================================
 !
-! ============================================================================================================
-!                         CATEGORIA 1: VERIFICACION DE RED (NCSI) Y PORTALES CAUTIVOS
-! ============================================================================================================
 !
-! --- Subcategoria: Android, Apple, Windows e IoT ---
+! [CAT:1] VERIFICACION DE RED (NCSI) Y PORTALES CAUTIVOS
 !
-!  Evita que Android marque "Sin Internet" y rompa portales Wi-Fi.
+! [SUB] ANDROID, APPLE, WINDOWS E IOT
+!
+! [INFO] Evita que Android marque "Sin Internet" y rompa portales Wi-Fi.
 @@/^connectivitycheck\.gstatic\.com$/
 !
-!  Respaldo oficial de AOSP para validar conexion a internet local.
+! [INFO] Respaldo oficial de AOSP para validar conexion a internet local.
 @@/^connectivitycheck\.android\.com$/
 !
-!  Permite abrir portales cautivos en redes publicas desde iOS/macOS.
+! [INFO] Permite abrir portales cautivos en redes publicas desde iOS/macOS.
 @@/^captive\.apple\.com$/
 !
-!  Descarga perfiles de red vitales y valida cifrados TLS en Apple.
+! [INFO] Descarga perfiles de red vitales y valida cifrados TLS en Apple.
 @@/^configuration\.apple\.com$/
 !
-!  Evita que Windows 10/11 marque la red como "Sin acceso a Internet".
+! [INFO] Evita que Windows 10/11 marque la red como "Sin acceso a Internet".
 @@||msftconnecttest.com^
 !
-!  Validacion de red legacy para Windows Server y sistemas antiguos.
+! [INFO] Validacion de red legacy para Windows Server y sistemas antiguos.
 @@||msftncsi.com^
 !
-!  Validacion de red en MIUI/HyperOS; evita falso estado offline en Xiaomi.
+! [INFO] Validacion de red en MIUI/HyperOS; evita falso estado offline en Xiaomi.
 @@/^connect\.rom\.miui\.com$/
 !
-!  Portal cautivo y validacion de red en ColorOS (Oppo, Realme, OnePlus).
+! [INFO] Portal cautivo y validacion de red en ColorOS (Oppo, Realme, OnePlus).
 @@/^connectivitycheck\.oppomobile\.com$/
 !
-!  Evita avisos constantes de desconexion en Smart TVs Samsung.
+! [INFO] Evita avisos constantes de desconexion en Smart TVs Samsung.
 @@/^connectivitycheck\.samsung\.com$/
 !
-!  Permite a routers y placas Asus verificar conectividad externa.
+! [INFO] Permite a routers y placas Asus verificar conectividad externa.
 @@/^connectivitycheck\.asus\.com$/
 !
-!  Evita que visores Meta Quest pierdan acceso a la red local y web.
+! [INFO] Evita que visores Meta Quest pierdan acceso a la red local y web.
 @@/^connectivitycheck\.fb\.com$/
 !
-!  Vital para conectar Nintendo Switch a partidas online y la eShop.
+! [INFO] Vital para conectar Nintendo Switch a partidas online y la eShop.
 @@/^conntest\.nintendowifi\.net$/
 !
-!  CDN de validacion de Nintendo; sin el, el multijugador se cae.
+! [INFO] CDN de validacion de Nintendo; sin el, el multijugador se cae.
 @@||ctest.cdn.nintendo.net^
 !
-! ============================================================================================================
-!                                 CATEGORIA 2: SEGURIDAD, DESAFIOS Y CAPTCHAS
-! ============================================================================================================
 !
-! --- Subcategoria: Desafios Anti-Bot y Cloudflare ---
+! [CAT:2] SEGURIDAD, DESAFIOS Y CAPTCHAS
 !
-!  Infraestructura oficial para resolver captchas y acceder a cuentas.
+! [SUB] DESAFIOS ANTI-BOT Y CLOUDFLARE
+!
+! [INFO] Infraestructura oficial para resolver captchas y acceder a cuentas.
 @@||recaptcha.net^
 !
-!  Sistema anti-bot critico en Cloudflare y sitios de alta seguridad.
+! [INFO] Sistema anti-bot critico en Cloudflare y sitios de alta seguridad.
 @@||hcaptcha.com^
 !
-!  Resuelve el desafio Turnstile de Cloudflare; evita bucles infinitos.
+! [INFO] Resuelve el desafio Turnstile de Cloudflare; evita bucles infinitos.
 @@/^challenges\.cloudflare\.com$/
 !
-! ============================================================================================================
-!                           CATEGORIA 3: SERVICIOS FINANCIEROS Y COMERCIO (CRITICO)
-! ============================================================================================================
 !
-! --- Subcategoria: Pasarelas Globales, Pagos y Antifraude ---
+! [CAT:3] SERVICIOS FINANCIEROS Y COMERCIO (CRITICO)
 !
-!  Vital para el token 3D Secure al verificar compras con tarjeta.
+! [SUB] PASARELAS GLOBALES, PAGOS Y ANTIFRAUDE
+!
+! [INFO] Vital para el token 3D Secure al verificar compras con tarjeta.
 @@||cardinalcommerce.com^
 !
-!  Renderiza los botones de pago web; sin esto, no puedes usar PayPal.
+! [INFO] Renderiza los botones de pago web; sin esto, no puedes usar PayPal.
 @@||paypalobjects.com^
 !
-!  Prevencion de fraude de PayPal; evita bloqueos por "riesgo alto".
+! [INFO] Prevencion de fraude de PayPal; evita bloqueos por "riesgo alto".
 @@||c.paypal.com^
 !
-!  Pasarela de pagos y antifraude web/apps de terceros (Stripe).
+! [INFO] Pasarela de pagos y antifraude web/apps de terceros (Stripe).
 @@||js.stripe.com^
 !
-!  Procesa el checkout de terceros; evita pagos rechazados genericos.
+! [INFO] Procesa el checkout de terceros; evita pagos rechazados genericos.
 @@/^api\.mercadopago\.com$/
 !
-!  Validacion de humano de MercadoPago para autorizar transacciones.
+! [INFO] Validacion de humano de MercadoPago para autorizar transacciones.
 @@/^tracker\.mercadopago\.com$/
 !
-!  Pasarela nativa de BBVA; indispensable para pagos en comercios MX.
+! [INFO] Pasarela nativa de BBVA; indispensable para pagos en comercios MX.
 @@||openpay.mx^
 !
-!  Metricas de interfaz; bloquea la app en pantalla azul si se omite.
+! [INFO] Metricas de interfaz; bloquea la app en pantalla azul si se omite.
 @@/^ecs\.bbva\.com$/
 !
-!  Servidor centralizado; restaura transferencias SPEI en tiempo real.
+! [INFO] Servidor centralizado; restaura transferencias SPEI en tiempo real.
 @@/^api\.banorte\.com$/
 !
-!  Evita que Coppel bloquee la cuenta por "software malicioso" (Fingerprinting).
+! [INFO] Evita que Coppel bloquee la cuenta por "software malicioso" (Fingerprinting).
 @@/^device\.coppel\.com$/
 !
-!  ThreatMetrix: valida la identidad del dispositivo en bancos globales.
+! [INFO] ThreatMetrix: valida la identidad del dispositivo en bancos globales.
 @@/^online-metrix\.net$/
 !
-!  Huella digital legal; restaura el login en HSBC e Inbursa.
+! [INFO] Huella digital legal; restaura el login en HSBC e Inbursa.
 @@/^api-secure\.solvedevices\.com$/
 !
-!  CDN de Akamai para infraestructura y servicios bancarios (Citibanamex).
+! [INFO] CDN de Akamai para infraestructura y servicios bancarios (Citibanamex).
 @@/^banamex\.com\.edgekey\.net$/
 !
-!  Dominio de rastreo y estatus de paqueteria de MercadoLibre.
+! [INFO] Dominio de rastreo y estatus de paqueteria de MercadoLibre.
 @@||melilogistics.com^
 !
-! ============================================================================================================
-!                             CATEGORIA 4: SERVICIOS DEL SO, NUBE Y NOTIFICACIONES
-! ============================================================================================================
 !
-! --- Subcategoria: Ecosistemas, Push y Verificacion Core ---
+! [CAT:4] SERVICIOS DEL SO, NUBE Y NOTIFICACIONES
 !
-!  Servicio CoreLocation; restaura el GPS y mapas en dispositivos iOS.
+! [SUB] ECOSISTEMAS, PUSH Y VERIFICACION CORE
+!
+! [INFO] Servicio CoreLocation; restaura el GPS y mapas en dispositivos iOS.
 @@/^gsp1\.apple\.com$/
 !
-!  Diagnostico de red celular y ubicacion para el ecosistema Apple.
+! [INFO] Diagnostico de red celular y ubicacion para el ecosistema Apple.
 @@/^gs-loc\.apple\.com$/
 !
-!  Nube de Windows Defender; evita que el antivirus detenga updates.
+! [INFO] Nube de Windows Defender; evita que el antivirus detenga updates.
 @@/^wdcp\.microsoft\.com$/
 !
-!  Ruta alterna de Defender para firmas de virus de dia cero.
+! [INFO] Ruta alterna de Defender para firmas de virus de dia cero.
 @@/^wdcpalt\.microsoft\.com$/
 !
-!  CDN de autenticacion y scripts de inicio de sesion Microsoft / Xbox / Office.
+! [INFO] CDN de autenticacion y scripts de inicio de sesion Microsoft / Xbox / Office.
 @@||aadcdn.msftauth.net^
 !
-!  Servidor Apple Push; si cae, iOS/macOS dejan de recibir alertas.
+! [INFO] Servidor Apple Push; si cae, iOS/macOS dejan de recibir alertas.
 @@||push.apple.com^
 !
-!  Notificaciones push nativas de dispositivos Samsung (One UI).
+! [INFO] Notificaciones push nativas de dispositivos Samsung (One UI).
 @@||push.samsungosp.com^
 !
-!  Nube HeyTap; vital para notificaciones en Oppo, Realme y OnePlus.
+! [INFO] Nube HeyTap; vital para notificaciones en Oppo, Realme y OnePlus.
 @@||heytapmobile.com^
 !
-!  Validacion Firebase; restaura notificaciones push en apps Android.
+! [INFO] Validacion Firebase; restaura notificaciones push en apps Android.
 @@/^firebaseinstallations\.googleapis\.com$/
 !
-!  Check-in central de Google Play Services y sincronizacion Android.
+! [INFO] Check-in central de Google Play Services y sincronizacion Android.
 @@/^android\.clients\.google\.com$/
 !
-!  Sincronizacion de perfiles y actualizacion de extensiones en Google Chrome.
+! [INFO] Sincronizacion de perfiles y actualizacion de extensiones en Google Chrome.
 @@||clients4.google.com^
 !
-! ============================================================================================================
-!                               CATEGORIA 5: ENTRETENIMIENTO, MEDIOS Y STREAMING
-! ============================================================================================================
 !
-! --- Subcategoria: YouTube, Spotify, Twitch y Streaming Global ---
+! [CAT:5] ENTRETENIMIENTO, MEDIOS Y STREAMING
 !
-!  API interna movil; si cae, la app de YouTube no carga contenido.
+! [SUB] YOUTUBE, SPOTIFY, TWITCH Y STREAMING GLOBAL
+!
+! [INFO] API interna movil; si cae, la app de YouTube no carga contenido.
 @@/^youtubei\.googleapis\.com$/
 !
-!  Guarda historial y minutos reproducidos en YouTube.
+! [INFO] Guarda historial y minutos reproducidos en YouTube.
 @@/^s\.youtube\.com$/
 !
-!  Manifiesto de Twitch; indispensable para iniciar streams en vivo.
+! [INFO] Manifiesto de Twitch; indispensable para iniciar streams en vivo.
 @@/^usher\.ttvnw\.net$/
 !
-!  Nodos de sesion de Spotify; evita errores de inicio en escritorio.
+! [INFO] Nodos de sesion de Spotify; evita errores de inicio en escritorio.
 @@/^spclient\.wg\.spotify\.com$/
 !
-!  Autenticacion de reproductores; vital para iniciar el audio.
+! [INFO] Autenticacion de reproductores; vital para iniciar el audio.
 @@/^apresolve\.spotify\.com$/
 !
-!  Backend tecnico de Disney+; evita la pantalla de carga infinita.
+! [INFO] Backend tecnico de Disney+; evita la pantalla de carga infinita.
 @@||bamgrid.com^
 !
-!  Secuencia de arranque en TVs; evita que Netflix se quede en el logo.
+! [INFO] Secuencia de arranque en TVs; evita que Netflix se quede en el logo.
 @@/^appboot\.netflix\.com$/
 !
-!  Llave criptografica DRM; evita codigos de error al reproducir HD.
+! [INFO] Llave criptografica DRM; evita codigos de error al reproducir HD.
 @@/^codex\.nflxext\.com$/
 !
-!  Conexion a nodos locales OCA; acelera drasticamente el inicio del video.
+! [INFO] Conexion a nodos locales OCA; acelera drasticamente el inicio del video.
 @@/^oca\.netflix\.com$/
 !
-!  Gestion de sesiones; evita que la app Max te expulse constantemente.
+! [INFO] Gestion de sesiones; evita que la app Max te expulse constantemente.
 @@/^auth\.max\.com$/
 !
-!  Guarda el progreso/minuto exacto de reproduccion en Max.
+! [INFO] Guarda el progreso/minuto exacto de reproduccion en Max.
 @@/^markers\.api\.max\.com$/
 !
-!  Configura Prime Video en TVs; repara errores de inicio e interfaz.
+! [INFO] Configura Prime Video en TVs; repara errores de inicio e interfaz.
 @@/^atv-ps\.amazon\.com$/
 !
-!  Permite cambiar de perfil familiar y conectar la Smart TV en Disney+.
+! [INFO] Permite cambiar de perfil familiar y conectar la Smart TV en Disney+.
 @@/^disney\.connections\.api\.disney\.com$/
 !
-!  Enrutamiento local; restaura el boton de enviar a la TV (Chromecast).
+! [INFO] Enrutamiento local; restaura el boton de enviar a la TV (Chromecast).
 @@||cast.google.com^
 !
-!  Certificado DRM; permite reproducir streaming en calidad HD y 4K.
+! [INFO] Certificado DRM; permite reproducir streaming en calidad HD y 4K.
 @@/^widevine\.l1\.google\.com$/
 !
-! ============================================================================================================
-!                                 CATEGORIA 6: COMUNICACION Y REDES SOCIALES
-! ============================================================================================================
 !
-! --- Subcategoria: Meta, TikTok, Discord, Telegram y X ---
+! [CAT:6] COMUNICACION Y REDES SOCIALES
 !
-!  API Graph; restaura "Iniciar sesion con FB" en sitios de terceros.
+! [SUB] META, TIKTOK, DISCORD, TELEGRAM Y X
+!
+! [INFO] API Graph; restaura "Iniciar sesion con FB" en sitios de terceros.
 @@/^graph\.facebook\.com$/
 !
-!  API base; repara los Mensajes Directos y la pestaña de Explorar en Instagram.
+! [INFO] API base; repara los Mensajes Directos y la pestaña de Explorar en Instagram.
 @@/^graph\.instagram\.com$/
 !
-!  API movil principal; necesaria para cargar feeds y reels sin errores.
+! [INFO] API movil principal; necesaria para cargar feeds y reels sin errores.
 @@/^i\.instagram\.com$/
 !
-!  Servidor Push; evita que las fotos de perfil se queden en gris en WhatsApp.
+! [INFO] Servidor Push; evita que las fotos de perfil se queden en gris en WhatsApp.
 @@/^pps\.whatsapp\.net$/
 !
-!  Red de archivos; restaura notas de voz y descarga de stickers pesados.
+! [INFO] Red de archivos; restaura notas de voz y descarga de stickers pesados.
 @@||cdn.whatsapp.net^
 !
-!  API de datos critica; sin ella, TikTok no pasa de la pantalla inicial.
+! [INFO] API de datos critica; sin ella, TikTok no pasa de la pantalla inicial.
 @@/^api\.tiktok\.com$/
 !
-!  Comprobador de latencia; restaura la conexion a chats de voz P2P en Discord.
+! [INFO] Comprobador de latencia; restaura la conexion a chats de voz P2P en Discord.
 @@/^latency\.discord\.media$/
 !
-!  Señalizacion P2P; evita llamadas trabadas en estado "Conectando..." en Telegram.
+! [INFO] Señalizacion P2P; evita llamadas trabadas en estado "Conectando..." en Telegram.
 @@/^gateway\.telegram\.org$/
 !
-!  CDN de video de X; evita que los clips se queden cargando en bucle.
+! [INFO] CDN de video de X; evita que los clips se queden cargando en bucle.
 @@||video.twimg.com^
 !
-! ============================================================================================================
-!                                      CATEGORIA 7: GAMING Y ECOSISTEMAS
-! ============================================================================================================
 !
-! --- Subcategoria: PlayStation, Xbox, Roblox, Supercell y Tencent ---
+! [CAT:7] GAMING Y ECOSISTEMAS
 !
-!  Verificador PSN; evita que PS4/PS5 marquen error de red local.
+! [SUB] PLAYSTATION, XBOX, ROBLOX, SUPERCELL Y TENCENT
+!
+! [INFO] Verificador PSN; evita que PS4/PS5 marquen error de red local.
 @@/^ena\.net\.playstation\.net$/
 !
-!  Valida licencias digitales; quita el icono de candado de tus juegos en PlayStation.
+! [INFO] Valida licencias digitales; quita el icono de candado de tus juegos en PlayStation.
 @@/^api\.playstation\.com$/
 !
-!  Sincronizador Microsoft; evita perder progreso de guardado en la nube en Xbox.
+! [INFO] Sincronizador Microsoft; evita perder progreso de guardado en la nube en Xbox.
 @@/^cloudsync\.xboxlive\.com$/
 !
-!  Gestor de titulos; vital para logros y acceso a red multijugador.
+! [INFO] Gestor de titulos; vital para logros y acceso a red multijugador.
 @@/^title\.mgt\.xboxlive\.com$/
 !
-!  Ajustes del motor; evita el congelamiento del motor de fisicas 3D en Roblox.
+! [INFO] Ajustes del motor; evita el congelamiento del motor de fisicas 3D en Roblox.
 @@/^clientsettings\.roblox\.com$/
 !
-!  Nube de Roblox; necesario para cargar progreso en mundos virtuales.
+! [INFO] Nube de Roblox; necesario para cargar progreso en mundos virtuales.
 @@/^gamepersistence\.roblox\.com$/
 !
-!  CDN visual; carga texturas, ropa de avatares y caratulas de mundos en Roblox.
+! [INFO] CDN visual; carga texturas, ropa de avatares y caratulas de mundos en Roblox.
 @@||images.roblox.com^
 !
-!  Login central; si cae, los juegos de King no abren la sesion.
+! [INFO] Login central; si cae, los juegos de King no abren la sesion.
 @@/^midas\.king\.com$/
 !
-!  Backend base de King; guarda niveles y eventos temporales en local.
+! [INFO] Backend base de King; guarda niveles y eventos temporales en local.
 @@/^king\.com$/
 !
-!  Nodos de Tencent; indispensable para iniciar partidas en CoD Mobile.
+! [INFO] Nodos de Tencent; indispensable para iniciar partidas en CoD Mobile.
 @@/^gcloud\.tencent\.com$/
 !
-!  Demonware: Motor de matchmaking de Activision para juegos online.
+! [INFO] Demonware: Motor de matchmaking de Activision para juegos online.
 @@||demonware.net^
 !
-!  Vanguard: Sistemas de autenticacion y anti-cheat en battle.net / CoD.
+! [INFO] Vanguard: Sistemas de autenticacion y anti-cheat en battle.net / CoD.
 @@||vanguard.battle.net^
 !
-!  Variante de Tencent Games para descarga de mapas y balanceo de carga en movil.
+! [INFO] Variante de Tencent Games para descarga de mapas y balanceo de carga en movil.
 @@/^gcloud\.tencentgames\.com$/
 !
-!  CDN de Roblox; indispensable para evitar errores de carga de assets.
+! [INFO] CDN de Roblox; indispensable para evitar errores de carga de assets.
 @@||rbxcdn.com^
 !
-!  Autenticacion ID Supercell; evita fallos al recuperar partidas en Clash/Hay Day.
+! [INFO] Autenticacion ID Supercell; evita fallos al recuperar partidas en Clash/Hay Day.
 @@||id.supercell.com^
 !
-! ============================================================================================================
-!                                       CATEGORIA 8: HARDWARE Y SMART TV
-! ============================================================================================================
 !
-! --- Subcategoria: LG webOS y Ecosistemas de TV ---
+! [CAT:8] HARDWARE Y SMART TV
 !
-!  Base operativa de LG; repara el acceso general a Content Store.
+! [SUB] LG WEBOS Y ECOSISTEMAS DE TV
+!
+! [INFO] Base operativa de LG; repara el acceso general a Content Store.
 @@||lgtvonline.com^
 !
-!  Telemetria de la tienda webOS; permite actualizar apps instaladas.
+! [INFO] Telemetria de la tienda webOS; permite actualizar apps instaladas.
 @@/^lgtvonline\.lge\.com$/
 !
-!  Soporte de tienda; evita errores de "red no disponible" en menus de LG.
+! [INFO] Soporte de tienda; evita errores de "red no disponible" en menus de LG.
 @@/^ibis\.lgappstv\.com$/
 !
-!  Perfil webOS; vincula la cuenta para usar comandos de voz del control.
+! [INFO] Perfil webOS; vincula la cuenta para usar comandos de voz del control.
 @@/^lgosprof\.lge\.com$/
 !
-! ============================================================================================================
-!                                  CATEGORIA 11: HERRAMIENTAS DE RED LOCALES
-! ============================================================================================================
 !
-! --- Subcategoria: Comprobadores de IP Publica ---
+! [CAT:11] HERRAMIENTAS DE RED LOCALES
 !
-!  Servidor activo primario para consultar la IP publica.
+! [SUB] COMPROBADORES DE IP PUBLICA
+!
+! [INFO] Servidor activo primario para consultar la IP publica.
 @@/^api\.ipify\.org$/$client=127.0.0.1
 !
-!  Servidor de respaldo, vital si falla el nodo primario de IP externa.
+! [INFO] Servidor de respaldo, vital si falla el nodo primario de IP externa.
 @@/^ipv4\.icanhazip\.com$/$client=127.0.0.1
 !
-!  Tercer contingente de red local para diagnosticos de conectividad.
+! [INFO] Tercer contingente de red local para diagnosticos de conectividad.
 @@/^ifconfig\.me$/$client=127.0.0.1
