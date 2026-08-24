@@ -1,7 +1,7 @@
 !
-! AEGIS LUMINA: WHITELIST ESTRICTA
+! Título: Aegis Lumina
 !
-! PROPOSITO: Mitigar fallos criticos generados por listas DNS agresivas.
+! PROPOSITO: Whitelist estricta para mitigar fallos criticos generados por listas DNS agresivas.
 ! PRINCIPIO: Fallo visual = Bloqueado. Fallo funcional critico = Autorizado.
 ! REGLA 0: Solo dominios de rastreo mixto. Cero excepciones obvias.
 !
