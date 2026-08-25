@@ -8,15 +8,92 @@
 !   [EX.REG]  @@/^...$/   - Regex exacta: Aísla y permite el endpoint crítico sin exponer la telemetría.
 !
 ! [EXCEPCIONES PERMITIDAS EXCLUSIVAMENTE PARA]
-!   [SEC.1] Validacion de red (NCSI), conectividad core del sistema operativo y portales cautivos.
-!   [SEC.2] Pasarelas de pago globales, motores de validacion antifraude y resolucion de captchas.
-!   [SEC.3] CDNs de infraestructura, flujos criticos de streaming y protocolos de proteccion DRM.
-!   [SEC.4] Servicios esenciales de experiencia de usuario (Notificaciones push y sincronizacion core e historial).
+!   [SEC.1] Validación de red (NCSI), conectividad core del sistema operativo y portales cautivos.
+!   [SEC.2] Pasarelas de pago globales, motores de validación antifraude y resolución de captchas.
+!   [SEC.3] CDNs de infraestructura, flujos críticos de streaming y protocolos de protección DRM.
+!   [SEC.4] Servicios esenciales de experiencia de usuario (Notificaciones, sincronización e historial).
 !
 !
-! [CAT:1] VERIFICACION DE RED (NCSI) Y PORTALES CAUTIVOS
+! [CAT:1] SEGURIDAD, VALIDACION DE CERTIFICADOS Y CAPTCHAS
 !
-! [SUB] ANDROID, APPLE, WINDOWS E IOT
+! [SUB] INFRAESTRUCTURA DE LLAVES PUBLICAS Y REVOCACION (SSL/TLS)
+@@||pki.goog^
+@@/^ocsp\.apple\.com$/
+@@/^ocsp2\.apple\.com$/
+!
+! [SUB] RESOLUCION ANTI-BOT, CLOUDFLARE Y CAPTCHAS
+@@||recaptcha.net^
+@@||hcaptcha.com^
+@@/^challenges\.cloudflare\.com$/
+@@||turnstile.cloudflare.com^
+@@||arkoselabs.com^
+@@||funcaptcha.com^
+!
+!
+! [CAT:2] SERVICIOS FINANCIEROS Y COMERCIO (CRITICO)
+!
+! [SUB] INFRAESTRUCTURA BANCARIA Y SEGURIDAD 3D SECURE
+@@||visa.com.edgekey.net^
+@@||mastercard.com.edgekey.net^
+@@||3ds-notify.com^
+@@/^verifiedbyvisa\.com$/
+@@||cardinalcommerce.com^
+@@/^cws\.banamex\.com$/
+@@/^banamex\.com\.edgekey\.net$/
+@@/^cws\.bbva\.com$/
+@@/^ecs\.bbva\.com$/
+@@/^api\.banorte\.com$/
+@@/^bancamovil\.inbursa\.com$/
+@@/^device\.coppel\.com$/
+@@/^online-metrix\.net$/
+@@/^api-secure\.solvedevices\.com$/
+!
+! [SUB] PASARELAS GLOBALES, CHECKOUT Y WALLETS MOBILES
+@@/^api\.paypal\.com$/
+@@||paypalobjects.com^
+@@||c.paypal.com^
+@@/^api\.stripe\.com$/
+@@||js.stripe.com^
+@@||adyen.com^
+@@||klarna.com^
+@@/^api\.mercadopago\.com$/
+@@/^tracker\.mercadopago\.com$/
+@@||openpay.mx^
+@@/^pay\.google\.com$/
+@@/^apple-pay-gateway\.apple\.com$/
+@@/^apple-pay-gateway-cert\.apple\.com$/
+@@||melilogistics.com^
+!
+!
+! [CAT:3] SERVICIOS DEL SO, NUBE Y NOTIFICACIONES
+!
+! [SUB] ECOSISTEMAS Y AUTENTICACION SINGLE SIGN-ON (SSO)
+@@||login.microsoftonline.com^
+@@||login.live.com^
+@@||msauth.net^
+@@||msauthimages.net^
+@@/^autologon\.microsoftazuread-sso\.com$/
+@@||aadcdn.msftauth.net^
+@@/^wdcp\.microsoft\.com$/
+@@/^wdcpalt\.microsoft\.com$/
+@@/^gsp1\.apple\.com$/
+@@/^gs-loc\.apple\.com$/
+@@/^api\.samsungcloudplatform\.com$/
+@@/^android\.clients\.google\.com$/
+@@||clients4.google.com^
+!
+! [SUB] NOTIFICACIONES PUSH Y VERIFICACION CORE
+@@/^fcmtoken\.googleapis\.com$/
+@@/^mtalk\.google\.com$/
+@@/^firebaseinstallations\.googleapis\.com$/
+@@||push.apple.com^
+@@||push.samsungosp.com^
+@@||heytapmobile.com^
+!
+!
+! [CAT:4] VERIFICACION DE RED (NCSI) Y PORTALES CAUTIVOS
+!
+! [SUB] ANDROID, APPLE, WINDOWS, SMART TV E IOT
 @@/^connectivitycheck\.gstatic\.com$/
 @@/^connectivitycheck\.android\.com$/
 @@/^captive\.apple\.com$/
@@ -30,109 +107,95 @@
 @@/^connectivitycheck\.fb\.com$/
 @@/^conntest\.nintendowifi\.net$/
 @@||ctest.cdn.nintendo.net^
+@@/^connectivitycheck\.smartthings\.com$/
+@@/^connectivity\.vizio\.com$/
+@@/^captive\.roku\.com$/
 !
-! [CAT:2] SEGURIDAD, DESAFIOS Y CAPTCHAS
-!
-! [SUB] DESAFIOS ANTI-BOT Y CLOUDFLARE
-@@||recaptcha.net^
-@@||hcaptcha.com^
-@@/^challenges\.cloudflare\.com$/
-!
-! [CAT:3] SERVICIOS FINANCIEROS Y COMERCIO (CRITICO)
-!
-! [SUB] PASARELAS GLOBALES, PAGOS Y ANTIFRAUDE
-@@||cardinalcommerce.com^
-@@||paypalobjects.com^
-@@||c.paypal.com^
-@@||js.stripe.com^
-@@/^api\.mercadopago\.com$/
-@@/^tracker\.mercadopago\.com$/
-@@||openpay.mx^
-@@/^ecs\.bbva\.com$/
-@@/^api\.banorte\.com$/
-@@/^device\.coppel\.com$/
-@@/^online-metrix\.net$/
-@@/^api-secure\.solvedevices\.com$/
-@@/^banamex\.com\.edgekey\.net$/
-@@||melilogistics.com^
-!
-! [CAT:4] SERVICIOS DEL SO, NUBE Y NOTIFICACIONES
-!
-! [SUB] ECOSISTEMAS, PUSH Y VERIFICACION CORE
-@@/^gsp1\.apple\.com$/
-@@/^gs-loc\.apple\.com$/
-@@/^wdcp\.microsoft\.com$/
-@@/^wdcpalt\.microsoft\.com$/
-@@||aadcdn.msftauth.net^
-@@||push.apple.com^
-@@||push.samsungosp.com^
-@@||heytapmobile.com^
-@@/^firebaseinstallations\.googleapis\.com$/
-@@/^android\.clients\.google\.com$/
-@@||clients4.google.com^
 !
 ! [CAT:5] ENTRETENIMIENTO, MEDIOS Y STREAMING
 !
+! [SUB] RESOLUCION DE LICENCIAS Y PROTOCOLOS DRM
+@@/^widevine\.googleapis\.com$/
+@@/^widevineproxy\.google\.com$/
+@@/^widevine\.l1\.google\.com$/
+@@/^fps\.envoy\.apple\.com$/
+@@/^license\.capri\.max\.com$/
+@@/^codex\.nflxext\.com$/
+!
 ! [SUB] YOUTUBE, SPOTIFY, TWITCH Y STREAMING GLOBAL
+@@||manifest.googlevideo.com^
 @@/^youtubei\.googleapis\.com$/
 @@/^s\.youtube\.com$/
 @@/^usher\.ttvnw\.net$/
 @@/^spclient\.wg\.spotify\.com$/
 @@/^apresolve\.spotify\.com$/
 @@||bamgrid.com^
+@@/^global\.edge\.bamgrid\.com$/
 @@/^appboot\.netflix\.com$/
-@@/^codex\.nflxext\.com$/
 @@/^oca\.netflix\.com$/
+@@/^ichnaea\.netflix\.com$/
 @@/^auth\.max\.com$/
 @@/^markers\.api\.max\.com$/
 @@/^atv-ps\.amazon\.com$/
+@@/^atv-ext-eu\.amazon\.com$/
+@@/^api\.paramountplus\.com$/
 @@/^disney\.connections\.api\.disney\.com$/
 @@||cast.google.com^
-@@/^widevine\.l1\.google\.com$/
+!
 !
 ! [CAT:6] COMUNICACION Y REDES SOCIALES
 !
-! [SUB] META, TIKTOK, DISCORD, TELEGRAM Y X
+! [SUB] META, X, TIKTOK, DISCORD Y TELEGRAM
 @@/^graph\.facebook\.com$/
 @@/^graph\.instagram\.com$/
 @@/^i\.instagram\.com$/
 @@/^pps\.whatsapp\.net$/
+@@/^v\.whatsapp\.net$/
 @@||cdn.whatsapp.net^
+@@/^api\.twitter\.com$/
+@@||video.twimg.com^
 @@/^api\.tiktok\.com$/
 @@/^latency\.discord\.media$/
 @@/^gateway\.telegram\.org$/
-@@||video.twimg.com^
+!
 !
 ! [CAT:7] GAMING Y ECOSISTEMAS
 !
-! [SUB] PLAYSTATION, XBOX, ROBLOX, SUPERCELL Y TENCENT
+! [SUB] PLAYSTATION, XBOX, ROBLOX, EPIC Y TENCENT
 @@/^ena\.net\.playstation\.net$/
 @@/^api\.playstation\.com$/
 @@/^cloudsync\.xboxlive\.com$/
 @@/^title\.mgt\.xboxlive\.com$/
+@@/^api\.epicgames\.dev$/
+@@/^account\.epicgames\.com$/
 @@/^clientsettings\.roblox\.com$/
 @@/^gamepersistence\.roblox\.com$/
+@@/^assetdelivery\.roblox\.com$/
 @@||images.roblox.com^
+@@||rbxcdn.com^
 @@/^midas\.king\.com$/
 @@/^king\.com$/
+@@/^s\.activision\.com$/
 @@/^gcloud\.tencent\.com$/
+@@/^gcloud\.tencentgames\.com$/
 @@||demonware.net^
 @@||vanguard.battle.net^
-@@/^gcloud\.tencentgames\.com$/
-@@||rbxcdn.com^
 @@||id.supercell.com^
 !
-! [CAT:8] HARDWARE Y SMART TV
 !
-! [SUB] LG WEBOS Y ECOSISTEMAS DE TV
+! [CAT:8] HARDWARE Y CONECTIVIDAD SMART TV
+!
+! [SUB] LG WEBOS Y ECOSISTEMAS DE CASTING
 @@||lgtvonline.com^
 @@/^lgtvonline\.lge\.com$/
 @@/^ibis\.lgappstv\.com$/
 @@/^lgosprof\.lge\.com$/
+@@/^tv-smartshare\.lge\.com$/
+!
 !
 ! [CAT:11] HERRAMIENTAS DE RED LOCALES
 !
-! [SUB] COMPROBADORES DE IP PUBLICA
+! [SUB] COMPROBADORES DE IP PUBLICA (OVERRIDE PARA DIAGNOSTICO)
 @@/^api\.ipify\.org$/$client=127.0.0.1
 @@/^ipv4\.icanhazip\.com$/$client=127.0.0.1
 @@/^ifconfig\.me$/$client=127.0.0.1
