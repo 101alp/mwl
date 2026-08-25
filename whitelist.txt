@@ -193,7 +193,7 @@
 @@/^tv-smartshare\.lge\.com$/
 !
 !
-! [CAT:11] HERRAMIENTAS DE RED LOCALES
+! [CAT:9] HERRAMIENTAS DE RED LOCALES
 !
 ! [SUB] COMPROBADORES DE IP PUBLICA (OVERRIDE PARA DIAGNOSTICO)
 @@/^api\.ipify\.org$/$client=127.0.0.1
