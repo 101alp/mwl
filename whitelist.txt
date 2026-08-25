@@ -1,19 +1,17 @@
 !
 ! Título: Aegis Lumina
 !
-! PROPOSITO: Whitelist estricta para mitigar fallos criticos generados por listas DNS agresivas.
-! PRINCIPIO: Fallo visual = Bloqueado. Fallo funcional critico = Autorizado.
-! REGLA 0: Solo dominios de rastreo mixto. Cero excepciones obvias.
+! [DESCRIPCIÓN] Esta lista blanca se encarga de desbloquear dominios y endpoints específicos que los bloqueadores de tracking, telemetría, spyware o anuncios suelen atrapar por error. Al bloquearse, afectan de forma crítica o inutilizan servicios o aplicaciones, por lo que esta autorización quirúrgica los restaura de forma precisa, evitando excepciones amplias que comprometan la seguridad o la privacidad.
 !
-! SINTAXIS ADMITIDA:
-! [ @@||...^ ] - Exclusion recursiva (Abarca el dominio y sus subdominios).
-! [ @@/^...$/ ] - Exclusion exacta estricta via Regex (Maxima precision).
+! [SINTAXIS ADMITIDA PARA EXCEPCIONES]
+!   [EX.REC]  @@||...^    - Exclusión recursiva: Abarca el dominio principal y todos sus subdominios. Se utiliza cuando el árbol completo carece de rastreo o telemetría basura, siendo un entorno totalmente crítico y recomendable de conservar sin bloqueos.
+!   [EX.REG]  @@/^...$/   - Exclusión exacta por Regex: Aplica de forma estricta al endpoint preciso. Se utiliza cuando la misma raíz contiene otros subdominios dedicados a telemetría o anuncios que no deben eximirse, permitiendo desbloquear únicamente el recurso crítico necesario.
 !
-! EXCEPCIONES PERMITIDAS SOLO PARA:
-! [1] Validacion de red (NCSI) y portales cautivos.
-! [2] Pasarelas de pago, validacion antifraude y captchas.
-! [3] CDNs esenciales, resolucion DRM y carga de medios.
-! [4] Experiencia de usuario innegociable (Push, historial).
+! [EXCEPCIONES PERMITIDAS EXCLUSIVAMENTE PARA]
+!   [SEC.1] Validacion de red (NCSI), conectividad core del sistema operativo y portales cautivos.
+!   [SEC.2] Pasarelas de pago globales, motores de validacion antifraude y resolucion de captchas.
+!   [SEC.3] CDNs de infraestructura, flujos criticos de streaming y protocolos de proteccion DRM.
+!   [SEC.4] Servicios esenciales de experiencia de usuario (Notificaciones push y sincronizacion core e historial).
 !
 !
 ! [CAT:1] VERIFICACION DE RED (NCSI) Y PORTALES CAUTIVOS
