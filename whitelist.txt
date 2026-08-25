@@ -4,9 +4,7 @@
 ! [DESCRIPCIÓN] Esta es una lista blanca encargada de desbloquear dominios y endpoints específicos que los bloqueadores de tracking, telemetría, spyware o anuncios suelen atrapar por error. Al bloquearse, afectan de forma crítica o inutilizan servicios o aplicaciones, por lo que esta autorización quirúrgica los restaura de forma precisa, evitando excepciones amplias que comprometan la seguridad o la privacidad de navegación.
 !
 ! [SINTAXIS ADMITIDA PARA EXCEPCIONES]
-!
 !   [EX.REC]  @@||...^    - Exclusión recursiva: Abarca el dominio principal y todos sus subdominios. Se utiliza cuando el árbol completo carece de rastreo o telemetría basura, siendo un entorno totalmente crítico y recomendable de conservar sin bloqueos.
-!
 !   [EX.REG]  @@/^...$/   - Exclusión exacta por Regex: Aplica de forma estricta al endpoint preciso. Se utiliza cuando la misma raíz contiene otros subdominios dedicados a telemetría o anuncios que no deben eximirse, permitiendo desbloquear únicamente el recurso crítico necesario.
 !
 ! [EXCEPCIONES PERMITIDAS EXCLUSIVAMENTE PARA]
