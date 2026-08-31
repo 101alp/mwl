@@ -5,7 +5,7 @@
 !
 ! [SINTAXIS ADMITIDA PARA EXCEPCIONES]
 !   [EX.REC]  @@||...^    - Recursiva: Abarca dominio y subdominios íntegramente libres de rastreo.
-!   [EX.EXA]  @@|...^|    - Exacta: Aísla y permite el endpoint crítico sin exponer la telemetría.
+!   [EX.EXA]  @@|...^|    - Exacta: Aísla y permite el endpoint crítico sin exponer la red a telemetría.
 !
 ! [EXCEPCIONES PERMITIDAS EXCLUSIVAMENTE PARA]
 !   [SEC.1] Validación de red (NCSI), conectividad core del sistema operativo y portales cautivos.
