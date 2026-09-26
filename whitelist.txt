@@ -23,11 +23,14 @@
 !
 ! [SUB] RESOLUCION ANTI-BOT, CLOUDFLARE Y CAPTCHAS
 @@||recaptcha.net^
-@@||hcaptcha.com^
+@@|www.gstatic.com^|
 @@|challenges.cloudflare.com^|
-@@||turnstile.cloudflare.com^
-@@||arkoselabs.com^
-@@||funcaptcha.com^
+@@|turnstile.cloudflare.com^|
+@@|js.hcaptcha.com^|
+@@|assets.hcaptcha.com^|
+@@|api.hcaptcha.com^|
+@@|client-api.arkoselabs.com^|
+@@|funcaptcha.com^|
 !
 !
 ! [CAT:2] SERVICIOS FINANCIEROS Y COMERCIO (CRITICO)
