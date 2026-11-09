@@ -20,15 +20,17 @@
 @@||pki.goog^
 @@|ocsp.apple.com^|
 @@|ocsp2.apple.com^|
+@@|ocsp.comodoca.com^|
+@@|ocsp.sectigo.com^|
 !
 ! [SUB] RESOLUCION ANTI-BOT, CLOUDFLARE Y CAPTCHAS
 @@||recaptcha.net^
 @@|www.gstatic.com^|
 @@|challenges.cloudflare.com^|
 @@|turnstile.cloudflare.com^|
-@@|js.hcaptcha.com^|
-@@|assets.hcaptcha.com^|
 @@|api.hcaptcha.com^|
+@@|assets.hcaptcha.com^|
+@@|js.hcaptcha.com^|
 @@|client-api.arkoselabs.com^|
 @@|funcaptcha.com^|
 !
@@ -42,7 +44,6 @@
 @@|verifiedbyvisa.com^|
 @@||cardinalcommerce.com^
 @@|cws.banamex.com^|
-@@|banamex.com.edgekey.net^|
 @@|cws.bbva.com^|
 @@|ecs.bbva.com^|
 @@|api.banorte.com^|
@@ -54,7 +55,6 @@
 ! [SUB] PASARELAS GLOBALES, CHECKOUT Y WALLETS MOBILES
 @@|api.paypal.com^|
 @@||paypalobjects.com^
-@@||c.paypal.com^
 @@|api.stripe.com^|
 @@||js.stripe.com^
 @@||adyen.com^
@@ -113,6 +113,11 @@
 @@|connectivitycheck.smartthings.com^|
 @@|connectivity.vizio.com^|
 @@|captive.roku.com^|
+@@||pool.ntp.org^
+@@||time.google.com^
+@@||time.apple.com^
+@@||time.windows.com^
+@@||time.nist.gov^
 !
 !
 ! [CAT:5] ENTRETENIMIENTO, MEDIOS Y STREAMING
@@ -190,10 +195,22 @@
 !
 ! [SUB] LG WEBOS Y ECOSISTEMAS DE CASTING
 @@||lgtvonline.com^
-@@|lgtvonline.lge.com^|
 @@|ibis.lgappstv.com^|
+@@||nudge.lgappstv.com^
 @@|lgosprof.lge.com^|
 @@|tv-smartshare.lge.com^|
+@@||lgsmartad.com^
+@@||snu.lge.com^
+@@||su.lge.com^
+@@||lgtvcommon.com^
+@@||lgsmartcdn.com^
+@@||lgtvsdp.com^
+@@||lgsmartplatform.com^
+@@||lgeapi.com^
+@@||ngfts.lge.com^
+@@||lgthinq.com^
+@@||nsu-service.lge.com^
+@@|ldas.lge.com^|
 !
 !
 ! [CAT:9] HERRAMIENTAS DE RED LOCALES
