@@ -195,22 +195,22 @@
 !
 ! [SUB] LG WEBOS Y ECOSISTEMAS DE CASTING
 @@||lgtvonline.com^
-@@|ibis.lgappstv.com^|
-@@||nudge.lgappstv.com^
-@@|lgosprof.lge.com^|
-@@|tv-smartshare.lge.com^|
-@@||lgsmartad.com^
+@@|tv-smartshare.lge.com^
 @@||snu.lge.com^
 @@||su.lge.com^
-@@||lgtvcommon.com^
 @@||lgsmartcdn.com^
-@@||lgtvsdp.com^
 @@||lgsmartplatform.com^
 @@||lgeapi.com^
 @@||ngfts.lge.com^
 @@||lgthinq.com^
 @@||nsu-service.lge.com^
-@@|ldas.lge.com^|
+@@|ldas.lge.com^
+@@|mx.nextlgsdp.com^
+@@|ngfts.nextlgsdp.com^
+@@|eic-gfts.nextlgsdp.com^
+@@|mx.lgtvsdp.com^
+@@|ngfts.lgtvsdp.com^
+@@|ngfts.lgtvsdp.com^
 !
 !
 ! [CAT:9] HERRAMIENTAS DE RED LOCALES
