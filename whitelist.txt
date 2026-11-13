@@ -210,7 +210,6 @@
 @@|eic-gfts.nextlgsdp.com^
 @@|mx.lgtvsdp.com^
 @@|ngfts.lgtvsdp.com^
-@@|ngfts.lgtvsdp.com^
 !
 ! [SUB] CAMARAS IP, VIDEOVIGILANCIA Y DOMOTICA (HOPEWAY)
 @@|api.mossturbo.com^|
