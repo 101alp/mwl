@@ -211,10 +211,6 @@
 @@|mx.lgtvsdp.com^
 @@|ngfts.lgtvsdp.com^
 !
-! [SUB] CAMARAS IP, VIDEOVIGILANCIA Y DOMOTICA (HOPEWAY)
-@@|api.mossturbo.com^|
-@@|api-sec.mossturbo.com^|
-!
 !
 ! [CAT:9] HERRAMIENTAS DE RED LOCALES
 !
