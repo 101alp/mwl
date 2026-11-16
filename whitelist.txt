@@ -251,10 +251,7 @@
 @@|osb-apps.samsungqbe.com^
 @@|sas.samsungcloudsolution.com^
 @@|otn.samsungcloudcdn.com^
-@@|otnprd8.samsungcloudsolution.net^
-@@|otnprd9.samsungcloudsolution.net^
-@@|otnprd10.samsungcloudsolution.net^
-@@|otnprd11.samsungcloudsolution.net^
+@@/^otnprd([89]|1[01])\.samsungcloudsolution\.net$/
 @@|api.samsungapps.com^
 @@|img.samsungapps.com^
 @@|az43064.vo.msecnd.net^
