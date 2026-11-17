@@ -239,6 +239,7 @@
 @@|otn.samsungotn.net^
 @@/^(us-)?(auth2?|discover)\.samsungosp\.net$/
 @@/^(mx|us|aic|emp)\.lgaccount\.com$/
+@@|d1oxlq5h9kq8q5.cloudfront.net^
 
 ! [SUB] CANALES IPTV NATIVOS (SAMSUNG TV PLUS, LG CHANNELS)
 @@/^(api|cdn|epg|vod)\.samsungtvplus\.com$/
