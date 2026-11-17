@@ -252,6 +252,13 @@
 @@/^(mx|us|ngfts|aic-gfts)\.nextlgsdp\.com$/
 @@/^(mx|us|ngfts|aic-ngfts)\.lgtvsdp\.com$/
 
+! [SUB] CANALES IPTV NATIVOS (SAMSUNG TV PLUS, LG CHANNELS)
+@@/^(api|cdn|epg|vod)\.samsungtvplus\.com$/
+@@/^(tvplus|ott)\.samsungcloudsolution\.com$/
+@@/^(api|us|mx|aic)\.lgchannels\.com$/
+@@/^(api|playback|us|mx)\.xumo\.com$/
+@@/^(boot|service-channels|stitcher)\.pluto\.tv$/
+
 
 ! [CAT:9] DIAGNOSTICO DE RED Y OVERRIDES LOCALES
 
