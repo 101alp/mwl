@@ -247,7 +247,7 @@
 @@/^(snu|su|ngfts|nsu-service|ldas)\.lge\.com$/
 @@/^(api|emp|us)\.lgeapi\.com$/
 @@||lgsmartcdn.com^
-@@||lgsmartplatform.com^
+@@/^(api|us|mx|aic)\.lgsmartplatform\.com$/
 @@||lgthinq.com^
 @@/^(mx|us|aic|ngfts)\.ibs\.lgappstv\.com$/
 @@/^(mx|ngfts|aic-gfts)\.nextlgsdp\.com$/
