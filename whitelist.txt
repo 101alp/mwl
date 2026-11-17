@@ -41,7 +41,7 @@
 @@/^(captive|configuration)\.apple\.com$/
 @@|netcts.cdn-apple.com^
 @@/^msft(connecttest|ncsi)\.com$/
-@@/^(connect\.rom|rom\.pt)\.miui\.com^/
+@@/^(connect\.rom|rom\.pt)\.miui\.com$/
 @@|wifi.vivo.com.cn^
 @@|conntest.nintendowifi.net^
 @@||ctest.cdn.nintendo.net^
@@ -79,7 +79,7 @@
 @@|gs-loc.apple.com^
 @@|api.samsungcloudplatform.com^
 @@|android.clients.google.com^
-@@||clients4.google.com^
+@@|clients4.google.com^
 
 ! [SUB] MENSAJERIA PUSH CORE MULTIPLATAFORMA
 @@|fcmtoken.googleapis.com^
@@ -164,8 +164,7 @@
 
 ! [SUB] PLATAFORMAS DE AUDIO, VIDEO Y STREAMING
 @@|api.paramountplus.com^
-@@|atv-ext-eu.amazon.com^
-@@|atv-ps.amazon.com^
+@@/^atv-(ext|ps)\.amazon\.com$/.
 @@||bamgrid.com^
 @@||cast.google.com^
 @@|disney.connections.api.disney.com^
@@ -184,35 +183,30 @@
 ! [CAT:6] COMUNICACION INTERPERSONAL Y REDES SOCIALES
 
 ! [SUB] MENSAJERIA INSTANTANEA Y VOIP
-@@||cdn.whatsapp.net^
-@@||fna.whatsapp.net^
+@@/\.((cdn|fna)\.)?whatsapp\.net$/
 @@/^(pps|v|g|c|mmg|media|static|stun|turn|e([1-9]|1[0-6]))\.whatsapp\.net$/
 
 ! [SUB] REDES SOCIALES Y CDNS DE MEDIOS
 @@|graph.facebook.com^
 @@|gateway.telegram.org^
-@@/^(graph|i)\.instagram\.com^/
+@@/^(graph|i)\.instagram\.com$/
 @@|api.tiktok.com^
 @@|api.twitter.com^
-@@||video.twimg.com^
+@@|video.twimg.com^
 @@|latency.discord.media^
 
 
 ! [CAT:7] GAMING Y ECOSISTEMAS DE ENTRETENIMIENTO INTERACTIVO
 
 ! [SUB] CONSOLAS DE SOBREMESA Y PORTATILES (NINTENDO, PLAYSTATION, XBOX)
-@@|atum.hac.lp1.d4c.nintendo.net^
-@@|aqua.hac.lp1.d4c.nintendo.net^
-@@|sun.hac.lp1.d4c.nintendo.net^
+@@/^(atum|aqua|sun)\.hac\.lp1\.d4c\.nintendo\.net$/
 @@/^(api\.)?accounts\.nintendo\.com$/
 @@||baas.nintendo.com^
-@@|asm.np.community.playstation.net^
 @@|api.playstation.com^
 @@|auth.api.sonyentertainmentnetwork.com^
 @@|ca.account.sony.com^
-@@|ena.net.playstation.net^
 @@/^(gs2\.ww|gst)\.prod\.dl\.playstation\.net$/
-@@|nsx.np.dl.playstation.net^
+@@/^(asm\.np\.community|ena\.net|nsx\.np\.dl)\.playstation\.net$/
 @@/^(cloudsync|title\.mgt|licensing|assets[12]|(user|device|xsts)\.auth)\.xboxlive\.com$/
 
 ! [SUB] PLATAFORMAS PC, MOVIL Y SERVICIOS ANTITRAMPAS
@@ -221,7 +215,7 @@
 @@|id.supercell.com^
 @@/^(midas\.)?king\.com^/
 @@/^(clientsettings|gamepersistence|assetdelivery)\.roblox\.com$/
-@@||images.roblox.com^
+@@|images.roblox.com^
 @@||rbxcdn.com^
 @@|s.activision.com^
 @@|gcloud.tencent.com^
