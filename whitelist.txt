@@ -1,11 +1,18 @@
 ! Título: Aegis Lumina
-
 ! [DESCRIPCIÓN] Lista blanca quirúrgica encargada de desbloquear dominios y endpoints críticos que los bloqueadores de tracking, telemetría o anuncios atrapan por error. Diseñada bajo dependencia estricta de red, privacidad absoluta y optimización DRY.
 
 ! [SINTAXIS ADMITIDA PARA EXCEPCIONES]
-!   [EX.REC]  @@||...^    - Recursiva: Abarca dominio y subdominios íntegramente.
-!   [EX.EXA]  @@|...^     - Exacta: Aísla y permite el endpoint crítico específico.
-!   [EX.REG]  @@/^...$/   - Regex: Agrupa múltiples nodos o endpoints exactos anclados.
+!   [EX.REC]  @@||...^    - Recursiva: Solo para CDNs estáticos o infraestructura sin rastreo.
+!   [EX.EXA]  @@|...^     - Exacta: Estándar por defecto para aislar endpoints únicos.
+!   [EX.REG]  @@/^...$/   - Regex: Obligatoria para agrupar >=2 nodos (DRY). Anclar (^ y $) y escapar (\.).
+!   [EX.HYB]  ! [EX.HYB]  - Híbrida: Marca obligatoria sobre nodos con función core + telemetría/ads acoplados.
+
+! [PROTOCOLO DE EDICION Y AUDITORIA]
+!   [POL.1]   INCLUSION: Permitir infraestructura core y nodos híbridos [EX.HYB] indispensables cuya
+!             ausencia rompa conectividad o funciones clave (ej. historial, feed, stream, login).
+!   [POL.2]   EXCLUSION: Prohibido añadir dominios puros de anuncios, banners promocionales
+!             (ej. discover.*), analítica pura (analytics.*, metrics.*) o rastreo de terceros.
+!   [POL.3]   ESTRUCTURA: Respetar categorías [CAT:1-9] y subcategorías [SUB] sin duplicar reglas.
 
 ! [EXCEPCIONES PERMITIDAS EXCLUSIVAMENTE PARA]
 !   [SEC.1] Validación de red (NCSI), conectividad core y sincronización temporal.
@@ -54,7 +61,7 @@
 @@/^(challenges|turnstile)\.cloudflare\.com$/
 @@/^(api|assets|js)\.hcaptcha\.com$/
 @@|client-api.arkoselabs.com^
-@@|funcaptcha.com^
+@@/^([a-z0-9-]+\.)?funcaptcha\.com$/
 
 
 ! [CAT:3] SISTEMAS OPERATIVOS, IDENTIDAD CLOUD Y NOTIFICACIONES PUSH
@@ -79,14 +86,13 @@
 @@|mtalk.google.com^
 @@||push.apple.com^
 @@||push.samsungosp.com^
-@@|heytapmobile.com^
+@@/^([a-z0-9-]+\.)?heytapmobile\.com$/
 
 ! [SUB] ECOSISTEMAS MOVILES Y DE ESCRITORIO (APPLE, GOOGLE, MICROSOFT, MOTOROLA, OPPO, SAMSUNG, XIAOMI)
 @@/^(albert|gdmf|mesu)\.apple\.com$/
 @@|gspe1-ssl.ls.apple.com^
 @@/^(init|identity)\.ess\.apple\.com$/
-@@/^p[0-9]{2,3}-(caldav|contacts)\.icloud\.com$/
-@@/^(setup|gateway)\.icloud\.com$/
+@@/^(setup|gateway|p[0-9]{2,3}-(caldav|contacts))\.icloud\.com$/
 @@/^(cds|accounts|cloud)\.motorola\.com$/
 @@|moto-ota.appspot.com^
 @@/^id\.(heytap|oppo)\.com$/
@@ -97,7 +103,7 @@
 @@|api.samsungcloud.com^
 @@|fota-cloud-dn.ospserver.net^
 @@||samsungpass.com^
-@@/^(us-)?auth2?\.samsungosp\.com$/
+@@/^(us-)?auth2?\.samsungosp\.(com|net)$/
 @@/^(api\.)?account\.xiaomi\.com$/
 @@|find.api.micloud.xiaomi.net^
 @@|i.mi.com^
@@ -111,9 +117,10 @@
 ! [SUB] INFRAESTRUCTURA DE TARJETAS, 3D SECURE Y ANTIFRAUDE
 @@||3ds-notify.com^
 @@||cardinalcommerce.com^
-@@|online-metrix.net^
+! [EX.HYB] Perfilado de dispositivo indispensable para autorización antifraude en banca web/móvil:
+@@/^([a-z0-9-]+\.)?online-metrix\.net$/
 @@|api-secure.solvedevices.com^
-@@|verifiedbyvisa.com^
+@@/^([a-z0-9-]+\.)?verifiedbyvisa\.com$/
 @@/^(visa|mastercard|banamex)\.com\.edgekey\.net$/
 
 ! [SUB] BANCA MOVIL Y FINTECH (MEXICO/LATAM)
@@ -127,15 +134,15 @@
 @@/^(api|mobile)\.hsbc\.com\.mx$/
 @@|bancamovil.inbursa.com^
 @@|api.nu.com.mx^
-@@|prod-global-auth.nubank.com.br^
+@@/^(prod-)?global-auth\.nubank\.com\.br$/
 @@/^(api|movil)\.(santander|scotiabank)\.com\.mx$/
 
 ! [SUB] PASARELAS DE PAGO, CHECKOUT Y WALLETS
-@@||adyen.com^
-@@||klarna.com^
+@@/^(checkoutshopper-live|live|api)\.adyen\.com$/
+@@/^(js|api|pay)\.klarna\.com$/
 @@||melilogistics.com^
 @@/^(www\.|api\.)?mercadopago\.com$/
-@@||openpay.mx^
+@@/^(api|sandbox-api)\.openpay\.mx$/
 @@|pay.google.com^
 @@|api.paypal.com^
 @@||paypalobjects.com^
@@ -155,7 +162,7 @@
 @@/^widevine(proxy|\.l1)?\.google(apis)?\.com$/
 
 ! [SUB] PLATAFORMAS DE AUDIO, VIDEO Y STREAMING
-@@|api.paramountplus.com^
+@@/^(api|auth|playback)\.paramountplus\.com$/
 @@/^atv-(ext|ps)\.amazon\.com$/
 @@/^(((disney|star|espn)\.api|global|playback|devices|drm|content|disney\.content|search-api-disney)\.edge|(config-)?cd-dmgz|prod-static)\.bamgrid\.com$/
 @@||cast.google.com^
@@ -165,9 +172,12 @@
 @@/^(appboot|oca)\.netflix\.com$/
 @@|apresolve.spotify.com^
 @@|spclient.wg.spotify.com^
+! [EX.HYB] Requerido para transmisión en vivo de Twitch; acopla publicidad SSAI en el flujo de video:
 @@|usher.ttvnw.net^
+! [EX.HYB] Requerido para sincronizar historial de reproducción y progreso de video en YouTube:
 @@|s.youtube.com^
 @@|youtubei.googleapis.com^
+! [EX.HYB] Entrega el flujo multimedia de YouTube junto con anuncios incrustados en el mismo dominio:
 @@||manifest.googlevideo.com^
 @@/^(api|auth|playback)\.vix\.com$/
 
@@ -181,6 +191,7 @@
 @@|graph.facebook.com^
 @@|gateway.telegram.org^
 @@/^(graph|i)\.instagram\.com$/
+! [EX.HYB] Endpoint central de feed y API; acopla telemetría de sesión con entrega de contenido:
 @@|api.tiktok.com^
 @@|api.twitter.com^
 @@|video.twimg.com^
@@ -217,34 +228,37 @@
 
 ! [CAT:8] HARDWARE ESPECIALIZADO, SMART TV E IOT
 
-! [SUB] SISTEMAS OPERATIVOS DE TELEVISION (LG WEBOS, SAMSUNG TIZEN)
+! [SUB] SISTEMAS OPERATIVOS DE TELEVISION (SAMSUNG TIZEN)
 @@|az43064.vo.msecnd.net^
 @@|sso.internetat.tv^
 @@|www.samsungrm.net^
 @@/^(api|img)\.samsungapps\.com$/
 @@|otn.samsungcloudcdn.com^
+@@|otn.samsungotn.net^
 @@/^osb(-(apps|auth|secure|ussvc))?(-v[12])?(-ussvc)?\.samsungqbe\.com$/
 @@/^(cdn|config|lcprd[12]|otnprd([89]|1[01]))\.samsungcloudsolution\.net$/
+! [EX.HYB] Nodos centrales de Samsung Tizen; requeridos para red/tienda pero mezclan métricas de uso:
 @@/^(time|network-test|cdn|config|sas|epg|epg-cdn|drm|tvplus|ott)\.samsungcloudsolution\.com$/
 @@/^(api|client)\.smartthings\.com$/
+@@|d1oxlq5h9kq8q5.cloudfront.net^
+
+! [SUB] SISTEMAS OPERATIVOS DE TELEVISION (LG WEBOS)
+! [EX.HYB] Nodos regionales de LG webOS; requeridos para conexión a tienda/red pero mezclan métricas y banners:
 @@/^(aic|us|mx|eu|kr|qt2-ngfts|snu|su)\.lgtvonline\.com$/
 @@/^(tv-smartshare|lgtvonline|snu|su|ngfts|nsu-service|ldas|(aic|mx)\.nlu)\.lge\.com$/
 @@/^(api|emp|us)\.lgeapi\.com$/
 @@||lgsmartcdn.com^
 @@/^(api|us|mx|aic)\.lgsmartplatform\.com$/
-@@||lgthinq.com^
-@@/^(mx|us|aic|ngfts)\.ibs\.lgappstv\.com$/
+@@/^(api|aic|us|mx)\.lgthinq\.com$/
+@@/^(mx|us|aic|ngfts)\.(ibs\.lgappstv|lgtvsdp)\.com$/
 @@/^(mx|us|ngfts|aic-gfts)\.nextlgsdp\.com$/
-@@/^(mx|us|ngfts|aic-ngfts)\.lgtvsdp\.com$/
-@@|otn.samsungotn.net^
-@@/^(us-)?(auth2?|discover)\.samsungosp\.net$/
 @@/^(mx|us|aic|emp)\.lgaccount\.com$/
-@@|d1oxlq5h9kq8q5.cloudfront.net^
 
-! [SUB] CANALES IPTV NATIVOS (SAMSUNG TV PLUS, LG CHANNELS)
+! [SUB] CANALES IPTV NATIVOS (SAMSUNG TV PLUS, LG CHANNELS, XUMO, PLUTO TV)
 @@/^(api|cdn|epg|vod)\.samsungtvplus\.com$/
 @@/^(api|us|mx|aic)\.lgchannels\.com$/
 @@/^(api|playback|us|mx)\.xumo\.com$/
+! [EX.HYB] Entrega el flujo de canales en vivo de Pluto TV junto con publicidad SSAI acoplada:
 @@/^(boot|service-channels|stitcher)\.pluto\.tv$/
 
 
