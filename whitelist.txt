@@ -30,7 +30,7 @@
 
 ! [SUB] SINCRONIZACION DE TIEMPO (NTP)
 @@||pool.ntp.org^
-@@/^time\.(google|apple|windows)\.com$/
+@@/^time\.(google|apple|windows|xtracloud)\.(com|net)$/
 @@||time.nist.gov^
 
 ! [SUB] VALIDACION DE CONECTIVIDAD (NCSI) Y PORTALES CAUTIVOS
@@ -49,11 +49,13 @@
 
 ! [CAT:2] SEGURIDAD CRIPTOGRAFICA, CERTIFICADOS Y VALIDACION ANTI-BOT
 
-! [SUB] INFRAESTRUCTURA DE LLAVES PUBLICAS Y REVOCACION (SSL/TLS/OCSP)
+! [SUB] INFRAESTRUCTURA DE LLAVES PUBLICAS, NAVEGACION SEGURA Y REVOCACION (SSL/TLS/OCSP)
 @@||pki.goog^
 @@|ocsp.rootca1.amazontrust.com^
 @@/^ocsp2?\.apple\.com$/
 @@/^ocsp\.(comodoca|sectigo)\.com$/
+@@/^(android-)?safebrowsing\.google(apis)?\.com$/
+@@|token.safebrowsing.apple^
 
 ! [SUB] RESOLUCION ANTI-BOT, WAF Y CAPTCHAS
 @@|www.gstatic.com^
@@ -87,8 +89,11 @@
 @@||push.apple.com^
 @@||push.samsungosp.com^
 @@/^([a-z0-9-]+\.)?heytapmobile\.com$/
+@@|wns.windows.com^
 
-! [SUB] ECOSISTEMAS MOVILES Y DE ESCRITORIO (APPLE, GOOGLE, MICROSOFT, MOTOROLA, OPPO, SAMSUNG, XIAOMI)
+! [SUB] ECOSISTEMAS MOVILES, BUSCADORES Y DE ESCRITORIO (APPLE, GOOGLE, MICROSOFT, MOTOROLA, OPPO, SAMSUNG, XIAOMI)
+@@/^(www\.)?(google|bing)\.com(\.mx)?$/
+@@|supl.google.com^
 @@/^(albert|gdmf|mesu)\.apple\.com$/
 @@|gspe1-ssl.ls.apple.com^
 @@/^(init|identity)\.ess\.apple\.com$/
@@ -137,7 +142,7 @@
 @@/^(prod-)?global-auth\.nubank\.com\.br$/
 @@/^(api|movil)\.(santander|scotiabank)\.com\.mx$/
 
-! [SUB] PASARELAS DE PAGO, CHECKOUT Y WALLETS
+! [SUB] PASARELAS DE PAGO, CHECKOUT, WALLETS Y COMERCIO CORE
 @@/^(checkoutshopper-live|live|api)\.adyen\.com$/
 @@/^(js|api|pay)\.klarna\.com$/
 @@||melilogistics.com^
@@ -149,6 +154,7 @@
 @@/^apple-pay-gateway(-cert)?\.apple\.com$/
 @@|api.stripe.com^
 @@||js.stripe.com^
+@@/^(www\.)?(amazon|mercadolibre)\.com\.mx$/
 
 
 ! [CAT:5] ENTRETENIMIENTO, MEDIOS Y PROTECCION DRM
@@ -216,7 +222,7 @@
 @@|api.epicgames.dev^
 @@|id.supercell.com^
 @@/^(midas\.)?king\.com$/
-@@/^(clientsettings|gamepersistence|assetdelivery)\.roblox\.com$/
+@@/^(api|clientsettings|gamepersistence|assetdelivery)\.roblox\.com$/
 @@|images.roblox.com^
 @@||rbxcdn.com^
 @@|s.activision.com^
@@ -254,7 +260,8 @@
 @@/^(mx|us|ngfts|aic-gfts)\.nextlgsdp\.com$/
 @@/^(mx|us|aic|emp)\.lgaccount\.com$/
 
-! [SUB] CANALES IPTV NATIVOS (SAMSUNG TV PLUS, LG CHANNELS, XUMO, PLUTO TV)
+! [SUB] HARDWARE DE CONTROL Y CANALES IPTV NATIVOS
+@@|reverselookup.quicksetcloud.com^
 @@/^(api|cdn|epg|vod)\.samsungtvplus\.com$/
 @@/^(api|us|mx|aic)\.lgchannels\.com$/
 @@/^(api|playback|us|mx)\.xumo\.com$/
@@ -264,7 +271,8 @@
 
 ! [CAT:9] DIAGNOSTICO DE RED Y OVERRIDES LOCALES
 
-! [SUB] COMPROBADORES DE IP Y RED LOCAL ($client)
+! [SUB] COMPROBADORES DE IP, ADMINISTRACION Y RED LOCAL ($client)
 @@|api.ipify.org^$client=127.0.0.1
 @@|ipv4.icanhazip.com^$client=127.0.0.1
 @@|ifconfig.me^$client=127.0.0.1
+@@|tplinkextender.net^
