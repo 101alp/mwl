@@ -243,15 +243,14 @@
 @@/^(time|network-test|cdn|config|sas|epg|epg-cdn|drm)\.samsungcloudsolution\.com$/
 @@/^(api|client)\.smartthings\.com$/
 @@||lgtvonline.com^
-@@|tv-smartshare.lge.com^
-@@/^(snu|su|ngfts|nsu-service|ldas)\.lge\.com$/
+@@/^(tv-smartshare|lgtvonline|snu|su|ngfts|nsu-service|ldas)\.lge\.com$/
 @@/^(api|emp|us)\.lgeapi\.com$/
 @@||lgsmartcdn.com^
 @@/^(api|us|mx|aic)\.lgsmartplatform\.com$/
 @@||lgthinq.com^
 @@/^(mx|us|aic|ngfts)\.ibs\.lgappstv\.com$/
-@@/^(mx|ngfts|aic-gfts)\.nextlgsdp\.com$/
-@@/^(mx|ngfts|aic-ngfts)\.lgtvsdp\.com$/
+@@/^(mx|us|ngfts|aic-gfts)\.nextlgsdp\.com$/
+@@/^(mx|us|ngfts|aic-ngfts)\.lgtvsdp\.com$/
 
 
 ! [CAT:9] DIAGNOSTICO DE RED Y OVERRIDES LOCALES
