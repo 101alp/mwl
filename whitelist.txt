@@ -225,7 +225,7 @@
 @@/^(api|img)\.samsungapps\.com$/
 @@|otn.samsungcloudcdn.com^
 @@/^osb(-(apps|auth|secure|ussvc))?(-v[12])?(-ussvc)?\.samsungqbe\.com$/
-@@/^(cdn|config|otnprd([89]|1[01]))\.samsungcloudsolution\.net$/
+@@/^(cdn|config|lcprd[12]|otnprd([89]|1[01]))\.samsungcloudsolution\.net$/
 @@/^(time|network-test|cdn|config|sas|epg|epg-cdn|drm|tvplus|ott)\.samsungcloudsolution\.com$/
 @@/^(api|client)\.smartthings\.com$/
 @@||lgtvonline.com^
