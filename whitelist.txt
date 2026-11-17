@@ -251,6 +251,9 @@
 @@/^(mx|us|aic|ngfts)\.ibs\.lgappstv\.com$/
 @@/^(mx|us|ngfts|aic-gfts)\.nextlgsdp\.com$/
 @@/^(mx|us|ngfts|aic-ngfts)\.lgtvsdp\.com$/
+@@|otn.samsungotn.net^
+@@/^(us-)?(auth2?|discover)\.samsungosp\.net$/
+@@/^(mx|us|aic|emp)\.lgaccount\.com$/
 
 ! [SUB] CANALES IPTV NATIVOS (SAMSUNG TV PLUS, LG CHANNELS)
 @@/^(api|cdn|epg|vod)\.samsungtvplus\.com$/
