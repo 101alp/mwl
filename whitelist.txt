@@ -129,7 +129,7 @@
 @@|bancamovil.banjercito.com.mx^
 @@|movil.afirme.com^
 @@|api.banorte.com^
-@@/^(cws|ecs)\.bbva\.com^/
+@@/^(cws|ecs)\.bbva\.com$/
 @@|device.coppel.com^
 @@|api.heybanco.com^
 @@/^(api|mobile)\.hsbc\.com\.mx$/
@@ -164,7 +164,7 @@
 
 ! [SUB] PLATAFORMAS DE AUDIO, VIDEO Y STREAMING
 @@|api.paramountplus.com^
-@@/^atv-(ext|ps)\.amazon\.com$/.
+@@/^atv-(ext|ps)\.amazon\.com$/
 @@||bamgrid.com^
 @@||cast.google.com^
 @@|disney.connections.api.disney.com^
@@ -213,7 +213,7 @@
 @@|account.epicgames.com^
 @@|api.epicgames.dev^
 @@|id.supercell.com^
-@@/^(midas\.)?king\.com^/
+@@/^(midas\.)?king\.com$/
 @@/^(clientsettings|gamepersistence|assetdelivery)\.roblox\.com$/
 @@|images.roblox.com^
 @@||rbxcdn.com^
