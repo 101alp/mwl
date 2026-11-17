@@ -27,16 +27,8 @@
 @@||time.nist.gov^
 
 ! [SUB] VALIDACION DE CONECTIVIDAD (NCSI) Y PORTALES CAUTIVOS
-@@|connectivitycheck.android.com^
-@@|connectivitycheck.asus.com^
-@@|connectivitycheck.cbg-app.huawei.com^
-@@|connectivitycheck.fb.com^
-@@|connectivitycheck.oppomobile.com^
-@@|connectivitycheck.platform.hicloud.com^
-@@|connectivitycheck.samsung.com^
-@@|connectivitycheck.smartthings.com^
+@@/^connectivitycheck\.(android|asus|cbg-app\.huawei|fb|gstatic|oppomobile|platform\.hicloud|samsung|smartthings)\.com$/
 @@|connectivity.vizio.com^
-@@|connectivitycheck.gstatic.com^
 @@|clients3.google.com^
 @@/^(captive|configuration)\.apple\.com$/
 @@|netcts.cdn-apple.com^
