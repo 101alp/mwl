@@ -257,9 +257,6 @@
 @@/^(mx|ngfts|eic-gfts)\.nextlgsdp\.com$/
 @@/^(mx|ngfts)\.lgtvsdp\.com^/
 
-! [SUB] DISPOSITIVOS DE STREAMING Y DOMOTICA
-! (Integrados en conectividad y SmartThings central)
-
 
 ! [CAT:9] DIAGNOSTICO DE RED Y OVERRIDES LOCALES
 
