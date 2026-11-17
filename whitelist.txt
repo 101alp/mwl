@@ -157,7 +157,7 @@
 ! [SUB] PLATAFORMAS DE AUDIO, VIDEO Y STREAMING
 @@|api.paramountplus.com^
 @@/^atv-(ext|ps)\.amazon\.com$/
-@@/^((disney|star)\.api|global|playback|search-api-disney)\.edge\.bamgrid\.com$/
+@@/^(((disney|star|espn)\.api|global|playback|devices|drm|content|disney\.content|search-api-disney)\.edge|(config-)?cd-dmgz|prod-static)\.bamgrid\.com$/
 @@||cast.google.com^
 @@|disney.connections.api.disney.com^
 @@/^mfwk(web|tv|mobile)-api\.clarovideo\.net$/
