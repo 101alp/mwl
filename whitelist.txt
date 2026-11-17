@@ -5,6 +5,7 @@
 ! [SINTAXIS ADMITIDA PARA EXCEPCIONES]
 !   [EX.REC]  @@||...^    - Recursiva: Abarca dominio y subdominios íntegramente libres de rastreo.
 !   [EX.EXA]  @@|...^     - Exacta: Aísla y permite el endpoint crítico sin exponer la red a telemetría.
+!   [EX.REG]  @@/^...$/   - Regex: Agrupa múltiples nodos o endpoints exactos sin abrir subdominios de rastreo.
 !
 ! [EXCEPCIONES PERMITIDAS EXCLUSIVAMENTE PARA]
 !   [SEC.1] Validación de red (NCSI), conectividad core del sistema operativo y portales cautivos.
@@ -17,20 +18,15 @@
 !
 ! [SUB] INFRAESTRUCTURA DE LLAVES PUBLICAS Y REVOCACION (SSL/TLS)
 @@||pki.goog^
-@@|ocsp.apple.com^
-@@|ocsp2.apple.com^
-@@|ocsp.comodoca.com^
-@@|ocsp.sectigo.com^
+@@/^ocsp2?\.apple\.com$/
+@@/^ocsp\.(comodoca|sectigo)\.com$/
 @@|ocsp.rootca1.amazontrust.com^
 !
 ! [SUB] RESOLUCION ANTI-BOT, CLOUDFLARE Y CAPTCHAS
 @@||recaptcha.net^
 @@|www.gstatic.com^
-@@|challenges.cloudflare.com^
-@@|turnstile.cloudflare.com^
-@@|api.hcaptcha.com^
-@@|assets.hcaptcha.com^
-@@|js.hcaptcha.com^
+@@/^(challenges|turnstile)\.cloudflare\.com$/
+@@/^(api|assets|js)\.hcaptcha\.com$/
 @@|client-api.arkoselabs.com^
 @@|funcaptcha.com^
 !
@@ -38,26 +34,19 @@
 ! [CAT:2] SERVICIOS FINANCIEROS Y COMERCIO (CRITICO)
 !
 ! [SUB] INFRAESTRUCTURA BANCARIA Y SEGURIDAD 3D SECURE
-@@||visa.com.edgekey.net^
-@@||mastercard.com.edgekey.net^
+@@/^(visa|mastercard|banamex)\.com\.edgekey\.net$/
 @@||3ds-notify.com^
 @@|verifiedbyvisa.com^
 @@||cardinalcommerce.com^
 @@|cws.banamex.com^
-@@|banamex.com.edgekey.net^
-@@|cws.bbva.com^
-@@|ecs.bbva.com^
+@@/^(cws|ecs)\.bbva\.com$/
 @@|api.banorte.com^
 @@|bancamovil.inbursa.com^
 @@|device.coppel.com^
 @@|online-metrix.net^
 @@|api-secure.solvedevices.com^
-@@|api.santander.com.mx^
-@@|movil.santander.com.mx^
-@@|mobile.hsbc.com.mx^
-@@|api.hsbc.com.mx^
-@@|movil.scotiabank.com.mx^
-@@|api.scotiabank.com.mx^
+@@/^(api|movil)\.(santander|scotiabank)\.com\.mx$/
+@@/^(api|mobile)\.hsbc\.com\.mx$/
 @@|prod-global-auth.nubank.com.br^
 @@|api.nu.com.mx^
 @@|api.heybanco.com^
@@ -71,26 +60,22 @@
 @@||js.stripe.com^
 @@||adyen.com^
 @@||klarna.com^
-@@|api.mercadopago.com^
-@@|tracker.mercadopago.com^
+@@/^(www\.|api\.)?mercadopago\.com$/
 @@||openpay.mx^
 @@|pay.google.com^
-@@|apple-pay-gateway.apple.com^
-@@|apple-pay-gateway-cert.apple.com^
+@@/^apple-pay-gateway(-cert)?\.apple\.com$/
 @@||melilogistics.com^
 !
 !
 ! [CAT:3] SERVICIOS DEL SO, NUBE Y NOTIFICACIONES
 !
 ! [SUB] ECOSISTEMAS Y AUTENTICACION SINGLE SIGN-ON (SSO)
-@@||login.microsoftonline.com^
-@@||login.live.com^
+@@/^login\.(microsoftonline|live)\.com$/
 @@||msauth.net^
 @@||msauthimages.net^
 @@|autologon.microsoftazuread-sso.com^
 @@||aadcdn.msftauth.net^
-@@|wdcp.microsoft.com^
-@@|wdcpalt.microsoft.com^
+@@/^wdcp(alt)?\.microsoft\.com$/
 @@|gsp1.apple.com^
 @@|gs-loc.apple.com^
 @@|api.samsungcloudplatform.com^
@@ -105,39 +90,64 @@
 @@||push.samsungosp.com^
 @@|heytapmobile.com^
 !
+! [SUB] XIAOMI (MIUI / HYPEROS) - CUENTA MI, PUSH Y SINCRONIZACION
+@@/^(api\.)?account\.xiaomi\.com$/
+@@/^(register\.)?xmpush\.xiaomi\.com$/
+@@|resolver.msg.xiaomi.net^
+@@|i.mi.com^
+@@|find.api.micloud.xiaomi.net^
+@@|update.miui.com^
+!
+! [SUB] SAMSUNG (GALAXY / ONE UI) - CLOUD, PASS Y UPDATES
+@@|api.samsungcloud.com^
+@@||samsungpass.com^
+@@|fota-cloud-dn.ospserver.net^
+!
+! [SUB] APPLE (iOS / iPadOS) - ICLOUD, UBICACION, ACTIVACION Y OTA
+@@/^(setup|gateway)\.icloud\.com$/
+@@/^p[0-9]{2,3}-(caldav|contacts)\.icloud\.com$/
+@@/^(albert|mesu|gdmf)\.apple\.com$/
+@@|gspe1-ssl.ls.apple.com^
+@@/^(init|identity)\.ess\.apple\.com$/
+!
+! [SUB] OPPO / REALME / ONEPLUS (COLOROS) - HEYTAP, PUSH Y OTA
+@@/^id\.(heytap|oppo)\.com$/
+@@/^(conn|api)\.push\.heytapmobi\.com$/
+@@|sau-server.allawntech.com^
+@@|ota.coloros.com^
+!
+! [SUB] MOTOROLA (MYUX / HELLO UI) - CONECTIVIDAD Y SERVICIOS CORE
+@@|moto-ota.appspot.com^
+@@/^(cds|accounts|cloud)\.motorola\.com$/
+!
 !
 ! [CAT:4] VERIFICACION DE RED (NCSI) Y PORTALES CAUTIVOS
 !
 ! [SUB] ANDROID, APPLE, WINDOWS, SMART TV E IOT
-@@|connectivitycheck.gstatic.com^
-@@|connectivitycheck.android.com^
-@@|captive.apple.com^
-@@|configuration.apple.com^
-@@||msftconnecttest.com^
-@@||msftncsi.com^
-@@|connect.rom.miui.com^
+@@/^connectivitycheck\.(gstatic|android|samsung|asus|fb)\.com$/
+@@|clients3.google.com^
+@@/^(captive|configuration)\.apple\.com$/
+@@|netcts.cdn-apple.com^
+@@/^msft(connecttest|ncsi)\.com$/
+@@/^(connect\.rom|rom\.pt)\.miui\.com$/
 @@|connectivitycheck.oppomobile.com^
-@@|connectivitycheck.samsung.com^
-@@|connectivitycheck.asus.com^
-@@|connectivitycheck.fb.com^
+@@|connectivitycheck.cbg-app.huawei.com^
+@@|connectivitycheck.platform.hicloud.com^
+@@|wifi.vivo.com.cn^
 @@|conntest.nintendowifi.net^
 @@||ctest.cdn.nintendo.net^
 @@|connectivitycheck.smartthings.com^
 @@|connectivity.vizio.com^
 @@|captive.roku.com^
 @@||pool.ntp.org^
-@@||time.google.com^
-@@||time.apple.com^
-@@||time.windows.com^
+@@/^time\.(google|apple|windows)\.com$/
 @@||time.nist.gov^
 !
 !
 ! [CAT:5] ENTRETENIMIENTO, MEDIOS Y STREAMING
 !
 ! [SUB] RESOLUCION DE LICENCIAS Y PROTOCOLOS DRM
-@@|widevine.googleapis.com^
-@@|widevineproxy.google.com^
-@@|widevine.l1.google.com^
+@@/^widevine(proxy|\.l1)?\.google(apis)?\.com$/
 @@|fps.envoy.apple.com^
 @@|license.capri.max.com^
 @@|codex.nflxext.com^
@@ -149,45 +159,26 @@
 @@|youtubei.googleapis.com^
 @@|s.youtube.com^
 @@|usher.ttvnw.net^
-@@|spclient.wg.spotify.com^
-@@|apresolve.spotify.com^
+@@/^(spclient\.wg|apresolve)\.spotify\.com$/
 @@||bamgrid.com^
-@@|appboot.netflix.com^
-@@|oca.netflix.com^
-@@|ichnaea.netflix.com^
-@@|auth.max.com^
-@@|markers.api.max.com^
-@@|atv-ps.amazon.com^
-@@|atv-ext-eu.amazon.com^
+@@/^(appboot|oca)\.netflix\.com$/
+@@/^(auth|markers\.api)\.max\.com$/
+@@/^atv-(ps|ext-eu)\.amazon\.com$/
 @@|api.paramountplus.com^
 @@|disney.connections.api.disney.com^
 @@||cast.google.com^
-@@|api.vix.com^
-@@|auth.vix.com^
-@@|playback.vix.com^
-@@|mfwkweb-api.clarovideo.net^
-@@|mfwktv-api.clarovideo.net^
-@@|mfwkmobile-api.clarovideo.net^
+@@/^(api|auth|playback)\.vix\.com$/
+@@/^mfwk(web|tv|mobile)-api\.clarovideo\.net$/
 !
 !
 ! [CAT:6] COMUNICACION Y REDES SOCIALES
 !
 ! [SUB] META, X, TIKTOK, DISCORD Y TELEGRAM
 @@|graph.facebook.com^
-@@|graph.instagram.com^
-@@|i.instagram.com^
-@@|pps.whatsapp.net^
-@@|v.whatsapp.net^
+@@/^(graph|i)\.instagram\.com$/
+@@/^(pps|v|g|c|mmg|media|static|stun|turn|e([1-9]|1[0-6]))\.whatsapp\.net$/
 @@||cdn.whatsapp.net^
-@@|g.whatsapp.net^
-@@|c.whatsapp.net^
-@@|mmg.whatsapp.net^
-@@|media.whatsapp.net^
-@@|static.whatsapp.net^
-@@|stun.whatsapp.net^
-@@|turn.whatsapp.net^
 @@||fna.whatsapp.net^
-@@/^e([1-9]|1[0-6])\.whatsapp\.net$/
 @@|api.twitter.com^
 @@||video.twimg.com^
 @@|api.tiktok.com^
@@ -202,42 +193,27 @@
 @@|api.playstation.com^
 @@|auth.api.sonyentertainmentnetwork.com^
 @@|ca.account.sony.com^
-@@|gs2.ww.prod.dl.playstation.net^
-@@|gst.prod.dl.playstation.net^
+@@/^(gs2\.ww|gst)\.prod\.dl\.playstation\.net$/
 @@|nsx.np.dl.playstation.net^
 @@|asm.np.community.playstation.net^
 !
 ! [SUB] XBOX LIVE Y GAME PASS
-@@|cloudsync.xboxlive.com^
-@@|title.mgt.xboxlive.com^
-@@|user.auth.xboxlive.com^
-@@|device.auth.xboxlive.com^
-@@|xsts.auth.xboxlive.com^
-@@|licensing.xboxlive.com^
-@@|assets1.xboxlive.com^
-@@|assets2.xboxlive.com^
+@@/^(cloudsync|title\.mgt|licensing|assets[12]|(user|device|xsts)\.auth)\.xboxlive\.com$/
 !
 ! [SUB] NINTENDO SWITCH Y ESHOP
-@@|accounts.nintendo.com^
-@@|api.accounts.nintendo.com^
+@@/^(api\.)?accounts\.nintendo\.com$/
 @@||baas.nintendo.com^
-@@|atum.hac.lp1.d4c.nintendo.net^
-@@|aqua.hac.lp1.d4c.nintendo.net^
-@@|sun.hac.lp1.d4c.nintendo.net^
+@@/^(atum|aqua|sun)\.hac\.lp1\.d4c\.nintendo\.net$/
 !
 ! [SUB] ROBLOX, EPIC, ACTIVISION, TENCENT Y OTROS
 @@|api.epicgames.dev^
 @@|account.epicgames.com^
-@@|clientsettings.roblox.com^
-@@|gamepersistence.roblox.com^
-@@|assetdelivery.roblox.com^
+@@/^(clientsettings|gamepersistence|assetdelivery)\.roblox\.com$/
 @@||images.roblox.com^
 @@||rbxcdn.com^
-@@|midas.king.com^
-@@|king.com^
+@@/^(midas\.)?king\.com$/
 @@|s.activision.com^
-@@|gcloud.tencent.com^
-@@|gcloud.tencentgames.com^
+@@/^gcloud\.tencent(games)?\.com$/
 @@||demonware.net^
 @@||vanguard.battle.net^
 @@||id.supercell.com^
@@ -257,37 +233,21 @@
 @@||lgthinq.com^
 @@||nsu-service.lge.com^
 @@|ldas.lge.com^
-@@|mx.nextlgsdp.com^
-@@|ngfts.nextlgsdp.com^
-@@|eic-gfts.nextlgsdp.com^
-@@|mx.lgtvsdp.com^
-@@|ngfts.lgtvsdp.com^
+@@/^(mx|ngfts|eic-gfts)\.nextlgsdp\.com$/
+@@/^(mx|ngfts)\.lgtvsdp\.com$/
 !
 ! [SUB] SAMSUNG TIZEN OS, SMART HUB Y ECOSISTEMA
-!
-@@|time.samsungcloudsolution.com^
-@@|network-test.samsungcloudsolution.com^
+@@/^(time|network-test|cdn|sas|epg|epg-cdn|drm)\.samsungcloudsolution\.com$/
 @@|www.samsungrm.net^
-@@|cdn.samsungcloudsolution.com^
-@@|cdn.samsungcloudsolution.net^
-@@|osb.samsungqbe.com^
-@@|osb-v2.samsungqbe.com^
-@@|osb-apps.samsungqbe.com^
-@@|sas.samsungcloudsolution.com^
+@@/^(cdn|otnprd([89]|1[01]))\.samsungcloudsolution\.net$/
+@@/^osb(-v2|-apps)?\.samsungqbe\.com$/
 @@|otn.samsungcloudcdn.com^
-@@/^otnprd([89]|1[01])\.samsungcloudsolution\.net$/
-@@|api.samsungapps.com^
-@@|img.samsungapps.com^
+@@/^(api|img)\.samsungapps\.com$/
 @@|az43064.vo.msecnd.net^
 @@|sso.internetat.tv^
-@@|auth.samsungosp.com^
-@@|us-auth2.samsungosp.com^
+@@/^(us-)?auth2?\.samsungosp\.com$/
 @@|account.samsung.com^
-@@|api.smartthings.com^
-@@|client.smartthings.com^
-@@|epg.samsungcloudsolution.com^
-@@|epg-cdn.samsungcloudsolution.com^
-@@|drm.samsungcloudsolution.com^
+@@/^(api|client)\.smartthings\.com$/
 !
 !
 ! [CAT:9] HERRAMIENTAS DE RED LOCALES
