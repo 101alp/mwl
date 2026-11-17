@@ -157,7 +157,8 @@
 ! [SUB] PLATAFORMAS DE AUDIO, VIDEO Y STREAMING
 @@|api.paramountplus.com^
 @@/^atv-(ext|ps)\.amazon\.com$/
-@@||bamgrid.com^
+@@/^(disney|star)\.api\.edge\.bamgrid\.com$/
+@@/^(global|playback|search-api-disney)\.edge\.bamgrid\.com$/
 @@||cast.google.com^
 @@|disney.connections.api.disney.com^
 @@/^mfwk(web|tv|mobile)-api\.clarovideo\.net$/
@@ -175,8 +176,7 @@
 ! [CAT:6] COMUNICACION INTERPERSONAL Y REDES SOCIALES
 
 ! [SUB] MENSAJERIA INSTANTANEA Y VOIP
-@@/\.((cdn|fna)\.)?whatsapp\.net$/
-@@/^(pps|v|g|c|mmg|media|static|stun|turn|e([1-9]|1[0-6]))\.whatsapp\.net$/
+@@/^(pps|v|g|c|mmg|media(-[a-z0-9-]+)?|static|stun|turn|e([1-9]|1[0-6]))\.((cdn|fna)\.)?whatsapp\.net$/
 
 ! [SUB] REDES SOCIALES Y CDNS DE MEDIOS
 @@|graph.facebook.com^
@@ -228,7 +228,7 @@
 @@/^(cdn|config|lcprd[12]|otnprd([89]|1[01]))\.samsungcloudsolution\.net$/
 @@/^(time|network-test|cdn|config|sas|epg|epg-cdn|drm|tvplus|ott)\.samsungcloudsolution\.com$/
 @@/^(api|client)\.smartthings\.com$/
-@@||lgtvonline.com^
+@@/^(aic|us|mx|eu|kr|qt2-ngfts|snu|su)\.lgtvonline\.com$/
 @@/^(tv-smartshare|lgtvonline|snu|su|ngfts|nsu-service|ldas|(aic|mx)\.nlu)\.lge\.com$/
 @@/^(api|emp|us)\.lgeapi\.com$/
 @@||lgsmartcdn.com^
