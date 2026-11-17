@@ -239,7 +239,7 @@
 @@|api.samsungapps.com^
 @@|img.samsungapps.com^
 @@|otn.samsungcloudcdn.com^
-@@/^osb(-apps)?(-v2)?\.samsungqbe\.com$/
+@@/^osb(-(apps|auth|secure|ussvc))?(-v)?(-ussvc)?\.samsungqbe\.com$/
 @@/^(cdn|otnprd([89]|1[01]))\.samsungcloudsolution\.net$/
 @@/^(time|network-test|cdn|sas|epg|epg-cdn|drm)\.samsungcloudsolution\.com$/
 @@/^(api|client)\.smartthings\.com$/
