@@ -236,26 +236,22 @@
 @@|az43064.vo.msecnd.net^
 @@|sso.internetat.tv^
 @@|www.samsungrm.net^
-@@|api.samsungapps.com^
-@@|img.samsungapps.com^
+@@/^(api|img)\.samsungapps\.com$/
 @@|otn.samsungcloudcdn.com^
-@@/^osb(-(apps|auth|secure|ussvc))?(-v)?(-ussvc)?\.samsungqbe\.com$/
-@@/^(cdn|otnprd([89]|1[01]))\.samsungcloudsolution\.net$/
-@@/^(time|network-test|cdn|sas|epg|epg-cdn|drm)\.samsungcloudsolution\.com$/
+@@/^osb(-(apps|auth|secure|ussvc))?(-v[12])?(-ussvc)?\.samsungqbe\.com$/
+@@/^(cdn|config|otnprd([89]|1[01]))\.samsungcloudsolution\.net$/
+@@/^(time|network-test|cdn|config|sas|epg|epg-cdn|drm)\.samsungcloudsolution\.com$/
 @@/^(api|client)\.smartthings\.com$/
 @@||lgtvonline.com^
 @@|tv-smartshare.lge.com^
-@@||snu.lge.com^
-@@||su.lge.com^
+@@/^(snu|su|ngfts|nsu-service|ldas)\.lge\.com$/
+@@/^(api|emp|us)\.lgeapi\.com$/
 @@||lgsmartcdn.com^
 @@||lgsmartplatform.com^
-@@||lgeapi.com^
-@@||ngfts.lge.com^
 @@||lgthinq.com^
-@@||nsu-service.lge.com^
-@@|ldas.lge.com^
-@@/^(mx|ngfts|eic-gfts)\.nextlgsdp\.com$/
-@@/^(mx|ngfts)\.lgtvsdp\.com^/
+@@/^(mx|us|aic|ngfts)\.ibs\.lgappstv\.com$/
+@@/^(mx|ngfts|aic-gfts)\.nextlgsdp\.com$/
+@@/^(mx|ngfts|aic-ngfts)\.lgtvsdp\.com$/
 
 
 ! [CAT:9] DIAGNOSTICO DE RED Y OVERRIDES LOCALES
