@@ -97,7 +97,12 @@
 ! [SUB] ECOSISTEMAS MOVILES, BUSCADORES Y DE ESCRITORIO (APPLE, GOOGLE, MICROSOFT, MOTOROLA, OPPO, SAMSUNG, XIAOMI)
 @@/^(www\.)?(google|bing)\.com(\.mx)?$/
 @@|supl.google.com^
+! [EX.HYB] Asistencia satelital A-GPS de Qualcomm (XTRA); acopla metadatos de hardware pero evita fallos de fijación GPS:
+@@/^path[1-3]\.xtracloud\.net$/
+! [EX.HYB] Servicio de configuración y seguridad ECS de Microsoft (Edge/Defender/Teams); acopla experimentos A/B:
+@@|config.edge.skype.com^
 @@/^(albert|gdmf|mesu)\.apple\.com$/
+@@/^(updates|updates-http)\.cdn-apple\.com$/
 @@|cl3.apple.com^
 @@|mask.icloud.com^
 @@|gspe1-ssl.ls.apple.com^
@@ -115,12 +120,15 @@
 @@|api.samsungcloud.com^
 @@|fota-cloud-dn.ospserver.net^
 @@||samsungpass.com^
+@@|vas.samsungapps.com^
 @@/^(us-)?auth2?\.samsungosp\.(com|net)$/
 @@/^(api\.)?account\.xiaomi\.com$/
+! [EX.HYB] Sincronización de nube y localización de dispositivo Xiaomi; acopla telemetría de estado de sistema:
 @@/^(api(\.g)?|find(\.api)?|findapi|us\.(find|gallery|status)api)\.micloud\.xiaomi\.net$/
 @@|api.device.xiaomi.net^
 @@|i.mi.com^
 @@/^(resolver\.msg(\.global)?|(sg\.)?app\.chat\.global)\.xiaomi\.net$/
+@@|api.intl.miui.com^
 @@|update.miui.com^
 @@/^(register\.)?xmpush\.xiaomi\.com$/
 @@/^(global|sg\.global|h3)\.market\.xiaomi\.com$/
@@ -140,15 +148,19 @@
 @@/^(visa|mastercard|banamex)\.com\.edgekey\.net$/
 
 ! [SUB] BANCA MOVIL Y FINTECH (MEXICO/LATAM)
-@@|cws.banamex.com^
+@@/^(www|cws|bancanet|movil)\.banamex\.com$/
 @@|bancamovil.banjercito.com.mx^
 @@|movil.afirme.com^
-@@|api.banorte.com^
+@@/^(www|api|bancoenlinea)\.banorte\.com$/
+@@|api.banregio.com^
+@@|movil.bb.com.mx^
 @@/^(cws|ecs)\.bbva\.com$/
+@@/^(www|movil)\.bbva\.mx$/
 @@|device.coppel.com^
 @@|api.heybanco.com^
 @@/^(api|mobile)\.hsbc\.com\.mx$/
 @@|bancamovil.inbursa.com^
+@@|api.klar.mx^
 @@|api.nu.com.mx^
 @@/^(prod-)?global-auth\.nubank\.com\.br$/
 @@/^(api|movil)\.(santander|scotiabank)\.com\.mx$/
@@ -160,7 +172,7 @@
 @@/^(www\.|api\.)?mercadopago\.com$/
 @@/^(api|sandbox-api)\.openpay\.mx$/
 @@|pay.google.com^
-@@|api.paypal.com^
+@@/^(www|api|c)\.paypal\.com$/
 @@||paypalobjects.com^
 @@/^apple-pay-gateway(-cert)?\.apple\.com$/
 @@|api.stripe.com^
@@ -181,13 +193,16 @@
 
 ! [SUB] PLATAFORMAS DE AUDIO, VIDEO Y STREAMING
 @@/^(api|auth|playback)\.paramountplus\.com$/
-@@/^atv-(ext|ps)\.amazon\.com$/
+! [EX.HYB] Nodos de interfaz y streaming de Prime Video; unagi-na evita bloqueo de cierre en Tizen OS:
+@@/^(atv-(ext|ps)|unagi-na)\.amazon\.com$/
 @@/^(((disney|star|espn)\.api|global|playback|devices|drm|content|disney\.content|search-api-disney)\.edge|(config-)?cd-dmgz|prod-static)\.bamgrid\.com$/
 @@||cast.google.com^
 @@|disney.connections.api.disney.com^
 @@/^mfwk(web|tv|mobile)-api\.clarovideo\.net$/
 @@/^(auth|markers\.api)\.max\.com$/
 @@/^(appboot|oca)\.netflix\.com$/
+! [EX.HYB] Telemetría de clientes embebidos Netflix (NRDP); su bloqueo rompe reproducción en Smart TVs:
+@@|nrdp.logs.netflix.com^
 @@|apresolve.spotify.com^
 @@|spclient.wg.spotify.com^
 ! [EX.HYB] Requerido para transmisión en vivo de Twitch; acopla publicidad SSAI en el flujo de video:
@@ -195,8 +210,8 @@
 ! [EX.HYB] Requerido para sincronizar historial de reproducción y progreso de video en YouTube:
 @@|s.youtube.com^
 @@|youtubei.googleapis.com^
-! [EX.HYB] Entrega el flujo multimedia de YouTube junto con anuncios incrustados en el mismo dominio:
-@@||manifest.googlevideo.com^
+! [EX.HYB] Entrega el flujo multimedia y manifiestos de YouTube junto con anuncios incrustados (aislado por patrón de nodo r/rr):
+@@/^(manifest|r{1,2}[0-9]+---sn-[a-z0-9-]+)\.googlevideo\.com$/
 @@/^(api|auth|playback)\.vix\.com$/
 
 
@@ -242,7 +257,7 @@
 @@|gcloud.tencent.com^
 @@|gcloud.tencentgames.com^
 @@||demonware.net^
-@@||vanguard.battle.net^
+@@|vanguard.battle.net^
 
 
 ! [CAT:8] HARDWARE ESPECIALIZADO, SMART TV E IOT
@@ -254,17 +269,17 @@
 @@/^(api|img)\.samsungapps\.com$/
 @@|otn.samsungcloudcdn.com^
 @@|otn.samsungotn.net^
-@@/^osb(-(apps|auth|secure|ussvc))?(-v[12])?(-ussvc)?\.samsungqbe\.com$/
-@@/^(cdn|config|lcprd[12]|otnprd([89]|1[01]))\.samsungcloudsolution\.net$/
-! [EX.HYB] Nodos centrales de Samsung Tizen; requeridos para red/tienda pero mezclan métricas de uso:
-@@/^(time|network-test|cdn|config|epg|epg-cdn|drm|tvplus|fkpprd(-v[0-9]+)?)\.samsungcloudsolution\.com$/
+@@/^(gpm|osb(-(apps|auth|secure|ussvc))?(-v[12])?(-ussvc)?)\.samsungqbe\.com$/
+@@/^(cdn|lcprd[12]|otnprd([89]|1[01]))\.samsungcloudsolution\.net$/
+! [EX.HYB] Nodos centrales de Samsung Tizen; requeridos para red/guía/DRM y aprovisionamiento inicial de apps, pero mezclan métricas de uso:
+@@/^(time|network-test|cdn|epg|epg-cdn|drm|tvplus|fkpprd(-v[0-9]+)?)\.samsungcloudsolution\.com$/
 @@/^(api|client)\.smartthings\.com$/
 @@|d1oxlq5h9kq8q5.cloudfront.net^
 
 ! [SUB] SISTEMAS OPERATIVOS DE TELEVISION (LG WEBOS) Y NAVEGADORES
 ! [EX.HYB] Nodos regionales de LG webOS; requeridos para conexión a tienda/red pero mezclan métricas y banners:
 @@/^(aic|us|mx|eu|kr|qt2-ngfts|snu|su)\.lgtvonline\.com$/
-@@/^(tv-smartshare|lgtvonline|snu|su|(aic-)?ngfts|nsu-service)\.lge\.com$/
+@@/^(tv-smartshare|lgtvonline|snu|su(-ssl)?|ngfts|aic-ngfts|qt2-ngfts|nsu-service)\.lge\.com$/
 @@/^(api|emp|us)\.lgeapi\.com$/
 @@||lgsmartcdn.com^
 @@/^(api|us|mx|aic)\.lgsmartplatform\.com$/
