@@ -257,7 +257,7 @@
 @@/^osb(-(apps|auth|secure|ussvc))?(-v[12])?(-ussvc)?\.samsungqbe\.com$/
 @@/^(cdn|config|lcprd[12]|otnprd([89]|1[01]))\.samsungcloudsolution\.net$/
 ! [EX.HYB] Nodos centrales de Samsung Tizen; requeridos para red/tienda pero mezclan métricas de uso:
-@@/^(time|network-test|cdn|config|epg|epg-cdn|drm|tvplus)\.samsungcloudsolution\.com$/
+@@/^(time|network-test|cdn|config|epg|epg-cdn|drm|tvplus|fkpprd(-v[0-9]+)?)\.samsungcloudsolution\.com$/
 @@/^(api|client)\.smartthings\.com$/
 @@|d1oxlq5h9kq8q5.cloudfront.net^
 
