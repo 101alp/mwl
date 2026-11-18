@@ -34,6 +34,7 @@
 @@||time.nist.gov^
 
 ! [SUB] VALIDACION DE CONECTIVIDAD (NCSI) Y PORTALES CAUTIVOS
+@@|stun.l.google.com^
 @@/^connectivitycheck\.(android|asus|cbg-app\.huawei|fb|gstatic|oppomobile|platform\.hicloud|samsung|smartthings)\.com$/
 @@|connectivity.vizio.com^
 @@|clients3.google.com^
@@ -64,6 +65,7 @@
 @@/^(api|assets|js)\.hcaptcha\.com$/
 @@|client-api.arkoselabs.com^
 @@/^([a-z0-9-]+\.)?funcaptcha\.com$/
+@@/^collector-px[a-z0-9]+\.(perimeterx\.net|px-cloud\.net)$/
 
 
 ! [CAT:3] SISTEMAS OPERATIVOS, IDENTIDAD CLOUD Y NOTIFICACIONES PUSH
@@ -88,16 +90,21 @@
 @@|mtalk.google.com^
 @@||push.apple.com^
 @@||push.samsungosp.com^
-@@/^([a-z0-9-]+\.)?heytapmobile\.com$/
-@@|wns.windows.com^
+@@|shortintl.push.heytapmobile.com^
+@@/^(client\.)?wns\.windows\.com$/
+@@/^conn-service-us-0[45]\.allawnos\.com$/
 
 ! [SUB] ECOSISTEMAS MOVILES, BUSCADORES Y DE ESCRITORIO (APPLE, GOOGLE, MICROSOFT, MOTOROLA, OPPO, SAMSUNG, XIAOMI)
 @@/^(www\.)?(google|bing)\.com(\.mx)?$/
 @@|supl.google.com^
 @@/^(albert|gdmf|mesu)\.apple\.com$/
+@@|cl3.apple.com^
+@@|mask.icloud.com^
 @@|gspe1-ssl.ls.apple.com^
 @@/^(init|identity)\.ess\.apple\.com$/
 @@/^(setup|gateway|p[0-9]{2,3}-(caldav|contacts))\.icloud\.com$/
+@@/^(findmydevice|notifications-ueeshp)-pa\.googleapis\.com$/
+@@|userlocation.googleapis.com^
 @@/^(cds|accounts|cloud)\.motorola\.com$/
 @@|moto-ota.appspot.com^
 @@/^id\.(heytap|oppo)\.com$/
@@ -110,11 +117,13 @@
 @@||samsungpass.com^
 @@/^(us-)?auth2?\.samsungosp\.(com|net)$/
 @@/^(api\.)?account\.xiaomi\.com$/
-@@|find.api.micloud.xiaomi.net^
+@@/^(api(\.g)?|find(\.api)?|findapi|us\.(find|gallery|status)api)\.micloud\.xiaomi\.net$/
+@@|api.device.xiaomi.net^
 @@|i.mi.com^
-@@|resolver.msg.xiaomi.net^
+@@/^(resolver\.msg(\.global)?|(sg\.)?app\.chat\.global)\.xiaomi\.net$/
 @@|update.miui.com^
 @@/^(register\.)?xmpush\.xiaomi\.com$/
+@@/^(global|sg\.global|h3)\.market\.xiaomi\.com$/
 
 
 ! [CAT:4] SERVICIOS FINANCIEROS, BANCA Y COMERCIO TRANSACCIONAL
@@ -122,6 +131,8 @@
 ! [SUB] INFRAESTRUCTURA DE TARJETAS, 3D SECURE Y ANTIFRAUDE
 @@||3ds-notify.com^
 @@||cardinalcommerce.com^
+@@|api3.siftscience.com^
+@@|imgs.signifyd.com^
 ! [EX.HYB] Perfilado de dispositivo indispensable para autorización antifraude en banca web/móvil:
 @@/^([a-z0-9-]+\.)?online-metrix\.net$/
 @@|api-secure.solvedevices.com^
@@ -166,6 +177,7 @@
 @@|codex.nflxext.com^
 @@|widevine-license.vix.com^
 @@/^widevine(proxy|\.l1)?\.google(apis)?\.com$/
+@@/^(partiality\.itunes|lcdn-locator|cstat\.cdn-apple)\.com$/
 
 ! [SUB] PLATAFORMAS DE AUDIO, VIDEO Y STREAMING
 @@/^(api|auth|playback)\.paramountplus\.com$/
@@ -193,15 +205,16 @@
 ! [SUB] MENSAJERIA INSTANTANEA Y VOIP
 @@/^(pps|v|g|c|mmg|media(-[a-z0-9-]+)?|static|stun|turn|e([1-9]|1[0-6]))\.((cdn|fna)\.)?whatsapp\.net$/
 
-! [SUB] REDES SOCIALES Y CDNS DE MEDIOS
+! [SUB] REDES SOCIALES, SOPORTE WEB Y CDNS DE MEDIOS
 @@|graph.facebook.com^
 @@|gateway.telegram.org^
-@@/^(graph|i)\.instagram\.com$/
+@@/^(graph|i|gateway|graph-fallback)\.instagram\.com$/
 ! [EX.HYB] Endpoint central de feed y API; acopla telemetría de sesión con entrega de contenido:
 @@|api.tiktok.com^
 @@|api.twitter.com^
 @@|video.twimg.com^
 @@|latency.discord.media^
+@@|widget-mediator.zopim.com^
 
 
 ! [CAT:7] GAMING Y ECOSISTEMAS DE ENTRETENIMIENTO INTERACTIVO
@@ -244,14 +257,14 @@
 @@/^osb(-(apps|auth|secure|ussvc))?(-v[12])?(-ussvc)?\.samsungqbe\.com$/
 @@/^(cdn|config|lcprd[12]|otnprd([89]|1[01]))\.samsungcloudsolution\.net$/
 ! [EX.HYB] Nodos centrales de Samsung Tizen; requeridos para red/tienda pero mezclan métricas de uso:
-@@/^(time|network-test|cdn|config|sas|epg|epg-cdn|drm|tvplus|ott)\.samsungcloudsolution\.com$/
+@@/^(time|network-test|cdn|config|epg|epg-cdn|drm|tvplus)\.samsungcloudsolution\.com$/
 @@/^(api|client)\.smartthings\.com$/
 @@|d1oxlq5h9kq8q5.cloudfront.net^
 
-! [SUB] SISTEMAS OPERATIVOS DE TELEVISION (LG WEBOS)
+! [SUB] SISTEMAS OPERATIVOS DE TELEVISION (LG WEBOS) Y NAVEGADORES
 ! [EX.HYB] Nodos regionales de LG webOS; requeridos para conexión a tienda/red pero mezclan métricas y banners:
 @@/^(aic|us|mx|eu|kr|qt2-ngfts|snu|su)\.lgtvonline\.com$/
-@@/^(tv-smartshare|lgtvonline|snu|su|ngfts|nsu-service|ldas|(aic|mx)\.nlu)\.lge\.com$/
+@@/^(tv-smartshare|lgtvonline|snu|su|(aic-)?ngfts|nsu-service)\.lge\.com$/
 @@/^(api|emp|us)\.lgeapi\.com$/
 @@||lgsmartcdn.com^
 @@/^(api|us|mx|aic)\.lgsmartplatform\.com$/
@@ -259,20 +272,19 @@
 @@/^(mx|us|aic|ngfts)\.(ibs\.lgappstv|lgtvsdp)\.com$/
 @@/^(mx|us|ngfts|aic-gfts)\.nextlgsdp\.com$/
 @@/^(mx|us|aic|emp)\.lgaccount\.com$/
+@@|sitecheck.opera.com^
 
 ! [SUB] HARDWARE DE CONTROL Y CANALES IPTV NATIVOS
 @@|reverselookup.quicksetcloud.com^
 @@/^(api|cdn|epg|vod)\.samsungtvplus\.com$/
 @@/^(api|us|mx|aic)\.lgchannels\.com$/
-@@/^(api|playback|us|mx)\.xumo\.com$/
+@@/^(playback|us|mx)\.xumo\.com$/
 ! [EX.HYB] Entrega el flujo de canales en vivo de Pluto TV junto con publicidad SSAI acoplada:
 @@/^(boot|service-channels|stitcher)\.pluto\.tv$/
 
 
 ! [CAT:9] DIAGNOSTICO DE RED Y OVERRIDES LOCALES
 
-! [SUB] COMPROBADORES DE IP, ADMINISTRACION Y RED LOCAL ($client)
-@@|api.ipify.org^$client=127.0.0.1
-@@|ipv4.icanhazip.com^$client=127.0.0.1
-@@|ifconfig.me^$client=127.0.0.1
-@@|tplinkextender.net^
+! [SUB] COMPROBADORES DE IP, ADMINISTRACION Y RED LOCAL
+@@||tplinkextender.net^
+@@/^(api\.ipify\.org|checkip\.amazonaws\.com|(ipv4\.)?icanhazip\.com|ifconfig\.me|whoami\.akamai\.net)$/
