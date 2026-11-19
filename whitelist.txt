@@ -413,12 +413,12 @@
 @@|d1oxlq5h9kq8q5.cloudfront.net^
 
 ! --- Smart Hub Core, Guía EPG, DRM y Samsung Cloud Solution (Híbridos) ---
-! [EX.HYB] Samsung Smart Hub OSB & GPM (Bus de sesión, políticas regionales y apps Tizen; acopla metadatos de Smart Hub)
-@@/^(gpm|osb(-(apps|auth|secure|ussvc))?(-v[12])?(-ussvc)?)\.samsungqbe\.com$/
+! [EX.HYB] Samsung Smart Hub OSB, Auth, T&C & GPM (Bus de sesión, políticas regionales y apps Tizen; acopla metadatos de Smart Hub)
+@@/^(gpm|stc|osb(-(apps|auth|secure|tnc|ussvc))?(-v[12])?(-appsacc|-ussvc)?)\.samsungqbe\.com$/
 ! [EX.HYB] Samsung Cloud Solution .NET (Validación de enlace Smart Hub lcprd, CDN de apps y nodos OTN; acopla estado de TV)
 @@/^(cdn|lcprd[12]|otnprd[0-9]{1,2})\.samsungcloudsolution\.net$/
-! [EX.HYB] Nodos centrales de Samsung Tizen; requeridos para red/guía/DRM y aprovisionamiento inicial de apps, pero mezclan métricas de uso
-@@/^(time|network-test|cdn|epg|epg-cdn|drm|tvplus|fkpprd(-v[0-9]+)?)\.samsungcloudsolution\.com$/
+! [EX.HYB] Nodos centrales de Samsung Tizen; requeridos para red/guía/DRM y binarios EMP de apps, pero mezclan métricas de uso
+@@/^(time|network-test|cdn|epg|epg-cdn|drm|tvplus|o?empprd|empdownprd|fkpprd(-v[0-9]+)?)\.samsungcloudsolution\.com$/
 
 ! --- Identidad LG Account, CDN Estático y ThinQ IoT ---
 @@||lgsmartcdn.com^
@@ -434,7 +434,7 @@
 ! [EX.HYB] LG Smart Platform & EMP EULA (Validación de acuerdos legales y runtime de apps webOS; acopla recomendaciones)
 @@/^(api|emp|us)\.lgeapi\.com$/
 ! [EX.HYB] LG Service Delivery Platform & LG Apps (Tienda de aplicaciones, reloj webOS y descargas; acopla filas recomendadas)
-@@/^(mx|us|aic|ngfts)\.(ibs\.lgappstv|lgtvsdp)\.com$/
+@@/^((mx|us|aic|ngfts)\.(ibs\.lgappstv|lgtvsdp)|mx\.ibs\.nextlgsdp)\.com$/
 
 ! --- Control Remoto Universal HDMI-CEC / IR (UEI QuickSet Cloud) ---
 ! [EX.HYB] UEI QuickSet Cloud (Detección automática de dispositivos HDMI para mando universal; acopla inventario de hardware)
@@ -445,6 +445,8 @@
 @@/^(api|cdn|epg|vod)\.samsungtvplus\.com$/
 ! [EX.HYB] LG Channels FAST IPTV (Sintonizador IP y guía de canales webOS; acopla publicidad nativa en transmisión gratuita)
 @@/^(api|us|mx|aic)\.lgchannels\.com$/
+! [EX.HYB] OTTera Static Assets (Carátulas y metadatos EPG para LG Channels; aislado de subdominios de anuncios de ottera.tv)
+@@|lge-static.ottera.tv^
 ! [EX.HYB] Xumo TV FAST Backend (Manifiestos de reproducción y canales en vivo; excluye balizas *-beacons.xumo.com)
 @@/^(playback|us|mx)\.xumo\.com$/
 ! [EX.HYB] Entrega el flujo de canales en vivo de Pluto TV (v3 y v4 CloudFront Stitcher) junto con publicidad SSAI acoplada
