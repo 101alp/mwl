@@ -1,6 +1,6 @@
-! ==============================================================================
 ! Título: Aegis Lumina
-! ==============================================================================
+! --------------------
+!
 ! [DESCRIPCIÓN] Lista blanca quirúrgica encargada de desbloquear dominios y
 !               endpoints críticos que los bloqueadores de tracking, telemetría
 !               o anuncios atrapan por error. Diseñada bajo dependencia estricta
@@ -29,19 +29,19 @@
 !   [SEC.7] Gaming y ecosistemas de entretenimiento interactivo.
 !   [SEC.8] Hardware especializado, Smart TV e IoT.
 !   [SEC.9] Diagnóstico de red y overrides locales ($client).
-! ==============================================================================
 
 
-! ==============================================================================
+
 ! [CAT:1] CONECTIVIDAD CORE, SINCRONIZACION DE TIEMPO Y PORTALES CAUTIVOS
-! ==============================================================================
+! -----------------------------------------------------------------------
 
 ! --- Estándares Globales y Gubernamentales (NTP Pool / NIST) ---
 @@||pool.ntp.org^
 @@||time.nist.gov^
 
-! --- Servidores Horarios Propietarios (Apple, Google, Microsoft, Qualcomm) ---
+! --- Servidores Horarios Propietarios (Apple, Google, Microsoft, Qualcomm, Xiaomi) ---
 @@/^time\.(google|apple|windows|xtracloud)\.(com|net)$/
+@@|tz.sec.xiaomi.com^
 
 ! --- Estándar WebRTC / NAT Traversal (STUN) ---
 @@|stun.l.google.com^
@@ -68,9 +68,8 @@
 @@|connectivity.vizio.com^
 
 
-! ==============================================================================
 ! [CAT:2] SEGURIDAD CRIPTOGRAFICA, CERTIFICADOS Y VALIDACION ANTI-BOT
-! ==============================================================================
+! -------------------------------------------------------------------
 
 ! --- Autoridades Certificadoras y Respondedores OCSP (Amazon, Apple, Google, Sectigo) ---
 @@||pki.goog^
@@ -78,12 +77,15 @@
 @@/^ocsp2?\.apple\.com$/
 @@/^ocsp\.(comodoca|sectigo)\.com$/
 
-! --- Navegación Segura y Protección Antiphishing (Apple / Google Safe Browsing) ---
+! --- Navegación Segura y Protección Antiphishing (Apple / Google Safe Browsing / Opera) ---
 @@/^(android-)?safebrowsing\.google(apis)?\.com$/
-@@|token.safebrowsing.apple^
+@@|ohttp-relay-safebrowsing-android.google.fastly-edge.com^
+@@/^(proxy|token)\.safebrowsing\.apple$/
+@@|sitecheck.opera.com^
 
 ! --- Google reCAPTCHA y Activos Estáticos Core ---
-@@|www.gstatic.com^
+@@/^www\.gstatic\.com$/
+@@/^t[0-9]+\.gstatic\.com$/
 @@||recaptcha.net^
 
 ! --- Cloudflare Turnstile & WAF Challenges ---
@@ -99,11 +101,19 @@
 ! --- PerimeterX / HUMAN Security WAF ---
 ! [EX.HYB] PerimeterX / HUMAN Security WAF (Anti-bot conductual obligatorio para evitar HTTP 403 en e-commerce/banca)
 @@/^collector-px[a-z0-9]+\.(perimeterx\.net|px-cloud\.net)$/
+@@|b.px-cdn.net^
+@@|ift.px-cloud.net^
+
+! --- Gestión de Consentimiento de Privacidad (CMP: OneTrust / Cookiebot) ---
+! [EX.HYB] OneTrust Global CMP Core & Jurisdiction Resolver (Evita congelamiento de interfaz y bucles de carga web)
+@@|cdn.cookielaw.org^
+@@|geolocation.onetrust.com^
+! [EX.HYB] Cookiebot CMP Core & CDN (Renderizado obligatorio de banner de consentimiento para habilitar scripts funcionales)
+@@/^consent(cdn)?\.cookiebot\.com$/
 
 
-! ==============================================================================
 ! [CAT:3] SISTEMAS OPERATIVOS, IDENTIDAD CLOUD Y NOTIFICACIONES PUSH
-! ==============================================================================
+! ------------------------------------------------------------------
 
 ! --- Microsoft Entra ID / Azure AD / Cuentas Microsoft ---
 @@||login.live.com^
@@ -114,6 +124,8 @@
 
 ! --- Apple ID / GeoServices Auth ---
 @@/^(gsp1|gs-loc)\.apple\.com$/
+@@/^(gs-loc\.ls-apple\.com\.akadns\.net|gsp[0-9]+-ssl\.apple\.com)$/
+@@|iphone-ld.apple.com^
 
 ! --- Google Account / Android GMS ---
 ! [EX.HYB] Google Mobile Services (Tokens OAuth Android, Play Store y Push FCM acoplados con estado de dispositivo)
@@ -121,8 +133,17 @@
 ! [EX.HYB] Google Account / Chrome Sync (OAuth multi-sesión y sincronización Workspace acoplados con telemetría de cliente)
 @@|clients4.google.com^
 
-! --- Samsung Cloud Platform ---
+! --- Samsung Cloud Platform & Push ---
 @@|api.samsungcloudplatform.com^
+@@|sdk.pushmessage.samsung.com^
+
+! --- Autenticación Social, Deep Linking y Webfonts Core (Snapkit, Branch.io, Adobe Typekit) ---
+@@|api.snapkit.com^
+! [EX.HYB] Branch.io Universal Deep Linking & Magic Link Auth (Enrutamiento de enlaces mágicos de inicio de sesión y apps)
+@@|api2.branch.io^
+@@|bnc.lt^
+! [EX.HYB] Adobe Fonts (Typekit) Core CSS & Webfont CDN (Tipografías esenciales de renderizado web y aplicaciones)
+@@/^(p|use)\.typekit\.net$/
 
 ! --- Google Firebase Cloud Messaging (FCM) ---
 @@/^(alt[1-8]-)?mtalk4?\.google\.com$/
@@ -143,16 +164,22 @@
 ! [EX.HYB] HeyTap / AllawnOS Push (Canal push nativo Oppo/OnePlus/Realme; subdominios aislados del rastreo raíz)
 @@|shortintl.push.heytapmobile.com^
 
-! --- Buscadores Web Core (Google y Bing) ---
+! --- Buscadores Web Core (Google, Bing y Apple Spotlight/Siri) ---
 ! [EX.HYB] Buscadores Web Core (Google y Bing raíz/www aislados de subdominios de analítica y publicidad)
 @@/^(www\.)?(google|bing)\.com(\.mx)?$/
+! [EX.HYB] Apple Spotlight, Siri & Safari Search Nodes (Sugerencias de búsqueda del sistema y resolución contextual)
+@@/^(api(-(glb|spotlight)-[a-z0-9-]+)?|chickadee)\.smoot\.apple\.com$/
 
-! --- Apple (iOS / macOS / iCloud / Activación / OTA / Ubicación) ---
+! --- Feature Flags & Configuración Dinámica de Apps (Statsig) ---
+! [EX.HYB] Statsig Feature Gates Initialization CDN (Inicialización de funciones core en Grok/xAI y ChatGPT; acopla métricas)
+@@|featureassets.org^
+
+! --- Apple (iOS / macOS / iCloud / Activación / OTA / Ubicación / Private Relay) ---
 @@/^(albert|gdmf|mesu)\.apple\.com$/
 @@/^updates(-http)?\.cdn-apple\.com$/
 @@/^(init|identity)\.ess\.apple\.com$/
 @@/^(setup|gateway|p[0-9]{2,3}-(caldav|contacts))\.icloud\.com$/
-@@|mask-api.icloud.com^
+@@/^mask(-api)?\.icloud\.com$/
 ! [EX.HYB] Apple CoreLocation y GeoServices (Mapas, Clima y posicionamiento Wi-Fi/Celular; acopla metadatos de ubicación)
 @@/^(cl[1-5]|gspe[0-9]+-ssl\.ls)\.apple\.com$/
 
@@ -167,19 +194,26 @@
 ! [EX.HYB] Asistencia satelital A-GPS de Qualcomm (XTRA); acopla metadatos de hardware pero evita fallos de fijación GPS
 @@/^path[1-3]\.xtracloud\.net$/
 
-! --- Microsoft Escritorio (Edge / Defender / Teams ECS) ---
+! --- Microsoft Escritorio (Edge / Defender / Teams ECS / Windows Update DO) ---
 ! [EX.HYB] Servicio de configuración y seguridad ECS de Microsoft (Edge/Defender/Teams); acopla experimentos A/B
 @@|config.edge.skype.com^
+@@/^geo(ver)?\.prod\.do\.dsp\.mp\.microsoft\.com$/
+
+! --- Huawei / Honor (HMS Core / Cloud) ---
+@@/^(dnkeeper\.platform|grs(\.platform)?)\.dbankcloud\.(asia|cn|com|eu|ru)$/
 
 ! --- Motorola (Moto ID / OTA / Ready For) ---
 @@/^(cds|accounts|cloud)\.motorola\.com$/
 @@|moto-ota.appspot.com^
 
-! --- Oppo / OnePlus / Realme (ColorOS / OxygenOS / HeyTap) ---
+! --- Oppo / OnePlus / Realme (ColorOS / OxygenOS / HeyTap / AllawnOS) ---
 @@/^id\.(heytap|oppo)\.com$/
 @@/^(conn|api)\.push\.heytapmobi\.com$/
 @@|ota.coloros.com^
-@@|sau-server.allawntech.com^
+@@/^sau-server(-sg)?\.allawn(tech|os)\.com$/
+
+! --- Opera (Compresión y Navegación Móvil) ---
+@@|mini5.opera-mini.net^
 
 ! --- Samsung Galaxy (Samsung Account / Cloud / FOTA / Pass / Galaxy Store) ---
 @@|account.samsung.com^
@@ -190,24 +224,25 @@
 ! [EX.HYB] Samsung Galaxy Store VAS (Actualización de apps del sistema y módulos Galaxy Wearable; acopla catálogo promocional)
 @@|vas.samsungapps.com^
 
-! --- Xiaomi / Redmi / POCO (MIUI / HyperOS / Mi Cloud / MiPush) ---
+! --- Xiaomi / Redmi / POCO (MIUI / HyperOS / Mi Cloud / MiPush / Security Core) ---
 @@/^(api\.)?account\.xiaomi\.com$/
 @@|i.mi.com^
 @@/^(resolver\.msg(\.global)?|(sg\.)?app\.chat\.global)\.xiaomi\.net$/
 @@|update.miui.com^
 @@/^(register\.)?xmpush\.xiaomi\.com$/
 @@|api.intl.miui.com^
+! [EX.HYB] Xiaomi MIUI/HyperOS Security Core & Auth API (Validación de permisos, seguridad del sistema y tokens regionales)
+@@/^(api|authbe)\.sec(\.intl)?\.miui\.com$/
 ! [EX.HYB] Sincronización de nube y localización de dispositivo Xiaomi; acopla telemetría de estado de sistema
-@@/^(api(\.g)?|find(\.api)?|findapi|us\.(find|gallery|status)api)\.micloud\.xiaomi\.net$/
+@@/^(api(\.g)?|find(\.api)?|findapi|us\.(find|find\.api|gallery|status)api)\.micloud\.xiaomi\.net$/
 ! [EX.HYB] Xiaomi Device & HyperOS/MIUI Global API (Validación de hardware y parámetros regionales; acopla metadatos de dispositivo)
 @@|api.device.xiaomi.net^
 ! [EX.HYB] Xiaomi System App Updater / GetApps (Actualización de componentes core MIUI/HyperOS; acopla catálogo de tienda)
 @@/^(global|sg\.global|h3)\.market\.xiaomi\.com$/
 
 
-! ==============================================================================
 ! [CAT:4] SERVICIOS FINANCIEROS, BANCA Y COMERCIO TRANSACCIONAL
-! ==============================================================================
+! -------------------------------------------------------------
 
 ! --- Protocolos EMV 3-D Secure y Redes de Tarjetas (Visa / Mastercard / Akamai Edgekey) ---
 @@||3ds-notify.com^
@@ -215,18 +250,28 @@
 @@/^([a-z0-9-]+\.)?verifiedbyvisa\.com$/
 @@/^([a-z0-9-]+\.)*(visa|mastercard|banamex)\.com\.edgekey\.net$/
 
-! --- Motores Antifraude y Perfilado de Dispositivo (ThreatMetrix, Sift, Signifyd, Accertify) ---
-! [EX.HYB] Sift Science API (Evaluación antifraude obligatoria en checkout; acopla telemetría conductual de dispositivo)
-@@|api3.siftscience.com^
+! --- Motores Antifraude, Biometría Conductual y Perfilado de Dispositivo (ThreatMetrix, Sift, Signifyd, Accertify, Forter, Fingerprint, Incognia, BioCatch) ---
+! [EX.HYB] Sift Science API & CDN (Evaluación antifraude obligatoria en checkout; acopla telemetría conductual de dispositivo)
+@@/^(api3|cdn)\.siftscience\.com$/
 ! [EX.HYB] Signifyd Fraud Protection (Validación de sesión antifraude en tiendas online; acopla fingerprinting de dispositivo)
 @@|imgs.signifyd.com^
 ! [EX.HYB] Perfilado de dispositivo indispensable para autorización antifraude en banca web/móvil
 @@/^([a-z0-9-]+\.)?online-metrix\.net$/
 ! [EX.HYB] Solvedevices / Accertify Risk API (Validación antifraude de dispositivo en pagos y aerolíneas; acopla telemetría)
 @@|api-secure.solvedevices.com^
+! [EX.HYB] Forter Fraud Prevention CDN Nodes (Validación antifraude en tiempo real durante transacciones e-commerce)
+@@/^([a-z0-9-]+\.)?cdn[0-9]*\.forter\.com$/
+! [EX.HYB] Fingerprint Pro Anti-Fraud & Device Validation (Identificación de integridad de dispositivo y WebRTC/TURN en banca/pagos)
+@@/^(api|use1-turn)\.fpjs\.io$/
+! [EX.HYB] Incognia Mobile Device Integrity & Banking Fraud Verification (Validación de ubicación y dispositivo en apps financieras)
+@@/^service[0-9]+\.us\.incognia\.com$/
+! [EX.HYB] BioCatch Behavioral Biometrics Banking Anti-Fraud (Protección biométrica conductual en BanCoppel y banca global)
+@@/^wup-([a-z0-9-]+\.us\.v2\.we-stats\.com|biocatch-app\.bancoppel\.com)$/
 
 ! --- Banca Tradicional México (Banamex, Banjercito, Afirme, Banorte, Banregio, BanBajío, BBVA, HSBC, Inbursa, Santander, Scotiabank) ---
 @@/^(www|cws|bancanet|movil)\.banamex\.com$/
+! [EX.HYB] Banamex BancaNet LexisNexis/ThreatMetrix Fraud Profiling (Perfilado antifraude obligatorio en sesión BancaNet)
+@@|content22.bancanet.banamex.com^
 @@|bancamovil.banjercito.com.mx^
 @@|movil.afirme.com^
 @@/^(www|api|bancoenlinea)\.banorte\.com$/
@@ -250,7 +295,8 @@
 @@|pay.google.com^
 @@/^apple-pay-gateway(-cert)?\.apple\.com$/
 
-! --- Pasarelas de Pago Internacionales y Locales (Adyen, Klarna, Mercado Pago, Openpay, PayPal, Stripe) ---
+! --- Pasarelas de Pago Internacionales y Locales (Adyen, Afterpay, Klarna, Mercado Pago, Openpay, PayPal, Stripe) ---
+@@|static.afterpay.com^
 @@/^(js|api|pay)\.klarna\.com$/
 @@/^(www\.|api\.)?mercadopago\.com(\.mx)?$/
 @@/^(api|sandbox-api)\.openpay\.mx$/
@@ -260,17 +306,20 @@
 @@/^(checkoutshopper-live|live|api)\.adyen\.com$/
 ! [EX.HYB] PayPal Core & Static CDN (Botones Smart Checkout, API de pagos y sesión; acopla telemetría de sesión en SDK)
 @@/^(www|api|c)\.paypal\.com$/
-! [EX.HYB] Stripe Checkout & Elements (Tokenización PCI-DSS de tarjetas y API de cobros; acopla antifraude Radar)
-@@|api.stripe.com^
+! [EX.HYB] Stripe Checkout, Elements & Radar (Tokenización PCI-DSS, API de cobros y detección antifraude Radar)
+@@/^(api\.stripe\.com|m\.stripe\.network)$/
 
-! --- Plataformas de Comercio Electrónico Core México (Amazon / Mercado Libre) ---
+! --- Plataformas de Comercio Electrónico Core México y Global (Amazon / Mercado Libre / VTEX) ---
 ! [EX.HYB] Comercio Electrónico Core México (Amazon y Mercado Libre raíz/www aislados de subdominios de ads/tracking)
 @@/^(www\.)?(amazon|mercadolibre)\.com\.mx$/
+! [EX.HYB] Amazon Regional Session, Cart, Brand Stores & UI Components (NA/MX/EU; evita ruptura de carrito y pedidos)
+@@/^(fls-(na|eu)|unagi(-eu)?)\.amazon\.(com(\.mx)?|ie)$/
+@@/^api\.stores\.[a-z0-9-]+\.prod(\.mt)?\.paets\.advertising\.amazon\.dev$/
+@@|io.vtex.com.br^
 
 
-! ==============================================================================
 ! [CAT:5] ENTRETENIMIENTO, MEDIOS Y PROTECCION DRM
-! ==============================================================================
+! ------------------------------------------------
 
 ! --- Google Widevine DRM & OEMCrypto Provisioning ---
 @@/^widevine(proxy|\.l1)?\.google(apis)?\.com$/
@@ -285,8 +334,13 @@
 @@|codex.nflxext.com^
 @@|widevine-license.vix.com^
 
-! --- Protocolos de Transmisión Local (Google Cast / Chromecast) ---
+! --- Protocolos de Transmisión Local e Infraestructura HLS (Google Cast / AWS IVS Live-Video) ---
 @@||cast.google.com^
+@@/^[a-z0-9]+\.[a-z0-9-]+\.hls\.live-video\.net$/
+
+! --- Inserción Dinámica de Flujos SSAI (Google DAI) ---
+! [EX.HYB] Google Dynamic Ad Insertion (Manifiestos de transmisión en vivo SSAI cuya ausencia bloquea streams deportivos/TV)
+@@|dai.google.com^
 
 ! --- Disney+ / Star+ / ESPN (BAMGrid Infrastructure) ---
 @@/^(((disney|star|espn)\.api|global|playback|devices|drm|content|disney\.content|search-api-disney)\.edge|(config-)?cd-dmgz|prod-static)\.bamgrid\.com$/
@@ -321,10 +375,12 @@
 ! [EX.HYB] Spotify Core API Gateway (Playlists, búsqueda y Spotify Connect; acopla telemetría de sesión y ads free-tier)
 @@|spclient.wg.spotify.com^
 
+! --- Alojamiento Multimedia e Imágenes Estáticas (Pixhost) ---
+@@/^img[0-9]+\.pixhost\.to$/
 
-! ==============================================================================
+
 ! [CAT:6] COMUNICACION INTERPERSONAL Y REDES SOCIALES
-! ==============================================================================
+! ---------------------------------------------------
 
 ! --- WhatsApp (Chat E2EE, Multimedia FNA/CDN y Llamadas STUN/TURN) ---
 ! [EX.HYB] WhatsApp Core & VoIP (Mensajería E2EE, multimedia FNA/CDN y STUN/TURN; nodo g.whatsapp.net acopla config/telemetría)
@@ -351,13 +407,14 @@
 ! [EX.HYB] Endpoint central de feed y API; acopla telemetría de sesión con entrega de contenido
 @@|api.tiktok.com^
 
-! --- Soporte en Vivo Web (Zendesk / Zopim Chat) ---
+! --- Soporte en Vivo Web y Atención al Cliente (Zendesk / Zopim / Intercom) ---
 @@|widget-mediator.zopim.com^
+! [EX.HYB] Intercom Live Customer Support & Account Assistance Widget (Chat de soporte bancario y e-commerce; acopla sesión)
+@@|widget.intercom.io^
 
 
-! ==============================================================================
 ! [CAT:7] GAMING Y ECOSISTEMAS DE ENTRETENIMIENTO INTERACTIVO
-! ==============================================================================
+! -----------------------------------------------------------
 
 ! --- Nintendo (Switch / eShop / NSO / Firmware) ---
 @@/^(atumn?|aqua|sun)\.hac\.lp1\.d4c\.nintendo\.net$/
@@ -385,6 +442,8 @@
 
 ! --- Roblox (Cliente, Persistencia y CDN de Activos) ---
 @@/^(api|clientsettings|gamepersistence|assetdelivery|images)\.roblox\.com$/
+! [EX.HYB] Roblox Windows Client Startup & Ephemeral Counters API (Inicialización de cliente PC; acopla contadores de estado)
+@@|ephemeralcounters.api.roblox.com^
 @@||rbxcdn.com^
 
 ! --- Supercell (Clash Royale / Clash of Clans / Brawl Stars / Hay Day) ---
@@ -393,14 +452,15 @@
 ! --- King (Candy Crush / Farm Heroes) ---
 @@/^(midas\.)?king\.com$/
 
-! --- Tencent Games (GCloud SDK / PUBG Mobile / Honor of Kings) ---
+! --- Tencent Games / Level Infinite (GCloud SDK / ACE Anti-Cheat / PUBG Mobile / Honor of Kings) ---
 ! [EX.HYB] Tencent GCloud Game SDK (Chat de voz GVoice, parches Dolphin/Puffer y enrutamiento regional; acopla telemetría SDK)
 @@/^gcloud\.tencent(games)?\.com$/
+! [EX.HYB] Tencent / Level Infinite Game Patch & ACE Anti-Cheat CDN (Descarga de parches y verificación anti-trampas)
+@@|dl.listdl.com^
 
 
-! ==============================================================================
 ! [CAT:8] HARDWARE ESPECIALIZADO, SMART TV E IOT
-! ==============================================================================
+! ----------------------------------------------
 
 ! --- Activación, Identidad SSO, Actualizaciones OTN y SmartThings ---
 @@|az43064.vo.msecnd.net^
@@ -413,8 +473,8 @@
 @@|d1oxlq5h9kq8q5.cloudfront.net^
 
 ! --- Smart Hub Core, Guía EPG, DRM y Samsung Cloud Solution (Híbridos) ---
-! [EX.HYB] Samsung Smart Hub OSB, Auth, T&C & GPM (Bus de sesión, políticas regionales y apps Tizen; acopla metadatos de Smart Hub)
-@@/^(gpm|stc|osb(-(apps|auth|secure|tnc|ussvc))?(-v[12])?(-appsacc|-ussvc)?)\.samsungqbe\.com$/
+! [EX.HYB] Samsung Smart Hub OSB, Auth, T&C, Push & GPM (Bus de sesión, mensajería XMPP, políticas y apps Tizen; acopla metadatos de Smart Hub)
+@@/^(gpm|scs|stc|osb(-(apps|auth|secure|tnc|ussvc))?(-v[12])?(-appsacc|-ussvc)?(-[a-z0-9-]+)?)\.samsungqbe\.com$/
 ! [EX.HYB] Samsung Cloud Solution .NET (Validación de enlace Smart Hub lcprd, CDN de apps y nodos OTN; acopla estado de TV)
 @@/^(cdn|lcprd[12]|otnprd[0-9]{1,2})\.samsungcloudsolution\.net$/
 ! [EX.HYB] Nodos centrales de Samsung Tizen; requeridos para red/guía/DRM y binarios EMP de apps, pero mezclan métricas de uso
@@ -436,6 +496,9 @@
 ! [EX.HYB] LG Service Delivery Platform & LG Apps (Tienda de aplicaciones, reloj webOS y descargas; acopla filas recomendadas)
 @@/^((mx|us|aic|ngfts)\.(ibs\.lgappstv|lgtvsdp)|mx\.ibs\.nextlgsdp)\.com$/
 
+! --- Roku OS (Recursos Gráficos e Interfaz) ---
+@@|wwwimg.roku.com^
+
 ! --- Control Remoto Universal HDMI-CEC / IR (UEI QuickSet Cloud) ---
 ! [EX.HYB] UEI QuickSet Cloud (Detección automática de dispositivos HDMI para mando universal; acopla inventario de hardware)
 @@|reverselookup.quicksetcloud.com^
@@ -453,15 +516,14 @@
 @@/^(boot|service-channels|stitcher|cfd-v4-service-channel-stitcher-[a-z0-9-]+\.prd)\.pluto\.tv$/
 
 
-! ==============================================================================
 ! [CAT:9] DIAGNOSTICO DE RED Y OVERRIDES LOCALES
-! ==============================================================================
+! ----------------------------------------------
 
 ! --- Administración Local de Routers y Repetidores (TP-Link) ---
 @@/^([a-z0-9-]+\.)?tplink(extender|repeater|wifi)\.net$/
 
-! --- Endpoints Públicos de Descubrimiento de IP WAN (IPv4) ---
-@@/^api4?\.ipify\.org$/
+! --- Endpoints Públicos de Descubrimiento de IP WAN (IPv4 / IPv6) ---
+@@/^api(4|64)?\.ipify\.org$/
 @@/^(ipv4\.)?icanhazip\.com$/
 @@/^checkip\.amazonaws\.com$/
 @@|ifconfig.me^
