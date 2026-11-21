@@ -51,7 +51,7 @@
 @@|netcts.cdn-apple.com^
 
 ! --- Ecosistema Google / Android / ChromeOS ---
-@@|clients3.google.com^
+@@/^(clients3\.google\.com(\.cn)?|www\.google\.cn)$/
 
 ! --- Ecosistema Microsoft (Windows NCSI / Xbox) ---
 @@/^msft(connecttest|ncsi)\.com$/
@@ -101,13 +101,14 @@
 ! --- PerimeterX / HUMAN Security WAF ---
 ! [EX.HYB] PerimeterX / HUMAN Security WAF (Anti-bot conductual obligatorio para evitar HTTP 403 en e-commerce/banca)
 @@/^collector-px[a-z0-9]+\.(perimeterx\.net|px-cloud\.net)$/
+@@/^(client|ift)\.px-cloud\.net$/
 @@|b.px-cdn.net^
-@@|ift.px-cloud.net^
 
 ! --- Gestión de Consentimiento de Privacidad (CMP: OneTrust / Cookiebot) ---
-! [EX.HYB] OneTrust Global CMP Core & Jurisdiction Resolver (Evita congelamiento de interfaz y bucles de carga web)
+! [EX.HYB] OneTrust Global & Mobile CMP Core (Evita congelamiento de interfaz, bucles de carga web y bloqueo de inicio en apps)
 @@|cdn.cookielaw.org^
 @@|geolocation.onetrust.com^
+@@|mobile-data.onetrust.io^
 ! [EX.HYB] Cookiebot CMP Core & CDN (Renderizado obligatorio de banner de consentimiento para habilitar scripts funcionales)
 @@/^consent(cdn)?\.cookiebot\.com$/
 
@@ -171,8 +172,9 @@
 @@/^(api(-(glb|spotlight)-[a-z0-9-]+)?|chickadee)\.smoot\.apple\.com$/
 
 ! --- Feature Flags & Configuración Dinámica de Apps (Statsig) ---
-! [EX.HYB] Statsig Feature Gates Initialization CDN (Inicialización de funciones core en Grok/xAI y ChatGPT; acopla métricas)
+! [EX.HYB] Statsig Feature Gates Initialization & Config API (Inicialización de funciones core en Grok/xAI y ChatGPT; excluye events.statsigapi.net)
 @@|featureassets.org^
+@@|statsigapi.net^
 
 ! --- Apple (iOS / macOS / iCloud / Activación / OTA / Ubicación / Private Relay) ---
 @@/^(albert|gdmf|mesu)\.apple\.com$/
@@ -184,20 +186,24 @@
 @@/^(cl[1-5]|gspe[0-9]+-ssl\.ls)\.apple\.com$/
 
 ! --- Google / Android (Find Hub, A-GPS SUPL y Ubicación) ---
-@@/^(findmydevice|notifications-ueeshp)-pa\.googleapis\.com$/
+@@/^(findmydevice|notifications-ueeshp|spot)-pa\.googleapis\.com$/
 ! [EX.HYB] Google A-GPS SUPL (Fijación rápida satelital GPS; transmite identificador de celda/IMSI al servidor SUPL)
 @@|supl.google.com^
-! [EX.HYB] Google UserLocation (Compartir ubicación en Google Maps y geofencing de Google Home; acopla historial de coordenadas)
-@@|userlocation.googleapis.com^
+! [EX.HYB] Google UserLocation & Semantic Location (Compartir ubicación, Maps y geofencing de Google Home; acopla historial de coordenadas)
+@@/^(semanticlocation-pa\.googleapis|userlocation\.googleapis)\.com$/
 
 ! --- Hardware Qualcomm (Asistencia Satelital GNSS XTRA) ---
 ! [EX.HYB] Asistencia satelital A-GPS de Qualcomm (XTRA); acopla metadatos de hardware pero evita fallos de fijación GPS
 @@/^path[1-3]\.xtracloud\.net$/
 
-! --- Microsoft Escritorio (Edge / Defender / Teams ECS / Windows Update DO) ---
+! --- Microsoft Escritorio, Store e IDEs (Edge / Defender / Teams ECS / Windows Update DO / TAS) ---
 ! [EX.HYB] Servicio de configuración y seguridad ECS de Microsoft (Edge/Defender/Teams); acopla experimentos A/B
 @@|config.edge.skype.com^
-@@/^geo(ver)?\.prod\.do\.dsp\.mp\.microsoft\.com$/
+! [EX.HYB] Microsoft TAS Feature Flags (VS Code, GitHub Copilot & Cursor IDE; acopla experimentos A/B de interfaz)
+@@|default.exp-tas.com^
+! [EX.HYB] Windows System Settings, NTP Time Sync & CPU KGL Config (Acopla telemetría de configuración del sistema)
+@@|settings-win.data.microsoft.com^
+@@/^(collections|geo(ver)?\.prod\.do\.dsp)\.mp\.microsoft\.com$/
 
 ! --- Huawei / Honor (HMS Core / Cloud) ---
 @@/^(dnkeeper\.platform|grs(\.platform)?)\.dbankcloud\.(asia|cn|com|eu|ru)$/
@@ -215,26 +221,28 @@
 ! --- Opera (Compresión y Navegación Móvil) ---
 @@|mini5.opera-mini.net^
 
-! --- Samsung Galaxy (Samsung Account / Cloud / FOTA / Pass / Galaxy Store) ---
+! --- Samsung Galaxy (Samsung Account / Cloud / FOTA / Pass / Galaxy Store / Positioning) ---
 @@|account.samsung.com^
 @@|api.samsungcloud.com^
 @@|fota-cloud-dn.ospserver.net^
 @@||samsungpass.com^
 @@/^(us-)?auth2?\.samsungosp\.(com|net)$/
+@@|us-api.samsungpositioning.com^
 ! [EX.HYB] Samsung Galaxy Store VAS (Actualización de apps del sistema y módulos Galaxy Wearable; acopla catálogo promocional)
 @@|vas.samsungapps.com^
 
-! --- Xiaomi / Redmi / POCO (MIUI / HyperOS / Mi Cloud / MiPush / Security Core) ---
+! --- Xiaomi / Redmi / POCO (MIUI / HyperOS / Mi Cloud / MiPush / Security Core / IoT) ---
 @@/^(api\.)?account\.xiaomi\.com$/
 @@|i.mi.com^
 @@/^(resolver\.msg(\.global)?|(sg\.)?app\.chat\.global)\.xiaomi\.net$/
 @@|update.miui.com^
 @@/^(register\.)?xmpush\.xiaomi\.com$/
-@@|api.intl.miui.com^
+@@/^(api(\.gallery)?\.intl)\.miui\.com$/
+@@|idm.iot.mi.com^
 ! [EX.HYB] Xiaomi MIUI/HyperOS Security Core & Auth API (Validación de permisos, seguridad del sistema y tokens regionales)
 @@/^(api|authbe)\.sec(\.intl)?\.miui\.com$/
 ! [EX.HYB] Sincronización de nube y localización de dispositivo Xiaomi; acopla telemetría de estado de sistema
-@@/^(api(\.g)?|find(\.api)?|findapi|us\.(find|find\.api|gallery|status)api)\.micloud\.xiaomi\.net$/
+@@/^(api(\.g)?|find(\.api)?|findapi|us\.(find(\.api)?|gallery|status)api)\.micloud\.xiaomi\.net$/
 ! [EX.HYB] Xiaomi Device & HyperOS/MIUI Global API (Validación de hardware y parámetros regionales; acopla metadatos de dispositivo)
 @@|api.device.xiaomi.net^
 ! [EX.HYB] Xiaomi System App Updater / GetApps (Actualización de componentes core MIUI/HyperOS; acopla catálogo de tienda)
@@ -265,8 +273,8 @@
 @@/^(api|use1-turn)\.fpjs\.io$/
 ! [EX.HYB] Incognia Mobile Device Integrity & Banking Fraud Verification (Validación de ubicación y dispositivo en apps financieras)
 @@/^service[0-9]+\.us\.incognia\.com$/
-! [EX.HYB] BioCatch Behavioral Biometrics Banking Anti-Fraud (Protección biométrica conductual en BanCoppel y banca global)
-@@/^wup-([a-z0-9-]+\.us\.v2\.we-stats\.com|biocatch-app\.bancoppel\.com)$/
+! [EX.HYB] BioCatch Behavioral Biometrics Banking Anti-Fraud (Protección biométrica conductual en BanCoppel, Banorte y banca global)
+@@/^((wup-[a-z0-9-]+|log-[a-z0-9]+)\.us\.v2\.we-stats\.com|wup-biocatch-app\.bancoppel\.com)$/
 
 ! --- Banca Tradicional México (Banamex, Banjercito, Afirme, Banorte, Banregio, BanBajío, BBVA, HSBC, Inbursa, Santander, Scotiabank) ---
 @@/^(www|cws|bancanet|movil)\.banamex\.com$/
@@ -274,7 +282,7 @@
 @@|content22.bancanet.banamex.com^
 @@|bancamovil.banjercito.com.mx^
 @@|movil.afirme.com^
-@@/^(www|api|bancoenlinea)\.banorte\.com$/
+@@/^(www|api|bancoenlinea|elsw)\.banorte\.com$/
 @@|api.banregio.com^
 @@|movil.bb.com.mx^
 @@/^(cws|ecs)\.bbva\.com$/
@@ -348,8 +356,8 @@
 
 ! --- Netflix (Open Connect & NRDP) ---
 @@/^(appboot|oca)\.netflix\.com$/
-! [EX.HYB] Telemetría de clientes embebidos Netflix (NRDP); su bloqueo rompe reproducción en Smart TVs
-@@|nrdp.logs.netflix.com^
+! [EX.HYB] Telemetría de clientes embebidos y reproducción Netflix (NRDP / Android); su bloqueo rompe reproducción y continuidad
+@@/^(android16\.|nrdp\.)?logs\.netflix\.com$/
 
 ! --- Amazon Prime Video ---
 ! [EX.HYB] Nodos de interfaz y streaming de Prime Video; unagi-na evita bloqueo de cierre en Tizen OS
@@ -399,16 +407,19 @@
 @@/^(graph|i|gateway|graph-fallback)\.instagram\.com$/
 
 ! --- X / Twitter ---
-@@|video.twimg.com^
+@@/^(cdn\.syndication|ton|video)\.twimg\.com$/
 ! [EX.HYB] X / Twitter Core API (Timeline, posts, DMs y OAuth; acopla tuits promocionados en respuesta GraphQL)
 @@|api.twitter.com^
 
 ! --- TikTok ---
-! [EX.HYB] Endpoint central de feed y API; acopla telemetría de sesión con entrega de contenido
+! [EX.HYB] Endpoint central de feed, sincronización de historial y API; acopla telemetría de sesión con entrega de contenido
 @@|api.tiktok.com^
+@@/^tnc(16|19)-normal-useast(5|8)\.tiktokv\.us$/
+@@/^vc-(brain|mirror)\.ndcpp-os\.com$/
 
-! --- Soporte en Vivo Web y Atención al Cliente (Zendesk / Zopim / Intercom) ---
+! --- Soporte en Vivo Web, Chat Embebido y Atención al Cliente (Zendesk / Zopim / Intercom / Chatango) ---
 @@|widget-mediator.zopim.com^
+@@|st.chatango.com^
 ! [EX.HYB] Intercom Live Customer Support & Account Assistance Widget (Chat de soporte bancario y e-commerce; acopla sesión)
 @@|widget.intercom.io^
 
@@ -428,17 +439,25 @@
 @@/^(gs2\.ww|gst)\.prod\.dl\.playstation\.net$/
 @@/^(asm\.np\.community|ena\.net|nsx\.np\.dl)\.playstation\.net$/
 
-! --- Microsoft Xbox (Xbox Live / Game Pass / Cloud Sync) ---
-@@/^(cloudsync|title\.mgt|licensing|assets[12]|(user|device|xsts)\.auth)\.xboxlive\.com$/
+! --- Microsoft Xbox (Xbox Live / Game Pass / Cloud Sync / Leaderboards) ---
+@@/^(cloudsync|title\.mgt|licensing|userstats|assets[12]|(user|device|xsts)\.auth)\.xboxlive\.com$/
+
+! --- Apple Game Center ---
+! [EX.HYB] Apple Game Center Achievements & Leaderboards Sync (Acopla métricas de actividad de juego)
+@@|stats.gc.apple.com^
 
 ! --- Epic Games (Launcher & Epic Online Services) ---
 @@|account.epicgames.com^
 @@|api.epicgames.dev^
+@@|statsproxy-public-service-live.ol.epicgames.com^
 
 ! --- Activision / Blizzard / Demonware / Battle.net ---
 @@|s.activision.com^
 @@||demonware.net^
 @@|vanguard.battle.net^
+
+! --- Ubisoft (Servidores Dedicados Multijugador) ---
+@@|dedicated.orl.thecrew-game-servers.com^
 
 ! --- Roblox (Cliente, Persistencia y CDN de Activos) ---
 @@/^(api|clientsettings|gamepersistence|assetdelivery|images)\.roblox\.com$/
@@ -448,6 +467,7 @@
 
 ! --- Supercell (Clash Royale / Clash of Clans / Brawl Stars / Hay Day) ---
 @@|id.supercell.com^
+@@|inventory.mtech.supercell.com^
 
 ! --- King (Candy Crush / Farm Heroes) ---
 @@/^(midas\.)?king\.com$/
