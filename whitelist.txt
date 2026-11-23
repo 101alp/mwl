@@ -31,9 +31,9 @@
 !   [SEC.9] Diagnóstico de red y overrides locales ($client).
 !
 ! [ESTADISTICAS DE AUDITORIA]
-!   Total de reglas activas   : 207
-!   - Infraestructura Core    : 166
-!   - Nodos Híbridos [EX.HYB] : 41
+!   Total de reglas activas   : 217
+!   - Infraestructura Core    : ---
+!   - Nodos Híbridos [EX.HYB] : ---
 
 
 ! [CAT:1] CONECTIVIDAD CORE, SINCRONIZACION DE TIEMPO Y PORTALES CAUTIVOS
