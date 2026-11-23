@@ -29,6 +29,11 @@
 !   [SEC.7] Gaming y ecosistemas de entretenimiento interactivo.
 !   [SEC.8] Hardware especializado, Smart TV e IoT.
 !   [SEC.9] Diagnóstico de red y overrides locales ($client).
+!
+! [ESTADISTICAS DE AUDITORIA]
+!   Total de reglas activas   : 207
+!   - Infraestructura Core    : 166
+!   - Nodos Híbridos [EX.HYB] : 41
 
 
 ! [CAT:1] CONECTIVIDAD CORE, SINCRONIZACION DE TIEMPO Y PORTALES CAUTIVOS
@@ -85,6 +90,8 @@
 ! --- Gestión de Consentimiento de Privacidad (CMP) callbacks y SDKs esenciales para evitar bloqueo de UI ---
 ! [EX.HYB] OneTrust SDK Core (Evita pantallas en blanco y UI congelada en webs/apps que bloquean el renderizado sin el callback CMP)
 @@/^(cdn\.cookielaw\.org|mobile-data\.onetrust\.io)$/
+! [EX.HYB] OneTrust IP Geolocation Check (Requerido por reproductores como SoundCloud y CBS para habilitar reproducción)
+@@|geolocation.onetrust.com^
 
 
 ! [CAT:3] SISTEMAS OPERATIVOS, IDENTIDAD CLOUD Y NOTIFICACIONES PUSH
@@ -121,11 +128,11 @@
 @@/^((albert|gdmf|mesu)\.apple\.com|updates(-http)?\.cdn-apple\.com)$/
 @@/^(setup|gateway|p[0-9]{2,3}-(caldav|contacts))\.icloud\.com$/
 @@/^(init|identity)\.ess\.apple\.com$/
-@@/^(lcdn-locator\.(apple|cdn-apple)|cstat\.cdn-apple)\.com$/
+@@/^(lcdn-locator(-[a-z0-9]+)?\.apple\.com(\.akadns\.net)?|(lcdn-locator|cstat)\.cdn-apple\.com)$/
 
 ! --- Ecosistema Google / Android (GMS / Ubicación / A-GPS) servicios de cuenta, localización y asistencia GPS ---
 @@/^(android\.clients|clients4)\.google\.com$/
-@@/^(findmydevice|notifications-ueeshp|spot)-pa\.googleapis\.com$/
+@@/^(auditrecording|findmydevice|geomobileservices|notifications-ueeshp|spot)-pa\.googleapis\.com$/
 @@|supl.google.com^
 @@/^(www\.)?(google|bing)\.com(\.mx)?$/
 ! [EX.HYB] Apple Siri & Spotlight Search Backend (Sugerencias Siri/Safari; envía consultas a Apple; excluye fbs.smoot.apple.com)
@@ -136,12 +143,15 @@
 
 ! --- Ecosistema Microsoft (Escritorio / OneDrive / Configuración / Feature Flags) servicios del sistema y apps ---
 @@/^(uhf|wcpstatic)\.microsoft\.com$/
+@@|inference.location.live.net^
 ! [EX.HYB] Microsoft OneDrive & BitLocker Config Redirector (CNAME a g.msn.com; requerido por OneDrive y claves BitLocker)
 @@|g.live.com^
 ! [EX.HYB] Microsoft Edge/Teams Configuration Service (Compatibilidad web y rollout en Edge; excluye api.edgeoffer.microsoft.com)
 @@|config.edge.skype.com^
 ! [EX.HYB] Windows Dynamic Settings (Acoplado a telemetría Asimov; requerido para sincronización manual de reloj y reinicios post-Update)
 @@|settings-win.data.microsoft.com^
+! [EX.HYB] Microsoft Outlook/Teams Mobile Sync & Auth Telemetry (Pipeline requerido por clientes móviles Outlook y Teams)
+@@|mobile.pipe.aria.microsoft.com^
 @@/^(collections|geo(ver)?\.prod\.do\.dsp)\.mp\.microsoft\.com$/
 ! [EX.HYB] Microsoft Treatment Assignment Service (Feature flags requeridos por VS Code, GitHub Copilot y Cursor IDE)
 @@|default.exp-tas.com^
@@ -149,6 +159,7 @@
 ! --- Ecosistema Huawei / Honor (HMS Core / Cloud) enrutamiento global y servicios de cuenta ---
 ! [EX.HYB] Huawei HMS Global Routing & DNS Backup (Requerido para Huawei ID, AppGallery y Huawei Cloud)
 @@/^(dnkeeper\.platform|grs(\.platform)?)\.dbankcloud\.(asia|cn|com|eu|ru)$/
+@@|grs.hihonorcloud.com^
 
 ! --- Ecosistema Motorola (Moto ID / OTA / Cloud) actualizaciones y servicios del fabricante ---
 @@/^((cds|accounts|cloud)\.motorola\.com|moto-ota\.appspot\.com)$/
@@ -169,6 +180,7 @@
 ! --- Ecosistema Xiaomi / Redmi / POCO (MIUI / HyperOS / Mi Cloud / MiPush) cuenta, nube y actualizaciones ---
 @@/^(i\.mi\.com|(api(\.g)?|find(\.api)?|findapi|(us\.|g-)(find\.api|(find|gallery|status)api))\.micloud\.xiaomi\.net)$/
 @@|update.miui.com^
+@@|mcc-intl.inf.miui.com^
 ! [EX.HYB] Xiaomi International System & Gallery API (Sincronización de Galería y servicios globales MIUI/HyperOS)
 @@/^api(\.gallery)?\.intl\.miui\.com$/
 ! [EX.HYB] Xiaomi System App Updater / GetApps Core (Actualización de apps nativas del sistema HyperOS/MIUI)
@@ -177,8 +189,10 @@
 ! [EX.HYB] Xiaomi Mi Push Service (Notificaciones push nativas HyperOS/MIUI y Mi Home; puede transportar avisos del sistema)
 @@/^((resolver\.msg(\.global)?|(sg\.)?app\.chat\.global)\.xiaomi\.net|(register\.)?xmpush\.xiaomi\.com)$/
 
-! --- Navegadores, Tipografías y SDKs de Aplicaciones (Opera / Typekit / Adobe / Statsig) recursos de ejecución ---
+! --- Navegadores, Tipografías y SDKs de Aplicaciones (Opera / Typekit / Adobe / Statsig / Chrome / Picsart) recursos de ejecución ---
 @@/^(p|use)\.typekit\.net$/
+@@|api.picsart.com^
+@@|chrome-devtools-frontend.appspot.com^
 ! [EX.HYB] Adobe Experience Platform Edge (Analítica Adobe acoplada a sesión funcional en portales Adobe Experience Manager)
 @@|edge.adobedc.net^
 ! [EX.HYB] Statsig Feature Flags Core (Evita funciones rotas en ChatGPT y lista de amigos en EA App; mantener bloqueado events.statsigapi.net)
@@ -214,8 +228,9 @@
 @@/^service[0-9]+\.us\.incognia\.com$/
 ! [EX.HYB] BioCatch Behavioral Biometrics (Telemetría conductual bancaria exigida por BanCoppel, BBVA y Santander)
 @@/^((wup-[a-z0-9-]+|log-[a-z0-9]+)\.us\.v2\.we-stats\.com|wup-biocatch-app\.bancoppel\.com)$/
-! [EX.HYB] PayPal / Braintree Risk Intelligence (Requerido para autorizar pagos y login en PayPal)
+! [EX.HYB] PayPal / Braintree Risk Intelligence & 2FA Auth Telemetry (Requerido para autorizar pagos, 2FA y login en PayPal)
 @@|p11.techlab-cdn.com^
+@@|b.stats.paypal.com^
 
 ! --- Banca Tradicional México (Portales, APIs Móviles y Tokens) operación bancaria en web y móvil ---
 @@/^((www|cws|bancanet|movil)\.banamex\.com|content22\.bancanet\.banamex\.com)$/
@@ -244,8 +259,8 @@
 @@/^(www\.|api\.)?mercadopago\.com(\.mx)?$/
 @@/^(api|sandbox-api)\.openpay\.mx$/
 @@/^(([a-z0-9-]+\.)?paypalobjects\.com|(www|api|c)\.paypal\.com)$/
-! [EX.HYB] Stripe Payment Gateway & Radar (m.stripe.network acopla telemetría antifraude obligatoria para tokenizar tarjetas)
-@@/^((js|api)\.stripe\.com|m\.stripe\.network)$/
+! [EX.HYB] Stripe Payment Gateway & Radar (m.stripe.com y m.stripe.network acoplan telemetría antifraude/3DS obligatoria)
+@@/^((js|api|m)\.stripe\.com|m\.stripe\.network)$/
 @@/^(checkoutshopper-live|live|api)\.adyen\.com$/
 
 ! --- Comercio Electrónico y CDNs de Retail plataformas comerciales y recursos de tienda ---
@@ -253,6 +268,8 @@
 @@|dynamodb.cn-north-1.amazonaws.com.cn^
 @@|img.alicdn.com^
 @@|io.vtex.com.br^
+@@|shark11124.pcapredict.com^
+@@|sharkninja-pdp-carousel.sharkninja-na.workers.dev^
 ! [EX.HYB] Amazon App Session & Forensics (Evita error en "Mis Pedidos" de la app Amazon y setup inicial de Fire OS)
 @@/^(fls-(na|eu)|unagi(-(na|eu))?)\.amazon\.(com(\.mx)?|ca|es|ie)$/
 
@@ -264,8 +281,9 @@
 @@/^widevine(proxy|\.l1)?\.google(apis)?\.com$/
 @@|fps.envoy.apple.com^
 
-! --- Licencias Multi-DRM (Bitmovin / Widevine / Google Cast) autorización DRM y envío local ---
+! --- Licencias Multi-DRM (Bitmovin / Widevine / Google Cast / JW Player) autorización DRM y envío local ---
 @@|licensing.bitmovin.com^
+@@|entitlements.jwplayer.com^
 @@/^(drm|widevine-vod)\.clarovideo\.net$/
 @@/^(license\.capri\.max|widevine-license\.vix)\.com$/
 @@|codex.nflxext.com^
@@ -274,6 +292,7 @@
 ! --- Streaming OTT Core (Disney+, Netflix, Prime Video, Max, Paramount+, Claro Video, ViX) flujos y reproducción ---
 @@/^((((disney|star|espn)\.api|global|playback|devices|drm|content|disney\.content|search-api-disney)\.edge|(config-)?cd-dmgz|prod-static)\.bamgrid\.com|disney\.connections\.api\.disney\.com)$/
 @@/^(appboot|oca)\.netflix\.com$/
+@@|ae.nflximg.net^
 @@/^(atv-(ext|ps)(-(eu|fe))?|unagi-(na|eu))\.amazon\.com$/
 @@/^(auth|markers\.api)\.max\.com$/
 @@/^(api|auth|playback)\.paramountplus\.com$/
@@ -315,7 +334,7 @@
 ! [EX.HYB] ByteDance / TikTok / CapCut / Hypic Core Routing & Localization (TNC routing y Starling i18n; excluye log/mon)
 @@/^(api\.tiktok\.com|starling-sg\.byteoversea\.com|tnc(16|19)-normal-useast(5|8)\.tiktokv\.us|tnc(-boot|-sg|0-normal-alisg|16-(alisg|sg|useast1a))\.(tiktokv|capcutapi|byteoversea|isnssdk|hypic)\.com)$/
 
-! --- Widgets de Soporte al Cliente en Vivo (Live Chat) atención y soporte embebido en webs y apps ---
+! --- Widgets de Soporte al Cliente en Vivo y Comunicaciones SDK (Live Chat / Twilio) atención y soporte embebido ---
 ! [EX.HYB] Zendesk Chat / Zopim Live Support (Requerido para abrir chats de atención al cliente)
 @@|widget-mediator.zopim.com^
 @@|st.chatango.com^
@@ -323,6 +342,8 @@
 @@|widget.intercom.io^
 ! [EX.HYB] Powerfront INSIDE Live Chat (Requerido para soporte en vivo en e-commerce)
 @@/^us5-(cdn|live)\.inside-graph\.com$/
+! [EX.HYB] Twilio SDK Call State & Event Gateway (Requerido para flujos de voz/video y soporte embebido)
+@@|eventgw.twilio.com^
 
 
 ! [CAT:7] GAMING Y ECOSISTEMAS DE ENTRETENIMIENTO INTERACTIVO
@@ -351,6 +372,7 @@
 ! [EX.HYB] Tencent GCloud Game SDK (Obligatorio para parches in-game y conexión en COD Mobile y PUBG Mobile)
 @@/^gcloud\.tencent(games)?\.com$/
 @@/^(dl\.listdl\.com|az43064\.vo\.msecnd\.net)$/
+@@|devs-api.poki.com^
 
 ! --- Interfaces Web Embebidas en Juegos vistas web y registros dentro del juego ---
 ! [EX.HYB] Call of Duty Telescope UI (Renderiza Combat Record y eventos en COD HQ; acopla banners promocionales in-game)
