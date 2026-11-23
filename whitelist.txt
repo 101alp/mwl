@@ -385,7 +385,8 @@
 @@/^((api|img)\.samsungapps\.com|d1oxlq5h9kq8q5\.cloudfront\.net)$/
 @@/^otn\.(samsungcloudcdn\.com|samsungotn\.net)$/
 @@/^(api|client)\.smartthings\.com$/
-@@/^(gpm|scs|stc|osb(-(apps|auth|secure|tnc|ussvc))?(-v[12])?(-appsacc|-ussvc)?(-[a-z0-9-]+)?)\.samsungqbe\.com$/
+! [EX.HYB] Samsung Smart Hub / SmartThings & Tizen Cloud (Servicios core Smart Hub; gpm/sdtlcprd acoplan telemetría/ads de menú)
+@@/^(gpm|scs|sdtlcprd|stc|osb(-(apps|auth|secure|tnc|ussvc))?(-v[12])?(-appsacc|-ussvc)?(-[a-z0-9-]+)?)\.samsungqbe\.com$/
 @@/^(cdn|lcprd[12]|otnprd[0-9]{1,2})\.samsungcloudsolution\.net$/
 @@/^(time|network-test|cdn|epg|epg-cdn|drm|tvplus|o?empprd|empdownprd|fkpprd(-v[0-9]+)?)\.samsungcloudsolution\.com$/
 @@||lgsmartcdn.com^
