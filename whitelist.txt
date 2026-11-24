@@ -1,24 +1,24 @@
 ! Título: Aegis Lumina
 ! --------------------
-!
+
 ! [DESCRIPCIÓN] Lista blanca quirúrgica encargada de desbloquear dominios y
 !               endpoints críticos que los bloqueadores de tracking, telemetría
 !               o anuncios atrapan por error. Diseñada bajo dependencia estricta
 !               de red, privacidad absoluta y optimización DRY.
-!
+
 ! [SINTAXIS ADMITIDA PARA EXCEPCIONES]
 !   [EX.REC]  @@||...^    - Recursiva: Solo para CDNs estáticos o infraestructura sin rastreo.
 !   [EX.EXA]  @@|...^     - Exacta: Estándar por defecto para aislar endpoints únicos.
 !   [EX.REG]  @@/^...$/   - Regex: Obligatoria para agrupar >=2 nodos (DRY). Anclar (^ y $) y escapar (\.).
 !   [EX.HYB]  ! [EX.HYB]  - Híbrida: Marca obligatoria sobre nodos con función core + telemetría/ads acoplados.
-!
+
 ! [PROTOCOLO DE EDICION Y AUDITORIA]
 !   [POL.1]   INCLUSION: Permitir infraestructura core y nodos híbridos [EX.HYB] indispensables cuya
 !             ausencia rompa conectividad o funciones clave (ej. historial, feed, stream, login).
 !   [POL.2]   EXCLUSION: Prohibido añadir dominios puros de anuncios, banners promocionales
 !             (ej. discover.*), analítica pura (analytics.*, metrics.*) o rastreo de terceros.
 !   [POL.3]   ESTRUCTURA: Respetar categorías [CAT:1-9], subcategorías [SUB] y niveles [SUB-2] sin duplicar reglas.
-!
+
 ! [EXCEPCIONES PERMITIDAS EXCLUSIVAMENTE PARA]
 !   [SEC.1] Validación de red (NCSI), conectividad core y sincronización temporal.
 !   [SEC.2] Seguridad criptográfica, certificados de revocación y sistemas anti-bot.
@@ -284,8 +284,8 @@
 @@/^((api|img)\.samsungapps\.com|d1oxlq5h9kq8q5\.cloudfront\.net)$/
 @@|otn.samsungcloudcdn.com^
 @@/^(api|client)\.smartthings\.com$/
-! [EX.HYB] Samsung Smart TV Hub (Autenticación y servicios de pantalla; recomendaciones y telemetría acopladas)
-@@/^(gpm|scs|osb(-(auth|secure|ussvc|eusvc|krsvc))?(-v[12])?(-(ussvc|eusvc|krsvc))?(-v[12])?)\.samsungqbe\.com$/
+! [EX.HYB] Samsung Smart TV Hub (Autenticación, tienda de apps y servicios de pantalla; recomendaciones y telemetría acopladas)
+@@/^(gpm|scs|osb(-(apps|auth|secure|ussvc|eusvc|krsvc))?(-v[12])?(-(ussvc|eusvc|krsvc))?(-v[12])?)\.samsungqbe\.com$/
 ! [EX.HYB] Samsung Cloud Solution (Actualizaciones OTA y recursos de apps TV; métricas de uso acopladas)
 @@/^(cdn|lcprd[12]|otnprd(8|9|10|11))\.samsungcloudsolution\.net$/
 @@/^(time|cdn|oempprd|empdownprd|fkpprd)\.samsungcloudsolution\.com$/
