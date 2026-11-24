@@ -92,6 +92,7 @@
 @@/^([a-z0-9-]+\.)?wdcp(alt)?\.microsoft\.com$/
 @@/^(uhf|wcpstatic)\.microsoft\.com$/
 @@/^geover?\.prod\.do\.dsp\.mp\.microsoft\.com$/
+@@|settings-win.data.microsoft.com^
 
 ! --- Notificaciones Push Multiplataforma entrega de mensajes en tiempo real ---
 @@/^(alt[1-8]-)?mtalk4?\.google\.com$/
@@ -117,7 +118,8 @@
 ! --- Ecosistema Google y Android servicios core, ubicación y búsqueda ---
 ! [EX.HYB] Google Play Services (Autenticación, sincronización y tienda Play; telemetría de dispositivo acoplada)
 @@/^(android\.clients|clients4)\.google\.com$/
-@@/^(findmydevice|spot)-pa\.googleapis\.com$/
+! [EX.HYB] Google Play Services Location & Find My Device (Ubicación semántica y rastreo de dispositivo; telemetría de lugares acoplada)
+@@/^(findmydevice|semanticlocation|spot)-pa\.googleapis\.com$/
 @@|supl.google.com^
 ! [EX.HYB] Google y Bing Search (Motores de búsqueda web principales; parámetros de registro y telemetría de búsqueda)
 @@/^(www\.)?(google(\.com(\.mx)?)|bing\.com)$/
@@ -143,6 +145,7 @@
 @@|api.intl.miui.com^
 ! [EX.HYB] Xiaomi Global Market (Tienda oficial de aplicaciones y actualizaciones; promociones y métricas acopladas)
 @@/^(eu\.|sg\.)?global\.market\.xiaomi\.com$/
+! [EX.HYB] Xiaomi Account Auth (Autenticación de cuenta Mi y emisión de serviceToken; telemetría de sesión acoplada)
 @@/^(api\.)?account\.xiaomi\.com$/
 ! [EX.HYB] Xiaomi Push y Mensajería (Entrega de notificaciones push Mi Push; telemetría de conexión acoplada)
 @@/^((resolver\.msg(\.global)?|(sg\.)?app\.chat\.global)\.xiaomi\.net|(register\.)?xmpush\.xiaomi\.com)$/
