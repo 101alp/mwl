@@ -35,34 +35,24 @@
 ! -----------------------------------------------------------------------
 
 ! --- Sincronización Temporal (NTP) y STUN validación de reloj y NAT traversal ---
-@@||pool.ntp.org^
-@@|time.nist.gov^
 @@/^time\.(google\.com|apple\.com|windows\.com|xtracloud\.net)$/
 @@|stun.l.google.com^
 
 ! --- Portales Cautivos y Validación de Red (NCSI) detección de acceso a internet en sistemas operativos ---
 @@/^(captive|configuration)\.apple\.com$/
-@@|netcts.cdn-apple.com^
 @@/^clients3\.google\.com(\.cn)?$/
-@@/^(www|dns)\.msft(connecttest|ncsi)\.com$/
 @@/^connectivitycheck\.(android|asus|cbg-app\.huawei|fb|gstatic|oppomobile|platform\.hicloud|samsung|smartthings)\.com$/
 @@|connect.rom.miui.com^
-@@|wifi.vivo.com.cn^
 
 ! --- Validación de Conectividad en Consolas y Smart TV pruebas de red en hardware ---
 @@/^(conntest\.nintendowifi\.net|ctest\.cdn\.nintendo\.net)$/
-@@|captive.roku.com^
-@@|connectivity.vizio.com^
 
 
 ! [CAT:2] SEGURIDAD CRIPTOGRAFICA, CERTIFICADOS Y VALIDACION ANTI-BOT
 ! -------------------------------------------------------------------
 
 ! --- Certificados Digitales y Revocación (OCSP/PKI) validación de cadenas TLS ---
-@@||pki.goog^
-@@|ocsp.rootca1.amazontrust.com^
 @@/^ocsp2?\.apple\.com$/
-@@/^ocsp\.(comodoca|sectigo)\.com$/
 
 ! --- Navegación Segura (Safe Browsing) protección antiphishing y malware en navegadores ---
 @@/^(android-safebrowsing\.google\.com|safebrowsing\.google(apis)?\.com)$/
@@ -70,12 +60,8 @@
 @@/^(proxy|token)\.safebrowsing\.apple$/
 
 ! --- Sistemas Anti-Bot, CAPTCHA y Gestión de Consentimiento ---
-@@|www.gstatic.com^
-@@||recaptcha.net^
 @@/^(challenges|turnstile)\.cloudflare\.com$/
 @@/^(api|assets|js)\.hcaptcha\.com$/
-! [EX.HYB] Arkose Labs / FunCaptcha (Validación anti-bot interactiva; telemetría de comportamiento acoplada)
-@@/^(client-api\.arkoselabs\.com|([a-z0-9-]+\.)?funcaptcha\.com)$/
 ! [EX.HYB] PerimeterX / HUMAN Security (Protección anti-bot y mitigación de fraude; recolección de huella y telemetría)
 @@/^((client|collector-px[a-z0-9]+)\.(perimeterx\.net|px-cloud\.net)|b\.px-cdn\.net)$/
 ! [EX.HYB] OneTrust CookieLaw (Gestión de consentimiento CMP; telemetría de preferencias acoplada)
@@ -87,8 +73,6 @@
 
 ! --- Microsoft, Windows y Azure AD identidad, SSO y actualizaciones del sistema ---
 @@/^([a-z0-9-]+\.)?login\.(live|microsoftonline)\.com$/
-@@/^([a-z0-9-]+\.)?(aadcdn\.msftauth|msauth|msauthimages)\.net$/
-@@|autologon.microsoftazuread-sso.com^
 @@/^([a-z0-9-]+\.)?wdcp(alt)?\.microsoft\.com$/
 @@/^(uhf|wcpstatic)\.microsoft\.com$/
 @@/^geo(ver?)?\.prod\.do\.dsp\.mp\.microsoft\.com$/
@@ -102,8 +86,6 @@
 @@/^([a-z0-9-]+\.)?wns\.windows\.com$/
 @@|push.services.mozilla.com^
 @@||push.samsungosp.com^
-! [EX.HYB] HeyTap Push (Servicio de notificaciones push OPPO/OnePlus; métricas de entrega acopladas)
-@@|api.push.heytapmobi.com^
 
 ! --- Ecosistema Apple (iCloud, iOS, macOS) sincronización, actualizaciones y localización ---
 ! [EX.HYB] Apple Location Services (Geolocalización asistida Wi-Fi/GPS; telemetría de celdas y puntos de acceso)
@@ -134,18 +116,12 @@
 ! [EX.HYB] Honor Cloud GRS (Enrutamiento de servicios cloud Honor; diagnóstico y telemetría acoplados)
 @@|grs.hihonorcloud.com^
 @@/^(accounts\.motorola\.com|moto-ota\.appspot\.com)$/
-@@/^id\.(heytap|oppo)\.com$/
 @@/^conn-service-(us|eu|sg)-0[45]\.allawnos\.com$/
 ! [EX.HYB] ColorOS / Realme OTA (Actualizaciones de firmware y sistema; reportes de estado y telemetría)
 @@/^(ota\.coloros\.com|(sau-server|rus-service)(-(sg|eu|us|in))?\.allawn(tech|os)\.com)$/
-@@|api.samsungcloud.com^
-@@|fota-cloud-dn.ospserver.net^
 @@/^(account\.samsung\.com|(us-)?auth2?\.samsungosp\.com)$/
 @@||samsungpass.com^
 @@/^(i\.mi\.com|(api(\.g)?|find(\.api)?|findapi|(us\.|g-)(find\.api|findapi))\.micloud\.xiaomi\.net)$/
-@@|update.miui.com^
-! [EX.HYB] MIUI International API (Configuración regional y servicios del sistema Xiaomi; telemetría acoplada)
-@@|api.intl.miui.com^
 ! [EX.HYB] Xiaomi Global Market (Tienda oficial de aplicaciones y actualizaciones; promociones y métricas acopladas)
 @@/^(eu\.|sg\.)?global\.market\.xiaomi\.com$/
 ! [EX.HYB] Xiaomi Account Auth (Autenticación de cuenta Mi y emisión de serviceToken; telemetría de sesión acoplada)
@@ -167,33 +143,22 @@
 ! ------------------------------------------------------------
 
 ! --- Autenticación Bancaria 3D Secure y Prevención de Fraude ---
-@@||3ds-notify.com^
 ! [EX.HYB] CardinalCommerce 3DS (Autenticación de pagos con tarjeta; telemetría de huella del dispositivo)
 @@||cardinalcommerce.com^
-@@/^([a-z0-9-]+\.)?verifiedbyvisa\.com$/
 
 ! --- Banca Nacional y Fintech (México) plataformas bancarias y autenticación ---
 @@/^((www|cws|bancanet|movil)\.banamex\.com|content22\.bancanet\.banamex\.com)$/
-@@|bancamovil.banjercito.com.mx^
-@@|movil.afirme.com^
 @@/^(www|api|bancoenlinea|elsw)\.banorte\.com$/
-@@|api.banregio.com^
-@@|movil.bb.com.mx^
 @@/^((cws|ecs)\.bbva\.com|(www|movil)\.bbva\.mx)$/
 @@/^(api|mobile)\.hsbc\.com\.mx$/
-@@|bancamovil.inbursa.com^
 @@/^(api|movil)\.(santander|scotiabank)\.com\.mx$/
-@@/^api\.(heybanco\.com|klar\.mx)$/
 @@/^(api\.nu\.com\.mx|(prod-)?global-auth\.nubank\.com\.br)$/
 
 ! --- Pasarelas de Pago y Billeteras Digitales ---
-! [EX.HYB] Google Pay (Procesamiento de pagos y tarjetas; telemetría de transacciones acoplada)
-@@|pay.google.com^
 @@/^apple-pay-gateway(-cert)?\.apple\.com$/
 @@|static.afterpay.com^
 @@/^(js|api|pay)\.klarna\.com$/
 @@/^(www\.|api\.)?mercadopago\.com(\.mx)?$/
-@@|api.openpay.mx^
 @@/^(([a-z0-9-]+\.)?paypalobjects\.com|(www|api)\.paypal\.com)$/
 @@/^(js|api)\.stripe\.com$/
 @@/^(checkoutshopper-live|live|api)\.adyen\.com$/
@@ -211,36 +176,22 @@
 ! ------------------------------------------------
 
 ! --- Protección DRM y Licencias de Contenido (Widevine / FairPlay) ---
-@@|widevineproxy.googleapis.com^
-@@|fps.envoy.apple.com^
 @@|licensing.bitmovin.com^
 @@|entitlements.jwplayer.com^
-@@/^(drm|widevine-vod)\.clarovideo\.net$/
 @@/^(license\.capri\.max|widevine-license\.vix)\.com$/
 
 ! --- Plataformas de Streaming y Protocolos Cast ---
-@@|codex.nflxext.com^
-@@||cast.google.com^
-@@/^((((disney|star|espn)\.api|global|playback|devices|drm|content|disney\.content|search-api-disney)\.edge|prod-static)\.bamgrid\.com)$/
 @@/^(appboot|oca)\.netflix\.com$/
 ! [EX.HYB] Amazon Prime Video (Catálogo, reproducción y perfiles; telemetría de visualización y anuncios acoplados)
 @@/^atv-(ext|ps)(-(eu|fe))?\.amazon\.com$/
-@@|auth.max.com^
 ! [EX.HYB] Paramount+ (Autenticación y flujos de reproducción; analítica de streaming acoplada)
 @@/^(api|auth|playback)\.paramountplus\.com$/
-@@/^mfwk(web|tv|mobile)-api\.clarovideo\.net$/
-! [EX.HYB] ViX Streaming (Autenticación y reproducción de video; inserción de anuncios y métricas acopladas)
-@@/^(api|auth|playback)\.vix\.com$/
 
 ! --- YouTube, Twitch y Streaming de Audio (Spotify) ---
-! [EX.HYB] YouTube InnerTube API (Navegación, feed, suscripciones y búsqueda; telemetría de interacción acoplada)
-@@|youtubei.googleapis.com^
 ! [EX.HYB] YouTube Watch History (Sincronización de historial de reproducción; métricas de visualización acopladas)
 @@|s.youtube.com^
 ! [EX.HYB] Google Video CDN (Entrega de flujos de video y audio YouTube; entrega de anuncios de video acoplada)
 @@/^(manifest|r{1,2}[0-9]+---sn-[a-z0-9-]+)\.googlevideo\.com$/
-! [EX.HYB] Twitch Usher (Asignación de servidores de transmisión en vivo; telemetría de sesión acoplada)
-@@|usher.ttvnw.net^
 ! [EX.HYB] Twitch HLS Video (Segmentos de transmisión en vivo; inserción de anuncios server-side acoplada)
 @@/^[a-z0-9]+\.[a-z0-9-]+\.hls\.live-video\.net$/
 ! [EX.HYB] Spotify Core (Resolución de puntos de acceso y reproducción de audio; telemetría de escucha acoplada)
@@ -250,19 +201,14 @@
 ! [CAT:6] COMUNICACION INTERPERSONAL Y REDES SOCIALES
 ! ----------------------------------------------------
 
-! --- Mensajería Instantánea (WhatsApp y Telegram) ---
+! --- Mensajería Instantánea (WhatsApp) ---
 @@/^(pps|v|g|c|mmg|media(-[a-z0-9-]+)?|static|stun|turn|e([1-9]|1[0-6]))\.((cdn|fna)\.)?whatsapp\.net$/
-@@|gateway.telegram.org^
 
 ! --- Redes Sociales y Contenido Multimedia ---
-! [EX.HYB] Facebook Graph API (Inicio de sesión, feed y funciones core; telemetría y rastreo social acoplados)
-@@|graph.facebook.com^
 ! [EX.HYB] Instagram Core API (Carga de feed, historias y mensajería; analítica y anuncios acoplados)
 @@/^(graph|i|gateway|graph-fallback)\.instagram\.com$/
 ! [EX.HYB] X / Twitter Core y Media (API principal, imágenes y video; métricas de interacción acopladas)
 @@/^(api\.twitter\.com|(ton|video)\.twimg\.com)$/
-! [EX.HYB] TikTok Core API (Carga de feed de video e inicio de sesión; telemetría de visualización acoplada)
-@@|api.tiktok.com^
 
 
 ! [CAT:7] GAMING Y ECOSISTEMAS DE ENTRETENIMIENTO INTERACTIVO
@@ -277,8 +223,6 @@
 
 ! --- Plataformas, Publishers y Servicios Multijugador ---
 @@/^(account\.epicgames\.com|api\.epicgames\.dev)$/
-@@|s.activision.com^
-@@|id.supercell.com^
 @@|prod-locator-cloud.rockstargames.com^
 @@/^((clientsettings|gamepersistence|assetdelivery)\.roblox\.com|(tr|[tc][0-7])\.rbxcdn\.com)$/
 @@|dl.listdl.com^
@@ -290,8 +234,6 @@
 ! --- Ecosistema Samsung Smart TV (Tizen) y SmartThings ---
 @@|sso.internetat.tv^
 @@/^((api|img)\.samsungapps\.com|d1oxlq5h9kq8q5\.cloudfront\.net)$/
-@@|otn.samsungcloudcdn.com^
-@@/^(api|client)\.smartthings\.com$/
 ! [EX.HYB] Samsung Smart TV Hub (Autenticación, tienda de apps y servicios de pantalla; recomendaciones y telemetría acopladas)
 @@/^(gpm|scs|osb(-(apps|auth|secure|ussvc|eusvc|krsvc))?(-v[12])?(-(ussvc|eusvc|krsvc))?(-v[12])?)\.samsungqbe\.com$/
 ! [EX.HYB] Samsung Cloud Solution (Actualizaciones OTA y recursos de apps TV; métricas de uso acopladas)
@@ -299,10 +241,6 @@
 @@/^(time|cdn|oempprd|empdownprd|fkpprd)\.samsungcloudsolution\.com$/
 
 ! --- Ecosistema LG Smart TV (webOS) y ThinQ ---
-@@/^(mx|us)(\.m)?\.lgaccount\.com$/
-@@|us.lgeapi.com^
-@@/^(aic|eic|kic)\.lgsmartcdn\.com$/
-@@/^(api|aic)\.lgthinq\.com$/
 @@/^(lgtvonline|snu|su(-ssl)?|(aic-|qt2-)?ngfts)\.lge\.com$/
 ! [EX.HYB] LG Next SDP (Tienda de aplicaciones y actualizaciones webOS; banners y telemetría acoplados)
 @@/^(mx|us|ngfts|aic-gfts)\.nextlgsdp\.com$/
