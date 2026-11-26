@@ -65,7 +65,7 @@
 ! [EX.HYB] DataDome Anti-Bot (Protección anti-bot y mitigación de fraude; recolección de huella y telemetría)
 @@|api-js.datadome.co^
 ! [EX.HYB] PerimeterX / HUMAN Security (Protección anti-bot y mitigación de fraude; recolección de huella y telemetría)
-@@/^((client|collector-px[a-z0-9]+|ift)\.(perimeterx\.net|px-cloud\.net)|b\.px-cdn\.net)$/
+@@/^((client|collector(-px[a-z0-9]+)?|ift)\.(perimeterx\.net|px-cloud\.net)|b\.px-cdn\.net)$/
 ! [EX.HYB] OneTrust CookieLaw (Gestión de consentimiento CMP; telemetría de preferencias acoplada)
 @@|cdn.cookielaw.org^
 ! [EX.HYB] Usercentrics CMP (Gestión de consentimiento de cookies y privacidad; telemetría de preferencias acoplada)
@@ -137,6 +137,8 @@
 @@/^(api\.)?account\.xiaomi\.com$/
 ! [EX.HYB] Xiaomi Push y Mensajería (Entrega de notificaciones push Mi Push; telemetría de conexión acoplada)
 @@/^((resolver\.msg(\.global)?|(sg\.)?app\.chat\.global)\.xiaomi\.net|(register\.)?xmpush\.xiaomi\.com)$/
+! [EX.HYB] Xiaomi MIUI Security (Verificación de integridad y escaneo de apps; telemetría de dispositivo acoplada)
+@@|api.sec.intl.miui.com^
 
 ! --- Herramientas Web, Tipografías y Navegadores ---
 @@|use.typekit.net^
@@ -155,11 +157,13 @@
 ! [EX.HYB] CardinalCommerce 3DS (Autenticación de pagos con tarjeta; telemetría de huella del dispositivo)
 @@||cardinalcommerce.com^
 ! [EX.HYB] Forter Antifraude (Evaluación de riesgo transaccional en checkout; telemetría de comportamiento acoplada)
-@@/^(cdn[06]|59dbfeb49a51\.cdn4)\.forter\.com$/
+@@/^(api|cdn[0369]|59dbfeb49a51\.cdn4)\.forter\.com$/
 ! [EX.HYB] LexisNexis ThreatMetrix (Perfilado de dispositivo y prevención de fraude bancario; telemetría acoplada)
-@@/^h(64)?\.online-metrix\.net$/
+@@/^(aa|h(64)?)\.online-metrix\.net$/
 ! [EX.HYB] Riskified Antifraude (Validación de seguridad en pagos e-commerce; telemetría de sesión acoplada)
 @@/^(beacon|img)\.riskified\.com$/
+! [EX.HYB] Sift Antifraude (Evaluación de riesgo y prevención de fraude en pagos/cuentas; telemetría de sesión acoplada)
+@@|api.sift.com^
 
 ! --- Banca Nacional y Fintech (México) plataformas bancarias y autenticación ---
 @@/^((www|cws|bancanet|movil)\.banamex\.com|content22\.bancanet\.banamex\.com)$/
@@ -174,7 +178,8 @@
 @@|static.afterpay.com^
 @@/^(js|api|pay)\.klarna\.com$/
 @@/^(www\.|api\.)?mercadopago\.com(\.mx)?$/
-@@/^(([a-z0-9-]+\.)?paypalobjects\.com|(www|api)\.paypal\.com)$/
+! [EX.HYB] PayPal Core & Antifraude (Pasarela de pago, verificación 2FA y riesgo transaccional; telemetría acoplada)
+@@/^(([a-z0-9-]+\.)?paypalobjects\.com|(www|api|t|b\.stats)\.paypal\.com)$/
 @@/^(js|api)\.stripe\.com$/
 @@/^(checkoutshopper-live|live|api)\.adyen\.com$/
 
@@ -199,6 +204,8 @@
 @@/^(appboot|oca)\.netflix\.com$/
 ! [EX.HYB] Amazon Prime Video (Catálogo, reproducción y perfiles; telemetría de visualización y anuncios acoplados)
 @@/^atv-(ext|ps)(-(eu|fe))?\.amazon\.com$/
+! [EX.HYB] Amazon Prime Video Delivery (Entrega de flujos y manifiestos de video; métricas de reproducción acopladas)
+@@|api.us-east-1.aiv-delivery.net^
 ! [EX.HYB] Paramount+ (Autenticación y flujos de reproducción; analítica de streaming acoplada)
 @@/^(api|auth|playback)\.paramountplus\.com$/
 
@@ -272,6 +279,8 @@
 @@|reverselookup.quicksetcloud.com^
 ! [EX.HYB] Pluto TV (Guía de canales y flujos de video en vivo; inserción dinámica de anuncios SSAI acoplada)
 @@/^(boot|service-channels|stitcher(-ipv4)?|cfd-v4-service-channel-stitcher-[a-z0-9-]+\.prd)\.pluto\.tv$/
+! [EX.HYB] Roku Cloud Services (Activación, cuentas y canales de Roku OS; telemetría de dispositivo acoplada)
+@@|cloudservices.roku.com^
 
 
 ! [CAT:9] DIAGNOSTICO DE RED Y OVERRIDES LOCALES
