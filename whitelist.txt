@@ -41,7 +41,7 @@
 ! --- Portales Cautivos y Validación de Red (NCSI) detección de acceso a internet en sistemas operativos ---
 @@/^(captive|configuration)\.apple\.com$/
 @@/^clients3\.google\.com(\.cn)?$/
-@@/^connectivitycheck\.(android|asus|cbg-app\.huawei|fb|gstatic|oppomobile|platform\.hicloud|samsung|smartthings)\.com$/
+@@/^connectivitycheck\.(android|asus|fb|gstatic|oppomobile|samsung|smartthings)\.com$/
 @@|connect.rom.miui.com^
 
 ! --- Validación de Conectividad en Consolas y Smart TV pruebas de red en hardware ---
@@ -117,11 +117,7 @@
 @@/^t[0-3]\.gstatic\.com$/
 @@/^(nts|path[1-3])\.xtracloud\.net$/
 
-! --- Ecosistemas Móviles Android (Huawei, Honor, Motorola, OPPO, Samsung, Xiaomi) ---
-! [EX.HYB] Huawei Mobile Services GRS (Enrutamiento regional y configuración cloud; telemetría de dispositivo)
-@@/^grs(\.platform)?\.dbankcloud\.(asia|cn|com|eu|ru)$/
-! [EX.HYB] Honor Cloud GRS (Enrutamiento de servicios cloud Honor; diagnóstico y telemetría acoplados)
-@@|grs.hihonorcloud.com^
+! --- Ecosistemas Móviles Android (Motorola, OPPO, Samsung, Xiaomi) ---
 @@/^(accounts\.motorola\.com|moto-ota\.appspot\.com)$/
 @@/^conn-service-(us|eu|sg)-0[45]\.allawnos\.com$/
 ! [EX.HYB] ColorOS / Realme OTA (Actualizaciones de firmware y sistema; reportes de estado y telemetría)
@@ -171,12 +167,9 @@
 @@/^((cws|ecs)\.bbva\.com|(www|movil)\.bbva\.mx)$/
 @@/^(api|mobile)\.hsbc\.com\.mx$/
 @@/^(api|movil)\.(santander|scotiabank)\.com\.mx$/
-@@/^(api\.nu\.com\.mx|(prod-)?global-auth\.nubank\.com\.br)$/
 
 ! --- Pasarelas de Pago y Billeteras Digitales ---
 @@/^apple-pay-gateway(-cert)?\.apple\.com$/
-@@|static.afterpay.com^
-@@/^(js|api|pay)\.klarna\.com$/
 @@/^(www\.|api\.)?mercadopago\.com(\.mx)?$/
 ! [EX.HYB] PayPal Core & Antifraude (Pasarela de pago, verificación 2FA y riesgo transaccional; telemetría acoplada)
 @@/^(([a-z0-9-]+\.)?paypalobjects\.com|(www|api|t|b\.stats)\.paypal\.com)$/
@@ -279,13 +272,11 @@
 @@|reverselookup.quicksetcloud.com^
 ! [EX.HYB] Pluto TV (Guía de canales y flujos de video en vivo; inserción dinámica de anuncios SSAI acoplada)
 @@/^(boot|service-channels|stitcher(-ipv4)?|cfd-v4-service-channel-stitcher-[a-z0-9-]+\.prd)\.pluto\.tv$/
-! [EX.HYB] Roku Cloud Services (Activación, cuentas y canales de Roku OS; telemetría de dispositivo acoplada)
-@@|cloudservices.roku.com^
 
 
 ! [CAT:9] DIAGNOSTICO DE RED Y OVERRIDES LOCALES
 ! ----------------------------------------------
 
 ! --- Verificación de IP Pública y Geolocalización de Red ---
-@@/^(api(4|64)?\.ipify\.org|(ipv[46]\.)?icanhazip\.com|checkip\.amazonaws\.com|ifconfig\.me|whoami\.akamai\.net)$/
+@@/^(api4?\.ipify\.org|(ipv4\.)?icanhazip\.com|checkip\.amazonaws\.com|ifconfig\.me|whoami\.akamai\.net)$/
 @@|pro.ip-api.com^
