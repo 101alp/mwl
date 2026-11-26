@@ -112,8 +112,6 @@
 ! [EX.HYB] Google Play Services Location & Find My Device (Ubicación semántica y rastreo de dispositivo; telemetría de lugares acoplada)
 @@/^(findmydevice|semanticlocation|spot)-pa\.googleapis\.com$/
 @@|supl.google.com^
-! [EX.HYB] Google y Bing Search (Motores de búsqueda web principales; parámetros de registro y telemetría de búsqueda)
-@@/^(www\.)?(google(\.com(\.mx)?)|bing\.com)$/
 @@/^t[0-3]\.gstatic\.com$/
 @@/^(nts|path[1-3])\.xtracloud\.net$/
 
@@ -126,7 +124,7 @@
 @@|shortintl.push.heytapmobile.com^
 @@/^(account\.samsung\.com|(us-)?auth2?\.samsungosp\.com)$/
 @@||samsungpass.com^
-@@/^(i\.mi\.com|(api(\.g)?|find(\.api)?|findapi|(us\.|g-)(find\.api|findapi))\.micloud\.xiaomi\.net)$/
+@@/^(api(\.g)?|find(\.api)?|findapi|(us\.|g-)(find\.api|findapi))\.micloud\.xiaomi\.net$/
 ! [EX.HYB] Xiaomi Global Market (Tienda oficial de aplicaciones y actualizaciones; promociones y métricas acopladas)
 @@/^(eu\.|sg\.)?global\.market\.xiaomi\.com$/
 ! [EX.HYB] Xiaomi Account Auth (Autenticación de cuenta Mi y emisión de serviceToken; telemetría de sesión acoplada)
@@ -162,23 +160,21 @@
 @@|api.sift.com^
 
 ! --- Banca Nacional y Fintech (México) plataformas bancarias y autenticación ---
-@@/^((www|cws|bancanet|movil)\.banamex\.com|content22\.bancanet\.banamex\.com)$/
-@@/^(www|api|bancoenlinea|els[lw])\.banorte\.com$/
-@@/^((cws|ecs)\.bbva\.com|(www|movil)\.bbva\.mx)$/
+@@/^((cws|bancanet|movil)\.banamex\.com|content22\.bancanet\.banamex\.com)$/
+@@/^(api|bancoenlinea|els[lw])\.banorte\.com$/
+@@/^((cws|ecs)\.bbva\.com|movil\.bbva\.mx)$/
 @@/^(api|mobile)\.hsbc\.com\.mx$/
 @@/^(api|movil)\.(santander|scotiabank)\.com\.mx$/
 
 ! --- Pasarelas de Pago y Billeteras Digitales ---
 @@/^apple-pay-gateway(-cert)?\.apple\.com$/
-@@/^(www\.|api\.)?mercadopago\.com(\.mx)?$/
+@@|api.mercadopago.com^
 ! [EX.HYB] PayPal Core & Antifraude (Pasarela de pago, verificación 2FA y riesgo transaccional; telemetría acoplada)
-@@/^(([a-z0-9-]+\.)?paypalobjects\.com|(www|api|t|b\.stats)\.paypal\.com)$/
+@@/^(([a-z0-9-]+\.)+paypalobjects\.com|(api|t|b\.stats)\.paypal\.com)$/
 @@/^(js|api)\.stripe\.com$/
 @@/^(checkoutshopper-live|live|api)\.adyen\.com$/
 
 ! --- Comercio Electrónico Transaccional plataformas de compra y checkout ---
-! [EX.HYB] Amazon y Mercado Libre México (Catálogo, carrito y compras; recomendaciones y rastreo comercial acoplados)
-@@/^(www\.)?(amazon|mercadolibre)\.com\.mx$/
 ! [EX.HYB] Amazon Retail Direct / AAX (Enrutamiento de fichas de productos y app móvil; enlaces patrocinados acoplados)
 @@|aax-us-east-retail-direct.amazon.com^
 ! [EX.HYB] VTEX Commerce (Infraestructura de checkout y tiendas online; métricas de conversión acopladas)
