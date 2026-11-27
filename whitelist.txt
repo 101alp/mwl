@@ -91,8 +91,8 @@
 @@||push.apple.com^
 @@/^([a-z0-9-]+\.)?wns\.windows\.com$/
 @@|push.services.mozilla.com^
-! [EX.HYB] Samsung Push Service (Entrega de notificaciones push en dispositivos Samsung; telemetría de registro acoplada)
-@@/^(push\.samsungosp\.com|sdk\.pushmessage\.samsung\.com)$/
+! [EX.HYB] Samsung Push Service (Enrutamiento GLD, entrega push Galaxy; telemetría de registro acoplada)
+@@/^((gld\.)?push\.samsungosp\.com|sdk\.pushmessage\.samsung\.com)$/
 
 ! --- Ecosistema Apple (iCloud, iOS, macOS) sincronización, actualizaciones y localización ---
 ! [EX.HYB] Apple Location Services (Geolocalización asistida Wi-Fi/GPS; telemetría de celdas y puntos de acceso)
@@ -105,6 +105,8 @@
 @@/^(lcdn-locator(-[a-z0-9]+)?\.apple\.com(\.akadns\.net)?|lcdn-locator\.cdn-apple\.com)$/
 ! [EX.HYB] Apple Software Updates & AirPlay (Restauración OS, XProtect y AirPlay; reportes OTA acoplados)
 @@|xp.apple.com^
+! [EX.HYB] Apple Search / Smoot (Sugerencias Siri, Spotlight, Safari y Lookup; telemetría de búsqueda acoplada)
+@@|api.smoot.apple.com^
 
 ! --- Ecosistema Google y Android servicios core, ubicación y búsqueda ---
 ! [EX.HYB] Google Play Services (Autenticación, sincronización y tienda Play; telemetría de dispositivo acoplada)
@@ -115,7 +117,7 @@
 @@/^t[0-3]\.gstatic\.com$/
 @@/^(nts|path[1-3])\.xtracloud\.net$/
 
-! --- Ecosistemas Móviles Android (Motorola, OPPO, Samsung, Xiaomi) ---
+! --- Ecosistemas Móviles Android (Motorola, OPPO, Samsung, Xiaomi, Huawei) ---
 @@/^(accounts\.motorola\.com|moto-ota\.appspot\.com)$/
 @@/^conn-service-(us|eu|sg)-0[45]\.allawnos\.com$/
 ! [EX.HYB] ColorOS / Realme OTA (Actualizaciones de firmware y sistema; reportes de estado y telemetría)
@@ -133,6 +135,7 @@
 @@/^((resolver\.msg(\.global)?|(sg\.)?app\.chat\.global)\.xiaomi\.net|(register\.)?xmpush\.xiaomi\.com)$/
 ! [EX.HYB] Xiaomi MIUI Security (Verificación de integridad y escaneo de apps; telemetría de dispositivo acoplada)
 @@|api.sec.intl.miui.com^
+@@/^grs\.(platform\.)?dbankcloud\.(asia|cn|com|eu|ru)$/
 
 ! --- Herramientas Web, Tipografías y Navegadores ---
 @@|use.typekit.net^
@@ -171,7 +174,7 @@
 @@|api.mercadopago.com^
 ! [EX.HYB] PayPal Core & Antifraude (Pasarela de pago, verificación 2FA y riesgo transaccional; telemetría acoplada)
 @@/^(([a-z0-9-]+\.)+paypalobjects\.com|(api|t|b\.stats)\.paypal\.com)$/
-@@/^(js|api)\.stripe\.com$/
+@@/^((js|api|r)\.stripe\.com|m\.stripe\.network)$/
 @@/^(checkoutshopper-live|live|api)\.adyen\.com$/
 
 ! --- Comercio Electrónico Transaccional plataformas de compra y checkout ---
@@ -205,8 +208,8 @@
 @@/^(manifest|r{1,2}[0-9]+---sn-[a-z0-9-]+)\.googlevideo\.com$/
 ! [EX.HYB] Twitch HLS Video (Segmentos de transmisión en vivo; inserción de anuncios server-side acoplada)
 @@/^[a-z0-9]+\.[a-z0-9-]+\.hls\.live-video\.net$/
-! [EX.HYB] Spotify Core (Resolución de puntos de acceso y reproducción de audio; telemetría de escucha acoplada)
-@@/^(apresolve|spclient\.wg)\.spotify\.com$/
+! [EX.HYB] Spotify Core & Canvas (Puntos de acceso, reproducción y bucles Canvas; telemetría de escucha acoplada)
+@@/^((apresolve|spclient\.wg)\.spotify\.com|canvaz\.scdn\.co)$/
 
 
 ! [CAT:6] COMUNICACION INTERPERSONAL Y REDES SOCIALES
@@ -224,6 +227,7 @@
 @@|api.snapkit.com^
 ! [EX.HYB] X / Twitter Core y Media (API principal, imágenes y video; métricas de interacción acopladas)
 @@/^(api\.twitter\.com|(ton|video)\.twimg\.com)$/
+@@/^(p16-capcut-sign-sg\.ibyteimg\.com|(tt-gecko|vcs)-sg\.capcutapi\.com)$/
 
 
 ! [CAT:7] GAMING Y ECOSISTEMAS DE ENTRETENIMIENTO INTERACTIVO
