@@ -97,8 +97,8 @@
 ! --- Ecosistemas Móviles Android (Motorola, OPPO, Samsung, Xiaomi, Huawei) ---
 ! [EX.HYB] OPPO / OnePlus / Realme ColorOS (Comprobación de conectividad y portales cautivos Wi-Fi; telemetría acoplada)
 @@/^conn-service-(us|eu|sg)-0[45]\.allawnos\.com$/
-! [EX.HYB] OPPO / OnePlus / Realme OTA (Verificación y descarga de actualizaciones de sistema ColorOS/OxygenOS; telemetría acoplada)
-@@/^(ota\.coloros\.com|sau-server-(sg|eu|us|in)\.allawnos\.com)$/
+! [EX.HYB] OPPO / OnePlus / Realme OTA & COTA (Actualizaciones de sistema y perfiles de operador ColorOS/OxygenOS; telemetría acoplada)
+@@/^(ota\.coloros\.com|(cota-service-sg|sau-server-(sg|eu|us|in))\.allawnos\.com)$/
 ! [EX.HYB] Xiaomi Cloud & Find Device (Sincronización de cuenta Mi Cloud y rastreo de dispositivo perdido; telemetría acoplada)
 @@/^(api(\.g)?|find\.api|(us\.)?findapi)\.micloud\.xiaomi\.net$/
 ! [EX.HYB] Xiaomi GetApps (Tienda oficial de aplicaciones y actualizaciones de sistema Xiaomi; métricas de uso acopladas)
@@ -121,6 +121,8 @@
 @@/^(beacon|img)\.riskified\.com$/
 ! [EX.HYB] Sift Digital Trust & Safety (Detección de fraude en tiempo real para logins y pagos; telemetría de eventos acoplada)
 @@|api.sift.com^
+! [EX.HYB] Signifyd Fraud Protection (Validación antifraude y perfilado de dispositivo en checkout; telemetría de sesión acoplada)
+@@|dp.signifyd.com^
 
 ! --- Pasarelas de Pago y Billeteras Digitales ---
 ! [EX.HYB] PayPal Mobile Auth (Validación de sesión y prevención de bucles 2FA en app; telemetría antifraude acoplada)
